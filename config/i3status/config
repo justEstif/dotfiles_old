@@ -3,10 +3,10 @@ general {
         interval = 5
 }
 
-order += "volume master"
 order += "wireless _first_"
 order += "battery all"
 order += "tztime local"
+order += "volume master"
 
 volume master {
         format = "VOL %volume"
@@ -17,7 +17,7 @@ volume master {
 }
 
 wireless _first_ {
-        format_up = "%essid %quality"
+        format_up = "%essid%quality"
         format_down = ""
 }
 
