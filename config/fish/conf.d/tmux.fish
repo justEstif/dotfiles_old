@@ -5,7 +5,7 @@ end
 
 set -q fish_tmux_autostart || set fish_tmux_autostart true
 set -q fish_tmux_autostart_once || set fish_tmux_autostart_once true
-set -q fish_tmux_autoconnect || set fish_tmux_autoconnect true
+set -q fish_tmux_autoconnect || set fish_tmux_autoconnect false
 set -q fish_tmux_autoquit || set fish_tmux_autoquit $fish_tmux_autostart
 set -q fish_tmux_fixterm || set fish_tmux_fixterm true
 set -q fish_tmux_iterm2 || set fish_tmux_iterm2 false
