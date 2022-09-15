@@ -1,0 +1,38 @@
+general {
+        colors = true
+        interval = 5
+}
+
+order += "volume master"
+order += "wireless _first_"
+order += "battery all"
+order += "tztime local"
+
+volume master {
+        format = "VOL %volume"
+        format_muted = "VOL muted"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+wireless _first_ {
+        format_up = "%essid %quality"
+        format_down = ""
+}
+
+battery all {
+        format = "%status %percentage %remaining %emptytime"
+        format_down = ""
+        status_chr = "chr"
+        status_bat = "bat"
+        status_unk = "unk"
+        status_full = "full"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M"
+}
+
