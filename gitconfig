@@ -1,0 +1,26 @@
+[user]
+	name = Estifanos
+	email = estifanosbeyene21@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = true
+	editor = nvim
+	excludesFile = ~/.gitignore
+[alias]
+  co = checkout
+  ci = commit -m
+  st = status
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+
+[color]
+	ui = auto
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
