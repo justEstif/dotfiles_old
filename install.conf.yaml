@@ -2,5 +2,11 @@
 
 - link:
     ~/.gitconfig: gitconfig
+    ~/.config/nvim: config/nvim
+    ~/.config/tmux: config/tmux
+    ~/.config/alacritty: config/alacritty
+    ~/.config/fish: config/fish
+    ~/.config/i3: config/i3
+    ~/.config/i3status: config/i3status
 
 

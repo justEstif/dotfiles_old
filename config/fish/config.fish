@@ -6,3 +6,5 @@ fish_vi_key_bindings
 
 set -x NVM_DIR ~/.nvm
 nvm use default --silent
+
+source ~/.config/fish/alias.fish  # add aliases
