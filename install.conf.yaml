@@ -1,5 +1,16 @@
 - clean: ['~']
 
+- shell:
+    - [mkdir -p ~/.config, Making sure that ~/.config exists]
+    - [mkdir -p ~/.config/nvim]
+    - [mkdir -p ~/.config/tmux]
+    - [mkdir -p ~/.config/alacritty]
+    - [mkdir -p ~/.config/fish]
+    - [mkdir -p ~/.config/i3]
+    - [mkdir -p ~/.config/i3status]
+    - [mkdir -p ~/.config/ranger]
+    - [git submodule update --init --recursive]
+
 - link:
     ~/.gitconfig: gitconfig
     ~/.config/nvim: config/nvim
