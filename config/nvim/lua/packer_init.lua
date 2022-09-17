@@ -34,15 +34,21 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter", -- code highlighting
 	})
 
-	use({ -- lsp/formating
+	-- LSP
+	use({
 		"neovim/nvim-lspconfig", -- nvim native lsp
 		"williamboman/nvim-lsp-installer", -- lsp installer
 		"jose-elias-alvarez/typescript.nvim", -- ts config
+	})
+
+	-- Formatters
+	use({
 		"jose-elias-alvarez/null-ls.nvim", -- formatter
 		"MunifTanjim/prettier.nvim", -- prettier
 	})
 
-	use({ -- completion/cmp
+	-- Code completion
+	use({
 		"hrsh7th/nvim-cmp", -- cmp plugin
 		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
 		"hrsh7th/cmp-path", -- path cmp
@@ -56,25 +62,31 @@ return packer.startup(function(use)
 		"nvim-telescope/telescope.nvim", -- telescope
 		"nvim-telescope/telescope-file-browser.nvim", -- telescope file browser
 		branch = "0.1.x",
-		requires = "nvim-lua/plenary.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	})
 
+	-- New Features
 	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
-	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
 	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }) -- error viewer
-
-	use({ "tpope/vim-abolish" }) -- search/abbrevation/rename
+	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
 	use({ "tpope/vim-fugitive" }) -- git client
-	use({ "tpope/vim-surround" }) -- surround
-
-	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
-	use({ "feline-nvim/feline.nvim" }) -- statusline
-	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
-	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
-	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
+
+	-- Improve
+  -- TODO: use({"svermeulen/vim-easyclip"}) -- clipboard
+	use({ "tpope/vim-repeat" }) -- tpope repeat
+	use({ "tpope/vim-abolish" }) -- search/abbrevation/rename
+	use({ "tpope/vim-surround" }) -- surround
 	use({ "phaazon/hop.nvim" }) -- clever s
-	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent
+	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
+
+	-- Apperance
+	use({ "feline-nvim/feline.nvim" }) -- statusline
+	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
+	use({ "kyazdani42/nvim-web-devicons" }) -- icons
+
+	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent/comment
+	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

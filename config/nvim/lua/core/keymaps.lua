@@ -85,6 +85,9 @@ map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in current dir
 map("n", "mt", ":TodoTrouble<CR>") -- open todo list
 
+-- NOTE: New keymap
+map({ "n", "v" }, '%', '"') -- % for working with the register
+
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
