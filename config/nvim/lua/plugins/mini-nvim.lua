@@ -55,3 +55,8 @@ mini_comment.setup({
 		end,
 	},
 })
+
+require("mini.starter").setup({
+items = nil,
+	footer = "",
+})

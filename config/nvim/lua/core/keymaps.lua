@@ -44,10 +44,11 @@ map("n", "<leader>tn", ":tabnext<CR>") -- go to next tab
 map("n", "<leader>tp", ":tabprev<CR>") -- go to prev tab
 map("n", "<leader>to", ":tabonly<CR>") -- kill all other tabs
 map("n", "<leader>tk", ":tabclose<CR>") -- kill current tab
+map("n", "<leader>tg", ":tab G<CR>") -- Open git fugitive in separate tab
 
 -- Buffers
 map("n", "<leader>bk", ":lua MiniBufremove.delete()<cr>") -- delete current buffer
-map("n", "<leader>q", ":bufdo bdelete<CR>:intro<CR>") -- kill all buffers
+map("n", "<leader>q", ":bufdo bdelete<CR>:lua MiniStarter.open()<cr>") -- kill all buffers
 
 -- Resize with arrows
 map("n", "<C-Up>", ":resize -2<CR>")

@@ -63,9 +63,9 @@ return packer.startup(function(use)
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
 	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }) -- error viewer
 
-	use({ "tpope/vim-abolish" }) -- search/abbrevation/var rename
+	use({ "tpope/vim-abolish" }) -- search/abbrevation/rename
 	use({ "tpope/vim-fugitive" }) -- git client
-	use({ "tpope/vim-surround" }) -- git client
+	use({ "tpope/vim-surround" }) -- surround
 
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "feline-nvim/feline.nvim" }) -- statusline
