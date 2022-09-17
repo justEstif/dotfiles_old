@@ -47,7 +47,7 @@ map("n", "<leader>tk", ":tabclose<CR>") -- kill current tab
 
 -- Buffers
 map("n", "<leader>bk", ":lua MiniBufremove.delete()<cr>") -- delete current buffer
-map("n", "<leader>q", ":bufdo bdelete<CR>:Alpha<CR>") -- kill all buffers
+map("n", "<leader>q", ":bufdo bdelete<CR>:intro<CR>") -- kill all buffers
 
 -- Resize with arrows
 map("n", "<C-Up>", ":resize -2<CR>")
