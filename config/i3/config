@@ -53,6 +53,7 @@ bindsym $mod+c kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 # bindcode $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# TODO: change lock screen color or use img
 bindsym $mod+Shift+x exec --no-startup-id i3lock
 bindsym $mod+Shift+w exec --no-startup-id firefox
 
