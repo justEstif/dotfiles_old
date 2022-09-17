@@ -59,11 +59,6 @@ return packer.startup(function(use)
 		requires = "nvim-lua/plenary.nvim",
 	})
 
-	-- Clipboard management
-	use({
-		"AckslD/nvim-neoclip.lua",
-		requires = { "nvim-telescope/telescope.nvim", "tami5/sqlite.lua" },
-	})
 	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
 	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
