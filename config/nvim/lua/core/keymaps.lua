@@ -68,10 +68,9 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 -----------------------------------------------------------
 
 -- Hop
-map({ "n", "v" }, "f", ":HopChar1MW<CR>") -- sneak s
+map({ "n", "v" }, "f", ":HopChar1MW<CR>") -- better f
 map({ "n", "v" }, "s", ":HopChar2MW<CR>") -- sneak s
 map({ "n", "v" }, "mw", ":HopWord<CR>") -- Jump to word on current visible buffer
-map({ "n" }, "f", '<cmd>lua require("custom.hop-dot-repeat").hint_char1()<cr>')
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file in dir
