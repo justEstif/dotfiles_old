@@ -44,13 +44,3 @@ mini_comment.setup({
 })
 
 require('plugins.mini.starter').starter()
--- -- Mini starter
--- local status_starter, mini_starter = pcall(require, "mini.starter")
--- if not status_starter then
--- 	return
--- end
--- mini_starter.setup({
--- 	items = nil,
--- 	footer = "",
--- })
---

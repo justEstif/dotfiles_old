@@ -68,7 +68,7 @@ return packer.startup(function(use)
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
-
+	use({ "ahmedkhalf/project.nvim" })
 	-- Improve
 	use({ "tpope/vim-repeat" }) -- repeat -> hop char1
 	use({ "tpope/vim-surround" }) -- surround

@@ -54,14 +54,6 @@ telescope.setup({
 		find_files = {
 			theme = "dropdown",
 			previewer = false,
-			find_command = {
-				"fd",
-				"..",
-				"--type",
-				"file",
-				"--strip-cwd-prefix",
-				"-u",
-			},
 		},
 		current_buffer_fuzzy_find = {
 			theme = "ivy",
