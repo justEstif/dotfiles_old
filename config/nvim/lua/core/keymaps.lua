@@ -26,6 +26,7 @@ for _, disable_key in pairs(disable_keys) do
 end
 
 -- Custom Navigation
+map({ "n", "v" }, "%", '"') -- % for working with the register
 map({ "n", "v" }, '"', "%") -- " to jump to matching closer
 map({ "n", "v" }, "H", "_") -- H to go the start of line(n)
 map({ "n", "v" }, "L", "$") -- L to go to the end of line(n)
@@ -37,14 +38,6 @@ map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
 map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
 map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
 map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
-
--- Tabs
-map("n", "<leader>tt", ":tabedit<CR>") -- open buffer in new tab
-map("n", "<leader>tn", ":tabnext<CR>") -- go to next tab
-map("n", "<leader>tp", ":tabprev<CR>") -- go to prev tab
-map("n", "<leader>to", ":tabonly<CR>") -- kill all other tabs
-map("n", "<leader>tk", ":tabclose<CR>") -- kill current tab
-map("n", "<leader>tg", ":tab G<CR>") -- Open git fugitive in separate tab
 
 -- Buffers
 map("n", "<leader>bk", ":lua MiniBufremove.delete()<cr>") -- delete current buffer
@@ -75,18 +68,16 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 -----------------------------------------------------------
 
 -- Hop
-map({ "n", "v" }, "ss", ":HopChar2MW<CR>") -- sneak s
+map({ "n", "v" }, "f", ":HopChar1MW<CR>") -- sneak s
+map({ "n", "v" }, "s", ":HopChar2MW<CR>") -- sneak s
 map({ "n", "v" }, "mw", ":HopWord<CR>") -- Jump to word on current visible buffer
+map({ "n" }, "f", '<cmd>lua require("custom.hop-dot-repeat").hint_char1()<cr>')
 
 -- Telescope
-map("n", "<C-b>", ":Telescope buffers<CR>") -- list all open buffers
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file in dir
 map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
-map("n", "mS", ":Telescope live_grep<CR>") -- find text in current dir
+map("n", "ms", ":Telescope live_grep<CR>") -- find text in current dir
 map("n", "mt", ":TodoTrouble<CR>") -- open todo list
-
--- NOTE: New keymap
-map({ "n", "v" }, '%', '"') -- % for working with the register
 
 -- other keybindings in:
 -- plugins.lsp/handlers
