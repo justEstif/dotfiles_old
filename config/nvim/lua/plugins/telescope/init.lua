@@ -78,20 +78,6 @@ telescope.setup({
 			theme = "ivy",
 			initial_mode = "normal",
 		},
-		buffers = {
-			theme = "ivy",
-			initial_mode = "normal",
-			mappings = { -- easy close buffer shortcut
-				i = {
-					["<C-d>"] = actions.delete_buffer,
-					["<C-b>"] = actions.close, -- exit
-				},
-				n = {
-					["<C-d>"] = actions.delete_buffer,
-					["<C-b>"] = actions.close, -- exit
-				},
-			},
-		},
 		git_status = { -- git status settings
 			initial_mode = "normal",
 			layout_config = { -- improved git diff view

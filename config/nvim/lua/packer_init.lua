@@ -70,6 +70,7 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 
 	-- Improve
+	use({ "tpope/vim-repeat" }) -- repeat -> hop char1
 	use({ "tpope/vim-surround" }) -- surround
 	use({ "phaazon/hop.nvim" }) -- clever s
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
