@@ -32,6 +32,7 @@ return packer.startup(function(use)
 		"wbthomason/packer.nvim", -- plugin manager
 		"nvim-lua/plenary.nvim", -- important package used by most
 		"nvim-treesitter/nvim-treesitter", -- code highlighting
+		"echasnovski/mini.nvim", -- improved-f/tabline/indent/comment
 	})
 
 	-- LSP
@@ -39,12 +40,6 @@ return packer.startup(function(use)
 		"neovim/nvim-lspconfig", -- nvim native lsp
 		"williamboman/nvim-lsp-installer", -- lsp installer
 		"jose-elias-alvarez/typescript.nvim", -- ts config
-	})
-
-	-- Formatters
-	use({
-		"jose-elias-alvarez/null-ls.nvim", -- formatter
-		"MunifTanjim/prettier.nvim", -- prettier
 	})
 
 	-- Code completion
@@ -58,6 +53,7 @@ return packer.startup(function(use)
 		"rafamadriz/friendly-snippets", -- common snippets
 	})
 
+	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim", -- telescope
 		"nvim-telescope/telescope-file-browser.nvim", -- telescope file browser
@@ -71,22 +67,19 @@ return packer.startup(function(use)
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
+	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 
 	-- Improve
-  -- TODO: use({"svermeulen/vim-easyclip"}) -- clipboard
-	use({ "tpope/vim-repeat" }) -- tpope repeat
-	use({ "tpope/vim-abolish" }) -- search/abbrevation/rename
 	use({ "tpope/vim-surround" }) -- surround
 	use({ "phaazon/hop.nvim" }) -- clever s
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
+	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 
 	-- Apperance
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 
-	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent/comment
-	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

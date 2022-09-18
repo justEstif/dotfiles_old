@@ -9,6 +9,7 @@ if not status_jump then
 end
 
 mini_jump.setup({
+	mappings = { repeat_jump = "" }, -- disable semicolon repeat
 	delay = {
 		highlight = 150,
 		idle_stop = 1000,
