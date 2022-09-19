@@ -15,8 +15,15 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:UbuntuMono Nerd Font Mono 10
 
-# Hide all borders
-for_window [class="^.*"] border pixel 0
+# Gaps (Outer gaps are added to the inner gaps)
+gaps inner 1
+gaps outer 0
+
+# Show border on focused client
+for_window [class=".*"] border pixel 1
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #81A1C1 #81A1C1 #D8DEE9 #a7c080   #81A1C1
 
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -53,8 +60,7 @@ bindsym $mod+c kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 # bindcode $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# TODO: change lock screen color or use img
-bindsym $mod+Shift+x exec --no-startup-id i3lock
+bindsym $mod+Shift+x exec --no-startup-id i3lock --color=000000
 bindsym $mod+Shift+w exec --no-startup-id firefox
 
 # change focus
@@ -181,7 +187,6 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        position top
         mode hide
         hidden_state hide
         modifier $mod
