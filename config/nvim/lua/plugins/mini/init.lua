@@ -53,5 +53,5 @@ mini_tabline.setup({})
 
 -- Mini starter
 require('plugins.mini.starter').starter()
-
+require('mini.jump2d').setup()
 
