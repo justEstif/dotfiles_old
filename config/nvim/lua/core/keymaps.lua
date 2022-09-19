@@ -13,17 +13,18 @@ local function map(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
+-- disable keys
+local disable_keys =
+	{ "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", "<C-f>", "<C-b>", "<C-e>", "<C-y>", "," }
+for _, disable_key in pairs(disable_keys) do
+	map("", disable_key, "<nop>")
+end
+
 vim.g.mapleader = ","
 
 -----------------------------------------------------------
 -- Neovim shortcuts
 -----------------------------------------------------------
-
--- disable keys
-local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", "<C-f>", "<C-b>", "<C-e>", "<C-y>" }
-for _, disable_key in pairs(disable_keys) do
-	map("", disable_key, "<nop>")
-end
 
 -- Custom Navigation
 map({ "n", "v" }, "%", '"') -- % for working with the register
@@ -66,10 +67,6 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
-
--- Hop
-map({ "n", "v" }, "s", "<cmd>lua require'hop'.hint_char2({})<cr>") -- sneak s
-map({ "n", "v" }, "f", "<cmd>lua require'hop'.hint_char1({current_line_only = true})<cr>")
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file in dir

@@ -39,7 +39,7 @@ local kind_icons = {
 	Reference = "",
 	Folder = "",
 	EnumMember = "",
-	Constant = "",
+  Constant = "",
 	Struct = "",
 	Event = "鬒",
 	Operator = "",
@@ -118,7 +118,6 @@ cmp.setup({
 				luasnip = "[snippet]",
 				buffer = "[buffer]",
 				path = "[path]",
-				emoji = "[emoji]",
 			})[entry.source.name]
 			return vim_item
 		end,
@@ -131,6 +130,5 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "buffer" },
 		{ name = "nvim_lua" },
-		{ name = "emoji" },
 	},
 })
