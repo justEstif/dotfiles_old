@@ -68,8 +68,8 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 -----------------------------------------------------------
 
 -- Hop
-map({ "n", "v" }, "f", ":HopChar1CurrentLine<CR>") -- better f
-map({ "n", "v" }, "s", ":HopChar2MW<CR>") -- sneak s
+map({ "n", "v" }, "s", "<cmd>lua require'hop'.hint_char2({})<cr>") -- sneak s
+map({ "n", "v" }, "f", "<cmd>lua require'hop'.hint_char1({current_line_only = true})<cr>")
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file in dir
