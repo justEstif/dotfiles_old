@@ -48,6 +48,7 @@ return packer.startup(function(use)
 		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
 		"hrsh7th/cmp-path", -- path cmp
 		"hrsh7th/cmp-buffer", -- buffer cmp
+		"hrsh7th/cmp-emoji", -- buffer cmp
 		"saadparwaiz1/cmp_luasnip", -- snippets cmp
 		"L3MON4D3/LuaSnip", -- snippets engine
 		"rafamadriz/friendly-snippets", -- common snippets
