@@ -68,9 +68,8 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 -----------------------------------------------------------
 
 -- Hop
-map({ "n", "v" }, "f", ":HopChar1MW<CR>") -- better f
+map({ "n", "v" }, "f", ":HopChar1CurrentLine<CR>") -- better f
 map({ "n", "v" }, "s", ":HopChar2MW<CR>") -- sneak s
-map({ "n", "v" }, "mw", ":HopWord<CR>") -- Jump to word on current visible buffer
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file in dir

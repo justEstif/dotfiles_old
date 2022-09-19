@@ -61,14 +61,15 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	})
 
-	-- New Features
+	-- Features
 	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
 	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }) -- error viewer
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
-	use({ "ahmedkhalf/project.nvim" })
+	use({ "ahmedkhalf/project.nvim" }) -- project
+
 	-- Improve
 	use({ "tpope/vim-repeat" }) -- repeat -> hop char1
 	use({ "tpope/vim-surround" }) -- surround

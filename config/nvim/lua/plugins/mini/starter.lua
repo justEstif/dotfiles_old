@@ -25,12 +25,12 @@ M.starter = function()
 			[[───────────────────────────────────]],
 		}, "\n"),
 		items = {
-			{ action = "Telescope find_files", name = "Files", section = "Telescope" },
-			{ action = "Telescope file_browser", name = "Browser", section = "Telescope" },
-			{ action = "enew", name = "New file", section = "Telescope" },
-			{ action = "PackerSync", name = "Update Plugins", section = "Plugins" },
-			{ action = "enew", name = "Edit New Buffer", section = "Builtin actions" },
-			{ action = "qall!", name = "Quit Neovim", section = "Builtin actions" },
+			{ action = "Telescope find_files", name = "P: Files", section = "Telescope" },
+			{ action = "Telescope file_browser", name = "N: Browser", section = "Telescope" },
+			{ action = "tab G", name = "G: Fugitive", section = "Git" },
+			{ action = "PackerSync", name = "U: Update Plugins", section = "Plugins" },
+			{ action = "enew", name = "E: New Buffer", section = "Builtin actions" },
+			{ action = "qall!", name = "Q: Quit Neovim", section = "Builtin actions" },
 		},
 	})
 end
