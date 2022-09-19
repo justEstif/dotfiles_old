@@ -43,4 +43,15 @@ mini_comment.setup({
 	},
 })
 
+-- Mini tabline
+local status_tabline, mini_tabline = pcall(require, "mini.tabline")
+if not status_tabline then
+  return
+end
+
+mini_tabline.setup({})
+
+-- Mini starter
 require('plugins.mini.starter').starter()
+
+
