@@ -18,7 +18,7 @@ end
 
 mini_indentscope.setup({
 	draw = { delay = 0 },
-	symbol = "|",
+	symbol = "׃",
 })
 
 -- Mini bufremove
@@ -46,12 +46,22 @@ mini_comment.setup({
 -- Mini tabline
 local status_tabline, mini_tabline = pcall(require, "mini.tabline")
 if not status_tabline then
-  return
+	return
 end
 
 mini_tabline.setup({})
 
 -- Mini starter
-require('plugins.mini.starter').starter()
-require('mini.jump2d').setup()
+require("plugins.mini.starter").starter()
 
+-- Mini jump2d
+local status_jump2d, mini_jump2d = pcall(require, "mini.jump2d")
+if not status_jump2d then
+	return
+end
+
+mini_jump2d.setup({
+	mappings = {
+		start_jumping = "s",
+	},
+})
