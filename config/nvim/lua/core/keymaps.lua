@@ -71,7 +71,7 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file in dir
 map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
 map("n", "ms", ":Telescope live_grep<CR>") -- find text in current dir
-map("n", "mt", ":TodoTrouble<CR>") -- open todo list
+map("n", "mt", ":TodoTelescope<CR>") -- open todo list
 
 -- other keybindings in:
 -- plugins.lsp/handlers

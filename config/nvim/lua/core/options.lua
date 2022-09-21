@@ -37,7 +37,7 @@ local options = {
 	termguicolors = true, -- Enable 24-bit RGB colors
 	laststatus = 3, -- Set global statusline
 	pumheight = 15, -- pop up menu height
-  cursorline = true, -- show cursorline
+	cursorline = true, -- show cursorline
 	showtabline = 0, -- disable tabline
 
 	-- Tabs, indent

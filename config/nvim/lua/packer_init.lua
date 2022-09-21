@@ -63,7 +63,6 @@ return packer.startup(function(use)
 
 	-- Features
 	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
-	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }) -- error viewer
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
