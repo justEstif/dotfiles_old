@@ -24,8 +24,14 @@ nvim_treesitter.setup({
 		additional_vim_regex_highlighting = true,
 	},
 	auto_install = true, -- auto install when missing parsers
-
-  -- Comment settings
+	indent = {
+		enable = true, -- indent based on treesitter
+		disable = { "" }, -- disable treesitter indent for these langs
+	},
+	fold = {
+		fold_one_line_after = true,
+	},
+	-- Comment settings
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
