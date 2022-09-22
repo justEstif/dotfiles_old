@@ -2,16 +2,7 @@
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
 
-local function map(mode, lhs, rhs, opts)
-	local options = {
-		noremap = true,
-		silent = true,
-	}
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.keymap.set(mode, lhs, rhs, options)
-end
+local map = require("core.utils").map
 
 -- disable keys
 local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", "," }
@@ -25,14 +16,6 @@ vim.g.mapleader = ","
 -- Neovim shortcuts
 -----------------------------------------------------------
 
--- Custom Navigation
-map({ "n", "v" }, "%", '"') -- % for working with the register
-map({ "n", "v" }, '"', "%") -- " to jump to matching closer
-map({ "n", "v" }, "H", "_") -- H to go the start of line(n)
-map({ "n", "v" }, "L", "$") -- L to go to the end of line(n)
-map({ "n", "v" }, "K", "{") -- L to jump next blocks(n)
-map({ "n", "v" }, "J", "}") -- J to jump previous blocks(n)
-
 -- Lines
 map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
 map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
@@ -40,7 +23,6 @@ map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
 map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 
 -- Buffers
-map("n", "<leader>bk", ":lua MiniBufremove.delete()<cr>") -- delete current buffer
 map("n", "<leader>q", ":bufdo bdelete<CR>:lua MiniStarter.open()<cr>") -- kill all buffers
 
 -- Resize with arrows
@@ -50,8 +32,6 @@ map("n", "<C-Left>", ":vertical resize +2<CR>")
 map("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Indent
-map("n", ">", ">>") -- quick indent
-map("n", "<", "<<") -- quick indent
 map("v", "<", "<gv") -- stay in indent mode
 map("v", ">", ">gv") -- stay in indent mode
 
