@@ -20,3 +20,9 @@
     - remapped " => % and % => "
       - so `%ay` => copy to a
       - `%ap` => paste from a
+
+- Quickfix
+  - <https://github.com/kevinhwang91/nvim-bqf>
+- WhichKey
+  - <https://github.com/folke/which-key.nvim>
+
