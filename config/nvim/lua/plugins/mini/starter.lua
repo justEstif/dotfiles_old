@@ -15,7 +15,7 @@ M.starter = function()
 			starter.gen_hook.aligning("center", "center"),
 		},
 		evaluate_single = true,
-		query_updaters = [[abcdefghijklmnopqrstuvwxyz0123456789_-.ABCDEFGHIJKLMNOPQRSTUVWXYZ]],
+		query_updaters = [[abcdefghijklmnopqrstuvwxyz0123456789_-,.ABCDEFGHIJKLMNOPQRSTUVWXYZ]],
 		footer = os.date(),
 		header = table.concat({
 			[[  /\ \▔\___  ___/\   /(●)_ __ ___  ]],

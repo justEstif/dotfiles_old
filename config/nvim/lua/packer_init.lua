@@ -72,7 +72,7 @@ return packer.startup(function(use)
 	-- Improve
 	use({ "tpope/vim-repeat" }) -- repeat -> hop char1
 	use({ "tpope/vim-surround" }) -- surround
-	use({ "tpope/vim-unimpaired" }) -- surround
+	use({ "tpope/vim-unimpaired" }) -- keybinds using []
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 
