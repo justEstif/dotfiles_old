@@ -21,8 +21,16 @@
       - so `%ay` => copy to a
       - `%ap` => paste from a
 
-- Quickfix
-  - <https://github.com/kevinhwang91/nvim-bqf>
-- WhichKey
-  - <https://github.com/folke/which-key.nvim>
+- Learn:
+  - quickfix list and location list and registers
+    - usecase: using quickfix instead todos and notes
+      - `:lvimgrep /TODO/ **/*` -> search recursively
+        - `:lopen`
+- using the quickfix lit
+  - `:vimgrep /Post/ %` -> add all lines in this with Post into the quickfix list
+  - `:vimgrep /Post/ **/*tsx` -> add all lines in tsx files with Post into the quickfix list
+  - cycle through the quickfix list using [q, ]q
+- use eslint with make command and add to quickfix list
+
+- use makefile in vim: <https://medium.com/lithictech/makefile-javascript-26731fb26867>
 
