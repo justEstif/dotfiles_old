@@ -15,13 +15,6 @@ vim.g.mapleader = ","
 -----------------------------------------------------------
 -- Neovim shortcuts
 -----------------------------------------------------------
-
--- Lines
-map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
-map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
-map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
-map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
-
 -- Buffers
 map("n", "<leader>q", ":bufdo bdelete<CR>:lua MiniStarter.open()<cr>") -- kill all buffers
 
@@ -39,7 +32,7 @@ map("v", ">", ">gv") -- stay in indent mode
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 map("v", "@", ":normal @") -- apply macro on visual range
 map("t", "<Esc>", [[<C-\><C-n>]]) -- esc exit terminal
-map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
+map({ "n", "v" }, "<Esc>", ":nohl<CR>") -- clear search highlights
 map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- open link under cursor
 
