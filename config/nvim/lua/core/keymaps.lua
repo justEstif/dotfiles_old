@@ -40,7 +40,6 @@ map('n', '<leader>da', ":Lexplore<CR>")
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file in dir
-map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
 map("n", "ms", ":Telescope live_grep<CR>") -- find text in current dir
 map("n", "mt", ":TodoTelescope<CR>") -- open todo list
 

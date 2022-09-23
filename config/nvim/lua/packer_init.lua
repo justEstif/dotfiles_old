@@ -55,7 +55,6 @@ return packer.startup(function(use)
 	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim", -- telescope
-		"nvim-telescope/telescope-file-browser.nvim", -- telescope file browser
 		branch = "0.1.x",
 		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	})
