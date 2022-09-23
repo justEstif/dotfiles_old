@@ -32,7 +32,6 @@ return packer.startup(function(use)
 		"wbthomason/packer.nvim", -- plugin manager
 		"nvim-lua/plenary.nvim", -- important package used by most
 		"nvim-treesitter/nvim-treesitter", -- code highlighting
-		"echasnovski/mini.nvim", -- improved-f/tabline/indent/comment
 	})
 
 	-- LSP
@@ -68,11 +67,12 @@ return packer.startup(function(use)
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "ahmedkhalf/project.nvim" }) -- project
+	use({ "echasnovski/mini.nvim" }) -- indent/comment/starter
 
 	-- Improve
 	use({ "tpope/vim-repeat" }) -- repeat -> hop char1
 	use({ "tpope/vim-surround" }) -- surround
-	use({ "tpope/vim-unimpaired" }) -- keybinds using []
+	use({ "tpope/vim-unimpaired" }) -- keybinds using [], and <>
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 
