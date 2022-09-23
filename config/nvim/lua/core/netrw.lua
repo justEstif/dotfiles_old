@@ -33,13 +33,13 @@ vim.api.nvim_create_autocmd("filetype", {
 
 		bind("<TAB>", "mf") -- toggles mark
 		bind("<S-TAB>", "mF") -- unmark
-		bind("<Leader>", "<TAB> mu") -- remove all marks
+		bind("<leader>", "<TAB> mu") -- remove all marks
 
 		bind("fr", "R") -- rename
 		bind("fc", "mc") -- copy the marked files
 		bind("fC", "mtmc") --  assign the target dir and copy in one step
 		bind("fm", "mm") -- move marked files
-		bind("fm", "mtmm") --  assign the target dir and move in one step
+		bind("fM", "mtmm") --  assign the target dir and move in one step
 		bind("f;", "mx") -- for running extermal commands on marked files
 	end,
 })
