@@ -34,3 +34,25 @@
 
 - use makefile in vim: <https://medium.com/lithictech/makefile-javascript-26731fb26867>
 
+vimgre: <http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/>
+search patterns:
+<http://vimregex.com/>,
+<http://vimcasts.org/episodes/refining-search-patterns-with-the-command-line-window/>,
+<http://vimcasts.org/episodes/supercharged-substitution-with-subvert/>
+
+vim regex: <https://dev.to/iggredible/learning-vim-regex-26ep>
+vim magic search: <https://vim.fandom.com/wiki/Simplifying_regular_expressions_using_magic_and_no-magic>
+
+# Search Patterns
+
+```
+/word  -> match all
+/\<word\> -> match whole word only
+/word\c -> case insensitive
+/word\C -> case sensitive
+/word\|pattern -> match word or pattern
+/\v(max|min) ->
+```
+
+`:lvimgrep /\v(TODO|NOTE)/ **/*` -> add todo and note to quickfix list
+TODO: Make the search exact only
