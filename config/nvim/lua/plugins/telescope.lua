@@ -70,13 +70,6 @@ telescope.setup({
 			theme = "ivy",
 			initial_mode = "normal",
 		},
-		git_status = { -- git status settings
-			initial_mode = "normal",
-			layout_config = { -- improved git diff view
-				height = 0.9,
-				preview_width = 0.75,
-			},
-		},
 	},
 	extensions = {},
 })
