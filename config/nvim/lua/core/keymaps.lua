@@ -18,12 +18,6 @@ vim.g.mapleader = ","
 -- Buffers
 map("n", "<leader>q", ":%bd!<CR>:lua MiniStarter.open()<cr>") -- kill all buffers
 
--- Resize with arrows
-map("n", "<C-Up>", ":resize -2<CR>")
-map("n", "<C-Down>", ":resize +2<CR>")
-map("n", "<C-Left>", ":vertical resize +2<CR>")
-map("n", "<C-Right>", ":vertical resize -2<CR>")
-
 -- Indent
 map("v", "<", "<gv") -- stay in indent mode
 map("v", ">", ">gv") -- stay in indent mode
@@ -35,6 +29,10 @@ map("t", "<Esc>", [[<C-\><C-n>]]) -- esc exit terminal
 map({ "n", "v" }, "<Esc>", ":nohl<CR>") -- clear search highlights
 map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- open link under cursor
+
+-- Netrw
+map('n', '<leader>dd', ":Lexplore %:p:h<CR>")
+map('n', '<leader>da', ":Lexplore<CR>")
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
