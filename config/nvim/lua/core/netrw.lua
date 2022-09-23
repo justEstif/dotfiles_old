@@ -35,7 +35,6 @@ vim.api.nvim_create_autocmd("filetype", {
 		bind("<S-TAB>", "mF") -- unmark
 		bind("<Leader>", "<TAB> mu") -- remove all marks
 
-		bind("fn", "%:w<CR>:buffer #<CR>") -- create a file
 		bind("fr", "R") -- rename
 		bind("fc", "mc") -- copy the marked files
 		bind("fC", "mtmc") --  assign the target dir and copy in one step

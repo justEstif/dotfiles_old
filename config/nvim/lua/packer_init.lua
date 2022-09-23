@@ -26,6 +26,15 @@ if not status_ok then
 	return
 end
 
+-- Have packer use a popup window
+packer.init({
+	display = {
+		open_fn = function()
+			return require("packer.util").float({ border = "rounded" })
+		end,
+	},
+})
+
 -- Install plugins
 return packer.startup(function(use)
 	use({
@@ -64,7 +73,6 @@ return packer.startup(function(use)
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
-	use({ "ahmedkhalf/project.nvim" }) -- project
 	use({ "echasnovski/mini.nvim" }) -- indent/comment/starter
 
 	-- Improve
