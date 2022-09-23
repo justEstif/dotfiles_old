@@ -23,7 +23,7 @@ autocmd("TextYankPost", {
 -- Remove whitespace on save
 autocmd("BufWritePre", {
 	pattern = "*",
-	command = ":%s/\\s\\+$//e",
+	command = "silent! :%s/\\s\\+$//e",
 })
 
 -- Don't auto commenting new lines

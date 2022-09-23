@@ -10,7 +10,7 @@ local options_append = {
 	netrw_banner = "0", -- hide banner
 	netrw_localcopydircmd = "cp -r", -- change copy command
 	netrw_localrmdir = "rm -r", -- change delete command
-	netrw_list_hide = [['\(^\|\s\s\)\zs\.\S\+']], --Hide dotfiles on load.
+	netrw_list_hide = [['\(^\|\s\s\)\zs\.\S\+']],
 }
 
 for k, v in pairs(options_append) do
@@ -26,7 +26,7 @@ vim.api.nvim_create_autocmd("filetype", {
 		end
 
 		bind("H", "u") -- preview dir
-		bind("h", "-^")  -- go up
+		bind("h", "-^") -- go up
 		bind("l", "<CR>") -- open file or dir
 		bind(".", "gh") -- toggle dotfiles
 		bind("<leader>dd", ":Lexplore<CR>") -- close if open
