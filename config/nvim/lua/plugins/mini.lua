@@ -65,3 +65,4 @@ starter.setup({
 		{ action = "qall!", name = "Q: Quit Neovim", section = "Builtin actions" },
 	},
 })
+
