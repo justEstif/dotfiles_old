@@ -5,7 +5,7 @@
 local map = require("core.utils").map
 
 -- disable keys
-local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", "," }
+local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", ",", " " }
 for _, disable_key in pairs(disable_keys) do
 	map("", disable_key, "<nop>")
 end
@@ -16,7 +16,7 @@ vim.g.mapleader = ","
 -- Neovim shortcuts
 -----------------------------------------------------------
 -- Buffers
-map("n", "<leader>q", ":bufdo bdelete<CR>:lua MiniStarter.open()<cr>") -- kill all buffers
+map("n", "<leader>q", ":%bd!<CR>:lua MiniStarter.open()<cr>") -- kill all buffers
 
 -- Resize with arrows
 map("n", "<C-Up>", ":resize -2<CR>")
