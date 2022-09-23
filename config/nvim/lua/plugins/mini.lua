@@ -47,7 +47,6 @@ starter.setup({
 		starter.gen_hook.aligning("center", "center"),
 	},
 	evaluate_single = true,
-	query_updaters = [[abcdefghijklmnopqrstuvwxyz0123456789_-,.ABCDEFGHIJKLMNOPQRSTUVWXYZ]],
 	footer = os.date(),
 	header = table.concat({
 		[[  /\ \▔\___  ___/\   /(●)_ __ ___  ]],
@@ -56,9 +55,8 @@ starter.setup({
 		[[\_\ \/ \___|\___/ \_/ |_|_| |_| |_|]],
 		[[───────────────────────────────────]],
 	}, "\n"),
+	query_updaters = [[abcdefghilmoqrstuvwxyz0123456789_-,.ABCDEFGHIJKLMOQRSTUVWXYZ]],
 	items = {
-		{ action = "Telescope find_files", name = "P: Files", section = "Telescope" },
-		{ action = "Telescope file_browser", name = "N: Browser", section = "Telescope" },
 		{ action = "tab G", name = "G: Fugitive", section = "Git" },
 		{ action = "PackerSync", name = "U: Update Plugins", section = "Plugins" },
 		{ action = "enew", name = "E: New Buffer", section = "Builtin actions" },
@@ -66,3 +64,12 @@ starter.setup({
 	},
 })
 
+vim.cmd([[
+  augroup MiniStarterJK
+    au!
+    au User MiniStarterOpened nmap <buffer> j <Cmd>lua MiniStarter.update_current_item('next')<CR>
+    au User MiniStarterOpened nmap <buffer> k <Cmd>lua MiniStarter.update_current_item('prev')<CR>
+    au User MiniStarterOpened nmap <buffer> <C-p> <Cmd>Telescope find_files<CR>
+    au User MiniStarterOpened nmap <buffer> <C-n> <Cmd>Telescope file_browser<CR>
+  augroup END
+]])
