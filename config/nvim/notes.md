@@ -56,3 +56,5 @@ vim magic search: <https://vim.fandom.com/wiki/Simplifying_regular_expressions_u
 
 `:lvimgrep /\v(TODO|NOTE)/ **/*` -> add todo and note to quickfix list
 TODO: Make the search exact only
+
+clear quickfix list `:cexpr []`

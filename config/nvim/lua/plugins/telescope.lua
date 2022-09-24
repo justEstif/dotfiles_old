@@ -19,6 +19,15 @@ end
 telescope.setup({
 
 	defaults = {
+		vimgrep_arguments = {
+			"rg",
+			"--color=never",
+			"--no-heading",
+			"--with-filename",
+			"--line-number",
+			"--column",
+			"--smart-case",
+		},
 		entry_prefix = "  ", -- remove symbols
 		prompt_prefix = "  ",
 		selection_caret = "  ",
@@ -31,10 +40,14 @@ telescope.setup({
 				["<C-k>"] = actions.move_selection_previous, -- previous item
 				["<C-?>"] = actions.which_key, -- available keys
 				["<C-w>"] = actions_layout.toggle_preview, -- toggle preview
+				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+				["<C-q>"] = actions.smart_add_to_qflist + actions.open_qflist, -- add grep to quickfix
 				["<C-f>"] = actions.preview_scrolling_up,
 				["<C-d>"] = actions.preview_scrolling_down,
 			},
 			n = {
+				["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 				["<C-?>"] = actions.which_key, -- see options
 				["<C-w>"] = actions_layout.toggle_preview, -- toggle preview
 				["<C-f>"] = actions.preview_scrolling_up,
