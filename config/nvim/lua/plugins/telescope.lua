@@ -28,7 +28,9 @@ telescope.setup({
 			"--column",
 			"--smart-case",
 		},
-		entry_prefix = "  ", -- remove symbols
+
+		-- remove symbols
+		entry_prefix = "  ",
 		prompt_prefix = "  ",
 		selection_caret = "  ",
 

@@ -26,7 +26,7 @@ map("v", ">", ">gv") -- stay in indent mode
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 map("v", "@", ":normal @") -- apply macro on visual range
 map("t", "<Esc>", [[<C-\><C-n>]]) -- esc exit terminal
-map({ "n", "v" }, "<Esc>", ":nohl<CR>") -- clear search highlights
+map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
 map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- open link under cursor
 
