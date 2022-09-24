@@ -25,21 +25,11 @@ vim.api.nvim_create_autocmd("filetype", {
 			vim.keymap.set("n", lhs, rhs, { remap = true, buffer = true })
 		end
 
+    -- NOTE use terminal for other things
 		bind("H", "u") -- preview dir
 		bind("h", "-^") -- go up
 		bind("l", "<CR>") -- open file or dir
 		bind(".", "gh") -- toggle dotfiles
 		bind("<leader>dd", ":Lexplore<CR>") -- close if open
-
-		bind("<TAB>", "mf") -- toggles mark
-		bind("<S-TAB>", "mF") -- unmark
-		bind("<leader>", "<TAB> mu") -- remove all marks
-
-		bind("fr", "R") -- rename
-		bind("fc", "mc") -- copy the marked files
-		bind("fC", "mtmc") --  assign the target dir and copy in one step
-		bind("fm", "mm") -- move marked files
-		bind("fM", "mtmm") --  assign the target dir and move in one step
-		bind("f;", "mx") -- for running extermal commands on marked files
 	end,
 })
