@@ -32,24 +32,6 @@ autocmd("BufEnter", {
 	command = "set fo-=c fo-=r fo-=o",
 })
 
--- Save folds on exit
-augroup("AutoSaveFolds", {
-	clear = true,
-})
-
-autocmd("BufWinLeave", {
-	group = "AutoSaveFolds",
-	pattern = "*",
-	command = "silent! mkview",
-})
-
--- Load folds on start
-autocmd("BufWinEnter", {
-	group = "AutoSaveFolds",
-	pattern = "*",
-	command = "silent! loadview",
-})
-
 -- Turn off line numbers in terminal
 autocmd("TermOpen", {
 	pattern = "*",
