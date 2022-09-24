@@ -11,6 +11,10 @@ local options = {
 	clipboard = "unnamedplus", -- Copy/paste to system clipboard
 	swapfile = false, -- Don't modify file open in another nvim processs
 	completeopt = "menuone,noinsert,noselect", -- Autocomplete options
+	joinspaces = false, -- Don't autoinsert two spaces after '.', '?', '!' for join command.
+	encoding = "utf-8", -- Display this encoding.
+	fileencoding = "utf-8", -- Use this encoding when writing to file.
+	viewoptions = "cursor,folds", -- Save/restore just these (with `:{mk,load}view`).
 
 	-- Search
 	ignorecase = true, -- Ignore case letters when search
@@ -85,7 +89,7 @@ end
 local options_append = {
 	shortmess = "sI", -- Disable nvim introcoreop
 	path = "**", -- makes :find === <C-p>
-  -- ignore these files in search
+	-- ignore these files in search
 	wildignore = "*.zip, *.png, *.jpg, *.gif, *.pdf, *DS_Store*, */.git/*, */node_modules/*, */build/*, package-lock.json",
 }
 
