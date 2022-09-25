@@ -12,11 +12,11 @@ set $alt Mod1
 font pango:UbuntuMono Nerd Font Mono 10
 
 # Gaps (Outer gaps are added to the inner gaps)
-gaps inner 1
+gaps inner 0
 gaps outer 0
 
 # Show border on focused client
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 
 # class         border  backgr. text    indicator child_border
 client.focused  #81A1C1 #81A1C1 #D8DEE9 #a7c080   #81A1C1
