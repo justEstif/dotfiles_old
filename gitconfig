@@ -14,6 +14,7 @@
   type = cat-file -t
   dump = cat-file -p
   lg = log --graph --pretty=format:'%Cred%h%Creset - %Cgreen(%ad)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
+	upstream = !git push -u origin HEAD
 
 [color]
 	ui = auto
