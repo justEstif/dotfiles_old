@@ -81,7 +81,7 @@ return packer.startup(function(use)
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 
-	-- Apperance
+	-- Appearance
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
