@@ -41,7 +41,6 @@ autocmd("filetype", {
 		bind("ff", ":!touch ") -- create file
 		bind("fF", ":!mkdir -p ") -- create folder
 		bind("fe", "R") -- Rename
-		bind("FF", "!rm -r ") -- Delete
 		bind("fc", "mc") -- copy
 		bind("fC", "mtmc")
 		bind("fx", "mm") -- move marked files
