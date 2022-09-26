@@ -146,6 +146,6 @@ bar {
   status_command i3status
   mode hide
   hidden_state hide
-  modifier $alt
+  modifier $mod+$alt
   font pango:UbuntuMono Nerd Font Mono 10
 }

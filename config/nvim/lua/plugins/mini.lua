@@ -57,7 +57,7 @@ starter.setup({
 	}, "\n"),
 	query_updaters = [[abcdefghilmoqrstuvwxyz0123456789_-,.ABCDEFGHIJKLMOQRSTUVWXYZ]],
 	items = {
-		{ action = "tab G", name = "G: Fugitive", section = "Git" },
+		{ action = "tab G", name = "F: Fugitive", section = "Git" },
 		{ action = "PackerSync", name = "U: Update Plugins", section = "Plugins" },
 		{ action = "enew", name = "E: New Buffer", section = "Builtin actions" },
 		{ action = "qall!", name = "Q: Quit Neovim", section = "Builtin actions" },
@@ -74,6 +74,9 @@ vim.cmd([[
   augroup END
 ]])
 
--- Mini statusline
-require('mini.tabline').setup()
-
+-- Mini tabline
+local tabline_status, tabline = pcall(require, "mini.tabline")
+if not tabline_status then
+	return
+end
+tabline.setup()

@@ -43,7 +43,7 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 map('n', '<leader>da', ":Lexplore! %:p:h<CR>")
 map('n', '<leader>dd', ":Lexplore!<CR>")
 
-map("n", "<C-t>", ":tab term<CR>")
+map("n", "<C-t>", "<C-w>s:term<CR>")
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
