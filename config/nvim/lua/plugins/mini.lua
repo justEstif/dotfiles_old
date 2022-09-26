@@ -73,3 +73,7 @@ vim.cmd([[
     au User MiniStarterOpened nmap <buffer> <leader>dd <Cmd>Lexplore!<CR>
   augroup END
 ]])
+
+-- Mini statusline
+require('mini.tabline').setup()
+

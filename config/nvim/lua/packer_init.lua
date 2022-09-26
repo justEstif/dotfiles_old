@@ -70,7 +70,6 @@ return packer.startup(function(use)
 
 	-- Features
 	use({ "tpope/vim-fugitive" }) -- git client
-	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- indent/comment/starter
 
