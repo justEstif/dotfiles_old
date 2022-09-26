@@ -153,33 +153,6 @@ local comps = {
 			right_sep = "",
 		},
 	},
-	-- git info
-	git = {
-		branch = {
-			provider = "git_branch",
-			icon = " ",
-			hl = { fg = colors.fg },
-			left_sep = "  ",
-		},
-		add = {
-			provider = "git_diff_added",
-			icon = " ",
-			hl = { fg = colors.green },
-			left_sep = " ",
-		},
-		change = {
-			provider = "git_diff_changed",
-			icon = " ",
-			hl = { fg = colors.orange },
-			left_sep = " ",
-		},
-		remove = {
-			provider = "git_diff_removed",
-			icon = " ",
-			hl = { fg = colors.red },
-			left_sep = " ",
-		},
-	},
 }
 
 local components = {
@@ -196,10 +169,6 @@ table.insert(components.inactive, {})
 table.insert(components.active[1], comps.vi_mode.left)
 table.insert(components.active[1], comps.file.info)
 table.insert(components.inactive[1], comps.file.info)
-table.insert(components.active[1], comps.git.branch)
-table.insert(components.active[1], comps.git.add)
-table.insert(components.active[1], comps.git.change)
-table.insert(components.active[1], comps.git.remove)
 
 -- Left Section
 table.insert(components.active[2], comps.diagnos.err)
