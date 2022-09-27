@@ -37,22 +37,18 @@ autocmd("filetype", {
 		bind("<S-Tab>", "mf") -- remove mark
 		bind("<leader><tab>", "mu") -- remove all marks
 
-		-- Files
-		bind("ff", ":!touch ") -- create file
-		bind("fF", ":!mkdir -p ") -- create folder
-		bind("fe", "R") -- Rename
-		bind("fc", "mc") -- copy
-		bind("fC", "mtmc")
-		bind("fx", "mm") -- move marked files
-		bind("fX", "mtmm")
-		bind("f;", "mx") -- run command
-
-		bind("fl", ' :echo join(netrw#Expose("netrwmarkfilelist"), "\n")<CR>') -- show list of marked files
-		bind("fq", [[:echo 'Target:' . netrw#Expose("netrwmftgt")<CR>]]) -- show the target directory,
-		bind("fd", "mtfq")
-
+		-- Bookmarks
 		bind("bb", "mb") -- To create a bookmark.
 		bind("bd", "mB") -- To remove the most recent bookmark.
 		bind("bl", "gb") -- To jump to the most recent bookmark.
+
+
+    -- Files
+		bind("ff", ":!touch ") -- create file
+		bind("fF", ":!mkdir -p ") -- create folder
+		bind("fm", ":!mv ") -- move
+		bind("fc", ":!cp -r ") -- copy
+		bind("fr", "R") -- Rename
+		bind("f;", "mx") -- run command
 	end,
 })

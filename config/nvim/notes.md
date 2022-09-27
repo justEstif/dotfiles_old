@@ -58,3 +58,13 @@ vim magic search: <https://vim.fandom.com/wiki/Simplifying_regular_expressions_u
 TODO: Make the search exact only
 
 clear quickfix list `:cexpr []`
+
+The vim file is under nvim/lua/config
+vim.cmd('source ' .. nvimrc .. '/lua/config/goyo.vim')```
+
+
+-- { desc = "Change directory to current file", silent = false }
+map("n", "cd", function()
+	vim.api.nvim_set_current_dir(vim.fn.expand("%:p:h"))
+	print("Current directory is: " .. vim.fn.getcwd())
+end)
