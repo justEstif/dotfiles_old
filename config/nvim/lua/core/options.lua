@@ -23,7 +23,6 @@ local options = {
 	showmatch = true, -- Highlight matching parenthesis
 
 	-- Line Number
-	number = true, -- true of number
 	relativenumber = true, -- relative numebr
 	numberwidth = 1, -- width of number
 	signcolumn = "yes:1", -- sign column default size
@@ -42,7 +41,6 @@ local options = {
 	laststatus = 3, -- Set global statusline
 	pumheight = 15, -- pop up menu height
 	cursorline = true, -- show cursorline
-	showtabline = 0, -- disable tabline
 
 	-- Tabs, indent
 	expandtab = true, -- Use spaces instead of tabs
