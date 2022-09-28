@@ -14,7 +14,7 @@ local map = function(mode, lhs, rhs, opts)
 end
 
 -- disable keys
-local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", ",", " " }
+local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", ",", " ", "<C-z>" }
 for _, disable_key in pairs(disable_keys) do
 	map("", disable_key, "<nop>")
 end
