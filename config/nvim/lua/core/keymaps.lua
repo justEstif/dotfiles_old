@@ -31,6 +31,12 @@ map("n", "<leader>q", ":%bd!<CR>:lua MiniStarter.open()<cr>") -- kill all buffer
 map("v", "<", "<gv") -- stay in indent mode
 map("v", ">", ">gv") -- stay in indent mode
 
+-- Resize with arrows
+map("n", "<C-Up>", ":resize -2<CR>")
+map("n", "<C-Down>", ":resize +2<CR>")
+map("n", "<C-Left>", ":vertical resize +2<CR>")
+map("n", "<C-Right>", ":vertical resize -2<CR>")
+
 -- Others
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 map("v", "@", ":normal @") -- apply macro on visual range
@@ -43,7 +49,10 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 map("n", "<leader>da", ":Lexplore! %:p:h<CR>")
 map("n", "<leader>dd", ":Lexplore!<CR>")
 
-map("n", "<C-t>", "<C-w>s:term<CR>")
+-- Terminal
+map("n", "<C-t>", function()
+	require("core.utils.term")()
+end)
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
