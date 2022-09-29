@@ -73,10 +73,3 @@ vim.cmd([[
     au User MiniStarterOpened nmap <buffer> <leader>dd <Cmd>Lexplore<CR>
   augroup END
 ]])
-
--- Mini tabline
-local tabline_status, tabline = pcall(require, "mini.tabline")
-if not tabline_status then
-	return
-end
-tabline.setup()
