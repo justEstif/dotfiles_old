@@ -45,9 +45,11 @@ map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
 map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- open link under cursor
 
+map("n", "<leader>b", ":b <C-d>") -- switch buffers
+
 -- Netrw
-map("n", "<leader>da", ":Lexplore! %:p:h<CR>")
-map("n", "<leader>dd", ":Lexplore!<CR>")
+map("n", "<leader>da", ":Lexplore %:p:h<CR>")
+map("n", "<leader>dd", ":Lexplore<CR>")
 
 -- Terminal
 map({ "i", "n" }, "<C-t>", function()
