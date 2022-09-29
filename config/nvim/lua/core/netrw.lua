@@ -32,22 +32,11 @@ autocmd("filetype", {
 		bind(".", "gh") -- toggle dotfiles
 		bind("<leader>dd", ":Lexplore<CR>") -- close if open
 
-		-- Marks
-		bind("<Tab>", "mf") -- add mark
-		bind("<S-Tab>", "mf") -- remove mark
-		bind("<leader><tab>", "mu") -- remove all marks
-
-		-- Bookmarks
-		bind("bb", "mb") -- To create a bookmark.
-		bind("bd", "mB") -- To remove the most recent bookmark.
-		bind("bl", "gb") -- To jump to the most recent bookmark.
-
     -- Files
 		bind("ff", ":!touch ") -- create file
-		bind("fF", ":!mkdir -p ") -- create folder
-		bind("fm", ":!mv ") -- move
+		bind("fd", ":!mkdir -p ") -- create folder
+		bind("fm", ":!mv ") -- move/rename
 		bind("fc", ":!cp -r ") -- copy
-		bind("fd", ":!rm -r ") -- delete
-		bind("fr", "R") -- Rename
+		bind("D", ":!rm -r ") -- delete
 	end,
 })
