@@ -42,6 +42,11 @@ local options = {
 	pumheight = 15, -- pop up menu height
 	cursorline = true, -- show cursorline
 
+	-- transparent wildmenu and popups
+	winblend = 0,
+	wildoptions = "pum",
+	pumblend = 0,
+
 	-- Tabs, indent
 	expandtab = true, -- Use spaces instead of tabs
 	shiftwidth = 2, -- Shift 2 spaces when tab
@@ -86,7 +91,7 @@ end
 
 local options_append = {
 	shortmess = "sI", -- Disable nvim introcoreop
-	path = "**", -- makes :find === <C-p>
+	path = { "**" }, -- makes :find === <C-p>
 	-- ignore these files in search
 	wildignore = "*.zip, *.png, *.jpg, *.gif, *.pdf, *DS_Store*, */.git/*, */node_modules/*, */build/*, package-lock.json",
 }

@@ -47,7 +47,7 @@ autocmd("filetype", {
 		bind("fF", ":!mkdir -p ") -- create folder
 		bind("fm", ":!mv ") -- move
 		bind("fc", ":!cp -r ") -- copy
+		bind("fd", ":!rm -r ") -- delete
 		bind("fr", "R") -- Rename
-		bind("f;", "mx") -- run command
 	end,
 })
