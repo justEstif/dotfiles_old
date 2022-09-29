@@ -12,7 +12,7 @@ if not status_ok_lspconfig then
 	return
 end
 
-local servers = { "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss" }
+local servers = { "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss", "prismals" }
 
 lsp_installer.setup({
 	ensure_installed = servers,

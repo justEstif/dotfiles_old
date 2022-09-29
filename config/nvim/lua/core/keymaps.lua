@@ -50,7 +50,7 @@ map("n", "<leader>da", ":Lexplore! %:p:h<CR>")
 map("n", "<leader>dd", ":Lexplore!<CR>")
 
 -- Terminal
-map("n", "<C-t>", function()
+map({ "i", "n" }, "<C-t>", function()
 	require("core.utils.term")()
 end)
 -----------------------------------------------------------
