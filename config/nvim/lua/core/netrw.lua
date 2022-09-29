@@ -42,7 +42,6 @@ autocmd("filetype", {
 		bind("bd", "mB") -- To remove the most recent bookmark.
 		bind("bl", "gb") -- To jump to the most recent bookmark.
 
-
     -- Files
 		bind("ff", ":!touch ") -- create file
 		bind("fF", ":!mkdir -p ") -- create folder

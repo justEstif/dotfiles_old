@@ -72,6 +72,11 @@ return packer.startup(function(use)
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- indent/comment/starter
+	use({
+		"phaazon/mind.nvim", -- wiki
+		branch = "v2.2",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
 
 	-- Improve
 	use({ "tpope/vim-repeat" }) -- repeat -> hop char1
