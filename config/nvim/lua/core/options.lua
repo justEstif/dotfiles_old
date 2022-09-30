@@ -92,7 +92,7 @@ for _, plugin in pairs(disabled_built_ins) do
 end
 
 local options_append = {
-	-- shortmess = "sI", -- Disable nvim introcoreop
+	shortmess = "sI", -- Disable nvim introcoreop
 	path = { "**" }, -- makes :find === <C-p>
 	-- ignore these files in search
 	wildignore = "*.zip, *.png, *.jpg, *.gif, *.pdf, *DS_Store*, */.git/*, */node_modules/*, */build/*, package-lock.json",

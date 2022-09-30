@@ -25,7 +25,7 @@ vim.g.mapleader = ","
 -- Neovim shortcuts
 -----------------------------------------------------------
 -- Buffers
-map("n", "<leader>q", ":%bd<CR>:intro<CR>") -- kill all buffers
+map("n", "<leader>q", ":%bd<CR>") -- kill all buffers
 
 -- Indent
 map("v", "<", "<gv") -- stay in indent mode

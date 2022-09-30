@@ -34,22 +34,31 @@ autocmd("BufEnter", {
 
 -- Terminal settings:
 -- Open a Terminal on the right tab
-autocmd('CmdlineEnter', {
-  command = 'command! Term :botright vsplit term://$SHELL'
+autocmd("CmdlineEnter", {
+	command = "command! Term :botright vsplit term://$SHELL",
 })
 
 -- Enter insert mode when switching to terminal
-autocmd('TermOpen', {
-  command = 'setlocal listchars= nonumber norelativenumber nocursorline',
+autocmd("TermOpen", {
+	command = "setlocal listchars= nonumber norelativenumber nocursorline",
 })
 
-autocmd('TermOpen', {
-  pattern = '*',
-  command = 'startinsert'
+autocmd("TermOpen", {
+	pattern = "*",
+	command = "startinsert",
 })
 
 -- Close terminal buffer on process exit
-autocmd('BufLeave', {
-  pattern = 'term://*',
-  command = 'stopinsert'
+autocmd("BufLeave", {
+	pattern = "term://*",
+	command = "stopinsert",
 })
+
+-- Checks if there is a file open after Vim starts up,
+-- and if not, open the current working directory in Netrw.
+vim.cmd([[
+augroup InitNetrw
+  autocmd!
+  autocmd VimEnter * if expand("%") == "" | Lexplore | endif
+augroup END
+]])
