@@ -41,12 +41,7 @@ local options = {
 	laststatus = 3, -- Set global statusline
 	pumheight = 15, -- pop up menu height
 	cursorline = true, -- show cursorline
-	showtabline = 0,
-
-	-- transparent wildmenu and popups
-	winblend = 0,
-	wildoptions = "pum",
-	pumblend = 0,
+	showtabline = 0, -- don't show tabline
 
 	-- Tabs, indent
 	expandtab = true, -- Use spaces instead of tabs
