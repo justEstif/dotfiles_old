@@ -41,7 +41,7 @@ local options = {
 	laststatus = 3, -- Set global statusline
 	pumheight = 15, -- pop up menu height
 	cursorline = true, -- show cursorline
-  showtabline = 0,
+	showtabline = 0,
 
 	-- transparent wildmenu and popups
 	winblend = 0,
@@ -61,6 +61,7 @@ local options = {
 	lazyredraw = true, -- Faster scrolling
 	updatetime = 300, -- ms to wait for trigger an event
 	undofile = true, -- enable persistent undo
+	shada = "" -- turn off shada
 }
 
 -- Settings Options
@@ -91,7 +92,7 @@ for _, plugin in pairs(disabled_built_ins) do
 end
 
 local options_append = {
-	shortmess = "sI", -- Disable nvim introcoreop
+	-- shortmess = "sI", -- Disable nvim introcoreop
 	path = { "**" }, -- makes :find === <C-p>
 	-- ignore these files in search
 	wildignore = "*.zip, *.png, *.jpg, *.gif, *.pdf, *DS_Store*, */.git/*, */node_modules/*, */build/*, package-lock.json",
