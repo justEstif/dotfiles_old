@@ -25,7 +25,7 @@ vim.g.mapleader = ","
 -- Neovim shortcuts
 -----------------------------------------------------------
 -- Buffers
-map("n", "<leader>q", ":%bd<CR>") -- kill all buffers
+map("n", "<leader>q", ":bufdo bdelete<CR>") -- kill all buffers
 
 -- Indent
 map("v", "<", "<gv") -- stay in indent mode
@@ -52,7 +52,7 @@ map("n", "<leader>da", ":Lexplore %:p:h<CR>")
 map("n", "<leader>dd", ":Lexplore<CR>")
 
 -- Terminal
-map({ "i", "n" }, "<C-t>", function()
+map({ "t", "i", "n" }, "<C-t>", function()
 	require("core.utils.term")()
 end)
 -----------------------------------------------------------
