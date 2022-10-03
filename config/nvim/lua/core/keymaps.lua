@@ -42,12 +42,12 @@ map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 map("v", "@", ":normal @") -- apply macro on visual range
 map("t", "<Esc>", [[<C-\><C-n>]]) -- esc exit terminal
 map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
-map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
+map("n", "<leader>rr", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- open link under cursor
 map("n", "<leader>cd", [[:lcd %:p:h<CR>:pwd<CR>]]) -- change working dir
 
 -- Buffers
-map("n", "<leader>b", ":b <C-d>") -- switch buffers
+map("n", "<leader>bb", ":b <C-d>") -- switch buffers
 
 -- Netrw
 map("n", "<leader>da", ":Lexplore %:p:h<CR>")
@@ -65,6 +65,8 @@ end)
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file in dir
 map("n", "ms", ":Telescope live_grep<CR>") -- find text in current dir
 
+-- Fugitive
+map("n", '<leader>gg', ":tab G<cr>") -- open Fugitive
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
