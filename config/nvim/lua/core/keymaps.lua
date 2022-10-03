@@ -44,7 +44,9 @@ map("t", "<Esc>", [[<C-\><C-n>]]) -- esc exit terminal
 map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
 map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- open link under cursor
+map("n", "<leader>cd", [[:lcd %:p:h<CR>:pwd<CR>]]) -- change working dir
 
+-- Buffers
 map("n", "<leader>b", ":b <C-d>") -- switch buffers
 
 -- Netrw
