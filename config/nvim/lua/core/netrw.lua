@@ -7,9 +7,10 @@ local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 local options_append = {
 	netrw_keepdir = 0, --Keep the current directory and the browsing directory synced
-	netrw_winsize = "17", -- 30% size
+	netrw_winsize = "17", -- 17% size
 	netrw_banner = "0", -- hide banner
-	netrw_localcopydircmd = "cp -r", -- change copy command
+	netrw_localmkdir = "mkdir -p", -- change mkdir cmd
+	netrw_localcopycmd = "cp -r", -- change copy command
 	netrw_localrmdir = "rm -r", -- change delete command
 	netrw_list_hide = [['\(^\|\s\s\)\zs\.\S\+']],
 }
@@ -32,11 +33,22 @@ autocmd("filetype", {
 		bind(".", "gh") -- toggle dotfiles
 		bind("<leader>dd", ":Lexplore<CR>") -- close if open
 
-    -- Files
+		-- Marks
+		bind("<TAB>", "mf") -- toggle mark
+		bind("<S-TAB>", "mF") -- unmark
+		bind("<Leader><TAB>", "mu") -- unmark all
+
+		-- Files
 		bind("ff", ":!touch ") -- create file
 		bind("fd", ":!mkdir -p ") -- create folder
 		bind("fm", ":!mv ") -- move/rename
 		bind("fc", ":!cp -r ") -- copy
 		bind("D", ":!rm -r ") -- delete
+		bind("f;", "mx") -- run command
+		bind("fc", "mtmc") -- copy
+		bind("fx", "mtmm") -- cut
+		bind("fl", [[:echo join(netrw#Expose("netrwmarkfilelist"), "\n")<CR>]]) -- show list of marked
+		bind("fq", [[:echo 'Target:' . netrw#Expose("netrwmftgt")<CR>]]) -- show target dir
+		bind("fd", "mtfq")
 	end,
 })
