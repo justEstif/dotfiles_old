@@ -49,6 +49,5 @@ autocmd("filetype", {
 		bind("fx", "mtmm") -- cut
 		bind("fl", [[:echo join(netrw#Expose("netrwmarkfilelist"), "\n")<CR>]]) -- show list of marked
 		bind("fq", [[:echo 'Target:' . netrw#Expose("netrwmftgt")<CR>]]) -- show target dir
-		bind("fd", "mtfq")
 	end,
 })
