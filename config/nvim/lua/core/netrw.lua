@@ -36,7 +36,7 @@ autocmd("filetype", {
 		-- Marks
 		bind("<TAB>", "mf") -- toggle mark
 		bind("<S-TAB>", "mF") -- unmark
-		bind("<Leader><TAB>", "mu") -- unmark all
+		bind("<leader><TAB>", "mu") -- unmark all
 
 		-- Files
 		bind("ff", ":!touch ") -- create file
