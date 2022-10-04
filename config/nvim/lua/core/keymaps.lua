@@ -45,7 +45,7 @@ map("v", "@", ":normal @") -- apply macro on visual range
 map("t", "<Esc>", [[<C-\><C-n>]]) -- esc exit terminal
 map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
 
-map("n", "<leader>rr", ":so %<CR>") -- Reload configuration without restart nvim
+map("n", "<leader>rr", ":ReloadConfig<cr>") -- Reload configuration without restart nvim
 map("n", "<leader>cd", [[:lcd %:p:h<CR>:pwd<CR>]]) -- change working dir
 map("n", "<leader>dd", ":Lexplore<CR>") -- toggle netrw
 map({ "t", "i", "n" }, "<C-t>", [[:lua require("core.utils.term")()<cr>]]) -- toggle terminal
