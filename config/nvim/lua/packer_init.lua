@@ -50,7 +50,7 @@ return packer.startup(function(use)
 		"jose-elias-alvarez/typescript.nvim", -- ts config
 	})
 
-	-- Code completion
+	-- Code completion TODO Replace with mini.cmp
 	use({
 		"hrsh7th/nvim-cmp", -- cmp plugin
 		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
