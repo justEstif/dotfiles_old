@@ -8,7 +8,7 @@ local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 local options = {
 	-- General
 	mouse = "", -- Disable mouse support
-	clipboard = "unnamedplus", -- Copy/paste to system clipboard
+	clipboard = "unnamed", -- Copy/paste to system clipboard
 	swapfile = false, -- Don't modify file open in another nvim processs
 	completeopt = "menuone,noinsert,noselect", -- Autocomplete options
 	joinspaces = false, -- Don't autoinsert two spaces after '.', '?', '!' for join command.
@@ -56,7 +56,6 @@ local options = {
 	lazyredraw = true, -- Faster scrolling
 	updatetime = 300, -- ms to wait for trigger an event
 	undofile = true, -- enable persistent undo
-	shada = "" -- turn off shada
 }
 
 -- Settings Options
