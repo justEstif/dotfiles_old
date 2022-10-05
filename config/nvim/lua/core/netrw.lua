@@ -46,9 +46,5 @@ autocmd("filetype", {
 		bind("fc", ":!cp -r ") -- copy
 		bind("D", ":!rm -r ") -- delete
 		bind("f;", "mx") -- run command
-		bind("fc", "mtmc") -- copy
-		bind("fx", "mtmm") -- cut
-		bind("fl", [[:echo join(netrw#Expose("netrwmarkfilelist"), "\n")<CR>]]) -- show list of marked
-		bind("fq", [[:echo 'Target:' . netrw#Expose("netrwmftgt")<CR>]]) -- show target dir
 	end,
 })
