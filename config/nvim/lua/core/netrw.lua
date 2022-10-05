@@ -27,6 +27,7 @@ autocmd("filetype", {
 			vim.keymap.set("n", lhs, rhs, { remap = true, buffer = true })
 		end
 
+    -- Navigation
 		bind("H", "u") -- preview dir
 		bind("h", "-^") -- go up
 		bind("l", "<CR>") -- open file or dir

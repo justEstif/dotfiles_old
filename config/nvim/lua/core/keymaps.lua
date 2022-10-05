@@ -29,6 +29,10 @@ map("n", "<leader>bb", ":b <C-d>") -- buffer list
 map("n", "<leader>qq", ":bufdo bdelete<CR>") -- kill all buffers
 map("n", "<leader>qQ", ":bufdo bdelete<CR>:q<cr>") -- kill all buffers and quit
 
+-- Clipboard
+map({"n", 'v'}, "cy", '"*y')
+map({"n", 'v'}, "cp", '"*p')
+
 -- Should be default
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 map("v", "<", "<gv") -- stay in indent mode
