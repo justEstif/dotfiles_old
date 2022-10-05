@@ -56,7 +56,7 @@ map({ "t", "n" }, "<C-t>", [[:lua require("core.utils.term")()<cr>]]) -- toggle 
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
 
-map("n", "<leader>cd", ":Telescope cder<cr>") -- change working dir
+map("n", "<leader>cd", ":Telescope cder<cr>") -- tc: change wdir
 map("n", "<C-p>", ":Telescope find_files<CR>") -- tc: find file
 map("n", "ms", ":Telescope live_grep<CR>") -- tc: find text
 map("n", "<leader>gg", ":tab G<cr>") -- fg: open

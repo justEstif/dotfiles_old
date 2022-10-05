@@ -27,7 +27,7 @@ autocmd("filetype", {
 			vim.keymap.set("n", lhs, rhs, { remap = true, buffer = true })
 		end
 
-    -- Navigation
+		-- Navigation
 		bind("H", "u") -- preview dir
 		bind("h", "-^") -- go up
 		bind("l", "<CR>") -- open file or dir
@@ -46,5 +46,8 @@ autocmd("filetype", {
 		bind("fc", ":!cp -r ") -- copy
 		bind("D", ":!rm -r ") -- delete
 		bind("f;", "mx") -- run command
+
+    -- Overwrite default
+    bind("ms", ':Telescope live_grep<cr>')
 	end,
 })
