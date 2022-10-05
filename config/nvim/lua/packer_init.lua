@@ -46,7 +46,8 @@ return packer.startup(function(use)
 	-- LSP
 	use({
 		"neovim/nvim-lspconfig", -- nvim native lsp
-		"williamboman/nvim-lsp-installer", -- lsp installer
+		"williamboman/mason.nvim", -- Installer for external tools
+		"williamboman/mason-lspconfig.nvim", -- mason extension for lspconfig
 		"jose-elias-alvarez/typescript.nvim", -- ts config
 	})
 

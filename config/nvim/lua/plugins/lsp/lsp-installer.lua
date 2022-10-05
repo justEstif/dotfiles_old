@@ -2,7 +2,14 @@
 -- LSP-Installer configuration file
 ----------------------------------------------------------
 
-local status_ok_lsp_installer, lsp_installer = pcall(require, "nvim-lsp-installer")
+local status_ok_mason, mason = pcall(require, "mason")
+if not status_ok_mason then
+	return
+end
+
+mason.setup({})
+
+local status_ok_lsp_installer, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not status_ok_lsp_installer then
 	return
 end
@@ -14,7 +21,7 @@ end
 
 local servers = { "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss", "prismals" }
 
-lsp_installer.setup({
+mason_lspconfig.setup({
 	ensure_installed = servers,
 })
 
