@@ -84,6 +84,7 @@ return packer.startup(function(use)
 	use({ "tpope/vim-unimpaired" }) -- keybinds using [], and <>
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
+	use({ "zane-/cder.nvim" }) -- change wdir using telescope
 
 	-- Appearance
 	use({ "feline-nvim/feline.nvim" }) -- statusline

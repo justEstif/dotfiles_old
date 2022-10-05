@@ -30,8 +30,8 @@ map("n", "<leader>qq", ":bufdo bdelete<CR>") -- kill all buffers
 map("n", "<leader>qQ", ":bufdo bdelete<CR>:q<cr>") -- kill all buffers and quit
 
 -- Clipboard
-map({"n", 'v'}, "cy", '"*y')
-map({"n", 'v'}, "cp", '"*p')
+map({ "n", "v" }, "cy", '"*y')
+map({ "n", "v" }, "cp", '"*p')
 
 -- Should be default
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
@@ -48,7 +48,6 @@ map("n", "<C-Left>", ":vertical resize +2<CR>")
 map("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Shortcuts
-map("n", "<leader>cd", [[:lcd %:p:h<CR>:pwd<CR>]]) -- change working dir
 map("n", "<leader>dd", ":Lexplore<CR>") -- toggle netrw
 map("n", "<leader>rr", ":ReloadConfig<cr>") -- Reload configuration without restart nvim
 map({ "t", "n" }, "<C-t>", [[:lua require("core.utils.term")()<cr>]]) -- toggle terminal
@@ -57,6 +56,7 @@ map({ "t", "n" }, "<C-t>", [[:lua require("core.utils.term")()<cr>]]) -- toggle 
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
 
+map("n", "<leader>cd", ":Telescope cder<cr>") -- change working dir
 map("n", "<C-p>", ":Telescope find_files<CR>") -- tc: find file
 map("n", "ms", ":Telescope live_grep<CR>") -- tc: find text
 map("n", "<leader>gg", ":tab G<cr>") -- fg: open
