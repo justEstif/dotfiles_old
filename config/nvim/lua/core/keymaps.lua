@@ -50,7 +50,7 @@ map("n", "<C-Right>", ":vertical resize -2<CR>")
 -- Shortcuts
 map("n", "<leader>cd", [[:cd %:p:h<CR>:pwd<CR>]]) -- change wdir
 map("n", "<leader>dd", ":Lexplore<CR>") -- toggle netrw
-map("n", "<leader>rr", ":ReloadConfig<cr>") -- Reload configuration without restart nvim
+map("n", "<leader>rr", ":so %<CR>") -- Reload configuration without restart nvim
 map({ "t", "n" }, "<C-t>", [[:lua require("core.utils.term")()<cr>]]) -- toggle terminal
 
 -----------------------------------------------------------
