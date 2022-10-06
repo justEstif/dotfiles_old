@@ -9,13 +9,14 @@ end
 
 local formatting = null_ls.builtins.formatting
 local completion = null_ls.builtins.completion
-local code_actions = null_ls.builtins.code_actions
+local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier, -- prettier
-		code_actions.eslint, -- eslint
+		diagnostics.eslint, -- eslint
+		diagnostics.jsonlint, -- json
 		formatting.rustywind, -- tailwind
 		formatting.stylua, -- lua
 		completion.spell.with({
