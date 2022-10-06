@@ -12,7 +12,7 @@ require("plugins.autotag")
 require("plugins.lsp")
 require("plugins.mind")
 require("plugins.mini")
+require("plugins.nvim-cmp")
 require("plugins.null-ls")
 require("plugins.nvim-treesitter")
 require("plugins.telescope")
-

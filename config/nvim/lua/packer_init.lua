@@ -51,9 +51,20 @@ return packer.startup(function(use)
 		"jose-elias-alvarez/typescript.nvim", -- ts config
 	})
 
+	-- Code completion
+	use({
+		"hrsh7th/nvim-cmp", -- cmp plugin
+		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
+		"hrsh7th/cmp-path", -- path cmp
+		"hrsh7th/cmp-buffer", -- buffer cmp
+		"L3MON4D3/LuaSnip", -- snippets engine
+		"saadparwaiz1/cmp_luasnip", -- snippets cmp
+		"rafamadriz/friendly-snippets", -- common snippets
+	})
+
 	-- Telescope
 	use({
-		"nvim-telescope/telescope.nvim", -- telescope
+		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
 		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	})
@@ -69,8 +80,8 @@ return packer.startup(function(use)
 	})
 
 	-- Improve
-	use({ "tpope/vim-repeat" }) -- repeat -> hop char1
-	use({ "tpope/vim-surround" }) -- surround
+	use({ "tpope/vim-repeat" }) -- repeat
+	-- use({ "tpope/vim-surround" }) -- surround
 	use({ "tpope/vim-unimpaired" }) -- keybinds using [], and <>
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
