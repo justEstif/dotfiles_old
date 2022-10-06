@@ -16,7 +16,7 @@ null_ls.setup({
 	sources = {
 		formatting.prettier, -- prettier
 		code_actions.eslint, -- eslint
-		formatting.rustywind,
+		formatting.rustywind, -- tailwind
 		formatting.stylua, -- lua
 		completion.spell.with({
 			filetypes = { "markdown", "gitcommit" },

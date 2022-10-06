@@ -12,12 +12,6 @@ if not luasnip_status_ok then
 	return
 end
 
--- Tab mapping util
-local check_backspace = function()
-	local col = vim.fn.col(".") - 1
-	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
-end
-
 local kind_icons = {
 	Text = "",
 	Method = "",
@@ -39,7 +33,7 @@ local kind_icons = {
 	Reference = "",
 	Folder = "",
 	EnumMember = "",
-  Constant = "",
+	Constant = "",
 	Struct = "",
 	Event = "鬒",
 	Operator = "",
@@ -59,51 +53,20 @@ cmp.setup({
 
 	-- Completion settings
 	completion = {
-		--completeopt = 'menu,menuone,noselect'
 		keyword_length = 2,
 	},
 
 	-- Key mapping
 	mapping = {
-		["<C-j>"] = cmp.mapping.select_next_item(),
-		["<C-k>"] = cmp.mapping.select_prev_item(),
+		["<Tab>"] = cmp.mapping.select_next_item(), -- scroll using tab
+		["<S-Tab>"] = cmp.mapping.select_prev_item(), -- scroll using s-tab
 		["<C-b>"] = cmp.mapping.scroll_docs(-4), -- scroll docs
 		["<C-f>"] = cmp.mapping.scroll_docs(4), -- scroll docs
-		["<C-Space>"] = cmp.mapping.complete(),
-		["<C-e>"] = cmp.mapping.close(),
-		["<CR>"] = cmp.mapping.confirm({
+		["<C-Space>"] = cmp.mapping.complete(), -- show using <C-space>
+		["\\"] = cmp.mapping.close(), -- close using \
+		["<CR>"] = cmp.mapping.confirm({ -- using enter to pick
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
-		}),
-
-		-- Tab mapping
-		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expandable() then
-				luasnip.expand()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
-			elseif check_backspace() then
-				fallback()
-			else
-				fallback()
-			end
-		end, {
-			"i",
-			"s",
-		}),
-		["<S-Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
-				luasnip.jump(-1)
-			else
-				fallback()
-			end
-		end, {
-			"i",
-			"s",
 		}),
 	},
 
