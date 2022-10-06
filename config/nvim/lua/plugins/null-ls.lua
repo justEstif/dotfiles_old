@@ -8,7 +8,6 @@ if not null_ls_status_ok then
 end
 
 local formatting = null_ls.builtins.formatting
-local completion = null_ls.builtins.completion
 local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
@@ -16,10 +15,7 @@ null_ls.setup({
 	sources = {
 		formatting.prettier, -- prettier
 		code_actions.eslint, -- eslint
-		formatting.rustywind,
+		formatting.rustywind, -- tailwind
 		formatting.stylua, -- lua
-		completion.spell.with({
-			filetypes = { "markdown", "gitcommit" },
-		}),
 	},
 })

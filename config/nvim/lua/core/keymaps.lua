@@ -60,6 +60,10 @@ map({ "t", "n" }, "<C-t>", [[:lua require("core.utils.term")()<cr>]]) -- toggle 
 map("n", "<C-p>", ":Telescope find_files<CR>") -- tc: find file
 map("n", "ms", ":Telescope live_grep<CR>") -- tc: find text
 map("n", "<leader>gg", ":tab G<cr>") -- fg: open
+
+-- scroll cmp using c-j and c-k
+map("i", "<C-j>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { noremap = true, expr = true })
+map("i", "<C-k>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { noremap = true, expr = true })
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
