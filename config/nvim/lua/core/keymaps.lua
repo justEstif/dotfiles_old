@@ -40,8 +40,8 @@ map("n", "]e", ":m .-2<CR>==") -- move line down(n)
 map("v", "]e", ":m '<-2<CR>gv=gv") -- move line down(v)
 map("n", "[<space>", "o<esc>k") -- create empty line below
 map("n", "]<space>", "O<esc>j") -- create empty line above
-map("n", "[b", ':bprevious<cr>') -- prev buffer
-map("n", "]b", ':bnext<cr>') -- next buffer
+map("n", "[b", ":bprevious<cr>") -- prev buffer
+map("n", "]b", ":bnext<cr>") -- next buffer
 
 -- Should be default
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
@@ -61,7 +61,7 @@ map("n", "<C-Right>", ":vertical resize -2<CR>")
 map("n", "<leader>cd", [[:cd %:p:h<CR>:pwd<CR>]]) -- change wdir
 map("n", "<leader>dd", ":Lexplore<CR>") -- toggle netrw
 map("n", "<leader>rr", ":so %<CR>") -- Reload configuration without restart nvim
-map({ "t", "n" }, "<C-t>", [[:lua require("core.utils.term")()<cr>]]) -- toggle terminal
+map("n", "<C-t>", ":ToggleTerminal<cr>") -- toggle terminal
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
