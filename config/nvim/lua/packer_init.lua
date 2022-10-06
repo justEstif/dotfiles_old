@@ -80,10 +80,7 @@ return packer.startup(function(use)
 	})
 
 	-- Improve
-	use({ "tpope/vim-repeat" }) -- repeat
-	-- use({ "tpope/vim-surround" }) -- surround
-	use({ "tpope/vim-unimpaired" }) -- keybinds using [], and <>
-	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
+  use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 
 	-- Appearance

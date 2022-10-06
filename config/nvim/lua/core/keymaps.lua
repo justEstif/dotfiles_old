@@ -33,6 +33,16 @@ map("n", "<leader>qQ", ":bufdo bdelete<CR>:q<cr>") -- kill all buffers and quit
 map({ "n", "v" }, "cy", '"*y')
 map({ "n", "v" }, "cp", '"*p')
 
+-- thanks tpope
+map("n", "[e", ":m .+1<CR>==") -- move line up(n)
+map("v", "[e", ":m '>+1<CR>gv=gv") -- move line up(v)
+map("n", "]e", ":m .-2<CR>==") -- move line down(n)
+map("v", "]e", ":m '<-2<CR>gv=gv") -- move line down(v)
+map("n", "[<space>", "o<esc>k") -- create empty line below
+map("n", "]<space>", "O<esc>j") -- create empty line above
+map("n", "[b", ':bprevious<cr>') -- prev buffer
+map("n", "]b", ':bnext<cr>') -- next buffer
+
 -- Should be default
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 map("v", "<", "<gv") -- stay in indent mode
@@ -56,7 +66,6 @@ map({ "t", "n" }, "<C-t>", [[:lua require("core.utils.term")()<cr>]]) -- toggle 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
-
 map("n", "<C-p>", ":Telescope find_files<CR>") -- tc: find file
 map("n", "ms", ":Telescope live_grep<CR>") -- tc: find text
 map("n", "<leader>gg", ":tab G<cr>") -- fg: open
