@@ -33,7 +33,7 @@ map("n", "<leader>qQ", ":bufdo bdelete<CR>:q<cr>") -- kill all buffers and quit
 map({ "n", "v" }, "cy", '"*y')
 map({ "n", "v" }, "cp", '"*p')
 
--- thanks tpope
+-- vim-unimpaired: thanks tpope
 map("n", "[e", ":m .+1<CR>==") -- move line up(n)
 map("v", "[e", ":m '>+1<CR>gv=gv") -- move line up(v)
 map("n", "]e", ":m .-2<CR>==") -- move line down(n)

@@ -47,8 +47,6 @@ local config = {
 		xz = { icon = "", name = "XZ" },
 		zip = { icon = "", name = "Zip" },
 	},
-	default = true,
 }
 
-devicons.set_default_icon("")
 devicons.setup(config)
