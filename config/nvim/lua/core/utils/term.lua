@@ -1,3 +1,7 @@
+-----------------------------------------------------------
+-- Toggle Terminal
+-----------------------------------------------------------
+
 -- Credit: https://github.com/3BD-R/nvim/blob/main/lua/basic/term.lua
 
 local te_buf = nil

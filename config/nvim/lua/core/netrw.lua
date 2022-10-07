@@ -47,7 +47,7 @@ autocmd("filetype", {
 		bind("D", ":!rm -r ") -- delete
 		bind("f;", "mx") -- run command
 
-    -- Overwrite default
+    -- Override default
     bind("ms", ':Telescope live_grep<cr>')
 	end,
 })
