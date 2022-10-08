@@ -25,7 +25,6 @@ vim.g.mapleader = ","
 -- Neovim shortcuts
 -----------------------------------------------------------
 -- Buffers
-map("n", "<leader>bb", ":b <C-d>") -- buffer list
 map("n", "<leader>qq", ":bufdo bdelete<CR>") -- kill all buffers
 map("n", "<leader>qQ", ":bufdo bdelete<CR>:q<cr>") -- kill all buffers and quit
 

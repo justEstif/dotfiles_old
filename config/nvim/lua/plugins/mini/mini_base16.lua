@@ -30,4 +30,5 @@ mini_base16.setup({
 
 vim.cmd([[hi LineNr guibg=NONE]]) -- line number
 vim.cmd([[hi SignColumn guibg=NONE]]) -- signcolumn
-vim.cmd([[hi Comment guifg=#ABCDEF]]) -- comment color
+vim.cmd([[hi VertSplit ctermbg=NONE guibg=NONE]]) -- split
+-- vim.cmd([[hi Comment guifg=#ABCDEF]]) -- comment color

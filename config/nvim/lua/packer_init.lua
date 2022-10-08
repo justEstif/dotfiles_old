@@ -73,19 +73,13 @@ return packer.startup(function(use)
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- indent/comment/starter
-	use({
-		"phaazon/mind.nvim", -- wiki
-		branch = "v2.2",
-		requires = { "nvim-lua/plenary.nvim" },
-	})
 
 	-- Improve
-  use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
+	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 
 	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
-	use({ "junegunn/goyo.vim" }) -- zen
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

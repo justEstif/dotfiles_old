@@ -1,6 +1,7 @@
 -----------------------------------------------------------
 -- Mini Surround configuration file
 ----------------------------------------------------------
+
 local status_surround, mini_surround = pcall(require, "mini.surround")
 if not status_surround then
 	return

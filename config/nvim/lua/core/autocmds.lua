@@ -53,12 +53,3 @@ autocmd("BufLeave", {
 	pattern = "term://*",
 	command = "stopinsert",
 })
-
--- Checks if there is a file open after Vim starts up,
--- and if not, open the current working directory in Netrw.
-vim.cmd([[
-augroup InitNetrw
-  autocmd!
-  autocmd VimEnter * if expand("%") == "" | edit . | endif
-augroup END
-]])
