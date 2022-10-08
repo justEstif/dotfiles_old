@@ -37,6 +37,5 @@ vim.cmd([[
     au User MiniStarterOpened nmap <buffer> k <Cmd>lua MiniStarter.update_current_item('prev')<CR>
     au User MiniStarterOpened nmap <buffer> <C-p> <Cmd>Telescope find_files<CR>
     au User MiniStarterOpened nmap <buffer> <leader>dd <Cmd>Lexplore<CR>
-    au User MiniStarterOpened nmap <buffer> m <Cmd>lua MiniStarter.close()<CR><Cmd>MindOpenProject<CR>
   augroup END
 ]])
