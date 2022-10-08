@@ -36,3 +36,5 @@ mini_comment.setup({
 })
 
 require("plugins.mini.mini_surround")
+require("plugins.mini.mini_base16")
+

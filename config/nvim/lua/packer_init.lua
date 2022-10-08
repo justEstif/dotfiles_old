@@ -84,7 +84,6 @@ return packer.startup(function(use)
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 
 	-- Appearance
-	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "junegunn/goyo.vim" }) -- zen
 

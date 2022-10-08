@@ -2,7 +2,6 @@
 
 require("packer_init")
 require("core.autocmds")
-require("core.colors")
 require("core.commands")
 require("core.keymaps")
 require("core.netrw")

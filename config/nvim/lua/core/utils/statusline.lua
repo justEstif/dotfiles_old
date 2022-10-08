@@ -133,7 +133,7 @@ function Statusline.inactive()
 end
 
 function Statusline.short()
-	return "%#StatusLineNC#   NvimTree"
+	return "%#StatusLineNC#   Netrw"
 end
 
 -- Remove whitespace on save
