@@ -73,6 +73,7 @@ return packer.startup(function(use)
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- indent/comment/starter
+	use({ "zane-/cder.nvim" }) -- project root
 
 	-- Improve
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags

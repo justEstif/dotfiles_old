@@ -57,7 +57,6 @@ map("n", "<C-Left>", ":vertical resize +2<CR>")
 map("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Shortcuts
-map("n", "<leader>cd", [[:cd %:p:h<CR>:pwd<CR>]]) -- change wdir
 map("n", "<leader>dd", ":Lexplore<CR>") -- toggle netrw
 map("n", "<leader>rr", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "<C-t>", ":ToggleTerminal<cr>") -- toggle terminal
@@ -67,6 +66,7 @@ map("n", "<C-t>", ":ToggleTerminal<cr>") -- toggle terminal
 -----------------------------------------------------------
 map("n", "<C-p>", ":Telescope find_files<CR>") -- tc: find file
 map("n", "ms", ":Telescope live_grep<CR>") -- tc: find text
+map("n", "<leader>cd", ":Telescope cder<cr>") -- tc: change wdir
 map("n", "<leader>gg", ":tab G<cr>") -- fg: open
 
 -- other keybindings in:
