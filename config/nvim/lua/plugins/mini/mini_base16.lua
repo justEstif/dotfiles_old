@@ -7,7 +7,6 @@ if not status_colors then
 	return
 end
 
--- nord
 mini_base16.setup({
 	palette = {
 		base00 = "#2E3440", -- background
