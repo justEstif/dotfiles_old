@@ -51,17 +51,6 @@ return packer.startup(function(use)
 		"jose-elias-alvarez/typescript.nvim", -- ts config
 	})
 
-	-- Code completion
-	use({
-		"hrsh7th/nvim-cmp", -- cmp plugin
-		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
-		"hrsh7th/cmp-path", -- path cmp
-		"hrsh7th/cmp-buffer", -- buffer cmp
-		"L3MON4D3/LuaSnip", -- snippets engine
-		"saadparwaiz1/cmp_luasnip", -- snippets cmp
-		"rafamadriz/friendly-snippets", -- common snippets
-	})
-
 	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",

@@ -64,7 +64,37 @@ M.on_attach = function(client, bufnr)
 	lsp_keymaps(bufnr)
 	lsp_highlight_document(client)
 
-	-- use null-ls for these languages(instead of lsp)
+	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.MiniCompletion.completefunc_lsp")
+	local kindIcons = {
+		"",
+		"",
+		"",
+		"",
+		"ﰠ",
+		"",
+		"ﴯ",
+		"",
+		"",
+		"ﰠ",
+		"塞",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"פּ",
+		"",
+		"",
+		"𝙏",
+	}
+	require("vim.lsp.protocol").CompletionItemKind = kindIcons
+
+	-- use null-ls for these languages
 	local ignored_formatters = { "tsserver", "sumneko_lua", "html" }
 	for _, value in ipairs(ignored_formatters) do
 		if value == client.name then
@@ -73,13 +103,6 @@ M.on_attach = function(client, bufnr)
 	end
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-
-local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not status_ok then
-	return
-end
-
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+M.capabilities = vim.lsp.protocol.make_client_capabilities()
 
 return M
