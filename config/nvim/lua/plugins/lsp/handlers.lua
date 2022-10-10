@@ -65,34 +65,32 @@ M.on_attach = function(client, bufnr)
 	lsp_highlight_document(client)
 
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.MiniCompletion.completefunc_lsp")
-	local kindIcons = {
-		"",
-		"",
-		"",
-		"",
-		"ﰠ",
-		"",
-		"ﴯ",
-		"",
-		"",
-		"ﰠ",
-		"塞",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"פּ",
-		"",
-		"",
-		"𝙏",
-	}
-	require("vim.lsp.protocol").CompletionItemKind = kindIcons
+
+	require("vim.lsp.protocol").CompletionItemKind[1] = ""
+	require("vim.lsp.protocol").CompletionItemKind[2] = ""
+	require("vim.lsp.protocol").CompletionItemKind[3] = ""
+	require("vim.lsp.protocol").CompletionItemKind[4] = ""
+	require("vim.lsp.protocol").CompletionItemKind[5] = "ﰠ"
+	require("vim.lsp.protocol").CompletionItemKind[6] = ""
+	require("vim.lsp.protocol").CompletionItemKind[7] = "ﴯ"
+	require("vim.lsp.protocol").CompletionItemKind[8] = ""
+	require("vim.lsp.protocol").CompletionItemKind[9] = ""
+	require("vim.lsp.protocol").CompletionItemKind[10] = "ﰠ"
+	require("vim.lsp.protocol").CompletionItemKind[11] = "塞"
+	require("vim.lsp.protocol").CompletionItemKind[12] = ""
+	require("vim.lsp.protocol").CompletionItemKind[13] = ""
+	require("vim.lsp.protocol").CompletionItemKind[14] = ""
+	require("vim.lsp.protocol").CompletionItemKind[15] = ""
+	require("vim.lsp.protocol").CompletionItemKind[16] = ""
+	require("vim.lsp.protocol").CompletionItemKind[17] = ""
+	require("vim.lsp.protocol").CompletionItemKind[18] = ""
+	require("vim.lsp.protocol").CompletionItemKind[19] = ""
+	require("vim.lsp.protocol").CompletionItemKind[20] = ""
+	require("vim.lsp.protocol").CompletionItemKind[21] = ""
+	require("vim.lsp.protocol").CompletionItemKind[22] = "פּ"
+	require("vim.lsp.protocol").CompletionItemKind[23] = ""
+	require("vim.lsp.protocol").CompletionItemKind[24] = ""
+	require("vim.lsp.protocol").CompletionItemKind[25] = "𝙏"
 
 	-- use null-ls for these languages
 	local ignored_formatters = { "tsserver", "sumneko_lua", "html" }
