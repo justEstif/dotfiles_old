@@ -69,10 +69,6 @@ map("n", "ms", ":Telescope live_grep<CR>") -- tc: find text
 map("n", "<leader>cd", ":Telescope cder<cr>") -- tc: change wdir
 map("n", "<leader>gg", ":tab G<cr>") -- fg: open
 
--- mini-cmp keymaps
-map("i", "<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { noremap = true, expr = true })
-map("i", "<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { noremap = true, expr = true })
-
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
