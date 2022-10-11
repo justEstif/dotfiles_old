@@ -1,5 +1,5 @@
 -----------------------------------------------------------
--- Mini Surround configuration file
+-- Mini Starter configuration file
 ----------------------------------------------------------
 
 local mini_starter_status, mini_starter = pcall(require, "mini.starter")

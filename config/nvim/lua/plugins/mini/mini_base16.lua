@@ -1,5 +1,5 @@
 -----------------------------------------------------------
--- Mini Surround configuration file
+-- Mini BAse16 configuration file
 ----------------------------------------------------------
 
 local status_colors, mini_base16 = pcall(require, "mini.base16")
