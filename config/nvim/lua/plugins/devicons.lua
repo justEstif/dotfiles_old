@@ -1,4 +1,11 @@
-local devicons = require("nvim-web-devicons")
+-----------------------------------------------------------
+-- Devicons configuration file
+----------------------------------------------------------
+
+local status, devicons = pcall(require, "nvim-web-devicons")
+if not status then
+	return
+end
 
 local config = {
 	override = {
