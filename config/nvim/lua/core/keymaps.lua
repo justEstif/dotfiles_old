@@ -2,7 +2,17 @@
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
 
-local map = require("utils.map")
+-- map function
+local map = function(mode, lhs, rhs, opts)
+	local options = {
+		noremap = true,
+		silent = true,
+	}
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.keymap.set(mode, lhs, rhs, options)
+end
 
 -- disable keys
 local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", ",", " " }
@@ -15,10 +25,6 @@ vim.g.mapleader = ","
 -----------------------------------------------------------
 -- Neovim shortcuts
 -----------------------------------------------------------
--- Buffers
-map("n", "<leader>qq", ":bufdo bdelete<CR>") -- kill all buffers
-map("n", "<leader>qQ", ":bufdo bdelete<CR>:q<cr>") -- kill all buffers and quit
-
 -- Clipboard
 map({ "n", "v" }, "cy", '"*y')
 map({ "n", "v" }, "cp", '"*p')

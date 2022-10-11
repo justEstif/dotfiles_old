@@ -53,3 +53,16 @@ autocmd("BufLeave", {
 	pattern = "term://*",
 	command = "stopinsert",
 })
+
+augroup("BetterCursorline", { clear = true })
+autocmd({ "InsertLeave", "WinEnter" }, {
+	group = "BetterCursorline",
+	pattern = "*",
+	command = "set cursorline",
+})
+
+autocmd({ "InsertEnter", "WinLeave" }, {
+	group = "BetterCursorline",
+	pattern = "*",
+	command = "set nocursorline",
+})
