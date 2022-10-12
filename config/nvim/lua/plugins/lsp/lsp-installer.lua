@@ -19,7 +19,7 @@ if not status_ok_lspconfig then
 	return
 end
 
-local servers = { "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss", "prismals" }
+local servers = { "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss", "prismals", "marksman" }
 
 mason_lspconfig.setup({
 	ensure_installed = servers,

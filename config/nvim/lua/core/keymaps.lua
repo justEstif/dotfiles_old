@@ -36,8 +36,7 @@ map("n", "[e", ":m .-2<CR>==") -- move line down(n)
 map("v", "[e", ":m '<-2<CR>gv=gv") -- move line down(v)
 map("n", "]<space>", "o<esc>k") -- create empty line below
 map("n", "[<space>", "O<esc>j") -- create empty line above
-map("n", "]b", ":bprevious<cr>") -- prev buffer
-map("n", "[b", ":bnext<cr>") -- next buffer
+map("n", "[b", ":b <C-d>") -- buffer list
 
 -- Should be default
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode

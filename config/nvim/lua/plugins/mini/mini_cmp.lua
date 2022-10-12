@@ -9,7 +9,7 @@ end
 
 mini_completion.setup({
 	source_func = "omnifunc",
-	auto_setup = true,
+	auto_setup = false,
 })
 
 vim.keymap.set("i", "<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { noremap = true, expr = true })
