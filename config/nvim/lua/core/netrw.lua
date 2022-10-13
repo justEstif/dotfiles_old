@@ -1,7 +1,6 @@
 -----------------------------------------------------------
 -- Netrw configuration file
 ----------------------------------------------------------
-
 local g = vim.g
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
@@ -16,6 +15,7 @@ local options_append = {
 	netrw_liststyle = 3, -- how files are open
 	netrw_browse_split = 0, -- open new files in vertical split
 	netrw_altv = 1,
+	netrw_bufsettings = "noma nomod nu nobl nowrap ro", -- line number
 }
 
 for k, v in pairs(options_append) do
@@ -31,7 +31,10 @@ autocmd("filetype", {
 		end
 
 		-- Navigation
+		bind("l", "<CR>") -- open file or dir
 		bind(".", "gh") -- toggle dotfiles
+		bind("H", "u") -- preview dir
+		bind("h", "-^") -- go up
 		bind("<leader>dd", ":Explore<CR>") -- close if open
 
 		-- Marks
