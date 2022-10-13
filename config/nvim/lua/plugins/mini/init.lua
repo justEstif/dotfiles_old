@@ -35,6 +35,14 @@ mini_comment.setup({
 	},
 })
 
+-- Mini comment
+local status_bufremove, mini_bufremove = pcall(require, "mini.bufremove")
+if not status_bufremove then
+	return
+end
+
+mini_bufremove.setup()
+
 require("plugins.mini.mini_base16")
 require("plugins.mini.mini_starter")
 require("plugins.mini.mini_surround")

@@ -36,7 +36,6 @@ map("n", "[e", ":m .-2<CR>==") -- move line down(n)
 map("v", "[e", ":m '<-2<CR>gv=gv") -- move line down(v)
 map("n", "]<space>", "o<esc>k") -- create empty line below
 map("n", "[<space>", "O<esc>j") -- create empty line above
-map("n", "[b", ":b <C-d>") -- buffer list
 
 -- Should be default
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
@@ -54,6 +53,7 @@ map("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Shortcuts
 map("n", "<leader>dd", ":Lexplore<CR>") -- toggle netrw
+map("n", "<leader>qq", ":Bdall<CR>") -- toggle netrw
 map("n", "<leader>rr", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "<C-t>", ":ToggleTerminal<cr>") -- toggle terminal
 
@@ -63,6 +63,8 @@ map("n", "<C-t>", ":ToggleTerminal<cr>") -- toggle terminal
 map("n", "<C-p>", ":Telescope find_files<CR>") -- tc: find file
 map("n", "ms", ":Telescope live_grep<CR>") -- tc: find text
 map("n", "<leader>cd", ":Telescope cder<cr>") -- tc: change wdir
+map("n", "[b", ":Telescope buffers<cr>") -- buffer list
+
 map("n", "<leader>gg", ":tab G<cr>") -- fg: open
 
 -- other keybindings in:

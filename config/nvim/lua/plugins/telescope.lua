@@ -86,7 +86,20 @@ telescope.setup({
 			theme = "ivy",
 			initial_mode = "normal",
 		},
+		buffers = {
+			theme = "cursor",
+			initial_mode = "normal",
+			previewer = false,
+			mappings = { -- easy close buffer shortcut
+				i = {
+					["<C-d>"] = actions.delete_buffer,
+				},
+				n = {
+					["<C-d>"] = actions.delete_buffer,
+				},
+			},
+		},
 	},
 	extensions = {},
 })
-telescope.load_extension('cder')
+telescope.load_extension("cder")
