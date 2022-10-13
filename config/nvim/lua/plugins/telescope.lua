@@ -19,22 +19,10 @@ end
 telescope.setup({
 
 	defaults = {
-		vimgrep_arguments = {
-			"rg",
-			"--color=never",
-			"--no-heading",
-			"--with-filename",
-			"--line-number",
-			"--column",
-			"--smart-case",
-			"--hidden",
-		},
-
 		-- remove symbols
 		entry_prefix = "  ",
 		prompt_prefix = "  ",
 		selection_caret = "  ",
-
 		mappings = {
 			i = {
 				["<C-u>"] = false, -- clear input with C-u
@@ -70,6 +58,7 @@ telescope.setup({
 		find_files = {
 			theme = "dropdown",
 			previewer = false,
+			find_command = { "fd", "--hidden" },
 		},
 		current_buffer_fuzzy_find = {
 			theme = "ivy",
