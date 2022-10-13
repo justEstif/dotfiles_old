@@ -40,9 +40,13 @@ return packer.startup(function(use)
 	use({
 		"wbthomason/packer.nvim", -- plugin manager
 		"nvim-lua/plenary.nvim", -- important package used by most
-		"nvim-treesitter/nvim-treesitter", -- code highlighting
 	})
 
+	-- Treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter", -- code highlighting
+		"nvim-treesitter/nvim-treesitter-textobjects",
+	})
 	-- LSP
 	use({
 		"neovim/nvim-lspconfig", -- nvim native lsp
