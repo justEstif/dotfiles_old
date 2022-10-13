@@ -7,7 +7,7 @@ local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 local options_append = {
 	netrw_keepdir = 0, --Keep the current directory and the browsing directory synced
-	netrw_winsize = "17", -- 17% size
+	netrw_winsize = "50", -- 17% size
 	netrw_banner = "0", -- hide banner
 	netrw_localmkdir = "mkdir -p", -- change mkdir cmd
 	netrw_localcopycmd = "cp -r", -- change copy command
@@ -32,7 +32,7 @@ autocmd("filetype", {
 		bind("h", "-^") -- go up
 		bind("l", "<CR>") -- open file or dir
 		bind(".", "gh") -- toggle dotfiles
-		bind("<leader>dd", ":Lexplore<CR>") -- close if open
+		bind("<leader>dd", "<C-w>q<CR>") -- close if open
 
 		-- Marks
 		bind("<TAB>", "mf") -- toggle mark

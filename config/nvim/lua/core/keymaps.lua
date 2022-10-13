@@ -52,8 +52,8 @@ map("n", "<C-Left>", ":vertical resize +2<CR>")
 map("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Shortcuts
-map("n", "<leader>dd", ":Lexplore<CR>") -- toggle netrw
-map("n", "<leader>qq", ":Bdall<CR>") -- toggle netrw
+map("n", "<leader>dd", ":Hexplore<CR>") -- toggle netrw
+map("n", "<leader>qq", ":%bdelete<CR>") -- toggle netrw
 map("n", "<leader>rr", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "<C-t>", ":ToggleTerminal<cr>") -- toggle terminal
 

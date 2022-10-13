@@ -7,4 +7,3 @@ local command = function(command, target)
 end
 
 command("ToggleTerminal", [[:lua require("custom.toggleterm")()<cr>]]) -- custom toggleterm
-command("Bdall", [[:bufdo lua MiniBufremove.delete()<cr>]]) -- close all buffers
