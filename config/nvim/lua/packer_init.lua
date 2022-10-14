@@ -47,6 +47,7 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter", -- code highlighting
 		"nvim-treesitter/nvim-treesitter-textobjects",
 	})
+
 	-- LSP
 	use({
 		"neovim/nvim-lspconfig", -- nvim native lsp
@@ -66,7 +67,7 @@ return packer.startup(function(use)
 	-- Features
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
-	use({ "echasnovski/mini.nvim" }) -- indent/comment/starter
+	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment/starter/theme/surround/cmp
 
 	-- Improve
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
