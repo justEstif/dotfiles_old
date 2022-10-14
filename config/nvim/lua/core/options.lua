@@ -30,7 +30,7 @@ local options = {
 	-- Fold
 	foldenable = false, -- don't start folded
 	foldtext = string.format("  %s: %d lines", vim.fn.getline(vim.v.foldstart), vim.v.foldend - vim.v.foldstart + 1),
-	fillchars = { eob = "-", fold = " " },
+	fillchars = { fold = " " },
 	foldmethod = "manual",
 
 	-- UI

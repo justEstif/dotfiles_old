@@ -45,7 +45,6 @@ return packer.startup(function(use)
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter", -- code highlighting
-		"nvim-treesitter/nvim-treesitter-textobjects",
 	})
 
 	-- LSP
@@ -62,7 +61,6 @@ return packer.startup(function(use)
 		branch = "0.1.x",
 		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	})
-	use({ "nvim-telescope/telescope-live-grep-args.nvim" })
 
 	-- Features
 	use({ "tpope/vim-fugitive" }) -- git client
