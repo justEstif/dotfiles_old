@@ -61,11 +61,10 @@ map("n", "<C-t>", ":ToggleTerminal<cr>") -- toggle terminal
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
 map("n", "<C-p>", ":Telescope find_files<CR>") -- tc: find file
-map("n", "ms", ":Telescope live_grep<CR>") -- tc: find text
+map("n", "ms", ":Telescope live_grep_args<CR>") -- tc: find text
 map("n", "[b", ":Telescope buffers<cr>") -- tc: buffer list
 map("n", "<leader>cd", ":cd %:p:h<CR>:pwd<CR>") -- change wdir
 map("n", "<leader>gg", ":tab G<cr>") -- fg: open
-
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
