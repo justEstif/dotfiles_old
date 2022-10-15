@@ -89,5 +89,8 @@ telescope.setup({
 			},
 		},
 	},
-	extensions = {},
+	extensions = {
+    initial_mode = 'normal'
+  },
 })
+telescope.load_extension("projects")
