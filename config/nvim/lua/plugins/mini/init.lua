@@ -35,12 +35,6 @@ mini_comment.setup({
 	},
 })
 
-require("mini.jump2d").setup({
-	mappings = {
-		start_jumping = "<BS>",
-	},
-})
-
 require("plugins.mini.mini_base16")
 require("plugins.mini.mini_starter")
 require("plugins.mini.mini_surround")

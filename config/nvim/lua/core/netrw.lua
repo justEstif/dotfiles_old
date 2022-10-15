@@ -51,6 +51,6 @@ autocmd("filetype", {
 		bind("f;", "mx") -- run command
 
 		-- Override default
-		bind("ms", ":Telescope live_grep<cr>")
+		bind("[s", ":Telescope live_grep<cr>")
 	end,
 })
