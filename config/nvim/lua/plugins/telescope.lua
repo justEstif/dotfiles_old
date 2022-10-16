@@ -57,6 +57,7 @@ telescope.setup({
 	},
 	pickers = { -- defining the options of different pickers
 		find_files = {
+			theme = "dropdown",
 			find_command = { "fd", "--hidden" },
 		},
 		current_buffer_fuzzy_find = {},
