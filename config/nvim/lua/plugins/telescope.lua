@@ -53,28 +53,16 @@ telescope.setup({
 			"dist/.*",
 		},
 		layout_strategy = "flex", -- display: flex;
+		initial_mode = "insert",
 	},
 	pickers = { -- defining the options of different pickers
 		find_files = {
-			theme = "dropdown",
-			previewer = false,
 			find_command = { "fd", "--hidden" },
 		},
-		current_buffer_fuzzy_find = {
-			theme = "ivy",
-			previewer = false,
-		},
-		live_grep = {
-			theme = "ivy",
-		},
-		lsp_references = {
-			theme = "dropdown",
-			initial_mode = "normal",
-		},
-		diagnostics = {
-			theme = "ivy",
-			initial_mode = "normal",
-		},
+		current_buffer_fuzzy_find = {},
+		live_grep = {},
+		lsp_references = { initial_mode = "normal" },
+		diagnostics = { initial_mode = "normal" },
 		buffers = {
 			theme = "cursor",
 			initial_mode = "normal",
@@ -89,8 +77,8 @@ telescope.setup({
 			},
 		},
 	},
-	extensions = {
-    initial_mode = 'normal'
-  },
+	extensions = {},
 })
+
 telescope.load_extension("projects")
+telescope.load_extension("live_grep_args")
