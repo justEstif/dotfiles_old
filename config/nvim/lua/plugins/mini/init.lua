@@ -35,6 +35,18 @@ mini_comment.setup({
 	},
 })
 
+-- Mini jump
+local status_jump, mini_jump = pcall(require, "mini.jump")
+if not status_jump then
+	return
+end
+
+mini_jump.setup({
+	mappings = {
+		repeat_jump = "",
+	},
+})
+
 -- Mini jump2d
 local status_jump2d, mini_jump2d = pcall(require, "mini.jump2d")
 if not status_jump2d then

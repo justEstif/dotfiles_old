@@ -28,15 +28,10 @@ end
 
 -- Install plugins
 return packer.startup(function(use)
-	use({
-		"wbthomason/packer.nvim", -- plugin manager
-		"nvim-lua/plenary.nvim", -- important package used by most
-	})
+	use({ "wbthomason/packer.nvim", "nvim-lua/plenary.nvim" })
 
-	-- Treesitter
-	use({
-		"nvim-treesitter/nvim-treesitter", -- code highlighting
-	})
+	-- Treesitter: code highlighting
+	use({ "nvim-treesitter/nvim-treesitter" })
 
 	-- LSP
 	use({
