@@ -53,7 +53,7 @@ map("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Shortcuts
 map("n", "[f", ":Explore<CR>") -- toggle netrw
-map("n", "<leader>qq", ":%bdelete<CR>") -- toggle netrw
+map("n", "[q", ":%bdelete<CR>") -- close all buffers
 map("n", "[t", ":ToggleTerminal<cr>") -- toggle terminal
 
 -----------------------------------------------------------

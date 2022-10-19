@@ -12,5 +12,9 @@ mini_completion.setup({
 	auto_setup = false,
 })
 
-vim.keymap.set("i", "<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { noremap = true, expr = true })
-vim.keymap.set("i", "<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { noremap = true, expr = true })
+local bind = function(lhs, rhs)
+	vim.keymap.set("i", lhs, rhs, { noremap = true, expr = true })
+end
+
+bind("<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]])
+bind("<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
