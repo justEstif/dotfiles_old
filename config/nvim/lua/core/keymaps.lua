@@ -52,10 +52,9 @@ map("n", "<C-Left>", ":vertical resize +2<CR>")
 map("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Shortcuts
-map("n", "<leader>dd", ":Explore<CR>") -- toggle netrw
+map("n", "[f", ":Explore<CR>") -- toggle netrw
 map("n", "<leader>qq", ":%bdelete<CR>") -- toggle netrw
-map("n", "<leader>rr", ":so %<CR>") -- Reload configuration without restart nvim
-map("n", "<C-t>", ":ToggleTerminal<cr>") -- toggle terminal
+map("n", "[t", ":ToggleTerminal<cr>") -- toggle terminal
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
