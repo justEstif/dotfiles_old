@@ -23,7 +23,6 @@ mini_starter.setup({
 	}, "\n"),
 	query_updaters = [[abcdefghiloqrstuvwxyz0123456789_-,.ABCDEFGHIJKLOQRSTUVWXYZ]],
 	items = {
-		{ action = "tab G", name = "F: Fugitive", section = "Git" },
 		{ action = "PackerSync", name = "U: Update Plugins", section = "Plugins" },
 		{ action = "enew", name = "E: New Buffer", section = "Builtin actions" },
 		{ action = "qall!", name = "Q: Quit Neovim", section = "Builtin actions" },

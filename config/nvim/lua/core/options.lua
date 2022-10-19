@@ -29,8 +29,7 @@ local options = {
 
 	-- Fold
 	foldenable = false, -- don't start folded
-	foldtext = string.format("  %s: %d lines", vim.fn.getline(vim.v.foldstart), vim.v.foldend - vim.v.foldstart + 1),
-	fillchars = { fold = " " },
+	fillchars = { vert = "|", fold = " " },
 	foldmethod = "manual",
 
 	-- UI
@@ -87,10 +86,19 @@ for _, plugin in pairs(disabled_built_ins) do
 end
 
 local options_append = {
-	shortmess = "sI", -- Disable nvim introcoreop
-	path = { "**" }, -- makes :find === <C-p>
 	-- ignore these files in search
-	wildignore = "*.zip, *.png, *.jpg, *.gif, *.pdf, *DS_Store*, */.git/*, */node_modules/*, */build/*, package-lock.json",
+	wildignore = {
+		"*.zip",
+		"*.png",
+		"*.jpg",
+		"*.gif",
+		"*.pdf",
+		"*DS_Store*",
+		"*/.git/*",
+		"*/node_modules/*",
+		"*/build/*",
+		"package-lock.json",
+	},
 }
 
 for k, v in pairs(options_append) do

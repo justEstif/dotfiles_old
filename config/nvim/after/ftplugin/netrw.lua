@@ -14,6 +14,7 @@ local options_append = {
 	netrw_liststyle = 3, -- how files are open
 	netrw_browse_split = 0, -- open new files in vertical split
 	netrw_altv = 1,
+	netrw_fastbrowse = 0, -- close netrw after opening file
 	netrw_bufsettings = "noma nomod nu nobl nowrap ro", -- line number
 }
 
@@ -46,4 +47,4 @@ bind("D", ":!rm -r ") -- delete
 bind("f;", "mx") -- run command
 
 -- Override default
-bind("[s", ":Telescope live_grep<cr>")
+bind("[s", ":Telescope live_grep_args<cr>")
