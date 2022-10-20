@@ -41,6 +41,17 @@ return packer.startup(function(use)
 		"jose-elias-alvarez/typescript.nvim", -- ts config
 	})
 
+	-- Code completion
+	use({
+		"hrsh7th/nvim-cmp", -- cmp plugin
+		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
+		"hrsh7th/cmp-path", -- path cmp
+		"hrsh7th/cmp-buffer", -- buffer cmp
+		"L3MON4D3/LuaSnip", -- snippets engine
+		"saadparwaiz1/cmp_luasnip", -- snippets cmp
+		"rafamadriz/friendly-snippets", -- common snippets
+	})
+
 	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -54,6 +65,8 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment/starter/theme/surround/cmp
 	use({ "ahmedkhalf/project.nvim" }) -- project/working dir
+	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
+	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 
 	-- Improve
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
@@ -61,6 +74,9 @@ return packer.startup(function(use)
 
 	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
+	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
+	use({ "feline-nvim/feline.nvim" }) -- statusline
+	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

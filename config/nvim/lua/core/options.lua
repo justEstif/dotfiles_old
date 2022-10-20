@@ -66,6 +66,10 @@ end
 -- Disable builtins plugins
 local disabled_built_ins = {
 	"gzip",
+	"netrw",
+	"netrwPlugin",
+	"netrwSettings",
+	"netrwFileHandlers",
 	"zip",
 	"zipPlugin",
 	"tar",

@@ -52,9 +52,8 @@ map("n", "<C-Left>", ":vertical resize +2<CR>")
 map("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Shortcuts
-map("n", "[f", ":Explore<CR>") -- toggle netrw
+map("n", "[f", ":NvimTreeToggle<CR>") -- toggle netrw
 map("n", "[q", ":%bdelete<CR>") -- close all buffers
-map("n", "[t", ":ToggleTerminal<cr>") -- toggle terminal
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
