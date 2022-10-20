@@ -117,25 +117,25 @@ local comps = {
 	diagnos = {
 		err = {
 			provider = "diagnostic_errors",
-			icon = " ",
+			icon = "E",
 			hl = { fg = colors.red },
 			left_sep = "  ",
 		},
 		warn = {
 			provider = "diagnostic_warnings",
-			icon = " ",
+			icon = "W",
 			hl = { fg = colors.yellow },
 			left_sep = " ",
 		},
 		info = {
 			provider = "diagnostic_info",
-			icon = " ",
+			icon = "I",
 			hl = { fg = colors.green },
 			left_sep = " ",
 		},
 		hint = {
 			provider = "diagnostic_hints",
-			icon = " ",
+			icon = "H",
 			hl = { fg = colors.cyan },
 			left_sep = " ",
 		},
