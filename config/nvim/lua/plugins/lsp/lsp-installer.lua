@@ -30,6 +30,8 @@ for _, server in pairs(servers) do
 		on_attach = require("plugins.lsp.handlers").on_attach,
 		capabilities = require("plugins.lsp.handlers").capabilities,
 	}
+
+	server = vim.split(server, "@")[1]
 	local has_custom_opts, server_custom_opts = pcall(require, "plugins.lsp.settings." .. server)
 	if has_custom_opts then
 		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
