@@ -35,5 +35,17 @@ mini_comment.setup({
 	},
 })
 
+-- Mini jump2d
+local status_jump2d, mini_jump2d = pcall(require, "mini.jump2d")
+if not status_jump2d then
+	return
+end
+
+mini_jump2d.setup({
+	mappings = {
+		start_jumping = "<BS>",
+	},
+})
+
 require("plugins.mini.mini_starter")
 require("plugins.mini.mini_surround")

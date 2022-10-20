@@ -58,8 +58,8 @@ cmp.setup({
 
 	-- Key mapping
 	mapping = {
-		["<Tab>"] = cmp.mapping.select_next_item(), -- scroll using tab
-		["<S-Tab>"] = cmp.mapping.select_prev_item(), -- scroll using s-tab
+		["<C-j>"] = cmp.mapping.select_next_item(), -- scroll using tab
+		["<C-k>"] = cmp.mapping.select_prev_item(), -- scroll using s-tab
 		["<C-b>"] = cmp.mapping.scroll_docs(-4), -- scroll docs
 		["<C-f>"] = cmp.mapping.scroll_docs(4), -- scroll docs
 		["<C-Space>"] = cmp.mapping.complete(), -- show using <C-space>

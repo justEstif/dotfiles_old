@@ -77,6 +77,7 @@ return packer.startup(function(use)
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
+	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

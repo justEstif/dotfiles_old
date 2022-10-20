@@ -105,50 +105,6 @@ local comps = {
 			},
 			righ_sep = " ",
 		},
-		-- Operating system
-		os = {
-			provider = function()
-				local os = vim.bo.fileformat:lower()
-				local icon
-				if os == "unix" then
-					icon = "  "
-				elseif os == "mac" then
-					icon = "  "
-				else
-					icon = "  "
-				end
-				return icon .. os
-			end,
-			hl = { fg = colors.fg },
-			left_sep = {
-				str = " " .. separator,
-				hl = { fg = colors.fg },
-			},
-			right_sep = {
-				str = " " .. separator,
-				hl = { fg = colors.fg },
-			},
-		},
-		-- Line-column
-		position = {
-			provider = { name = "position" },
-			hl = {
-				fg = colors.fg,
-				style = "bold",
-			},
-			left_sep = " ",
-			right_sep = " ",
-		},
-		-- Cursor position in %
-		line_percentage = {
-			provider = { name = "line_percentage" },
-			hl = {
-				fg = colors.cyan,
-				style = "bold",
-			},
-			left_sep = " ",
-			right_sep = " ",
-		},
 		-- Simple scrollbar
 		scroll_bar = {
 			provider = { name = "scroll_bar" },
@@ -203,19 +159,19 @@ local comps = {
 		},
 		add = {
 			provider = "git_diff_added",
-			icon = "  ",
+			icon = " ",
 			hl = { fg = colors.green },
 			left_sep = " ",
 		},
 		change = {
 			provider = "git_diff_changed",
-			icon = "  ",
+			icon = " ",
 			hl = { fg = colors.orange },
 			left_sep = " ",
 		},
 		remove = {
 			provider = "git_diff_removed",
-			icon = "  ",
+			icon = " ",
 			hl = { fg = colors.red },
 			left_sep = " ",
 		},
@@ -250,9 +206,6 @@ table.insert(components.active[2], comps.diagnos.hint)
 table.insert(components.active[2], comps.diagnos.info)
 table.insert(components.active[2], comps.lsp.name)
 table.insert(components.active[2], comps.file.type)
-table.insert(components.active[2], comps.file.os)
-table.insert(components.active[2], comps.file.position)
-table.insert(components.active[2], comps.file.line_percentage)
 
 -- Call feline
 feline.setup({
