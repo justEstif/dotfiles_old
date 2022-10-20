@@ -8,3 +8,9 @@ if not status then
 end
 
 project.setup({})
+
+local telescope_status_ok, telescope = pcall(require, "telescope")
+if not telescope_status_ok then
+	return
+end
+telescope.load_extension("projects")

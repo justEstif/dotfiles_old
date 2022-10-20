@@ -58,12 +58,17 @@ telescope.setup({
 	pickers = { -- defining the options of different pickers
 		find_files = {
 			theme = "dropdown",
-			find_command = { "fd", "--hidden" },
+			find_command = {
+				"fd",
+				"--hidden",
+			},
 		},
-		current_buffer_fuzzy_find = {},
-		live_grep = {},
-		lsp_references = { initial_mode = "normal" },
-		diagnostics = { initial_mode = "normal" },
+		lsp_references = {
+			initial_mode = "normal",
+		},
+		diagnostics = {
+			initial_mode = "normal",
+		},
 		buffers = {
 			theme = "cursor",
 			initial_mode = "normal",
@@ -81,5 +86,4 @@ telescope.setup({
 	extensions = {},
 })
 
-telescope.load_extension("projects")
 telescope.load_extension("live_grep_args")
