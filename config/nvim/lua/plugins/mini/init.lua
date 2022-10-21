@@ -28,6 +28,7 @@ if not status_comment then
 end
 
 mini_comment.setup({
+	delay = 0,
 	hooks = {
 		pre = function()
 			require("ts_context_commentstring.internal").update_commentstring()

@@ -29,7 +29,7 @@ local options = {
 
 	-- Fold
 	foldenable = false, -- don't start folded
-	fillchars = { vert = "|", fold = " " },
+	fillchars = { vert = " ", fold = " " },
 	foldmethod = "manual",
 
 	-- UI
