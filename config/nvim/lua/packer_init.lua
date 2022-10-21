@@ -48,8 +48,8 @@ return packer.startup(function(use)
 		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
 		"hrsh7th/cmp-path", -- path cmp
 		"hrsh7th/cmp-buffer", -- buffer cmp
-		"L3MON4D3/LuaSnip", -- snippets engine
 		"saadparwaiz1/cmp_luasnip", -- snippets cmp
+		"L3MON4D3/LuaSnip", -- snippets engine
 		"rafamadriz/friendly-snippets", -- common snippets
 	})
 
@@ -64,7 +64,7 @@ return packer.startup(function(use)
 	-- Features
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
-	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment/starter/theme/surround/cmp
+	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment/starter
 	use({ "ahmedkhalf/project.nvim" }) -- project/working dir
 	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal

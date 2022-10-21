@@ -53,7 +53,6 @@ local options = {
 	hidden = true, -- Enable background buffers
 	history = 200, -- Remember N lines in history
 	synmaxcol = 240, -- Max column for syntax highlight
-	lazyredraw = true, -- Faster scrolling
 	updatetime = 300, -- ms to wait for trigger an event
 	undofile = true, -- enable persistent undo
 }
