@@ -78,6 +78,7 @@ return packer.startup(function(use)
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
+	use({ "tpope/vim-surround" }) -- surround
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

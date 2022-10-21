@@ -67,12 +67,6 @@ nvim_tree.setup({
 				style = "minimal",
 			},
 		},
-		git = {
-			enable = true,
-			ignore = true,
-			show_on_dirs = true,
-			timeout = 400,
-		},
 		open_file = {
 			quit_on_open = true,
 			resize_window = true,
