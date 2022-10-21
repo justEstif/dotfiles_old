@@ -32,6 +32,7 @@ return packer.startup(function(use)
 
 	-- Treesitter: code highlighting
 	use({ "nvim-treesitter/nvim-treesitter" })
+	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 
 	-- LSP
 	use({
@@ -67,6 +68,7 @@ return packer.startup(function(use)
 	use({ "ahmedkhalf/project.nvim" }) -- project/working dir
 	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
+	use({ "kylechui/nvim-surround", tag = "*" }) -- nvim surround
 
 	-- Improve
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
@@ -78,7 +80,6 @@ return packer.startup(function(use)
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
-	use({ "tpope/vim-surround" }) -- surround
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
