@@ -1,0 +1,9 @@
+- archinstall
+- fish terminal
+- alacritty
+- yay
+- git
+- nvim
+- insomnia: http client
+- ranger
+- i3lockmore
