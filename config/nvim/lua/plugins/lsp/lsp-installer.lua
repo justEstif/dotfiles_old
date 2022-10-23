@@ -19,6 +19,11 @@ if not status_ok_lspconfig then
 	return
 end
 
+local status, typescript = pcall(require, "typescript")
+if not status then
+	return
+end
+
 local servers = { "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss", "prismals", "marksman" }
 
 mason_lspconfig.setup({
@@ -37,7 +42,11 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
 	end
 	if server == "tsserver" then -- uses the typescript plugin
-		require("plugins.lsp.typescript").typescript_setup(opts)
+		typescript.setup({
+			disable_commands = false, -- prevent the plugin from creating Vim commands
+			debug = false, -- enable debug logging for commands
+			server = opts,
+		})
 	else
 		lspconfig[server].setup(opts)
 	end

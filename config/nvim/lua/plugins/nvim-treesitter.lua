@@ -20,6 +20,7 @@ nvim_treesitter.setup({
 		"typescript",
 		"vim",
 		"comment",
+    "fish"
 	},
 	sync_install = false,
 	highlight = {
