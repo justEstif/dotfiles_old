@@ -7,16 +7,6 @@ if not cmp_status_ok then
 	return
 end
 
-local luasnip_status_ok, luasnip = pcall(require, "luasnip")
-if not luasnip_status_ok then
-	return
-end
-
-local check_backspace = function()
-	local col = vim.fn.col(".") - 1
-	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
-end
-
 local kind_icons = {
 	Text = "",
 	Method = "",
@@ -45,16 +35,7 @@ local kind_icons = {
 	TypeParameter = "",
 }
 
--- load snippets
-require("luasnip.loaders.from_vscode").lazy_load()
-
 cmp.setup({
-	-- Load snippet support
-	snippet = {
-		expand = function(args)
-			luasnip.lsp_expand(args.body)
-		end,
-	},
 
 	-- Completion settings
 	completion = {
@@ -73,36 +54,7 @@ cmp.setup({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
-		["<CR>"] = cmp.mapping.confirm({ select = true,
-behavior = cmp.ConfirmBehavior.Replace }),
-		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expandable() then
-				luasnip.expand()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
-			elseif check_backspace() then
-				fallback()
-			else
-				fallback()
-			end
-		end, {
-			"i",
-			"s",
-		}),
-		["<S-Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
-				luasnip.jump(-1)
-			else
-				fallback()
-			end
-		end, {
-			"i",
-			"s",
-		}),
+		["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
 	},
 
 	formatting = {
@@ -113,7 +65,6 @@ behavior = cmp.ConfirmBehavior.Replace }),
 			vim_item.menu = ({
 				nvim_lsp = "[lsp]",
 				nvim_lua = "[nvim_lua]",
-				luasnip = "[snippet]",
 				buffer = "[buffer]",
 				path = "[path]",
 			})[entry.source.name]
@@ -124,7 +75,6 @@ behavior = cmp.ConfirmBehavior.Replace }),
 	-- add sources here; move priorities higher
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
 		{ name = "path" },
 		{ name = "buffer" },
 		{ name = "nvim_lua" },

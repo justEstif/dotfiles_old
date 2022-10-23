@@ -31,7 +31,7 @@ return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim", "nvim-lua/plenary.nvim" })
 
 	-- Treesitter: code highlighting
-	use({ "nvim-treesitter/nvim-treesitter" })
+	use({ "nvim-treesitter/nvim-treesitter", commit = "9bfaf62e42bdcd042df1230e9188487e62a112c0" })
 	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 
 	-- LSP
@@ -48,9 +48,6 @@ return packer.startup(function(use)
 		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
 		"hrsh7th/cmp-path", -- path cmp
 		"hrsh7th/cmp-buffer", -- buffer cmp
-		"saadparwaiz1/cmp_luasnip", -- snippets cmp
-		"L3MON4D3/LuaSnip", -- snippets engine
-		"rafamadriz/friendly-snippets", -- common snippets
 	})
 
 	-- Telescope
