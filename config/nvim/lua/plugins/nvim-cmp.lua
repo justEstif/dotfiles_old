@@ -46,6 +46,8 @@ cmp.setup({
 	mapping = {
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
+		["<Tab>"] = cmp.mapping.select_next_item(),
+		["<S-Tab>"] = cmp.mapping.select_prev_item(),
 		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
 		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
@@ -64,7 +66,6 @@ cmp.setup({
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			vim_item.menu = ({
 				nvim_lsp = "[lsp]",
-				nvim_lua = "[nvim_lua]",
 				buffer = "[buffer]",
 				path = "[path]",
 			})[entry.source.name]
@@ -77,6 +78,5 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "path" },
 		{ name = "buffer" },
-		{ name = "nvim_lua" },
 	},
 })
