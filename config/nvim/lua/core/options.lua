@@ -15,6 +15,7 @@ local options = {
 	encoding = "utf-8", -- Display this encoding.
 	fileencoding = "utf-8", -- Use this encoding when writing to file.
 	viewoptions = "cursor,folds", -- Save/restore just these (with `:{mk,load}view`).
+	backspace = "indent,eol,start", -- allow backspace on indent, end of line or insert mode start position
 
 	-- Search
 	ignorecase = true, -- Ignore case letters when search

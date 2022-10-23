@@ -39,6 +39,7 @@ map("n", "[<space>", "O<esc>j") -- create empty line above
 
 -- Should be default
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
+map("n", "x", "_x") -- delete single character without copying into register
 map("v", "<", "<gv") -- stay in indent mode
 map("v", ">", ">gv") -- stay in indent mode
 map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true }) -- apply macro on visual range
