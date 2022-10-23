@@ -7,3 +7,7 @@
 - insomnia: http client
 - ranger
 - i3lockmore
+- flameshot
+- master pdf editor version 4
+- iwgtk
+- arandr
