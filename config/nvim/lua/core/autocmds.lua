@@ -53,3 +53,23 @@ autocmd("BufLeave", {
 	pattern = "term://*",
 	command = "stopinsert",
 })
+
+-- Better Cursorline
+augroup("BetterCursorline", { clear = true })
+autocmd({ "WinEnter" }, {
+	group = "BetterCursorline",
+	pattern = "*",
+	command = "set cursorline",
+})
+
+autocmd({ "WinLeave" }, {
+	group = "BetterCursorline",
+	pattern = "*",
+	command = "set nocursorline",
+})
+
+autocmd("filetype", {
+	group = "BetterCursorline",
+	pattern = { "TelescopePrompt", "starter" },
+	command = "set nocursorline",
+})
