@@ -10,17 +10,6 @@ end
 
 mini_pairs.setup({})
 
--- Mini indent
-local status_indentscope, mini_indentscope = pcall(require, "mini.indentscope")
-if not status_indentscope then
-	return
-end
-
-mini_indentscope.setup({
-	draw = { delay = 0 },
-	symbol = "׃",
-})
-
 -- Mini comment
 local status_comment, mini_comment = pcall(require, "mini.comment")
 if not status_comment then
@@ -28,7 +17,6 @@ if not status_comment then
 end
 
 mini_comment.setup({
-	delay = 0,
 	hooks = {
 		pre = function()
 			require("ts_context_commentstring.internal").update_commentstring()
@@ -49,3 +37,4 @@ mini_jump2d.setup({
 })
 
 require("plugins.mini.mini_starter")
+require("plugins.mini.mini_indent")
