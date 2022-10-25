@@ -57,4 +57,8 @@ nvim_treesitter.setup({
 			include_surrounding_whitespace = true,
 		},
 	},
+	-- match
+	matchup = {
+		enable = "true",
+	},
 })

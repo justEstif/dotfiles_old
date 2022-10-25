@@ -37,4 +37,3 @@ mini_jump2d.setup({
 })
 
 require("plugins.mini.mini_starter")
-require("plugins.mini.mini_indent")

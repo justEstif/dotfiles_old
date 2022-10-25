@@ -68,6 +68,7 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "kylechui/nvim-surround", tag = "*" }) -- nvim surround
+	use({ "andymass/vim-matchup" }) -- add % match
 
 	-- Improve
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
