@@ -59,7 +59,7 @@ map("n", "[q", ":%bdelete<CR>") -- close all buffers
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
 map("n", "<C-p>", ":Telescope find_files<CR>") -- tc: find file
-map("n", "[s", ":Telescope live_grep_args<CR>") -- tc: find text
+map("n", "[s", ":Telescope live_grep<CR>") -- tc: find text
 map("n", "[b", ":Telescope buffers<cr>") -- tc: buffer list
 map("n", "[d", ":Telescope projects<cr>") -- change wdir
 map("n", "[g", ":tab G<cr>") -- fg: open

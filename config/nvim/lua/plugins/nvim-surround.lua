@@ -8,4 +8,3 @@ if not status then
 end
 
 nvim_surround.setup({})
-

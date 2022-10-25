@@ -85,5 +85,3 @@ telescope.setup({
 	},
 	extensions = {},
 })
-
-telescope.load_extension("live_grep_args")
