@@ -31,7 +31,7 @@ return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim", "nvim-lua/plenary.nvim" })
 
 	-- Treesitter: code highlighting
-	use({ "nvim-treesitter/nvim-treesitter", commit = "9bfaf62e42bdcd042df1230e9188487e62a112c0" })
+	use({ "nvim-treesitter/nvim-treesitter" })
 	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 
 	-- LSP
@@ -76,12 +76,12 @@ return packer.startup(function(use)
 	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
-	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
 	use({
 		"nvim-lualine/lualine.nvim", -- statusline
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
+	use({ "Tsuzat/NeoSolarized.nvim" }) -- colorscheme
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

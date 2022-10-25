@@ -8,7 +8,6 @@ end
 
 mini_indentscope.setup({
 	draw = { delay = 0 },
-	symbol = "׃",
 })
 
 -- disable
