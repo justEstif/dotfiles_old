@@ -35,5 +35,3 @@ mini_jump2d.setup({
 		start_jumping = "<BS>",
 	},
 })
-
-require("plugins.mini.mini_starter")
