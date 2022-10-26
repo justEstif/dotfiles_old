@@ -83,6 +83,8 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 	use({ "Tsuzat/NeoSolarized.nvim" }) -- colorscheme
+	-- TODO: Setup whichkey
+
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
