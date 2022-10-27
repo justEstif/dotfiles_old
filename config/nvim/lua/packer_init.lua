@@ -79,7 +79,6 @@ return packer.startup(function(use)
 
 	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
-	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
 	use({
 		"nvim-lualine/lualine.nvim", -- statusline
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
