@@ -39,10 +39,10 @@ return packer.startup(function(use)
 		"neovim/nvim-lspconfig", -- nvim native lsp
 		"williamboman/mason.nvim", -- Installer for external tools
 		"williamboman/mason-lspconfig.nvim", -- mason extension for lspconfig
-		"jose-elias-alvarez/typescript.nvim", -- ts config
+		"jose-elias-alvarez/typescript.nvim", -- add features to tsserver config
 	})
 
-	-- Code completion
+	-- completion
 	use({
 		"hrsh7th/nvim-cmp", -- cmp plugin
 		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
@@ -53,37 +53,40 @@ return packer.startup(function(use)
 		"rafamadriz/friendly-snippets", -- common snippets
 	})
 
-	-- Telescope
+	-- Files
 	use({
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
 		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	})
-
-	-- Features
-	use({ "tpope/vim-fugitive" }) -- git client
-	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
-	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment/starter
 	use({ "ahmedkhalf/project.nvim" }) -- project/working dir
 	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
+
+  -- Git
+	use({ "tpope/vim-fugitive" }) -- git client
+	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git
+
+	-- Features
+	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
+	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
-	use({ "kylechui/nvim-surround", tag = "*" }) -- nvim surround
-	use({ "andymass/vim-matchup" }) -- add % match
 
 	-- Improve
+	use({ "kylechui/nvim-surround", tag = "*" }) -- add surround option
+	use({ "andymass/vim-matchup" }) -- add more match to %
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
-	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
+	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments support
 
 	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
-	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
 	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
 	use({
 		"nvim-lualine/lualine.nvim", -- statusline
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 	use({ "Tsuzat/NeoSolarized.nvim" }) -- colorscheme
-	-- TODO: Setup whichkey
+	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
+	use({ "folke/which-key.nvim" }) -- whichkey
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

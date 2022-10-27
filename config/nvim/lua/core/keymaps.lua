@@ -51,20 +51,12 @@ map("n", "<C-Down>", ":resize +2<CR>")
 map("n", "<C-Left>", ":vertical resize +2<CR>")
 map("n", "<C-Right>", ":vertical resize -2<CR>")
 
--- Shortcuts
-map("n", "[f", ":NvimTreeToggle<CR>") -- toggle netrw
-map("n", "[q", ":%bdelete<CR>") -- close all buffers
-
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
-map("n", "<C-p>", ":Telescope find_files<CR>") -- tc: find file
-map("n", "[s", ":Telescope live_grep<CR>") -- tc: find text
-map("n", "[b", ":Telescope buffers<cr>") -- tc: buffer list
-map("n", "[d", ":Telescope projects<cr>") -- change wdir
-map("n", "[g", ":tab G<cr>") -- fg: open
+map("n", "<C-p>", ":Telescope find_files<CR>", { desc = "Telescope: find files" }) -- tc: find file
 
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
--- core.netrw -> local keybinds
+-- plugins.which_key
