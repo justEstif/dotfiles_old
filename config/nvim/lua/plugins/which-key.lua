@@ -9,10 +9,8 @@ end
 
 local conf = {
 	plugins = {
-		marks = false, -- shows a list of your marks on ' and `
-		registers = false, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
-		-- the presets plugin, adds help for a bunch of default keybindings in Neovim
-		-- No actual key bindings are created
+		marks = true, -- shows a list of your marks on ' and `
+		registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
 		presets = {
 			operators = false, -- adds help for operators like d, y, ...
 			motions = false, -- adds help for motions
@@ -25,12 +23,12 @@ local conf = {
 		spelling = { enabled = true, suggestions = 20 }, -- use which-key for spelling hints
 	},
 	window = {
-		border = "single", -- none, single, double, shadow
+		border = "none", -- none, single, double, shadow
 		position = "bottom", -- bottom, top
 	},
 }
 
-local opts = {
+local leader_opts = {
 	mode = "n", -- Normal mode
 	prefix = "<leader>",
 	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
@@ -39,21 +37,13 @@ local opts = {
 	nowait = false, -- use `nowait` when creating keymaps
 }
 
-local mappings = {
+local leader_mappings = {
 	["w"] = { "<cmd>update!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
-
-	["["] = {
-		name = "Quick menu",
-		b = { "<cmd>Telescope buffers<CR>", "Find buffer" },
-		d = { "<cmd>Telescope projects<CR>", "Find project" },
-		s = { "<cmd>Telescope live_grep<CR>", "Find text" },
-	},
 
 	b = {
 		name = "Buffer",
 		c = { "<Cmd>bd!<Cr>", "Close current buffer" },
-		D = { "<Cmd>%bd<Cr>", "Delete all buffers" },
 	},
 
 	z = {
@@ -93,23 +83,5 @@ local mappings = {
 	},
 }
 
--- NOTE: Mappings for '['
-local opts_2 = {
-	mode = "n", -- Normal mode
-	prefix = "[",
-	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-	silent = true, -- use `silent` when creating keymaps
-	noremap = true, -- use `noremap` when creating keymaps
-	nowait = false, -- use `nowait` when creating keymaps
-}
-
-local mappings_2 = {
-	b = { "<cmd>Telescope buffers<CR>", "Find buffer" },
-	d = { "<cmd>Telescope projects<CR>", "Find project" },
-	f = { "<cmd>NvimTreeToggle<CR>", "Open file tree" },
-	s = { "<cmd>Telescope live_grep<CR>", "Find text" },
-}
-
 whichkey.setup(conf)
-whichkey.register(mappings, opts) -- , keymaps
-whichkey.register(mappings_2, opts_2) -- [ keymaps
+whichkey.register(leader_mappings, leader_opts) -- leader keymaps
