@@ -55,7 +55,6 @@ local options = {
 	synmaxcol = 240, -- Max column for syntax highlight
 	updatetime = 300, -- ms to wait for trigger an event
 	undofile = true, -- enable persistent undo
-	timeoutlen = 300, -- Time in milliseconds to wait for a mapped sequence to complete.
 }
 
 -- Settings Options
