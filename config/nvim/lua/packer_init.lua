@@ -85,7 +85,6 @@ return packer.startup(function(use)
 	})
 	use({ "Tsuzat/NeoSolarized.nvim" }) -- colorscheme
 	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
-	use({ "folke/which-key.nvim" }) -- whichkey
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

@@ -34,30 +34,26 @@ map("n", "]<space>", "o<esc>k", { desc = "Move empty line below" })
 map("n", "[<space>", "O<esc>j", { desc = "Move empty line above" })
 
 -- Should be default
-map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
-map("v", "<", "<gv") -- stay in indent mode
-map("v", ">", ">gv") -- stay in indent mode
-map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true }) -- apply macro on visual range
-map("t", "<Esc>", [[<C-\><C-n>]]) -- esc exit terminal
-map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
-
--- Resize with arrows
-map("n", "<C-Up>", ":resize -2<CR>")
-map("n", "<C-Down>", ":resize +2<CR>")
-map("n", "<C-Left>", ":vertical resize +2<CR>")
-map("n", "<C-Right>", ":vertical resize -2<CR>")
+map("v", "p", '"_dP', { desc = "Keep the yanked text when pasting in visual  mode" })
+map("v", "<", "<gv", { desc = "Stay in indent mode" }) -- stay in indent mode
+map("v", ">", ">gv", { desc = "Stay in indent mode" }) -- stay in indent mode
+map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true, desc = "Appy macro on visual range" })
+map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Esc exit terminal" }) -- esc exit terminal
+map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Shortcuts
-map("n", "[f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" }) -- toggle netrw
-map("n", "[q", ":%bdelete<CR>", { desc = "Close all buffers" }) -- close all buffers
+map("n", "[f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
+map("n", "[q", ":%bdelete<CR>", { desc = "Close all buffers" })
+map("n", "<leader>rr", ":so ~/dotfiles/config/nvim/init.lua<cr>", { desc = "Reload config" })
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
-map("n", "<C-p>", ":Telescope find_files<CR>", { desc = "Telescope: find files" }) -- tc: find file
-map("n", "[s", ":Telescope live_grep<CR>", { desc = "Telescope: live grep" }) -- tc: find text
-map("n", "[b", ":Telescope buffers<cr>", { desc = "Telescope: buffers" }) -- tc: buffer list
-map("n", "[d", ":Telescope projects<cr>", { desc = "Telescope: project" }) -- change wdir
+map("n", "<C-p>", ":Telescope find_files<CR>", { desc = "Telescope: find files" })
+map("n", "[s", ":Telescope live_grep<CR>", { desc = "Telescope: live grep" })
+map("n", "[b", ":Telescope buffers<cr>", { desc = "Telescope: buffers" })
+map("n", "[d", ":Telescope projects<cr>", { desc = "Telescope: project" })
+map("n", "[g", ":tab G<cr>", { desc = "Fugitive: open" })
 
 -- other keybindings in:
 -- plugins.lsp/handlers
