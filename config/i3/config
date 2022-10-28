@@ -58,7 +58,9 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # Screenshot
 bindsym Print exec flameshot gui
-bindsym $mod+Shift+x exec --no-startup-id i3lockmore --image-fill ~/.config/i3/lock.png
+
+# Lock using scroll lock
+bindsym Scroll_Lock exec --no-startup-id i3lockmore --image-fill ~/.config/i3/lock.png
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
