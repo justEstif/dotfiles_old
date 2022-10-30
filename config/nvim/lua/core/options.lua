@@ -7,7 +7,7 @@ local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
 local options = {
 	-- General
-	mouse = "", -- Disable mouse support
+	mouse = "a", -- enable mouse support
 	clipboard = "unnamedplus", -- Copy/paste to system clipboard
 	swapfile = false, -- Don't modify file open in another nvim processs
 	completeopt = "menuone,noinsert,noselect", -- Autocomplete options
