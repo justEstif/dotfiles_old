@@ -35,10 +35,10 @@ map("n", "[<space>", "O<esc>j", { desc = "Move empty line above" })
 
 -- Should be default
 map("v", "p", '"_dP', { desc = "Keep the yanked text when pasting in visual  mode" })
-map("v", "<", "<gv", { desc = "Stay in indent mode" }) -- stay in indent mode
-map("v", ">", ">gv", { desc = "Stay in indent mode" }) -- stay in indent mode
+map("v", "<", "<gv", { desc = "Stay in indent mode" })
+map("v", ">", ">gv", { desc = "Stay in indent mode" })
 map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true, desc = "Appy macro on visual range" })
-map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Esc exit terminal" }) -- esc exit terminal
+map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Esc exit terminal" })
 map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Shortcuts
