@@ -47,21 +47,26 @@ local function lsp_highlight_document(client)
 	end
 end
 
-local function lsp_keymaps(bufnr)
-	local opts = { noremap = true, silent = true }
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gt", "<cmd>Telescope lsp_type_definitions<cr>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gL", "<cmd>Telescope diagnostics<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gR", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "=", "<cmd>lua vim.lsp.buf.format{async=true}<CR>", opts)
+local function lsp_keymaps()
+	local map = require("core.utils").map
+	map("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "Goto the definition of the word under the cursor" })
+	map(
+		"n",
+		"gt",
+		"<cmd>Telescope lsp_type_definitions<cr>",
+		{ desc = "Goto the definition of the type of the word under the cursor" }
+	)
+	map("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = "Lists LSP references for word under the cursor" })
+	map("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>")
+	map("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>")
+	map("n", "gL", "<cmd>Telescope diagnostics<CR>", { desc = "Lists Diagnostics for all open buffers. " })
+	map("n", "gR", "<cmd>lua vim.lsp.buf.rename()<CR>")
+	map("n", "gca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+	map("n", "=", "<cmd>lua vim.lsp.buf.format{async=true}<CR>")
 end
 
-M.on_attach = function(client, bufnr)
-	lsp_keymaps(bufnr)
+M.on_attach = function(client)
+	lsp_keymaps()
 	lsp_highlight_document(client)
 
 	-- use null-ls for these languages

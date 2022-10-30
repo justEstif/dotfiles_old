@@ -2,17 +2,7 @@
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
 
--- map function
-local map = function(mode, lhs, rhs, opts)
-	local options = {
-		noremap = true,
-		silent = true,
-	}
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.keymap.set(mode, lhs, rhs, options)
-end
+local map = require("core.utils").map
 
 -- disable keys
 local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", ",", " " }
