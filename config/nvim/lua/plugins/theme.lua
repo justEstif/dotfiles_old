@@ -1,7 +1,17 @@
 -----------------------------------------------------------
 -- Color schemes configuration file
 -----------------------------------------------------------
-require('onedark').setup {
-    style = 'darker'
-}
-require('onedark').load()
+local status, onedark = pcall(require, "onedark")
+if not status then
+	return
+end
+
+onedark.setup({
+	style = "darker", -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
+	ending_tildes = true,
+	code_style = {
+		comments = "none",
+	},
+})
+
+onedark.load()
