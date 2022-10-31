@@ -1,0 +1,2 @@
+- Still have some issues with the working directory setup
+- Markdown highlighting

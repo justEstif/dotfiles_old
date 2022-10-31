@@ -60,7 +60,7 @@ map("n", "<leader>rr", ":so %<cr>", { desc = "Reload config" })
 map("n", "<C-p>", ":Telescope find_files<CR>", { desc = "Telescope: find files" })
 map("n", "[s", ":Telescope live_grep<CR>", { desc = "Telescope: live grep" })
 map("n", "[b", ":Telescope buffers<cr>", { desc = "Telescope: buffers" })
-map("n", "[d", ":Telescope projects<cr>", { desc = "Telescope: project" })
+map("n", "[d", ":Telescope cder<cr>", { desc = "Telescope: project" })
 map("n", "[g", ":tab G<cr>", { desc = "Fugitive: open" })
 
 -- other keybindings in:

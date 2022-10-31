@@ -33,6 +33,9 @@ return packer.startup(function(use)
 	-- Treesitter: code highlighting
 	use({ "nvim-treesitter/nvim-treesitter" })
 	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
+	use({ "andymass/vim-matchup" }) -- add more match to %
+	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
+	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments support
 
 	-- LSP
 	use({
@@ -59,7 +62,7 @@ return packer.startup(function(use)
 		branch = "0.1.x",
 		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	})
-	use({ "ahmedkhalf/project.nvim" }) -- project/working dir
+	use({ "zane-/cder.nvim" }) -- change working dir
 	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
 
 	-- Git
@@ -70,20 +73,19 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
-
-	-- Improve
 	use({ "kylechui/nvim-surround", tag = "*" }) -- add surround option
-	use({ "andymass/vim-matchup" }) -- add more match to %
-	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
-	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments support
 
-	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
+
+	-- Statusline
 	use({
-		"nvim-lualine/lualine.nvim", -- statusline
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		"nvim-lualine/lualine.nvim",
+		requires = {
+			"kyazdani42/nvim-web-devicons",
+			opt = true,
+		},
 	})
-	use({ "Tsuzat/NeoSolarized.nvim" }) -- colorscheme
+	use({ "navarasu/onedark.nvim" }) -- colorscheme
 	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
 
 	-- Put this at the end after all plugins
