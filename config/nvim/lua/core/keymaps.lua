@@ -2,7 +2,19 @@
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
 
-local map = require("core.utils").map
+-- @desc keymapping function
+local map = function(mode, lhs, rhs, opts)
+	local options = {
+		noremap = true,
+		silent = true,
+	}
+
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.keymap.set(mode, lhs, rhs, options)
+end
+
 
 -- disable keys
 local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", ",", " " }
@@ -30,6 +42,12 @@ map("v", ">", ">gv", { desc = "Stay in indent mode" })
 map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true, desc = "Appy macro on visual range" })
 map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Esc exit terminal" })
 map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
+map(
+	"n",
+	"gx",
+	[[:silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<CR>]],
+	{ desc = "Open link under cursor" }
+)
 
 -- Shortcuts
 map("n", "[f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })

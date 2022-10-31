@@ -62,7 +62,7 @@ return packer.startup(function(use)
 	use({ "ahmedkhalf/project.nvim" }) -- project/working dir
 	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
 
-  -- Git
+	-- Git
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git
 
