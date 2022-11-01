@@ -42,12 +42,6 @@ map("v", ">", ">gv", { desc = "Stay in indent mode" })
 map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true, desc = "Appy macro on visual range" })
 map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Esc exit terminal" })
 map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
-map(
-	"n",
-	"gx",
-	[[:silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<CR>]],
-	{ desc = "Open link under cursor" }
-)
 
 -- Shortcuts
 map("n", "[f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })

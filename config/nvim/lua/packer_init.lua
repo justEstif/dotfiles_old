@@ -57,13 +57,13 @@ return packer.startup(function(use)
 	})
 
 	-- Files
+	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
+	use({ "zane-/cder.nvim" }) -- change working dir
 	use({
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
 		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	})
-	use({ "zane-/cder.nvim" }) -- change working dir
-	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
 
 	-- Git
 	use({ "tpope/vim-fugitive" }) -- git client
@@ -75,18 +75,16 @@ return packer.startup(function(use)
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "kylechui/nvim-surround", tag = "*" }) -- add surround option
 
+	-- Apperance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
+	use({ "navarasu/onedark.nvim" }) -- colorscheme
+	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
 
 	-- Statusline
 	use({
 		"nvim-lualine/lualine.nvim",
-		requires = {
-			"kyazdani42/nvim-web-devicons",
-			opt = true,
-		},
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
-	use({ "navarasu/onedark.nvim" }) -- colorscheme
-	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
