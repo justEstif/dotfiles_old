@@ -79,6 +79,7 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "navarasu/onedark.nvim" }) -- colorscheme
 	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
+	use({ "hood/popui.nvim" }) -- add popup functionality
 
 	-- Statusline
 	use({
