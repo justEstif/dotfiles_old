@@ -45,7 +45,7 @@ return packer.startup(function(use)
 		"jose-elias-alvarez/typescript.nvim", -- add features to tsserver config
 	})
 
-	-- completion
+	-- Code completion
 	use({
 		"hrsh7th/nvim-cmp", -- cmp plugin
 		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
@@ -58,7 +58,7 @@ return packer.startup(function(use)
 
 	-- Files
 	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
-	use({ "zane-/cder.nvim" }) -- change working dir
+	use({ "zane-/cder.nvim" }) -- tc: change working dir
 	use({
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
