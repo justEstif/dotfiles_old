@@ -1,5 +1,5 @@
 return {
-	filetypes = { "html", "javascript", "javascriptreact", "typescriptreact" },
+	filetypes = { "html", "css", "javascript", "javascriptreact", "typescriptreact" },
 	settings = {
 		tailwindCSS = {
 			lint = {
