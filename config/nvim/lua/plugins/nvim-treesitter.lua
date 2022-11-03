@@ -40,23 +40,6 @@ nvim_treesitter.setup({
 		enable = true,
 		enable_autocmd = false,
 	},
-	-- textobjects
-	textobjects = {
-		select = {
-			enable = true,
-			lookahead = true,
-			keymaps = {
-				["af"] = "@function.outer",
-				["if"] = "@function.inner",
-			},
-			selection_modes = {
-				["@parameter.outer"] = "v", -- charwise
-				["@function.outer"] = "V", -- linewise
-				["@class.outer"] = "<c-v>", -- blockwise
-			},
-			include_surrounding_whitespace = true,
-		},
-	},
 	-- match
 	matchup = {
 		enable = "true",

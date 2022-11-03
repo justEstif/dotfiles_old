@@ -32,7 +32,6 @@ return packer.startup(function(use)
 
 	-- Treesitter: code highlighting
 	use({ "nvim-treesitter/nvim-treesitter" })
-	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 	use({ "andymass/vim-matchup" }) -- add more match to %
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments support
