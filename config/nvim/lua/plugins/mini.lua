@@ -39,15 +39,6 @@ mini_jump2d.setup({
 	},
 })
 
--- Mini tabline
-local status_tabline, mini_tabline = pcall(require, "mini.tabline")
-if not status_tabline then
-	print("mini.tabline error")
-	return
-end
-
-mini_tabline.setup()
-
 -- Mini jump
 local status_jump, mini_jump = pcall(require, "mini.jump")
 if not status_jump then
