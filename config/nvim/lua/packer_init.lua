@@ -66,7 +66,7 @@ return packer.startup(function(use)
 
 	-- Git
 	use({ "tpope/vim-fugitive" }) -- git client
-	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git
+	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git signs
 
 	-- Features
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
@@ -76,8 +76,8 @@ return packer.startup(function(use)
 
 	-- Apperance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
-	use({ "navarasu/onedark.nvim" }) -- colorscheme
 	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
+	use({ "catppuccin/nvim", as = "catppuccin" }) -- theme
 
 	-- Statusline
 	use({

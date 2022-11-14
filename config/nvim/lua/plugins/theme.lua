@@ -1,17 +1,41 @@
 -----------------------------------------------------------
 -- Color schemes configuration file
 -----------------------------------------------------------
-local status, onedark = pcall(require, "onedark")
+local status, theme = pcall(require, "catppuccin")
 if not status then
 	return
 end
 
-onedark.setup({
-	style = "darker", -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
-	ending_tildes = true,
-	code_style = {
-		comments = "none",
+-- Lua
+theme.setup({
+	flavour = "mocha", -- latte, frappe, macchiato, mocha
+	background = { -- :h background
+		light = "latte",
+		dark = "mocha",
+	},
+	styles = {
+		comments = {},
+		conditionals = {},
+		loops = {},
+		functions = {},
+		keywords = {},
+		strings = {},
+		variables = {},
+		numbers = {},
+		booleans = {},
+		properties = {},
+		types = {},
+		operators = {},
+	},
+	integrations = {
+		cmp = true,
+		gitsigns = true,
+		nvimtree = true,
+		telescope = true,
+		treesitter = true,
+		mini = true,
+		mason = true,
 	},
 })
 
-onedark.load()
+vim.cmd([[colorscheme catppuccin-latte]])
