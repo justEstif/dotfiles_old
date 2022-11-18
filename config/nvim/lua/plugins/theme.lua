@@ -38,4 +38,4 @@ theme.setup({
 	},
 })
 
-vim.cmd([[colorscheme catppuccin-macchiato]])
+vim.cmd([[colorscheme catppuccin-latte]])

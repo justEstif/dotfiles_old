@@ -65,7 +65,6 @@ bindsym Scroll_Lock exec --no-startup-id i3lockmore --image-fill ~/.config/i3/lo
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-bindsym $mod+Shift+d exec --no-startup-id discord
 bindsym $mod+Shift+w exec --no-startup-id firefox
 
 # change focus
