@@ -19,10 +19,9 @@ end
 telescope.setup({
 
 	defaults = {
-		-- remove symbols
-		entry_prefix = "  ",
-		prompt_prefix = "  ",
-		selection_caret = "  ",
+		prompt_prefix = "  ",
+		selection_caret = " ",
+		path_display = { "smart" },
 		mappings = {
 			i = {
 				["<C-u>"] = false, -- clear input with C-u
@@ -53,36 +52,17 @@ telescope.setup({
 			"dist/.*",
 		},
 		layout_strategy = "flex", -- display: flex;
-		initial_mode = "insert",
 	},
 	pickers = { -- defining the options of different pickers
 		find_files = {
+			initial_mode = "insert",
 			theme = "dropdown",
 			find_command = {
 				"fd",
 				"--hidden",
 			},
 		},
-		lsp_references = {
-			initial_mode = "normal",
-		},
-		diagnostics = {
-			initial_mode = "normal",
-		},
-		buffers = {
-			theme = "cursor",
-			initial_mode = "normal",
-			previewer = false,
-			mappings = { -- easy close buffer shortcut
-				i = {
-					["<C-d>"] = actions.delete_buffer,
-				},
-				n = {
-					["<C-d>"] = actions.delete_buffer,
-				},
-			},
-		},
 	},
 	extensions = {},
 })
-telescope.load_extension('cder')
+telescope.load_extension("cder")
