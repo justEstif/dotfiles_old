@@ -43,9 +43,10 @@ map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Esc exit terminal" })
 map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Shortcuts
-map("n", "[f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
 map("n", "[q", ":%bdelete<CR>", { desc = "Close all buffers" })
+map("n", "[b", ":b <C-z>", { desc = "List open buffers" })
 map("n", "<leader>rr", ":so %<cr>", { desc = "Reload config" })
+map("n", "[f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
