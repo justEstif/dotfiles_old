@@ -4,6 +4,7 @@ alias cdu="cd -" # go to the prev dir
 ## app aliases
 alias lf='ranger_cd' # file manager
 alias lz='nvim +"tab G"'  # git client
+alias v='nvim' # nvim
 
 # kill all node apps
 alias killnode="killall -9 node"

@@ -73,6 +73,7 @@ return packer.startup(function(use)
 	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "kylechui/nvim-surround", tag = "*" }) -- add surround option
+	use({ "wakatime/vim-wakatime" }) -- wakatime
 
 	-- Apperance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
