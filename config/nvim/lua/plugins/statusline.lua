@@ -7,4 +7,8 @@ if not status_ok then
 	return
 end
 
-lualine.setup({})
+lualine.setup({
+	options = {
+		theme = "catppuccin",
+	},
+})

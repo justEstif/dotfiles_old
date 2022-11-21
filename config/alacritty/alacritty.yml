@@ -1,6 +1,6 @@
 import:
-  # - ~/dotfiles/config/alacritty/catppuccin/catppuccin-latte.yml
-  - ~/dotfiles/config/alacritty/catppuccin/catppuccin-mocha.yml
+  - ~/dotfiles/config/alacritty/catppuccin/catppuccin-latte.yml
+  # - ~/dotfiles/config/alacritty/catppuccin/catppuccin-mocha.yml
   # - ~/dotfiles/config/alacritty/catppuccin/catppuccin-frappe.yml
   # - ~/dotfiles/config/alacritty/catppuccin/catppuccin-macchiato.yml
 
