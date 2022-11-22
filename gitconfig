@@ -2,7 +2,7 @@
 	name = Estifanos
 	email = estifanosbeyene21@gmail.com
 [core]
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
 	editor = nvim
 	excludesFile = ~/.gitignore
