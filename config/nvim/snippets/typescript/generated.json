@@ -1,0 +1,47 @@
+{
+  "exportDefault": {
+    "key": "exportDefault",
+    "prefix": "exp",
+    "body": ["export default ${1:first}"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "consoleLog": {
+    "key": "consoleLog",
+    "prefix": "clg",
+    "body": ["console.log(${1:first})"],
+    "description": "Displays a message in the console",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "typescriptReactFunctionalExportComponent": {
+    "key": "typescriptReactFunctionalExportComponent",
+    "prefix": "trfce",
+    "body": [
+      "type Props = {}",
+      "",
+      "function ${1:${TM_FILENAME_BASE}}({}: Props) {",
+      "  return (",
+      "    <div>${1:first}</div>",
+      "  )",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Creates a React Functional Component with ES7 module system and TypeScript interface",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "reactFunctionalExportComponent": {
+    "key": "reactFunctionalExportComponent",
+    "prefix": "rfce",
+    "body": [
+      "function ${1:${TM_FILENAME_BASE}}() {",
+      "  return (",
+      "    <div>${1:first}</div>",
+      "  )",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Creates a React Functional Component with ES7 module system",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  }
+}

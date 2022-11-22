@@ -88,7 +88,6 @@ local disabled_built_ins = {
 	"optwin",
 	"compiler",
 	"bugreport",
-	"ftplugin",
 }
 
 for _, plugin in pairs(disabled_built_ins) do
