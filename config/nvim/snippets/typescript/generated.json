@@ -2,70 +2,52 @@
   "consoleLog": {
     "key": "consoleLog",
     "prefix": "clg",
-    "body": [
-      "console.log(${1:first})"
-    ],
+    "body": ["console.log(${1:first})"],
     "description": "Displays a message in the console",
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
   "import": {
     "key": "import",
     "prefix": "imp",
-    "body": [
-      "import ${2:second} from '${1:first}'"
-    ],
+    "body": ["import ${2:second} from '${1:first}'"],
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
   "importDestructing": {
     "key": "importDestructing",
     "prefix": "imd",
-    "body": [
-      "import { ${2:second} } from '${1:first}'"
-    ],
+    "body": ["import { ${2:second} } from '${1:first}'"],
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
   "importEverything": {
     "key": "importEverything",
     "prefix": "ime",
-    "body": [
-      "import * as ${2:second} from '${1:first}'"
-    ],
+    "body": ["import * as ${2:second} from '${1:first}'"],
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
   "destructingObject": {
     "key": "destructingObject",
     "prefix": "dob",
-    "body": [
-      "const {${2:second}} = ${1:first}"
-    ],
+    "body": ["const {${2:second}} = ${1:first}"],
     "description": "Creates and assigns a local variable using object destructing",
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
   "commentBigBlock": {
     "key": "commentBigBlock",
     "prefix": "cmmb",
-    "body": [
-      "/**",
-      " * ${1:first}",
-      " */"
-    ],
+    "body": ["/**", " * ${1:first}", " */"],
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
   "map": {
     "key": "map",
     "prefix": "map",
-    "body": [
-      "${1:first}.map(${2:second} => {${3:third}})"
-    ],
+    "body": ["${1:first}.map(${2:second} => {${3:third}})"],
     "description": "Creates a map statement",
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
   "namedFunction": {
     "key": "namedFunction",
     "prefix": "nfn",
-    "body": [
-      "const ${1:first} = (${2:second}) => { ${3:third} }"
-    ],
+    "body": ["const ${1:first} = (${2:second}) => { ${3:third} }"],
     "description": "Creates a named function",
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
@@ -113,7 +95,7 @@
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
   "useState": {
-    "key": "useState",
+    "key": "ust",
     "prefix": "useStateSnippet",
     "body": [
       "const [${1:first}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:second})"
@@ -121,7 +103,7 @@
     "scope": "typescript,typescriptreact,javascript,javascriptreact"
   },
   "useEffect": {
-    "key": "useEffect",
+    "key": "uef",
     "prefix": "useEffectSnippet",
     "body": [
       "useEffect(() => {",

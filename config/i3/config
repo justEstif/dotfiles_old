@@ -88,7 +88,6 @@ bindsym $mod+shift+V split h
 bindsym $mod+v split v
 
 # container layout
-bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
