@@ -75,7 +75,6 @@ return packer.startup(function(use)
 
 	-- Apperance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
-	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
 	use({ "catppuccin/nvim", as = "catppuccin" }) -- theme
 
 	-- Statusline
