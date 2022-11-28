@@ -71,7 +71,6 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
-	use({ "kylechui/nvim-surround", tag = "*" }) -- add surround option
 	use({ "wakatime/vim-wakatime" }) -- wakatime
 
 	-- Apperance
