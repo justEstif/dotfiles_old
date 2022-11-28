@@ -45,10 +45,6 @@ local kind_icons = {
 	TypeParameter = "",
 }
 
--- Load custom typescript snippets
-require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets/typescript" } })
-luasnip.filetype_extend("all", { "_" })
-
 cmp.setup({
 	-- Load snippet support
 	snippet = {

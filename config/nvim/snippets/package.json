@@ -12,18 +12,18 @@
           "typescript",
           "typescriptreact"
         ],
-        "path": "./base-js.json"
+        "path": "./javascript/js.json"
       },
       {
         "language": [
           "javascriptreact",
           "typescriptreact"
         ],
-        "path": "./jsx.json"
+        "path": "./javascript/jsx.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./tsx.json"
+        "path": "./javascript/tsx.json"
       },
       {
         "language": "markdown",
