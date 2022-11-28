@@ -12,7 +12,26 @@
           "typescript",
           "typescriptreact"
         ],
-        "path": "./generated.json"
+        "path": "./base-js.json"
+      },
+      {
+        "language": [
+          "javascriptreact",
+          "typescriptreact"
+        ],
+        "path": "./jsx.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./tsx.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./markdown.json"
+      },
+      {
+        "language": "gitcommit",
+        "path": "./gitcommit.json"
       }
     ]
   }

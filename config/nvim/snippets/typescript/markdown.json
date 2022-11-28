@@ -1,0 +1,23 @@
+{
+  "Links": {
+    "prefix": "link",
+    "body": ["[${1}](${2}) ${0}"],
+    "description": "Add links"
+  },
+  "URLS": {
+    "prefix": "url",
+    "body": ["<${1}> ${0}"]
+  },
+  "Insert code": {
+    "prefix": "code",
+    "body": "`${1}` $0"
+  },
+  "Insert code block": {
+    "prefix": "codeblock",
+    "body": ["```${1:language}", "$0", "```"]
+  },
+  "Insert task list": {
+    "prefix": "task",
+    "body": ["- [${1| ,x|}] ${2:text}", "${0}"]
+  }
+}
