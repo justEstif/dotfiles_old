@@ -70,18 +70,11 @@ return packer.startup(function(use)
 	-- Features
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment
-	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "wakatime/vim-wakatime" }) -- wakatime
 
-	-- Apperance
+	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "catppuccin/nvim", as = "catppuccin" }) -- theme
-
-	-- Statusline
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
