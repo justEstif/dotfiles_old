@@ -59,9 +59,6 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # Screenshot
 bindsym Print exec flameshot gui
 
-# Lock using scroll lock
-bindsym Scroll_Lock exec --no-startup-id i3lockmore --image-fill ~/.config/i3/lock.png
-
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
@@ -144,14 +141,12 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # mode for lock, logout, suspend
 set $Locker i3lockmore --image-fill ~/.config/i3/lock.png && sleep 1
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (h) suspend, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+    bindsym s exec --no-startup-id systemctl poweroff -i, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
