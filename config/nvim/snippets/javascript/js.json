@@ -1,10 +1,10 @@
 {
-  "If-Else Statement": {
+  "if-else statement": {
     "prefix": "ifelse",
     "body": ["if (${1:condition}) {", "\t$0", "} else {", "\t", "}"],
     "description": "If-Else Statement"
   },
-  "Switch Statement": {
+  "switch statement": {
     "prefix": "switch",
     "body": [
       "switch (${1:key}) {",
@@ -42,6 +42,11 @@
     "prefix": "some",
     "body": "${1:iterable}.some((${2:item}) => {\n\t${0}\n})"
   },
+  "JSDoc Comment": {
+    "prefix": "/*",
+    "body": ["/**\n", " * ${1:Comment}$0\n", "*/"],
+    "description": "A JSDoc comment"
+  },
   "const statement": {
     "prefix": "c",
     "body": "const ${1:name}"
@@ -58,13 +63,17 @@
     "prefix": "ca",
     "body": "const ${1:name} = [\n\t${0}\n]"
   },
-  "const function": {
-    "prefix": "cf",
+  "function": {
+    "prefix": "f",
     "body": "const ${1:first} = (${2:second}) => { ${3:third} }"
+  },
+  "const async function": {
+    "prefix": "af",
+    "body": "const ${1:first} = async (${2:second}) => { ${3:third} }"
   },
   "export named function": {
     "prefix": "ef",
-    "body": "const ${1:first} = (${2:second}) => { ${3:third} }"
+    "body": ["export const ${1:first} = (${2:second}) => { ${3:third} }"]
   },
   "module default export": {
     "prefix": "ed",
@@ -90,17 +99,9 @@
     "prefix": "id",
     "body": "import {$2} from '${1:module}'"
   },
-  "async function": {
-    "prefix": "asf",
-    "body": "const ${1:first} = async (${2:second}) => { ${3:third} }"
-  },
   "console.log": {
     "prefix": "clg",
     "body": "console.log(${0})"
-  },
-  "JSON.parse()": {
-    "prefix": "jsp",
-    "body": "JSON.parse($0)"
   },
   "return": {
     "prefix": "r",

@@ -32,6 +32,17 @@
       {
         "language": "gitcommit",
         "path": "./gitcommit.json"
+      },
+      {
+        "language": [
+          "plaintext",
+          "markdown",
+          "tex",
+          "html",
+          "global",
+          "all"
+        ],
+        "path": "./global.json"
       }
     ]
   }
