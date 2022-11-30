@@ -31,3 +31,8 @@ autocmd("BufEnter", {
 	pattern = "*",
 	command = "set fo-=c fo-=r fo-=o",
 })
+
+-- Turn of line numbers in terminal
+autocmd("TermOpen", {
+	command = "setlocal listchars= nonumber norelativenumber nocursorline",
+})
