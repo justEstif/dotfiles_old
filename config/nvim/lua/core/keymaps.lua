@@ -1,19 +1,6 @@
------------------------------------------------------------
--- Define keymaps of Neovim and installed plugins.
------------------------------------------------------------
+-- Keymaps
 
--- @desc keymapping function
-local map = function(mode, lhs, rhs, opts)
-	local options = {
-		noremap = true,
-		silent = true,
-	}
-
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.keymap.set(mode, lhs, rhs, options)
-end
+local map = require("core.utils").map
 
 -- disable keys
 local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", ",", " " }
@@ -38,12 +25,11 @@ map("n", "<leader>q", ":%bdelete<CR>", { desc = "Close all buffers" })
 map("n", "<leader>b", ":b <C-z>", { desc = "List open buffers" })
 map("n", "<leader>rr", ":so %<cr>", { desc = "Reload config" })
 map("n", "<leader>t", function()
-	require("core.utils.term")()
+	require("core.utils").toggle_term()
 end)
 
 -- Plugins shortcuts
-map("n", "<leader><leader>", ":Telescope find_files<CR>", { desc = "Telescope: find files" })
-map("n", "<leader>c", ":Telescope cder<cr>", { desc = "Telescope: project" })
 map("n", "<leader>d", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
+map("n", "<leader>f", ":Telescope find_files<CR>", { desc = "Telescope: find files" })
 map("n", "<leader>g", ":tab G<cr>", { desc = "Fugitive: open" })
 map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Telescope: live grep" })

@@ -56,7 +56,6 @@ return packer.startup(function(use)
 
 	-- Files
 	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
-	use({ "zane-/cder.nvim" }) -- tc: change working dir
 	use({
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
@@ -71,7 +70,6 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment
 	use({ "wakatime/vim-wakatime" }) -- wakatime
-	use({ "jakewvincent/mkdnflow.nvim", rocks = "luautf8" }) -- md notes
 
 	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
