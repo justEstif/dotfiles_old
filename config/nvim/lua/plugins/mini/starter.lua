@@ -18,10 +18,9 @@ mini_starter.setup({
 		[[\_\ \/ \___|\___/ \_/ |_|_| |_| |_|]],
 		[[───────────────────────────────────]],
 	}, "\n"),
-	query_updaters = [[abcdeghiloqrstuvwxyz0123456789_-,.ABCDEGHIJKLOQRSTUVWXYZ]],
+	query_updaters = [[abcdeghiloqrstuvwxyz0123456789_-.ABCDEGHIJKLOQRSTUVWXYZ]],
 	items = {
 		{ action = "PackerSync", name = "U: Update Plugins", section = "Plugins" },
-		{ section = "Settings", name = "S: Settings", action = ":e $MYVIMRC<CR>" },
 		{ action = "qall!", name = "Q: Quit Neovim", section = "Builtin actions" },
 	},
 })
@@ -34,4 +33,3 @@ vim.cmd([[
     au User MiniStarterOpened nmap <buffer> <C-p> <Cmd>Telescope find_files<CR>
   augroup END
 ]])
-
