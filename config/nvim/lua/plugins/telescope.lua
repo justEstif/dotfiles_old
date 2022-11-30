@@ -23,7 +23,7 @@ telescope.setup({
 		mappings = {
 			i = {
 				["<C-u>"] = false, -- clear input with C-u
-				["<C-p>"] = actions.close, -- exit
+				["<leader><leader>"] = actions.close, -- exit
 				["<C-j>"] = actions.move_selection_next, -- next item
 				["<C-k>"] = actions.move_selection_previous, -- previous item
 				["<C-?>"] = actions.which_key, -- available keys
