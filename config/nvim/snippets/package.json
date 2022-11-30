@@ -26,10 +26,6 @@
         "path": "./javascript/tsx.json"
       },
       {
-        "language": "markdown",
-        "path": "./markdown.json"
-      },
-      {
         "language": "gitcommit",
         "path": "./gitcommit.json"
       },
