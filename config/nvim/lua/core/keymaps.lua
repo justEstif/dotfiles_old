@@ -23,18 +23,7 @@ end
 
 vim.g.mapleader = ","
 
------------------------------------------------------------
--- Neovim shortcuts
------------------------------------------------------------
--- vim-unimpaired: thanks tpope
-map("n", "]e", ":m .+1<CR>==", { desc = "Move line up" })
-map("v", "]e", ":m '>+1<CR>gv=gv", { desc = "Move line up" })
-map("n", "[e", ":m .-2<CR>==", { desc = "Move line down" })
-map("v", "[e", ":m '<-2<CR>gv=gv", { desc = "Move line down" })
-map("n", "]<space>", "o<esc>k", { desc = "Move empty line below" })
-map("n", "[<space>", "O<esc>j", { desc = "Move empty line above" })
-
--- Should be default
+-- Override default
 map("v", "p", '"_dP', { desc = "Keep the yanked text when pasting in visual  mode" })
 map("v", "<", "<gv", { desc = "Stay in indent mode" })
 map("v", ">", ">gv", { desc = "Stay in indent mode" })
@@ -43,15 +32,13 @@ map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Esc exit terminal" })
 map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Shortcuts
-map("n", "[q", ":%bdelete<CR>", { desc = "Close all buffers" })
-map("n", "[b", ":b <C-z>", { desc = "List open buffers" })
+map("n", "<leader>q", ":%bdelete<CR>", { desc = "Close all buffers" })
+map("n", "<leader>b", ":b <C-z>", { desc = "List open buffers" })
 map("n", "<leader>rr", ":so %<cr>", { desc = "Reload config" })
-map("n", "[f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
+map("n", "<leader>f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
 
------------------------------------------------------------
--- Applications and Plugins shortcuts
------------------------------------------------------------
-map("n", "<C-p>", ":Telescope find_files<CR>", { desc = "Telescope: find files" })
-map("n", "[s", ":Telescope live_grep<CR>", { desc = "Telescope: live grep" })
-map("n", "[d", ":Telescope cder<cr>", { desc = "Telescope: project" })
-map("n", "[g", ":tab G<cr>", { desc = "Fugitive: open" })
+-- Plugins shortcuts
+map("n", "<leader><leader>", ":Telescope find_files<CR>", { desc = "Telescope: find files" })
+map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Telescope: live grep" })
+map("n", "<leader>d", ":Telescope cder<cr>", { desc = "Telescope: project" })
+map("n", "<leader>g", ":tab G<cr>", { desc = "Fugitive: open" })
