@@ -30,6 +30,6 @@ end, { desc = "Toggle a single terminal" })
 
 -- Plugins shortcuts
 map("n", "<leader>d", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
-map("n", "<leader>f", ":Telescope find_files<CR>", { desc = "Telescope: find files" })
 map("n", "<leader>g", ":tab G<cr>", { desc = "Fugitive: open" })
+map("n", "<leader>f", ":Telescope find_files<CR>", { desc = "Telescope: find files" })
 map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Telescope: live grep" })
