@@ -15,7 +15,6 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier, -- prettier
-		diagnostics.eslint, -- eslint
 		diagnostics.jsonlint, -- json
 		formatting.rustywind, -- tailwind
 		formatting.stylua, -- lua
