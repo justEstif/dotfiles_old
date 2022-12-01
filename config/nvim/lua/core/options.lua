@@ -5,63 +5,70 @@
 local g = vim.g -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
-local options = {
-	-- General
-	mouse = "a", -- enable mouse support
-	clipboard = "unnamedplus", -- Copy/paste to system clipboard
-	swapfile = false, -- Don't modify file open in another nvim processs
-	completeopt = "menuone,noinsert,noselect", -- Autocomplete options
-	joinspaces = false, -- Don't autoinsert two spaces after '.', '?', '!' for join command.
-	encoding = "utf-8", -- Display this encoding.
-	fileencoding = "utf-8", -- Use this encoding when writing to file.
-	viewoptions = "cursor,folds", -- Save/restore just these (with `:{mk,load}view`).
-	backspace = "indent,eol,start", -- allow backspace on indent, end of line or insert mode start position
+-- General
+opt.mouse = "a" -- enable mouse support
+opt.clipboard = "unnamedplus" -- Copy/paste to system clipboard
+opt.swapfile = false -- Don't modify file open in another nvim processs
+opt.completeopt = "menuone,noinsert,noselect" -- Autocomplete options
+opt.joinspaces = false -- Don't autoinsert two spaces after '.', '?', '!' for join command.
+opt.encoding = "utf-8" -- Display this encoding.
+opt.fileencoding = "utf-8" -- Use this encoding when writing to file.
+opt.viewoptions = "cursor,folds" -- Save/restore just these (with `:{mk,load}view`).
+opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
-	-- Search
-	ignorecase = true, -- Ignore case letters when search
-	smartcase = true, -- Ignore lowercase for the whole pattern
-	gdefault = true, -- default g flag to search
-	showmatch = true, -- Highlight matching parenthesis
+-- Search
+opt.ignorecase = true -- Ignore case letters when search
+opt.smartcase = true -- Ignore lowercase for the whole pattern
+opt.gdefault = true -- default g flag to search
+opt.showmatch = true -- Highlight matching parenthesis
 
-	-- Line Number
-	relativenumber = true, -- relative numebr
-	signcolumn = "yes:1", -- sign column default size
+-- Line Number
+opt.relativenumber = true -- relative numebr
+opt.signcolumn = "yes:1" -- sign column default size
 
-	-- Fold
-	foldenable = false, -- don't start folded
-	fillchars = { fold = " " },
-	foldmethod = "manual",
+-- Fold
+opt.foldenable = false -- don't start folded
+opt.fillchars = { fold = " " }
+opt.foldmethod = "manual"
 
-	-- UI
-	wrap = true, -- wrap lines
-	linebreak = true, -- Wrap on word boundary
-	splitright = true, -- Vertical split to the right
-	splitbelow = true, -- Horizontal split to the bottom
-	termguicolors = true, -- Enable 24-bit RGB colors
-	laststatus = 3, -- Set global statusline
-	pumheight = 15, -- pop up menu height
-	cursorline = true, -- show cursorline
-	showtabline = 0, -- don't show tabline
+-- UI
+opt.wrap = true -- wrap lines
+opt.linebreak = true -- Wrap on word boundary
+opt.splitright = true -- Vertical split to the right
+opt.splitbelow = true -- Horizontal split to the bottom
+opt.termguicolors = true -- Enable 24-bit RGB colors
+opt.laststatus = 3 -- Set global statusline
+opt.pumheight = 15 -- pop up menu height
+opt.cursorline = true -- show cursorline
+opt.showtabline = 0 -- don't show tabline
 
-	-- Tabs, indent
-	expandtab = true, -- Use spaces instead of tabs
-	shiftwidth = 2, -- Shift 2 spaces when tab
-	tabstop = 2, -- 1 tab == 2 spaces
-	smartindent = true, -- Autoindent new lines
+-- Tabs, indent
+opt.expandtab = true -- Use spaces instead of tabs
+opt.shiftwidth = 2 -- Shift 2 spaces when tab
+opt.tabstop = 2 -- 1 tab == 2 spaces
+opt.smartindent = true -- Autoindent new lines
 
-	-- Memory, CPU
-	hidden = true, -- Enable background buffers
-	history = 200, -- Remember N lines in history
-	synmaxcol = 240, -- Max column for syntax highlight
-	updatetime = 300, -- ms to wait for trigger an event
-	undofile = true, -- enable persistent undo
-	autoread = true,
-}
+-- Memory, CPU
+opt.hidden = true -- Enable background buffers
+opt.history = 200 -- Remember N lines in history
+opt.synmaxcol = 240 -- Max column for syntax highlight
+opt.updatetime = 300 -- ms to wait for trigger an event
+opt.undofile = true -- enable persistent undo
+opt.autoread = true -- auto read files changes (works with autocommand)
 
--- Settings Options
-for k, v in pairs(options) do
-	opt[k] = v
-end
+-- ignore these files in search
+opt.wildignore:append({
+	"*.zip",
+	"*.png",
+	"*.jpg",
+	"*.gif",
+	"*.pdf",
+	"*DS_Store*",
+	"*/.git/*",
+	"*/node_modules/*",
+	"*/build/*",
+	"package-lock.json",
+})
 
 -- Disable builtins plugins
 local disabled_built_ins = {
@@ -93,24 +100,4 @@ local disabled_built_ins = {
 
 for _, plugin in pairs(disabled_built_ins) do
 	g["loaded_" .. plugin] = 1
-end
-
-local options_append = {
-	-- ignore these files in search
-	wildignore = {
-		"*.zip",
-		"*.png",
-		"*.jpg",
-		"*.gif",
-		"*.pdf",
-		"*DS_Store*",
-		"*/.git/*",
-		"*/node_modules/*",
-		"*/build/*",
-		"package-lock.json",
-	},
-}
-
-for k, v in pairs(options_append) do
-	opt[k]:append(v)
 end
