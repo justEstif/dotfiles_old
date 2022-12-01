@@ -55,6 +55,7 @@ local options = {
 	synmaxcol = 240, -- Max column for syntax highlight
 	updatetime = 300, -- ms to wait for trigger an event
 	undofile = true, -- enable persistent undo
+	autoread = true,
 }
 
 -- Settings Options

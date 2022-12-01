@@ -1,6 +1,6 @@
 local M = {}
 
--- function for mapping
+-- @desc function for keymapping
 M.map = function(mode, lhs, rhs, opts)
 	local options = { silent = true }
 
@@ -10,8 +10,8 @@ M.map = function(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
--- function for toggling a single terminal
-M.toggle_term = function()
+-- @desc function for toggling a single terminal
+M.toggle_single_term = function()
 	local te_buf = nil
 	local te_win_id = nil
 

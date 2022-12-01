@@ -36,3 +36,9 @@ autocmd("BufEnter", {
 autocmd("TermOpen", {
 	command = "setlocal listchars= nonumber norelativenumber nocursorline",
 })
+
+-- Autoreload file when change in different app
+autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+	command = "if mode() != 'c' | checktime | endif",
+	pattern = { "*" },
+})
