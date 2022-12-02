@@ -14,6 +14,8 @@ nvim_treesitter.setup({
 		"javascript",
 		"json",
 		"lua",
+		"markdown",
+		"markdown_inline",
 		"python",
 		"typescript",
 		"vim",

@@ -37,7 +37,6 @@ opt.linebreak = true -- Wrap on word boundary
 opt.splitright = true -- Vertical split to the right
 opt.splitbelow = true -- Horizontal split to the bottom
 opt.termguicolors = true -- Enable 24-bit RGB colors
-opt.laststatus = 3 -- Set global statusline
 opt.pumheight = 15 -- pop up menu height
 opt.cursorline = true -- show cursorline
 opt.showtabline = 0 -- don't show tabline

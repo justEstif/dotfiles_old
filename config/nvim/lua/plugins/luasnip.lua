@@ -1,8 +1,8 @@
 -----------------------------------------------------------
 -- Luasnip configuration file
 ----------------------------------------------------------
-local luasnip_status_ok, luasnip = pcall(require, "luasnip")
-if not luasnip_status_ok then
+local status, luasnip = pcall(require, "luasnip")
+if not status then
 	return
 end
 

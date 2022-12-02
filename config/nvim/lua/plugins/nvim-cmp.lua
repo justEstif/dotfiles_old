@@ -2,13 +2,13 @@
 -- Cmp configuration file
 ----------------------------------------------------------
 
-local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
+local status_cmp, cmp = pcall(require, "cmp")
+if not status_cmp then
 	return
 end
 
-local luasnip_status_ok, luasnip = pcall(require, "luasnip")
-if not luasnip_status_ok then
+local status_luasnip, luasnip = pcall(require, "luasnip")
+if not status_luasnip then
 	return
 end
 

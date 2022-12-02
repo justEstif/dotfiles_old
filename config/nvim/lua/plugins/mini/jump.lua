@@ -13,6 +13,4 @@ mini_jump.setup({
 		backward_till = "T",
 		repeat_jump = "",
 	},
-	idle_stop = 1000,
 })
-

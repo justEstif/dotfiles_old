@@ -1,6 +1,7 @@
 -- Mini Starter
-local mini_starter_status, mini_starter = pcall(require, "mini.starter")
-if not mini_starter_status then
+local status, mini_starter = pcall(require, "mini.starter")
+if not status then
+	print("mini.starter error")
 	return
 end
 
