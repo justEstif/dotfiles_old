@@ -70,6 +70,7 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment
 	use({ "wakatime/vim-wakatime" }) -- wakatime
+	use({ "akinsho/toggleterm.nvim", tag = "*" }) -- toggle term
 
 	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons

@@ -24,7 +24,8 @@ if not status then
 	return
 end
 
-local servers = { "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss", "prismals", "eslint" }
+local servers =
+	{ "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss", "prismals", "marksman", "eslint" }
 
 mason_lspconfig.setup({
 	ensure_installed = servers,

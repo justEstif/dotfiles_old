@@ -26,11 +26,6 @@ autocmd("BufEnter", {
 	command = "set fo-=c fo-=r fo-=o",
 })
 
--- Turn of line numbers in terminal
-autocmd("TermOpen", {
-	command = "setlocal listchars= nonumber norelativenumber nocursorline",
-})
-
 -- Autoreload file when change in different app
 autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
 	command = "if mode() != 'c' | checktime | endif",
