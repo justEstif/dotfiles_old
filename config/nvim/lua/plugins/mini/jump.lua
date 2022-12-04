@@ -5,12 +5,4 @@ if not status_jump then
 	return
 end
 
-mini_jump.setup({
-	mappings = {
-		forward = "f",
-		backward = "F",
-		forward_till = "t",
-		backward_till = "T",
-		repeat_jump = "",
-	},
-})
+mini_jump.setup()

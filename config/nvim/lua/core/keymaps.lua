@@ -31,9 +31,6 @@ map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 map("n", "<leader>q", ":%bdelete<CR>", { desc = "Close all buffers" })
 map("n", "<leader>b", ":b <C-z>", { desc = "List open buffers" })
 map("n", "<leader>rr", ":so %<cr>", { desc = "Reload config" })
-map("n", "<leader>t", function()
-	require("core.utils").toggle_single_term()
-end, { desc = "Toggle a single terminal" })
 
 -- Plugins shortcuts
 map("n", "<leader>d", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })

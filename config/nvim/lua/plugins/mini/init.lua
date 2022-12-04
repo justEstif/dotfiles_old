@@ -1,7 +1,6 @@
 require("plugins.mini.ai")
 require("plugins.mini.comment")
 require("plugins.mini.jump")
-require("plugins.mini.jump2d")
 require("plugins.mini.pairs")
 require("plugins.mini.starter")
 require("plugins.mini.statusline")
