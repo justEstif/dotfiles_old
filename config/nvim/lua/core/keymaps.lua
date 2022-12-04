@@ -22,7 +22,6 @@ map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 -- Shortcuts
 map("n", "<leader>q", ":%bdelete<CR>", { desc = "Close all buffers" })
 map("n", "<leader>b", ":b <C-z>", { desc = "List open buffers" })
-map("n", "<leader>rr", ":so %<cr>", { desc = "Reload config" })
 
 -- Plugins shortcuts
 map("n", "<leader>d", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
