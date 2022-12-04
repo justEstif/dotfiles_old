@@ -16,7 +16,6 @@ map("n", "<", "<<", { desc = "Indent" })
 map("v", "<", "<gv", { desc = "Indent" })
 map("v", ">", ">gv", { desc = "Indent" })
 map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true, desc = "Appy macro on visual range" })
-map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Esc exit terminal" })
 map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Shortcuts

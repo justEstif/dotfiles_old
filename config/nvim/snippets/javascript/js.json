@@ -1,7 +1,13 @@
 {
   "if-else statement": {
     "prefix": "ifelse",
-    "body": ["if (${1:condition}) {", "\t$0", "} else {", "\t", "}"],
+    "body": [
+      "if (${1:condition}) {",
+      "\t$0",
+      "} else {",
+      "\t",
+      "}"
+    ],
     "description": "If-Else Statement"
   },
   "switch statement": {
@@ -44,7 +50,11 @@
   },
   "JSDoc Comment": {
     "prefix": "/*",
-    "body": ["/**\n", " * ${1:Comment}$0\n", "*/"],
+    "body": [
+      "/**",
+      " * ${1:Comment}$0",
+      "*/"
+    ],
     "description": "A JSDoc comment"
   },
   "const statement": {
@@ -73,7 +83,9 @@
   },
   "export named function": {
     "prefix": "ef",
-    "body": ["export const ${1:first} = (${2:second}) => { ${3:third} }"]
+    "body": [
+      "export const ${1:first} = (${2:second}) => { ${3:third} }"
+    ]
   },
   "module default export": {
     "prefix": "ed",

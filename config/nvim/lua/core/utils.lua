@@ -20,14 +20,4 @@ M.buf_map = function(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
--- @desc function for global user commands
-M.cmd = function(command, target)
-	vim.api.nvim_create_user_command(command, target)
-end
-
--- @desc function for buffer user commands
-M.buf_cmd = function(command, target)
-	vim.api.nvim_buf_create_user_command(command, target)
-end
-
 return M
