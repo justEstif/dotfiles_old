@@ -7,9 +7,10 @@ end
 toggleterm.setup({
 	size = 18,
 	shade_terminals = false,
-	open_mapping = "<leader>t",
 	direction = "horizontal",
 	persist_size = true,
+	open_mapping = "<leader>t",
+	insert_mappings = false, -- open_mapping off in insert mode
 })
 
 local term_buf_map = function(lhs, rhs)

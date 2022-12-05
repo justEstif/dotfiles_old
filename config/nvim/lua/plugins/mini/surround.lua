@@ -7,6 +7,7 @@ end
 
 -- Replace vim-surround:
 mini_surround.setup({
+	n_lines = 500,
 	mappings = {
 		add = "ys",
 		delete = "ds",
@@ -21,6 +22,7 @@ mini_surround.setup({
 	},
 	search_method = "cover_or_nearest",
 })
+
 -- Remap adding surrounding to Visual mode selection
 vim.api.nvim_del_keymap("x", "ys")
 vim.api.nvim_set_keymap("x", "S", [[:<C-u>lua MiniSurround.add('visual')<CR>]], { noremap = true })
