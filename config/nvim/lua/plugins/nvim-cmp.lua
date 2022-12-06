@@ -53,10 +53,7 @@ cmp.setup({
 		end,
 	},
 
-	-- Completion settings
-	completion = {
-		keyword_length = 1,
-	},
+	completion = { keyword_length = 1 },
 
 	-- Key mapping
 	mapping = {

@@ -1,17 +1,10 @@
------------------------------------------------------------
--- File manager configuration file
------------------------------------------------------------
-
+-- Nvim Tree
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
 	return
 end
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-	return
-end
-
+local nvim_tree_config = require("nvim-tree.config")
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
@@ -79,13 +72,9 @@ nvim_tree.setup({
 				},
 			},
 		},
-		remove_file = {
-			close_window = true,
-		},
+		remove_file = { close_window = true },
 	},
-	filters = {
-		custom = { "^.git$" },
-	},
+	filters = { custom = { "^.git$" } },
 	diagnostics = {
 		enable = true,
 		show_on_dirs = true,

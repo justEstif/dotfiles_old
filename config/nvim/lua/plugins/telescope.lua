@@ -1,20 +1,11 @@
------------------------------------------------------------
--- Telescope configuration file
-----------------------------------------------------------
+-- Telescope
 local telescope_status_ok, telescope = pcall(require, "telescope")
 if not telescope_status_ok then
 	return
 end
 
-local actions_status_ok, actions = pcall(require, "telescope.actions")
-if not actions_status_ok then
-	return
-end
-
-local layout_ok, actions_layout = pcall(require, "telescope.actions.layout")
-if not layout_ok then
-	return
-end
+local actions = require("telescope.actions")
+local actions_layout = require("telescope.actions.layout")
 
 telescope.setup({
 
@@ -55,10 +46,7 @@ telescope.setup({
 		find_files = {
 			initial_mode = "insert",
 			theme = "dropdown",
-			find_command = {
-				"fd",
-				"--hidden",
-			},
+			find_command = { "fd", "--hidden" },
 		},
 	},
 	extensions = {},
