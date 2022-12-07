@@ -46,7 +46,7 @@ telescope.setup({
 		find_files = {
 			initial_mode = "insert",
 			theme = "dropdown",
-			find_command = { "fd", "--hidden" },
+			find_command = { "fd", "--hidden", "--no-ignore-vcs" },
 		},
 	},
 	extensions = {},
