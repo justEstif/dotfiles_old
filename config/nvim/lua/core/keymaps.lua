@@ -19,8 +19,7 @@ map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true, desc = "Appy m
 map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Shortcuts
-map("n", "<leader>q", ":%bdelete<CR>", { desc = "Close all buffers" })
-
+map("n", "<leader>q", ":%bdelete | lua MiniStarter.open()<CR>", { desc = "Close all buffers" })
 
 -- Plugins shortcuts
 map("n", "<leader>d", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })

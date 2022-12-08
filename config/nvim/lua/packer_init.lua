@@ -74,7 +74,7 @@ return packer.startup(function(use)
 
 	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
-	use({ "navarasu/onedark.nvim" })
+	use({ "navarasu/onedark.nvim" }) -- theme
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
