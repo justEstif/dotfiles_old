@@ -18,12 +18,10 @@ map("v", ">", ">gv", { desc = "Indent" })
 map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true, desc = "Appy macro on visual range" })
 map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 
--- Shortcuts
-map("n", "<leader>q", ":%bdelete | lua MiniStarter.open()<CR>", { desc = "Close all buffers" })
-
 -- Plugins shortcuts
-map("n", "<leader>d", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
-map("n", "<leader>g", ":G<cr>", { desc = "Fugitive: open" })
 map("n", "<leader>b", ":Telescope buffers<cr>", { desc = "List open buffers" })
-map("n", "<leader>f", ":Telescope find_files<CR>", { desc = "Telescope: find files" })
-map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Telescope: live grep" })
+map("n", "<leader>f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
+map("n", "<leader>g", ":G<cr>", { desc = "Open fugitive" })
+map("n", "<leader>q", ":%bdelete | lua MiniStarter.open()<CR>", { desc = "Close all buffers" })
+map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Search in cwd" })
+map("n", "<leader><leader>", ":Telescope find_files<CR>", { desc = "Find files in cwd" })
