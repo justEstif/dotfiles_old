@@ -19,9 +19,10 @@ mini_starter.setup({
 		[[\_\ \/ \___|\___/ \_/ |_|_| |_| |_|]],
 		[[───────────────────────────────────]],
 	}, "\n"),
-	query_updaters = "qQfF",
+	query_updaters = "eEfFqQ",
 	items = {
 		{ action = "NvimTreeOpen", name = "F: Open File Tree", section = "Plugins" },
+		{ action = "enew", name = "E: New Buffer", section = "Builtin actions" },
 		{ action = "qall!", name = "Q: Quit Neovim", section = "Builtin actions" },
 	},
 })
