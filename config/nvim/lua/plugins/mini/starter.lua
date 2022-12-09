@@ -19,9 +19,9 @@ mini_starter.setup({
 		[[\_\ \/ \___|\___/ \_/ |_|_| |_| |_|]],
 		[[───────────────────────────────────]],
 	}, "\n"),
-	query_updaters = [[abcdeghiloqrstuvwxyz0123456789_-.ABCDEGHIJKLOQRSTUVWXYZ]],
+	query_updaters = "qQdD",
 	items = {
-		{ action = "PackerSync", name = "U: Update Plugins", section = "Plugins" },
+		{ action = "NvimTreeOpen", name = "D: Open File Tree", section = "Plugins" },
 		{ action = "qall!", name = "Q: Quit Neovim", section = "Builtin actions" },
 	},
 })
