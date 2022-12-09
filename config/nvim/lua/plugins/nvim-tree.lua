@@ -90,10 +90,11 @@ nvim_tree.setup({
 		side = "left",
 		mappings = {
 			list = {
-				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
+				{ key = { "l", "<CR>" }, cb = tree_cb("edit") },
 				{ key = "h", cb = tree_cb("close_node") },
 				{ key = "v", cb = tree_cb("vsplit") },
 				{ key = "V", cb = tree_cb("split") },
+				{ key = "<leader><leader>", cb = tree_cb("close") },
 			},
 		},
 	},

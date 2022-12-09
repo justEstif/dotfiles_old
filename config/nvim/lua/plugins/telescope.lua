@@ -25,6 +25,7 @@ telescope.setup({
 				["<C-d>"] = actions.preview_scrolling_down,
 			},
 			n = {
+				["<leader><leader>"] = actions.close, -- exit
 				["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
 				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 				["<C-?>"] = actions.which_key, -- see options
