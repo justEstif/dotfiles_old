@@ -13,35 +13,27 @@ telescope.setup({
 		path_display = { "smart" },
 		mappings = {
 			i = {
-				["<C-u>"] = false, -- clear input with C-u
 				["<leader><leader>"] = actions.close, -- exit
+				["<C-u>"] = false, -- clear input with C-u
 				["<C-j>"] = actions.move_selection_next, -- next item
 				["<C-k>"] = actions.move_selection_previous, -- previous item
-				["<C-?>"] = actions.which_key, -- available keys
 				["<C-w>"] = actions_layout.toggle_preview, -- toggle preview
-				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-				["<C-q>"] = actions.smart_add_to_qflist + actions.open_qflist, -- add grep to quickfix
-				["<C-f>"] = actions.preview_scrolling_up,
-				["<C-d>"] = actions.preview_scrolling_down,
+				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- add selected (using tab key)
+				["<C-q>"] = actions.smart_add_to_qflist + actions.open_qflist, -- add all to qflist
+				["<C-?>"] = actions.which_key, -- available keys
 			},
 			n = {
 				["<leader><leader>"] = actions.close, -- exit
-				["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-				["<C-?>"] = actions.which_key, -- see options
+				["<C-j>"] = actions.move_selection_next, -- next item
+				["<C-k>"] = actions.move_selection_previous, -- previous item
 				["<C-w>"] = actions_layout.toggle_preview, -- toggle preview
-				["<C-f>"] = actions.preview_scrolling_up,
-				["<C-d>"] = actions.preview_scrolling_down,
+				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- add selected (using tab key)
+				["<C-q>"] = actions.smart_add_to_qflist + actions.open_qflist, -- add all to qflist
 			},
 		},
 
-		file_ignore_patterns = { -- ignore these files
-			"node_modules/.*",
-			".git/.*",
-			".next/.*",
-			"dist/.*",
-		},
-		layout_strategy = "flex", -- display: flex;
+		file_ignore_patterns = { "node_modules/.*", ".git/.*", ".next/.*", "dist/.*" },
+		layout_strategy = "flex",
 	},
 	pickers = { -- defining the options of different pickers
 		find_files = {
