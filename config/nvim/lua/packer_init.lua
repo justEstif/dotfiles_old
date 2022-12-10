@@ -71,7 +71,6 @@ return packer.startup(function(use)
 	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment
 	use({ "wakatime/vim-wakatime" }) -- wakatime
 	use({ "akinsho/toggleterm.nvim", tag = "*" }) -- toggle term
-	use({ "phaazon/hop.nvim", branch = "v2" }) -- motion
 
 	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons

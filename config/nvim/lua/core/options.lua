@@ -13,7 +13,7 @@ opt.completeopt = "menuone,noinsert,noselect" -- Autocomplete options
 opt.joinspaces = false -- Don't autoinsert two spaces after '.', '?', '!' for join command.
 opt.encoding = "utf-8" -- Display this encoding.
 opt.fileencoding = "utf-8" -- Use this encoding when writing to file.
-opt.viewoptions = "cursor,folds" -- Save/restore just these (with `:{mk,load}view`).
+opt.viewoptions = "cursor" -- Save/restore just these (with `:{mk,load}view`).
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- Search
@@ -22,10 +22,11 @@ opt.smartcase = true -- Ignore lowercase for the whole pattern
 opt.gdefault = true -- default g flag to search
 opt.showmatch = true -- Highlight matching parenthesis
 
--- Fold
+-- Fold (using nvim_treesitter)
 opt.foldenable = false -- don't start folded
 opt.fillchars = { fold = " " }
-opt.foldmethod = "manual"
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- UI
 opt.wrap = true -- wrap lines
