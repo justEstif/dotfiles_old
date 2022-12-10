@@ -22,10 +22,6 @@ opt.smartcase = true -- Ignore lowercase for the whole pattern
 opt.gdefault = true -- default g flag to search
 opt.showmatch = true -- Highlight matching parenthesis
 
--- Line Number
-opt.relativenumber = true -- relative numebr
-opt.signcolumn = "yes:1" -- sign column default size
-
 -- Fold
 opt.foldenable = false -- don't start folded
 opt.fillchars = { fold = " " }
@@ -40,6 +36,7 @@ opt.termguicolors = true -- Enable 24-bit RGB colors
 opt.pumheight = 15 -- pop up menu height
 opt.cursorline = true -- show cursorline
 opt.showtabline = 0 -- don't show tabline
+opt.signcolumn = "yes:1" -- sign column default size
 
 -- Tabs, indent
 opt.expandtab = true -- Use spaces instead of tabs
