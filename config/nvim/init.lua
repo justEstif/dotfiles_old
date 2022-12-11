@@ -1,5 +1,3 @@
--- Import Lua modules
-
 require("packer_init")
 require("core.autocmds")
 require("core.keymaps")
@@ -10,10 +8,10 @@ require("plugins.gitsigns")
 require("plugins.luasnip")
 require("plugins.lsp")
 require("plugins.mini")
-require("plugins.theme")
 require("plugins.nvim-cmp")
 require("plugins.null-ls")
 require("plugins.nvim-tree")
 require("plugins.nvim-treesitter")
 require("plugins.telescope")
+require("plugins.theme")
 require("plugins.toggleterm")

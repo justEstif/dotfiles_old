@@ -1,8 +1,4 @@
------------------------------------------------------------
--- Autocommand functions
------------------------------------------------------------
-
-local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+local autocmd = vim.api.nvim_create_autocmd
 
 -- Highlight on yank
 autocmd("TextYankPost", {

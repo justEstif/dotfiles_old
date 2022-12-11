@@ -1,4 +1,3 @@
--- Mini comment
 local status, comment = pcall(require, "mini.comment")
 if not status then
 	print("mini.comment error")

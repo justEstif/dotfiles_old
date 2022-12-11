@@ -1,7 +1,5 @@
--- Keymaps
 local map = require("core.utils").map
 
--- Disable keys
 local disable_keys = {
 	"<up>",
 	"<left>",

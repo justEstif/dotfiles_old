@@ -18,7 +18,6 @@ end
 
 -- set keymap
 vim.api.nvim_create_autocmd("TermOpen", {
-
 	pattern = "term://*",
 	callback = function()
 		term_buf_map("<esc>", [[<C-\><C-n>]])
