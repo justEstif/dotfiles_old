@@ -20,6 +20,7 @@ nvim_treesitter.setup({
 		"diff",
 		"gitcommit",
 		"gitignore",
+		"sql",
 	},
 	sync_install = false,
 	auto_install = true,
