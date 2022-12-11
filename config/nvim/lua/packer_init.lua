@@ -26,13 +26,11 @@ end
 return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim", "nvim-lua/plenary.nvim" })
 
-	-- Treesitter: code highlighting
-	use({ "nvim-treesitter/nvim-treesitter" })
+	use({ "nvim-treesitter/nvim-treesitter" }) -- treesitter
 	use({ "andymass/vim-matchup" }) -- add more match to %
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments support
 
-	-- LSP
 	use({
 		"neovim/nvim-lspconfig", -- nvim native lsp
 		"williamboman/mason.nvim", -- Installer for external tools
@@ -40,7 +38,6 @@ return packer.startup(function(use)
 		"jose-elias-alvarez/typescript.nvim", -- add features to tsserver config
 	})
 
-	-- Code completion
 	use({
 		"hrsh7th/nvim-cmp", -- cmp plugin
 		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
@@ -50,7 +47,6 @@ return packer.startup(function(use)
 		"L3MON4D3/LuaSnip", -- snippets engine
 	})
 
-	-- Files
 	use({ "kyazdani42/nvim-tree.lua" }) -- file explorer
 	use({
 		"nvim-telescope/telescope.nvim",
