@@ -27,3 +27,5 @@
 	clean = git-lfs clean -- %f
 [pull]
 	rebase = true
+[diff]
+	colorMoved = zebra
