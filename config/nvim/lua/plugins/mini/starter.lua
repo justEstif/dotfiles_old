@@ -1,14 +1,13 @@
--- Mini Starter
-local status, mini_starter = pcall(require, "mini.starter")
+local status, starter = pcall(require, "mini.starter")
 if not status then
 	print("mini.starter error")
 	return
 end
 
-mini_starter.setup({
+starter.setup({
 	content_hooks = {
-		mini_starter.gen_hook.adding_bullet(""),
-		mini_starter.gen_hook.aligning("center", "center"),
+		starter.gen_hook.adding_bullet(""),
+		starter.gen_hook.aligning("center", "center"),
 	},
 	evaluate_single = true,
 	footer = os.date(),

@@ -1,4 +1,3 @@
--- LSP
 local M = {}
 
 M.setup = function()
@@ -53,8 +52,9 @@ M.on_attach = function(client, bufnr)
 	end
 end
 
-local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not status_ok then
+local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not status then
+	print("cmp_nvim_lsp error")
 	return
 end
 

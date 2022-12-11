@@ -1,7 +1,3 @@
------------------------------------------------------------
--- Cmp configuration file
-----------------------------------------------------------
-
 local status_cmp, cmp = pcall(require, "cmp")
 if not status_cmp then
 	return

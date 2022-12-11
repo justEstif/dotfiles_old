@@ -1,29 +1,40 @@
--- LSP-Installer
-
-local status_ok_mason, mason = pcall(require, "mason")
-if not status_ok_mason then
+local status_mason, mason = pcall(require, "mason")
+if not status_mason then
+	print("mason error")
 	return
 end
 
 mason.setup({})
 
-local status_ok_lsp_installer, mason_lspconfig = pcall(require, "mason-lspconfig")
-if not status_ok_lsp_installer then
+local status_lsp_installer, mason_lspconfig = pcall(require, "mason-lspconfig")
+if not status_lsp_installer then
+	print("mason-lspconfig error")
 	return
 end
 
-local status_ok_lspconfig, lspconfig = pcall(require, "lspconfig")
-if not status_ok_lspconfig then
+local status_lspconfig, lspconfig = pcall(require, "lspconfig")
+if not status_lspconfig then
+	print("lspconfig error")
 	return
 end
 
 local status, typescript = pcall(require, "typescript")
 if not status then
+	print("typescript error")
 	return
 end
 
-local servers =
-	{ "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss", "prismals", "marksman", "eslint" }
+local servers = {
+	"html",
+	"cssls",
+	"tsserver",
+	"sumneko_lua",
+	"jsonls",
+	"tailwindcss",
+	"prismals",
+	"marksman",
+	"eslint",
+}
 
 mason_lspconfig.setup({
 	ensure_installed = servers,

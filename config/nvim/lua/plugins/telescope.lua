@@ -1,6 +1,6 @@
--- Telescope
-local telescope_status_ok, telescope = pcall(require, "telescope")
-if not telescope_status_ok then
+local status, telescope = pcall(require, "telescope")
+if not status then
+	print("telescope error")
 	return
 end
 
@@ -35,7 +35,7 @@ telescope.setup({
 		file_ignore_patterns = { "node_modules/.*", ".git/.*", ".next/.*", "dist/.*" },
 		layout_strategy = "flex",
 	},
-	pickers = { -- defining the options of different pickers
+	pickers = {
 		find_files = {
 			initial_mode = "insert",
 			theme = "dropdown",
@@ -45,6 +45,10 @@ telescope.setup({
 			initial_mode = "normal",
 			previewer = false,
 			theme = "cursor",
+			mappings = {
+				i = { ["<C-d>"] = actions.delete_buffer },
+				n = { ["<C-d>"] = actions.delete_buffer },
+			},
 		},
 	},
 	extensions = {},

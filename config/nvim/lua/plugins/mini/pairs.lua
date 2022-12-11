@@ -1,9 +1,7 @@
--- Mini pairs
-local status_pair, mini_pairs = pcall(require, "mini.pairs")
-if not status_pair then
+local status, pairs = pcall(require, "mini.pairs")
+if not status then
 	print("mini.pairs error")
 	return
 end
 
-mini_pairs.setup({})
-
+pairs.setup({})

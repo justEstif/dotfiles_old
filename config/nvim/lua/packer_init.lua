@@ -1,7 +1,3 @@
------------------------------------------------------------
--- Plugin manager configuration file
------------------------------------------------------------
-
 -- Automatically install packer
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
