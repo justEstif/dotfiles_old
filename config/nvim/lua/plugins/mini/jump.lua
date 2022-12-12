@@ -4,4 +4,8 @@ if not status then
 	return
 end
 
-jump.setup()
+jump.setup({
+	mappings = {
+		repeat_jump = "",
+	},
+})

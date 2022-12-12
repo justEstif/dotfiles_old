@@ -13,6 +13,7 @@ local disable_keys = {
 	"K",
 	"<cr>",
 	"<bs>",
+	";",
 }
 
 for _, disable_key in pairs(disable_keys) do
