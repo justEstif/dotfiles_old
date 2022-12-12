@@ -18,8 +18,9 @@ starter.setup({
 		[[\_\ \/ \___|\___/ \_/ |_|_| |_| |_|]],
 		[[───────────────────────────────────]],
 	}, "\n"),
-	query_updaters = "eEqQ",
+	query_updaters = "eEfFqQ",
 	items = {
+		{ action = "NvimTreeToggle", name = "F: NvimTree", section = "Plugins" },
 		{ action = "enew", name = "E: New Buffer", section = "Builtin actions" },
 		{ action = "qall!", name = "Q: Quit Neovim", section = "Builtin actions" },
 	},
