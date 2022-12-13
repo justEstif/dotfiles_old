@@ -11,6 +11,7 @@ local disable_keys = {
 	",",
 	" ",
 	"K",
+	"g/",
 	"<cr>",
 	"<bs>",
 	";",
@@ -32,7 +33,7 @@ map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true, desc = "Appy m
 map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Plugin shortcuts
-map("n", "s", ":lua MiniJump2d.start(MiniJump2d.builtin_opts.line_start)<CR>", { desc = "Jump by line" })
+map("n", "s", ":lua MiniJump2d.start(MiniJump2d.builtin_opts.query)<CR>", { desc = "Jump to query" })
 map(
 	"n",
 	";",

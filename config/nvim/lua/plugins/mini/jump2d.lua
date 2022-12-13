@@ -1,6 +1,6 @@
 local status, jump2d = pcall(require, "mini.jump2d")
 if not status then
-	print("mini.jump error")
+	print("mini.jump2d error")
 	return
 end
 

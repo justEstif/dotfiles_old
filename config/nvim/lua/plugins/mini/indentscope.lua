@@ -1,6 +1,6 @@
 local status, indentscope = pcall(require, "mini.indentscope")
 if not status then
-	print("mini.jump error")
+	print("mini.indentscope error")
 	return
 end
 
