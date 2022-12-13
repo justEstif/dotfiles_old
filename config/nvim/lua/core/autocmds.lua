@@ -21,9 +21,3 @@ autocmd("BufEnter", {
 	pattern = "*",
 	command = "set fo-=c fo-=r fo-=o",
 })
-
--- Trigger opt.autoread to reload files
-autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
-	command = "if mode() != 'c' | checktime | endif",
-	pattern = { "*" },
-})
