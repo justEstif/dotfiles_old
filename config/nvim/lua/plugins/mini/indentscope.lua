@@ -6,6 +6,6 @@ end
 
 indentscope.setup({
 	draw = {
-		delay = 0,
+		animation = indentscope.gen_animation.none(),
 	},
 })
