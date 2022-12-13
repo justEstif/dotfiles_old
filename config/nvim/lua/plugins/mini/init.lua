@@ -1,5 +1,6 @@
 require("plugins.mini.ai")
 require("plugins.mini.comment")
+require("plugins.mini.fuzzy")
 require("plugins.mini.jump")
 require("plugins.mini.jump2d")
 require("plugins.mini.indentscope")

@@ -6,6 +6,7 @@ end
 
 local actions = require("telescope.actions")
 local actions_layout = require("telescope.actions.layout")
+local fuzzy = require("mini.fuzzy")
 
 telescope.setup({
 
@@ -34,6 +35,10 @@ telescope.setup({
 
 		file_ignore_patterns = { "node_modules/.*", ".git/.*", ".next/.*", "dist/.*" },
 		layout_strategy = "flex",
+
+		-- Use custom sorter based on more intuitive (at least for me) fuzzy logic
+		file_sorter = fuzzy.get_telescope_sorter,
+		generic_sorter = fuzzy.get_telescope_sorter,
 	},
 	pickers = {
 		find_files = {
