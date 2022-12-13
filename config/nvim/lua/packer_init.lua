@@ -27,7 +27,6 @@ return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim", "nvim-lua/plenary.nvim" })
 
 	use({ "nvim-treesitter/nvim-treesitter" }) -- treesitter
-	use({ "andymass/vim-matchup" }) -- add more match to %
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments support
 
@@ -54,17 +53,14 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	})
 
-	-- Git
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git signs
 
-	-- Features
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- formatter
 	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment
 	use({ "wakatime/vim-wakatime" }) -- wakatime
 	use({ "akinsho/toggleterm.nvim", tag = "*" }) -- toggle term
 
-	-- Appearance
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "navarasu/onedark.nvim" }) -- theme
 
