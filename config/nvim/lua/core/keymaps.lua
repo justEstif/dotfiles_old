@@ -33,7 +33,12 @@ map("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Plugin shortcuts
 map("n", "s", ":lua MiniJump2d.start(MiniJump2d.builtin_opts.line_start)<CR>", { desc = "Jump by line" })
-map("n", "K", ":lua MiniJump2d.start(MiniJump2d.builtin_opts.query)<CR>", { desc = "Jump to query" })
+map(
+	"n",
+	";",
+	":lua MiniJump2d.start(MiniJump2d.builtin_opts.single_character)<CR>",
+	{ desc = "Jump to single character" }
+)
 map("n", "<leader>b", ":Telescope buffers<cr>", { desc = "List open buffers" })
 map("n", "<leader>f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
 map("n", "<leader>g", ":G<cr>", { desc = "Open fugitive" })

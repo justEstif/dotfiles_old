@@ -21,6 +21,7 @@ nvim_treesitter.setup({
 		"gitcommit",
 		"gitignore",
 		"sql",
+    "prisma"
 	},
 	sync_install = false,
 	auto_install = true,
