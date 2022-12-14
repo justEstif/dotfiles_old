@@ -46,6 +46,11 @@ telescope.setup({
 			theme = "dropdown",
 			find_command = { "fd", "--hidden", "--no-ignore-vcs" },
 		},
+		live_grep = {
+			glob_pattern = {
+				"!package-lock.json",
+			},
+		},
 		buffers = {
 			initial_mode = "normal",
 			previewer = false,
