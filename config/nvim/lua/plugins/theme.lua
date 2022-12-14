@@ -1,6 +1,6 @@
 local status, theme = pcall(require, "onedark")
 if not status then
-  print("onedark error")
+	print("onedark error")
 	return
 end
 

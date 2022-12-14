@@ -63,7 +63,10 @@ return packer.startup(function(use)
 
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "navarasu/onedark.nvim" }) -- theme
-
+	use({ -- highlight todo
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+	})
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
