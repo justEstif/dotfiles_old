@@ -94,6 +94,7 @@ bindsym $mod+Shift+a move scratchpad
 bindsym $mod+a scratchpad show
 bindsym $mod+Ctrl+a sticky toggle
 
+# workspace variables and sym, call before mode_resize
 include ~/.config/i3/workspace.conf
 
 # different mode
