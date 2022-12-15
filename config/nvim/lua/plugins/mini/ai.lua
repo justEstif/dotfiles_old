@@ -4,13 +4,14 @@ if not status then
 	return
 end
 
+local spec_treesitter = require("mini.ai").gen_spec.treesitter
 ai.setup({
-	n_lines = 500,
-	search_method = "cover_or_nearest",
+	n_lines = 100,
 	custom_textobjects = {
-		F = require("mini.ai").gen_spec.treesitter({
-			a = "@function.outer",
-			i = "@function.inner",
+		F = spec_treesitter({ a = "@function.outer", i = "@function.inner" }),
+		o = spec_treesitter({
+			a = { "@conditional.outer", "@loop.outer" },
+			i = { "@conditional.inner", "@loop.inner" },
 		}),
 	},
 })
