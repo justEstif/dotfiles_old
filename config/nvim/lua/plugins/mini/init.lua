@@ -1,4 +1,5 @@
 require("plugins.mini.ai")
+require("plugins.mini.align")
 require("plugins.mini.comment")
 require("plugins.mini.fuzzy")
 require("plugins.mini.jump")
