@@ -30,8 +30,13 @@ map("n", "<", "<<", { desc = "Indent" })
 map("v", "<", "<gv", { desc = "Indent" })
 map("v", ">", ">gv", { desc = "Indent" })
 map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true, desc = "Appy macro on visual range" })
-map("n", "<Esc>", ":nohl | lua MiniJump.stop_jumping()<cr><CR>", { desc = "Clear search/jump highlights" })
-
+map("n", "<Esc>", function()
+	require("mini.jump").stop_jumping()
+	vim.cmd.nohlsearch()
+	vim.cmd.echo()
+end, {
+	desc = "clear highlights",
+})
 -- Keep matches center screen when cycling with n|N
 map("n", "n", "nzzzv", { desc = "Fwd  search '/' or '?'" })
 map("n", "N", "Nzzzv", { desc = "Back search '/' or '?'" })
