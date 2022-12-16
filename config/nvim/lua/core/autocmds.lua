@@ -10,12 +10,6 @@ autocmd("TextYankPost", {
 	end,
 })
 
--- Remove whitespace on save
-autocmd("BufWritePre", {
-	pattern = "*",
-	command = "silent! :%s/\\s\\+$//e",
-})
-
 -- Don't auto commenting new lines
 autocmd("BufEnter", {
 	pattern = "*",
