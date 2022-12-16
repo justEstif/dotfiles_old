@@ -9,8 +9,6 @@ opt.completeopt = "menuone,noinsert,noselect" -- Autocomplete options
 opt.joinspaces = false -- Don't autoinsert two spaces after '.', '?', '!' for join command.
 opt.encoding = "utf-8" -- Display this encoding.
 opt.fileencoding = "utf-8" -- Use this encoding when writing to file.
-opt.viewoptions = "cursor" -- Save/restore just these (with `:{mk,load}view`).
-opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- Search
 opt.ignorecase = true -- Ignore case letters when search
@@ -27,10 +25,8 @@ opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- UI
 opt.wrap = true -- wrap lines
 opt.linebreak = true -- Wrap on word boundary
-opt.splitright = true -- Vertical split to the right
 opt.splitbelow = true -- Horizontal split to the bottom
-opt.termguicolors = true -- Enable 24-bit RGB colors
-opt.pumheight = 15 -- pop up menu height
+opt.pumheight = 10 -- pop up menu height
 opt.cursorline = true -- show cursorline
 opt.showtabline = 0 -- don't show tabline
 opt.signcolumn = "yes:1" -- sign column default size
@@ -47,7 +43,7 @@ opt.history = 200 -- Remember N lines in history
 opt.synmaxcol = 240 -- Max column for syntax highlight
 opt.updatetime = 300 -- ms to wait for trigger an event
 opt.undofile = true -- enable persistent undo
-opt.autoread = true -- auto read files changes (works with autocommand)
+opt.autoread = true -- auto read files changes
 
 -- ignore these files in search
 opt.wildignore:append({
