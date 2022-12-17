@@ -12,4 +12,3 @@ const Hello = "";
 /<C-R><C-W>         : Pull <cword> onto search/command line
 /<C-R><C-A>         : Pull <CWORD> onto search/command line
 ```
-

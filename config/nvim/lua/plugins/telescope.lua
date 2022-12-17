@@ -60,6 +60,9 @@ telescope.setup({
 				n = { ["<C-d>"] = actions.delete_buffer },
 			},
 		},
+		spell_suggest = {
+			theme = "cursor",
+		},
 	},
 	extensions = {},
 })

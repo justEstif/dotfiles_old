@@ -28,6 +28,7 @@ opt.linebreak = true -- Wrap on word boundary
 opt.splitbelow = true -- Horizontal split to the bottom
 opt.pumheight = 10 -- pop up menu height
 opt.cursorline = true -- show cursorline
+opt.showtabline = 0 -- don't show tabline
 opt.signcolumn = "yes:1" -- sign column default size
 
 -- Tabs, indent
