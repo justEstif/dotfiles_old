@@ -6,6 +6,7 @@ local disable_keys = {
 	"<down>",
 	"<right>",
 	"gh",
+	"gc",
 	"gl",
 	"gL",
 	",",
@@ -41,6 +42,10 @@ end, {
 map("n", "n", "nzzzv", { desc = "Fwd  search '/' or '?'" })
 map("n", "N", "Nzzzv", { desc = "Back search '/' or '?'" })
 
+-- Utils
+map("n", "gx", [[:lua require("core.utils").go_to_url()<cr>]], { desc = "go to url under cursor" })
+map("n", "<leader>r", [[:lua require("core.utils").run_file()<cr>]], { desc = "run current file" })
+
 -- Plugin shortcuts
 map("n", "s", ":lua MiniJump2d.start(MiniJump2d.builtin_opts.query)<CR>", { desc = "Jump to query" })
 map(
@@ -55,3 +60,4 @@ map("n", "<leader>g", ":G<cr>", { desc = "Open fugitive" })
 map("n", "<leader>q", ":%bdelete | lua MiniStarter.open()<CR>", { desc = "Close all buffers" })
 map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Search in cwd" })
 map("n", "<leader><leader>", ":Telescope find_files<CR>", { desc = "Find files in cwd" })
+map("n", "z=", ":Telescope spell_suggest<CR>", { desc = "Spell suggest keybind" })

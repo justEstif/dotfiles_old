@@ -29,4 +29,16 @@ M.go_to_url = function(cmd)
 	vim.fn.jobstart({ cmd or "xdg-open", url }, { on_exit = function() end })
 end
 
+-- @desc Run the current file according to filetype
+M.run_file = function()
+	local fts = {
+		python = "python %",
+		javascript = "node %",
+		typescript = "ts-node %",
+		go = "go run %",
+	}
+
+	local cmd = string.format('TermExec cmd="%s"<cr>', fts[vim.bo.ft])
+	vim.cmd(cmd)
+end
 return M
