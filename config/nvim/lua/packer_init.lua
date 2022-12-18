@@ -60,6 +60,7 @@ return packer.startup(function(use)
 	use({ "echasnovski/mini.nvim" }) -- pairs/indent/comment
 	use({ "wakatime/vim-wakatime" }) -- wakatime
 	use({ "akinsho/toggleterm.nvim", tag = "*" }) -- toggle term
+	use({ "tiagovla/scope.nvim" }) -- scope buffers to tabs
 
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "navarasu/onedark.nvim" }) -- theme
