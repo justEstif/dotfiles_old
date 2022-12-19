@@ -45,12 +45,11 @@ map("n", "gx", [[:lua require("core.utils").go_to_url()<cr>]], { desc = "go to u
 map("n", "<leader>r", [[:lua require("core.utils").run_file()<cr>]], { desc = "run current file" })
 
 -- Plugin shortcuts
-map("n", "s", ":lua MiniJump2d.start(MiniJump2d.builtin_opts.query)<CR>", { desc = "Jump to query" })
 map(
 	"n",
-	";",
+	"s",
 	":lua MiniJump2d.start(MiniJump2d.builtin_opts.single_character)<CR>",
-	{ desc = "Jump to single character" }
+	{ desc = "Jump to single_character" }
 )
 map("n", "<leader>b", ":Telescope buffers<cr>", { desc = "List open buffers" })
 map("n", "<leader>f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
