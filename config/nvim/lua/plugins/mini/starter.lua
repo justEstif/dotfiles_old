@@ -6,8 +6,8 @@ end
 
 starter.setup({
 	content_hooks = {
-		starter.gen_hook.adding_bullet(""),
 		starter.gen_hook.aligning("center", "center"),
+		starter.gen_hook.adding_bullet(),
 	},
 	evaluate_single = true,
 	footer = os.date(),
@@ -26,10 +26,4 @@ starter.setup({
 	},
 })
 
-vim.cmd([[
-  augroup MiniStarterJK
-    au!
-    au User MiniStarterOpened nmap <buffer> j <Cmd>lua MiniStarter.update_current_item('next')<CR>
-    au User MiniStarterOpened nmap <buffer> k <Cmd>lua MiniStarter.update_current_item('prev')<CR>
-  augroup END
-]])
+vim.cmd([[ autocmd TabNewEntered * ++nested lua MiniStarter.open() ]])

@@ -53,12 +53,7 @@ telescope.setup({
 		},
 		buffers = {
 			initial_mode = "normal",
-			previewer = false,
 			theme = "cursor",
-			mappings = {
-				i = { ["<C-d>"] = actions.delete_buffer },
-				n = { ["<C-d>"] = actions.delete_buffer },
-			},
 		},
 		spell_suggest = {
 			theme = "cursor",

@@ -41,4 +41,18 @@ M.run_file = function()
 	local cmd = string.format('TermExec cmd="%s"<cr>', fts[vim.bo.ft])
 	vim.cmd(cmd)
 end
+
+-- @desc create custom cmds
+M.cmd = function(input, action, opts)
+	vim.api.nvim_add_user_command(input, action, opts)
+end
+
+-- @desc create autocmd
+M.aucmd = vim.api.nvim_create_autocmd
+
+-- @desc create autocmd group
+M.augroup = function(name, fnc)
+	fnc(vim.api.nvim_create_augroup(name, { clear = true }))
+end
+
 return M

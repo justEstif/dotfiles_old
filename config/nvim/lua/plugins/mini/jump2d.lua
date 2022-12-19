@@ -14,3 +14,9 @@ jump2d.setup({
 	},
 	labels = "etovxqpdygfblzhckisuran",
 })
+
+local map = require("core.utils").map
+
+map("n", "s", function()
+	jump2d.start(jump2d.builtin_opts.single_character)
+end, { desc = "Jump to single_character" })
