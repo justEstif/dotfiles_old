@@ -34,7 +34,6 @@ local servers = {
 	"prismals",
 	"marksman",
 	"eslint",
-	"gopls",
   "pylsp"
 }
 

@@ -7,6 +7,7 @@ local disable_keys = {
 	"<right>",
 	"gh",
 	"gl",
+	"gJ",
 	"gL",
 	",",
 	" ",
@@ -21,14 +22,14 @@ for _, disable_key in pairs(disable_keys) do
 end
 
 vim.g.mapleader = ","
-
+-- g<Tab> -> tabedit current buffer
 -- Override default
-map("v", "p", '"_dP', { desc = "Keep the yanked text when pasting in visual  mode" })
+map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
 map("n", ">", ">>", { desc = "Indent" })
 map("n", "<", "<<", { desc = "Indent" })
 map("v", "<", "<gv", { desc = "Indent" })
 map("v", ">", ">gv", { desc = "Indent" })
-map("x", "@", '":norm @" . getcharstr() . "<cr>"', { expr = true, desc = "Appy macro on visual range" })
+map("x", "@", [[":norm @" . getcharstr() . "<cr>"]], { expr = true, desc = "Appy macro on visual range" })
 map("n", "<Esc>", function()
 	require("mini.jump").stop_jumping()
 	vim.cmd.nohlsearch()
