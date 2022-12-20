@@ -1,17 +1,24 @@
-local autocmd = vim.api.nvim_create_autocmd
+local augroup = require("core.utils").augroup
+local aucmd = require("core.utils").aucmd
 
--- Highlight on yank
-autocmd("TextYankPost", {
-	callback = function()
-		vim.highlight.on_yank({
-			higroup = "IncSearch",
-			timeout = "200",
-		})
-	end,
-})
+augroup("SmartTextYankPost", function(g)
+	aucmd("TextYankPost", {
+		group = g,
+		pattern = "*",
+		desc = "Highlight yanked text",
+		callback = function()
+			vim.highlight.on_yank({
+				higroup = "IncSearch",
+				timeout = "200",
+			})
+		end,
+	})
+end)
 
--- Don't auto commenting new lines
-autocmd("BufEnter", {
-	pattern = "*",
-	command = "set fo-=c fo-=r fo-=o",
-})
+augroup("NewlineNoAutoComments", function(g)
+	aucmd("BufEnter", {
+		group = g,
+		pattern = "*",
+		command = "setlocal formatoptions-=o",
+	})
+end)
