@@ -52,6 +52,7 @@ return packer.startup(function(use)
 		branch = "0.1.x",
 		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
 	})
+	use({ "debugloop/telescope-undo.nvim" })
 
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git signs
