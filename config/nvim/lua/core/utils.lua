@@ -55,4 +55,38 @@ M.augroup = function(name, fnc)
 	fnc(vim.api.nvim_create_augroup(name, { clear = true }))
 end
 
+-- @desc disabled keys
+M.disable_keys = {
+	"<up>",
+	"<left>",
+	"<down>",
+	"<right>",
+	",",
+	" ",
+	"K",
+	"<bs>",
+	";",
+	"<C-j>",
+	"<C-p>",
+	"<C-m>",
+	"<C-n>",
+	"+",
+	"-",
+	"[#",
+	"]#",
+	"gk",
+	"gj",
+	"g<Down>",
+	"ge",
+	"gE",
+	"gw",
+	"gW",
+	"g~",
+	"gh",
+	"gl",
+	"gJ",
+	"gL",
+	"g/",
+}
+
 return M

@@ -1,37 +1,5 @@
 local map = require("core.utils").map
-
-local disable_keys = {
-	"<up>",
-	"<left>",
-	"<down>",
-	"<right>",
-	"gh",
-	"gl",
-	"gJ",
-	"gL",
-	",",
-	" ",
-	"K",
-	"g/",
-	"<bs>",
-	";",
-	"<C-j>",
-	"<C-p>",
-	"<C-m>",
-	"<C-n>",
-	"+",
-	"-",
-	"[#",
-	"]#",
-	"gk",
-	"gj",
-	"g<Down>",
-	"ge",
-	"gE",
-	"gw",
-	"gW",
-	"g~",
-}
+local disable_keys = require("core.utils").disable_keys
 
 for _, disable_key in pairs(disable_keys) do
 	map("", disable_key, "<nop>")
