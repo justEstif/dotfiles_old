@@ -54,6 +54,9 @@ telescope.setup({
 		buffers = {
 			initial_mode = "normal",
 			theme = "cursor",
+			layout_config = {
+				preview_width = 0.4,
+			},
 		},
 		spell_suggest = {
 			theme = "cursor",

@@ -13,14 +13,16 @@ toggleterm.setup({
 	insert_mappings = false, -- open_mapping off in insert mode
 })
 
-local term_buf_map = function(lhs, rhs)
-	require("core.utils").buf_map("t", lhs, rhs)
-end
+local augroup = require("core.utils").augroup
+local aucmd = require("core.utils").aucmd
+local buf_map = require("core.utils").buf_map
 
--- set keymap
-vim.api.nvim_create_autocmd("TermOpen", {
-	pattern = "term://*",
-	callback = function()
-		term_buf_map("<esc>", [[<C-\><C-n>]])
-	end,
-})
+augroup("EscapeTermKeymap", function(g)
+	aucmd("TermOpen", {
+		group = g,
+		pattern = "term://*",
+		callback = function()
+			buf_map("t", "<esc>", [[<C-\><C-n>]])
+		end,
+	})
+end)
