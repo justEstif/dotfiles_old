@@ -18,8 +18,8 @@ nvim_tree.setup({
 				default = "",
 				symlink = "",
 				folder = {
-					arrow_open = "",
-					arrow_closed = "",
+					arrow_open = "",
+					arrow_closed = "",
 					default = "",
 					open = "",
 					empty = "",
@@ -60,7 +60,7 @@ nvim_tree.setup({
 			},
 		},
 		open_file = {
-			quit_on_open = true,
+			quit_on_open = false,
 			resize_window = true,
 			window_picker = {
 				enable = true,
@@ -85,15 +85,13 @@ nvim_tree.setup({
 		},
 	},
 	view = {
-		width = 30,
+		width = 27,
 		side = "left",
+		signcolumn = "no",
 		mappings = {
 			list = {
 				{ key = { "l", "<CR>" }, cb = tree_cb("edit") },
 				{ key = "h", cb = tree_cb("close_node") },
-				{ key = "v", cb = tree_cb("vsplit") },
-				{ key = "V", cb = tree_cb("split") },
-				{ key = "<leader><leader>", cb = tree_cb("close") },
 			},
 		},
 	},
