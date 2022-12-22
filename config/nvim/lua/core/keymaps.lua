@@ -4,13 +4,13 @@ require("core.utils").disable_keys() -- disable some keys
 vim.g.mapleader = ","
 
 -- Override default
--- map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
+map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
 map("n", ">", ">>", { desc = "Indent" })
 map("n", "<", "<<", { desc = "Indent" })
 map("v", "<", "<gv", { desc = "Indent" })
 map("v", ">", ">gv", { desc = "Indent" })
 map("x", "@", [[":norm @" . getcharstr() . "<cr>"]], { expr = true, desc = "Appy macro on visual range" })
-map("n", "<BS>", function()
+map("n", "<C-l>", function()
 	require("mini.jump").stop_jumping()
 	vim.cmd.nohlsearch()
 	vim.cmd.echo()
