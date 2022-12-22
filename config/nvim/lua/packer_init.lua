@@ -64,7 +64,7 @@ return packer.startup(function(use)
 	use({ "tiagovla/scope.nvim" }) -- scope buffers to tabs
 
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
-	use({ "navarasu/onedark.nvim" }) -- theme
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ -- highlight todo
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",

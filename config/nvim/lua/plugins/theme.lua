@@ -1,11 +1,28 @@
-local status, theme = pcall(require, "onedark")
+local status, theme = pcall(require, "catppuccin")
 if not status then
-	print("onedark error")
+	print("catppuccin error")
 	return
 end
 
 theme.setup({
-	style = "darker", -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
+	flavour = "mocha", -- latte, frappe, macchiato, mocha
+	options = {
+		cursorline = true,
+	},
+	custom_highlights = function()
+		return {
+			EndOfBuffer = { fg = "#ffffff" },
+		}
+	end,
+	integrations = {
+		cmp = true,
+		gitsigns = true,
+		nvimtree = true,
+		telescope = true,
+		notify = false,
+		mini = true,
+		treesitter = true,
+	},
 })
 
-theme.load()
+vim.cmd.colorscheme("catppuccin")
