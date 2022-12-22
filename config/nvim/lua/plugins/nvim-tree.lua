@@ -18,8 +18,8 @@ nvim_tree.setup({
 				default = "",
 				symlink = "",
 				folder = {
-					arrow_open = "",
-					arrow_closed = "",
+					arrow_open = "",
+					arrow_closed = "",
 					default = "",
 					open = "",
 					empty = "",
@@ -87,7 +87,6 @@ nvim_tree.setup({
 	view = {
 		width = 27,
 		side = "left",
-		signcolumn = "no",
 		mappings = {
 			list = {
 				{ key = { "l", "<CR>" }, cb = tree_cb("edit") },

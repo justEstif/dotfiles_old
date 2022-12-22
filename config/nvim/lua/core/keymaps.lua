@@ -1,19 +1,16 @@
 local map = require("core.utils").map
-local disable_keys = require("core.utils").disable_keys
+require("core.utils").disable_keys() -- disable some keys
 
-for _, disable_key in pairs(disable_keys) do
-	map("", disable_key, "<nop>")
-end
 vim.g.mapleader = ","
 
 -- Override default
-map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
+-- map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
 map("n", ">", ">>", { desc = "Indent" })
 map("n", "<", "<<", { desc = "Indent" })
 map("v", "<", "<gv", { desc = "Indent" })
 map("v", ">", ">gv", { desc = "Indent" })
 map("x", "@", [[":norm @" . getcharstr() . "<cr>"]], { expr = true, desc = "Appy macro on visual range" })
-map("n", "<Esc>", function()
+map("n", "<BS>", function()
 	require("mini.jump").stop_jumping()
 	vim.cmd.nohlsearch()
 	vim.cmd.echo()
@@ -32,9 +29,3 @@ map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Search in cwd" })
 map("n", "<leader>u", ":Telescope undo<CR>", { desc = "Undo tree" })
 map("n", "<leader><leader>", ":Telescope find_files<CR>", { desc = "Find files in cwd" })
 map("n", "z=", ":Telescope spell_suggest<CR>", { desc = "Spell suggest keybind" })
-
--- unmap
-
--- learn
--- mark motions
--- use <C-o> and <C-i> -> unmap <tab>

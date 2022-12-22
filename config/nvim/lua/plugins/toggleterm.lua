@@ -7,7 +7,7 @@ end
 toggleterm.setup({
 	size = 18,
 	shade_terminals = false,
-	direction = "horizontal",
+	direction = "float",
 	persist_size = true,
 	open_mapping = "<leader>t",
 	insert_mappings = false, -- open_mapping off in insert mode

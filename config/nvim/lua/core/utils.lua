@@ -56,37 +56,43 @@ M.augroup = function(name, fnc)
 end
 
 -- @desc disabled keys
-M.disable_keys = {
-	"<up>",
-	"<left>",
-	"<down>",
-	"<right>",
-	",",
-	" ",
-	"K",
-	"<bs>",
-	";",
-	"<C-j>",
-	"<C-p>",
-	"<C-m>",
-	"<C-n>",
-	"+",
-	"-",
-	"[#",
-	"]#",
-	"gk",
-	"gj",
-	"g<Down>",
-	"ge",
-	"gE",
-	"gw",
-	"gW",
-	"g~",
-	"gh",
-	"gl",
-	"gJ",
-	"gL",
-	"g/",
-}
+M.disable_keys = function()
+	local keys = {
+		"<up>",
+		"<left>",
+		"<down>",
+		"<right>",
+		",",
+		" ",
+		"K",
+		"<bs>",
+		";",
+		"<C-j>",
+		"<C-p>",
+		"<C-m>",
+		"<C-n>",
+		"+",
+		"-",
+		"[#",
+		"]#",
+		"gk",
+		"gj",
+		"g<Down>",
+		"ge",
+		"gE",
+		"gw",
+		"gW",
+		"g~",
+		"gh",
+		"gl",
+		"gJ",
+		"gL",
+		"g/",
+	}
+
+	for _, key in pairs(keys) do
+		M.map("", key, "<nop>")
+	end
+end
 
 return M
