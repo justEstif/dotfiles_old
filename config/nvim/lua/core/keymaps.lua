@@ -21,10 +21,12 @@ map("n", "gx", [[:lua require("core.utils").go_to_url()<cr>]], { desc = "go to u
 map("n", "<leader>r", [[:lua require("core.utils").run_file()<cr>]], { desc = "run current file" })
 
 -- Plugin shortcuts
-map("n", "<leader>b", ":Telescope buffers<cr>", { desc = "List open buffers" })
 map("n", "<leader>f", ":NvimTreeToggle<CR>", { desc = "Open Nvim tree" })
 map("n", "<leader>g", ":G<cr>", { desc = "Open fugitive" })
 map("n", "<leader>q", ":lua MiniBufremove.wipeout()<cr>", { desc = "close buffer" })
+
+-- Telescope
+map("n", "<leader>b", ":Telescope buffers<cr>", { desc = "List open buffers" })
 map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Search in cwd" })
 map("n", "<leader>u", ":Telescope undo<CR>", { desc = "Undo tree" })
 map("n", "<leader><leader>", ":Telescope find_files<CR>", { desc = "Find files in cwd" })

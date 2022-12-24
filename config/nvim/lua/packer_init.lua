@@ -62,6 +62,11 @@ return packer.startup(function(use)
 	use({ "wakatime/vim-wakatime" }) -- wakatime
 	use({ "akinsho/toggleterm.nvim", tag = "*" }) -- toggle term
 	use({ "tiagovla/scope.nvim" }) -- scope buffers to tabs
+	use({
+		"phaazon/mind.nvim",
+		branch = "v2.2",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
 
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "catppuccin/nvim", as = "catppuccin" })
