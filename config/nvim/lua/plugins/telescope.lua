@@ -57,6 +57,14 @@ telescope.setup({
 			layout_config = {
 				preview_width = 0.4,
 			},
+			mappings = {
+				n = {
+					["<c-d>"] = actions.delete_buffer,
+				},
+				i = {
+					["<c-d>"] = actions.delete_buffer,
+				},
+			},
 		},
 		spell_suggest = {
 			theme = "cursor",
