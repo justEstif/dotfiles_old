@@ -22,3 +22,20 @@ augroup("NewlineNoAutoComments", function(g)
 		command = "setlocal formatoptions-=o",
 	})
 end)
+
+augroup("DisableCmpInCmdLine", function(g)
+	aucmd("CmdWinEnter", {
+		group = g,
+		pattern = "*",
+		callback = function()
+			require("cmp").setup({ enabled = false })
+		end,
+	})
+	aucmd("CmdWinLeave", {
+		group = g,
+		pattern = "*",
+		callback = function()
+			require("cmp").setup({ enabled = true })
+		end,
+	})
+end)
