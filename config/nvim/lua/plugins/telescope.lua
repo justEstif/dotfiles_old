@@ -70,28 +70,5 @@ telescope.setup({
 			theme = "cursor",
 		},
 	},
-	extensions = {
-		undo = {
-			initial_mode = "normal",
-			side_by_side = true,
-			layout_strategy = "vertical",
-			layout_config = {
-				preview_height = 0.8,
-			},
-			mappings = {
-				i = {
-					["<C-a>"] = require("telescope-undo.actions").yank_additions,
-					["<C-d>"] = require("telescope-undo.actions").yank_deletions,
-					["<C-cr>"] = require("telescope-undo.actions").restore,
-				},
-				n = {
-					["<C-a>"] = require("telescope-undo.actions").yank_additions,
-					["<C-d>"] = require("telescope-undo.actions").yank_deletions,
-					["<C-cr>"] = require("telescope-undo.actions").restore,
-				},
-			},
-		},
-	},
+	extensions = {},
 })
-
-telescope.load_extension("undo")
