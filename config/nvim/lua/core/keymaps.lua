@@ -24,7 +24,7 @@ map("n", "<leader>r", [[:lua require("core.utils").run_file()<cr>]], { desc = "r
 
 -- Mind
 map("n", "<leader>om", ":MindOpenProject<cr>", { desc = "open mind project" })
-map("n", "<leader>cm", ":MindClose<cr>")
+map("n", "<leader>cm", ":MindClose<cr>", { desc = "close mind project" })
 
 -- Telescope
 map("n", "<leader>b", ":Telescope buffers<cr>", { desc = "List open buffers" })
