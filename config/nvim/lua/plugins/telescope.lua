@@ -52,6 +52,7 @@ telescope.setup({
 			},
 		},
 		buffers = {
+			path_display = { "tail" },
 			initial_mode = "normal",
 			theme = "cursor",
 			layout_config = {

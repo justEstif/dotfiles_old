@@ -30,6 +30,7 @@ opt.splitbelow = true -- Horizontal split to the bottom
 opt.pumheight = 10 -- pop up menu height
 opt.cursorline = true -- show cursorline
 opt.signcolumn = "yes:1" -- sign column default size
+opt.shortmess:append("I") -- disable welcome
 
 -- Tabs, indent
 opt.expandtab = true -- Use spaces instead of tabs

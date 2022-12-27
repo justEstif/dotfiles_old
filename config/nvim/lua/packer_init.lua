@@ -68,7 +68,7 @@ return packer.startup(function(use)
 	})
 
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
-	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "catppuccin/nvim", as = "catppuccin" }) -- theme
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

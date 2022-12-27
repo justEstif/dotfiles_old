@@ -17,6 +17,7 @@ map("n", "<C-l>", function()
 end, { desc = "clear highlights" })
 map("n", "<leader>ot", ":tabnew<cr>", { desc = "open new tab" })
 map("n", "<leader>ct", ":tabclose<cr>", { desc = "close tab" })
+map("n", "<leader>cb", ":bd<cr>", { desc = "close buffer" })
 
 -- Utils
 map("n", "<leader>r", [[:lua require("core.utils").run_file()<cr>]], { desc = "run current file" })
