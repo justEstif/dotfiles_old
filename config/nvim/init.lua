@@ -1,4 +1,4 @@
-require("packer_init")
+require("lazy_init")
 require("core.autocmds")
 require("core.keymaps")
 require("core.options")
