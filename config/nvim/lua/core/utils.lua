@@ -10,6 +10,11 @@ M.map = function(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
+-- @desc function to unmap
+M.unmap = function(mode, lhs)
+	vim.keymap.del(mode, lhs)
+end
+
 -- @desc function for buffer keymapping
 M.buf_map = function(mode, lhs, rhs, opts)
 	local options = { silent = true, buffer = true }
@@ -47,43 +52,4 @@ M.augroup = function(name, fnc)
 end
 
 -- @desc disabled keys
-M.disable_keys = function()
-	local keys = {
-		"<up>",
-		"<left>",
-		"<down>",
-		"<right>",
-		",",
-		" ",
-		"K",
-		"<bs>",
-		";",
-		"<C-j>",
-		"<C-p>",
-		"<C-m>",
-		"<C-n>",
-		"+",
-		"-",
-		"[#",
-		"]#",
-		"gk",
-		"gj",
-		"g<Down>",
-		"ge",
-		"gE",
-		"gw",
-		"gW",
-		"g~",
-		"gh",
-		"gl",
-		"gJ",
-		"gL",
-		"g/",
-	}
-
-	for _, key in pairs(keys) do
-		M.map("", key, "<nop>")
-	end
-end
-
 return M

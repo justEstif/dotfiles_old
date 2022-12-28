@@ -27,15 +27,14 @@ end
 local function lsp_keymaps(bufnr)
 	local opts = { noremap = true, silent = true }
 	vim.api.nvim_buf_set_option(bufnr, "tagfunc", "v:lua.vim.lsp.tagfunc") -- use Ctrl-] to go to definition
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gT", "vim.lsp.buf.type_definition()<cr>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":Telescope lsp_references<cr>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gh", ":lua vim.lsp.buf.hover()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", ":lua vim.diagnostic.open_float()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gL", ":Telescope diagnostics<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gC", ":lua vim.lsp.buf.code_action()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "=", ":lua vim.lsp.buf.format{async=true}<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F2>", ":lua require('plugins.lsp.rename').rename()<cr>", opts)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F3>", ":lua vim.lsp.buf.code_action()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F8>", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F11>", ":Telescope lsp_type_definitions<cr>", opts)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F12>", ":Telescope lsp_references<cr>", opts)
 end
 
 M.on_attach = function(client, bufnr)
