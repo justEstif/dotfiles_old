@@ -20,3 +20,7 @@ local map = require("core.utils").map
 map("n", "s", function()
 	jump2d.start(jump2d.builtin_opts.single_character)
 end, { desc = "Jump to single_character" })
+
+map("n", "|", function()
+	jump2d.start(jump2d.builtin_opts.line_start)
+end, { desc = "Jump to line_start" })

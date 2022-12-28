@@ -1,5 +1,6 @@
 local map = require("core.utils").map
-require("core.utils").disable_keys() -- disable some keys
+require("custom.fixfnkeys")
+require("custom.unmapkeys")
 
 vim.g.mapleader = ","
 
@@ -25,10 +26,11 @@ map("n", "<leader>r", [[:lua require("core.utils").run_file()<cr>]], { desc = "r
 -- Mind
 map("n", "<leader>om", ":MindOpenProject<cr>", { desc = "open mind project" })
 map("n", "<leader>cm", ":MindClose<cr>", { desc = "close mind project" })
+map("n", "<leader>cv", ":qall<cr>", { desc = "close vim" })
 
 -- Telescope
 map("n", "<leader>b", ":Telescope buffers<cr>", { desc = "List open buffers" })
-map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Search in cwd" })
+map("n", "<leader>/", ":Telescope live_grep<CR>", { desc = "Search in cwd" })
 map("n", "<leader><leader>", ":Telescope find_files<CR>", { desc = "Find files in cwd" })
 map("n", "z=", ":Telescope spell_suggest<CR>", { desc = "Spell suggest keybind" })
 
