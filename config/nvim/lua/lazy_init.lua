@@ -20,6 +20,15 @@ end
 
 lazy.setup({
 	"nvim-lua/plenary.nvim",
+	{ -- theme
+		"catppuccin/nvim",
+		as = "catppuccin",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("plugins.theme")
+		end,
+	},
 	{
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
@@ -72,9 +81,7 @@ lazy.setup({
 		dependencies = {
 			{
 				"tiagovla/scope.nvim", -- scope buffers to tabs
-				config = function()
-					require("plugins.scope")
-				end,
+				config = true,
 			},
 		},
 
@@ -115,9 +122,7 @@ lazy.setup({
 		"phaazon/mind.nvim",
 		branch = "v2.2",
 		requires = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("plugins.mind")
-		end,
+		config = true,
 	},
 	{
 		"kyazdani42/nvim-web-devicons",
@@ -125,12 +130,4 @@ lazy.setup({
 			require("plugins.devicons")
 		end,
 	}, -- icons
-	{
-		"catppuccin/nvim",
-		as = "catppuccin",
-		lazy = false,
-		config = function()
-			require("plugins.theme")
-		end,
-	}, -- theme
 })
