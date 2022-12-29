@@ -61,9 +61,11 @@ telescope.setup({
 			mappings = {
 				n = {
 					["<c-d>"] = actions.delete_buffer,
+					["<c-a>"] = actions.select_all,
 				},
 				i = {
 					["<c-d>"] = actions.delete_buffer,
+					["<c-a>"] = actions.select_all,
 				},
 			},
 		},
