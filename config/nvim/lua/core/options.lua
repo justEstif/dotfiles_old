@@ -16,12 +16,6 @@ opt.smartcase = true -- Ignore lowercase for the whole pattern
 opt.gdefault = true -- default g flag to search
 opt.showmatch = true -- Highlight matching parenthesis
 
--- Fold (using nvim_treesitter)
-opt.foldenable = false -- don't start folded
-opt.fillchars = { fold = " " }
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
-
 -- UI
 opt.wrap = true -- wrap lines
 opt.linebreak = true -- Wrap on word boundary
@@ -31,6 +25,8 @@ opt.pumheight = 10 -- pop up menu height
 opt.cursorline = true -- show cursorline
 opt.signcolumn = "yes:1" -- sign column default size
 opt.shortmess:append("I") -- disable welcome
+opt.foldenable = false -- don't start folded
+opt.fillchars = {  fold = " " }
 
 -- Tabs, indent
 opt.expandtab = true -- Use spaces instead of tabs
