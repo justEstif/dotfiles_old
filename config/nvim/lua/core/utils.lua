@@ -86,4 +86,14 @@ M.disable_keys = function()
 	end
 end
 
+-- @desc fix f-keys
+M.fix_fnkeys = function()
+	local mode = { "n", "v", "x", "s", "o", "i", "l", "c", "t" }
+	local opts = { silent = true, nowait = true, noremap = false, remap = true }
+	vim.keymap.set(mode, "<F20>", "<S-F8>", opts)
+	-- vim.keymap.set(mode, "<F32>", "<C-F8>", opts)
+	-- vim.keymap.set(mode, "<F44>", "<C-S-F8>", opts)
+	-- vim.keymap.set(mode, "<F56>", "<M-F8>", opts)
+end
+
 return M
