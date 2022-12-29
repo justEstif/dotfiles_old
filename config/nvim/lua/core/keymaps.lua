@@ -1,6 +1,4 @@
 local map = require("core.utils").map
-require("custom.fixfnkeys")
-require("custom.unmapkeys")
 
 vim.g.mapleader = ","
 
