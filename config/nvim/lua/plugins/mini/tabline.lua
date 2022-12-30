@@ -4,4 +4,6 @@ if not status then
 	return
 end
 
-tabline.setup({})
+tabline.setup({
+  show_icons = false
+})

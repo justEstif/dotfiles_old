@@ -24,7 +24,6 @@ lazy.setup({
 		"catppuccin/nvim",
 		as = "catppuccin",
 		lazy = false,
-		priority = 1000,
 		config = function()
 			require("plugins.theme")
 		end,
@@ -107,6 +106,7 @@ lazy.setup({
 	}, -- formatter
 	{
 		"echasnovski/mini.nvim",
+		lazy = false,
 		config = function()
 			require("plugins.mini")
 		end,
@@ -124,10 +124,5 @@ lazy.setup({
 		requires = { "nvim-lua/plenary.nvim" },
 		config = true,
 	},
-	{
-		"kyazdani42/nvim-web-devicons",
-		config = function()
-			require("plugins.devicons")
-		end,
-	}, -- icons
+	"kyazdani42/nvim-web-devicons",
 })
