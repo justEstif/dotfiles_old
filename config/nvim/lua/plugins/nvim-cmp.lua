@@ -116,9 +116,9 @@ cmp.setup({
 	-- add sources here; move priorities higher
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
-		{ name = "path" },
 		{ name = "buffer" },
+		{ name = "path" },
+		{ name = "luasnip" },
 		{ name = "nvim_lua" },
 	},
 })

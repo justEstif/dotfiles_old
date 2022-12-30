@@ -34,7 +34,7 @@ local servers = {
 	"prismals",
 	"marksman",
 	"eslint",
-  "pylsp"
+	"pylsp",
 }
 
 mason_lspconfig.setup({
