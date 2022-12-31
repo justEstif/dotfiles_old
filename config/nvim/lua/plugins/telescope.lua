@@ -71,6 +71,7 @@ telescope.setup({
 		},
 		spell_suggest = {
 			theme = "cursor",
+			initial_mode = "normal",
 		},
 	},
 	extensions = {},

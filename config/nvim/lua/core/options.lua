@@ -17,16 +17,20 @@ opt.gdefault = true -- default g flag to search
 opt.showmatch = true -- Highlight matching parenthesis
 
 -- UI
-opt.wrap = true -- wrap lines
-opt.linebreak = true -- Wrap on word boundary
-opt.splitright = true -- Horizontal split to the bottom
-opt.splitbelow = true -- Horizontal split to the bottom
+opt.wrap = false -- wrap lines
 opt.pumheight = 10 -- pop up menu height
 opt.cursorline = true -- show cursorline
 opt.signcolumn = "yes:1" -- sign column default size
-opt.shortmess:append("I") -- disable welcome
-opt.foldenable = false -- don't start folded
-opt.fillchars = {  fold = " " }
+
+-- new window direction
+opt.splitright = true -- Horizontal split to the bottom
+opt.splitbelow = true -- Horizontal split to the bottom
+
+-- fold
+opt.fillchars = { fold = " " }
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldenable = false
 
 -- Tabs, indent
 opt.expandtab = true -- Use spaces instead of tabs
@@ -42,6 +46,7 @@ opt.updatetime = 300 -- ms to wait for trigger an event
 opt.undofile = true -- enable persistent undo
 opt.autoread = true -- auto read files changes
 
+opt.shortmess:append("I") -- disable welcome
 -- ignore these files in search
 opt.wildignore:append({
 	"*.zip",
