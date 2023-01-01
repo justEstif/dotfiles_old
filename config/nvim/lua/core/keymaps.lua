@@ -14,13 +14,11 @@ map("n", "<C-l>", function()
 	vim.cmd.nohlsearch()
 	vim.cmd.echo()
 end, { desc = "clear highlights" })
+
 map("n", "<leader>ot", ":tabnew<cr>", { desc = "open new tab" })
 map("n", "<leader>ct", ":tabclose<cr>", { desc = "close tab" })
 map("n", "<leader>cb", ":bd<cr>", { desc = "close buffer" })
 map("n", "<leader>cv", ":qall<cr>", { desc = "close vim" })
-
--- Utils
-map("n", "<leader>r", [[:lua require("core.utils").run_file()<cr>]], { desc = "run current file" })
 
 -- Mind
 map("n", "<leader>om", ":MindOpenProject<cr>", { desc = "open mind project" })
