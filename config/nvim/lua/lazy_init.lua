@@ -19,26 +19,28 @@ if not status_ok then
 end
 
 lazy.setup({
-	"nvim-lua/plenary.nvim",
-	{ -- theme
-		"catppuccin/nvim",
-		as = "catppuccin",
-		lazy = false,
-		config = function()
-			require("plugins.theme")
-		end,
+	{ -- aesthetics
+		{ -- theme
+			"catppuccin/nvim",
+			as = "catppuccin",
+			lazy = false,
+			config = function()
+				require("plugins.theme")
+			end,
+		},
+		"kyazdani42/nvim-web-devicons", -- icons
 	},
-	{
+	{ -- code highlight
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
 			"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments support
+			"windwp/nvim-ts-autotag", --autoclose and autorename html tag
 		},
 		config = function()
 			require("plugins.nvim-treesitter")
 		end,
 	},
-	{ "windwp/nvim-ts-autotag", config = true }, -- autoclose and autorename html tags
-	{
+	{ -- lsp
 		"neovim/nvim-lspconfig", -- nvim native lsp
 		dependencies = {
 			"williamboman/mason.nvim", -- Installer for external tools
@@ -49,7 +51,13 @@ lazy.setup({
 			require("plugins.lsp")
 		end,
 	},
-	{
+	{ -- formatting
+		"jose-elias-alvarez/null-ls.nvim",
+		config = function()
+			require("plugins.null-ls")
+		end,
+	},
+	{ -- code completion
 		"hrsh7th/nvim-cmp", -- cmp plugin
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp", -- lsp cmp
@@ -83,35 +91,27 @@ lazy.setup({
 				config = true,
 			},
 		},
-
 		config = function()
 			require("plugins.telescope")
 		end,
 	},
-
-	{ "tpope/vim-fugitive" }, -- git client
 	{
-		"lewis6991/gitsigns.nvim",
-		requires = "nvim-lua/plenary.nvim",
-		config = function()
-			require("plugins.gitsigns")
-		end,
-	}, -- git signs
-
-	{
-		"jose-elias-alvarez/null-ls.nvim",
-		config = function()
-			require("plugins.null-ls")
-		end,
-	}, -- formatter
+		"tpope/vim-fugitive", -- git client
+		{ -- git signs
+			"lewis6991/gitsigns.nvim",
+			requires = "nvim-lua/plenary.nvim",
+			config = function()
+				require("plugins.gitsigns")
+			end,
+		},
+	},
 	{
 		"echasnovski/mini.nvim",
 		lazy = false,
 		config = function()
 			require("plugins.mini")
 		end,
-	}, -- pairs/indent/comment
-	{ "wakatime/vim-wakatime" }, -- wakatime
+	},
 	{
 		"akinsho/toggleterm.nvim",
 		config = function()
@@ -124,5 +124,6 @@ lazy.setup({
 		requires = { "nvim-lua/plenary.nvim" },
 		config = true,
 	},
-	"kyazdani42/nvim-web-devicons",
+	"nvim-lua/plenary.nvim",
+	"wakatime/vim-wakatime",
 })

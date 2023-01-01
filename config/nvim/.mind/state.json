@@ -1,1 +1,1 @@
-{"uid":"20221227181738","icon":" ","children":[{"is_expanded":false,"data":".mind\/data\/20221227181750-netrw.md","contents":[{"text":"netrw"}]},{"is_expanded":true,"children":[{"is_expanded":false,"data":".mind\/data\/20221230131929-options.md","contents":[{"text":"options"}]}],"data":".mind\/data\/20221230052238-mind-keymaps.md","contents":[{"text":"mind-keymaps"}]}],"is_expanded":true,"contents":[{"text":"nvim"}],"type":1}
+{"uid":"20221227181738","is_expanded":true,"icon":" ","type":1,"contents":[{"text":"nvim"}]}

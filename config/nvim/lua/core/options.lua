@@ -5,7 +5,7 @@ local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 opt.mouse = "a" -- enable mouse support
 opt.clipboard = "unnamedplus" -- Copy/paste to system clipboard
 opt.swapfile = false -- Don't modify file open in another nvim processs
-opt.completeopt = "menuone,noinsert,noselect" -- Autocomplete options
+opt.completeopt = { "menu", "noinsert", "noselect" } -- Customize completions
 opt.joinspaces = false -- Don't autoinsert two spaces after '.', '?', '!' for join command.
 opt.encoding = "utf-8" -- Display this encoding.
 opt.fileencoding = "utf-8" -- Use this encoding when writing to file.
@@ -28,15 +28,16 @@ opt.splitbelow = true -- Horizontal split to the bottom
 
 -- fold
 opt.fillchars = { fold = " " }
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldmethod = "indent"
 opt.foldenable = false
 
 -- Tabs, indent
-opt.expandtab = true -- Use spaces instead of tabs
-opt.shiftwidth = 2 -- Shift 2 spaces when tab
-opt.tabstop = 2 -- 1 tab == 2 spaces
-opt.smartindent = true -- Autoindent new lines
+opt.expandtab = true -- Convert tabs to spaces
+opt.tabstop = 2 -- Insert 2 spaces for a tab
+opt.smarttab = true -- Make tabbing smarter (will realize you have 2 vs 4)
+opt.shiftwidth = 2 -- Use this number of spaces for indentation
+opt.smartindent = true -- Make indenting smart
+opt.autoindent = true -- Use auto indent
 
 -- Memory, CPU
 opt.hidden = true -- Enable background buffers

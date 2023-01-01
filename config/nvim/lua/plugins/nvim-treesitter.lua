@@ -31,4 +31,5 @@ nvim_treesitter.setup({
 	},
 	indent = { enable = true }, -- indent
 	context_commentstring = { enable = true, enable_autocmd = false }, -- comments(plugin)
+	autotag = { enable = true },
 })
