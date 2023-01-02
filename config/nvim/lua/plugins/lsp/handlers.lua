@@ -39,6 +39,33 @@ end
 
 M.on_attach = function(client, bufnr)
 	lsp_keymaps(bufnr)
+	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.MiniCompletion.completefunc_lsp")
+
+	require("vim.lsp.protocol").CompletionItemKind[1] = ""
+	require("vim.lsp.protocol").CompletionItemKind[2] = ""
+	require("vim.lsp.protocol").CompletionItemKind[3] = ""
+	require("vim.lsp.protocol").CompletionItemKind[4] = ""
+	require("vim.lsp.protocol").CompletionItemKind[5] = "ﰠ"
+	require("vim.lsp.protocol").CompletionItemKind[6] = ""
+	require("vim.lsp.protocol").CompletionItemKind[7] = "ﴯ"
+	require("vim.lsp.protocol").CompletionItemKind[8] = ""
+	require("vim.lsp.protocol").CompletionItemKind[9] = ""
+	require("vim.lsp.protocol").CompletionItemKind[10] = "ﰠ"
+	require("vim.lsp.protocol").CompletionItemKind[11] = "塞"
+	require("vim.lsp.protocol").CompletionItemKind[12] = ""
+	require("vim.lsp.protocol").CompletionItemKind[13] = ""
+	require("vim.lsp.protocol").CompletionItemKind[14] = ""
+	require("vim.lsp.protocol").CompletionItemKind[15] = ""
+	require("vim.lsp.protocol").CompletionItemKind[16] = ""
+	require("vim.lsp.protocol").CompletionItemKind[17] = ""
+	require("vim.lsp.protocol").CompletionItemKind[18] = ""
+	require("vim.lsp.protocol").CompletionItemKind[19] = ""
+	require("vim.lsp.protocol").CompletionItemKind[20] = ""
+	require("vim.lsp.protocol").CompletionItemKind[21] = ""
+	require("vim.lsp.protocol").CompletionItemKind[22] = "פּ"
+	require("vim.lsp.protocol").CompletionItemKind[23] = ""
+	require("vim.lsp.protocol").CompletionItemKind[24] = ""
+	require("vim.lsp.protocol").CompletionItemKind[25] = "𝙏"
 
 	-- use null-ls for these languages
 	local ignored_formatters = { "tsserver", "sumneko_lua", "html" }
@@ -49,12 +76,6 @@ M.on_attach = function(client, bufnr)
 	end
 end
 
-local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not status then
-	print("cmp_nvim_lsp error")
-	return
-end
-
-M.capabilities = cmp_nvim_lsp.default_capabilities()
+M.capabilities = vim.lsp.protocol.make_client_capabilities()
 
 return M
