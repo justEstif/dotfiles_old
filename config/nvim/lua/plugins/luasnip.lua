@@ -9,6 +9,7 @@ luasnip.filetype_extend("all", { "_" })
 
 -- Make snippet keymaps
 local map = require("core.utils").map
+
 local luasnip_go_right = function()
 	if luasnip.expand_or_jumpable() then
 		luasnip.expand_or_jump()
@@ -23,8 +24,8 @@ end
 
 map({ "i", "s" }, "<C-l>", function()
 	luasnip_go_right()
-end, {})
+end)
 
 map({ "i", "s" }, "<C-h>", function()
 	luasnip_go_left()
-end, {})
+end)

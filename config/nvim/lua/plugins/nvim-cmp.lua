@@ -9,8 +9,8 @@ if not status_luasnip then
 end
 
 local kind_icons = {
-	Text = "",
-	Method = "",
+	Text = "",
+	Method = "",
 	Function = "ƒ",
 	Constructor = " ",
 	Field = "識",
@@ -48,16 +48,12 @@ cmp.setup({
 
 	-- Key mapping
 	mapping = {
-		["<C-j>"] = cmp.mapping.select_next_item(),
-		["<C-k>"] = cmp.mapping.select_prev_item(),
-		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+		["<C-n>"] = cmp.mapping.select_next_item(),
+		["<C-p>"] = cmp.mapping.select_prev_item(),
+		["<C-u>"] = cmp.mapping.scroll_docs(-4),
+		["<C-d>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-		["<C-y>"] = cmp.config.disable,
-		["<C-e>"] = cmp.mapping({
-			i = cmp.mapping.abort(),
-			c = cmp.mapping.close(),
-		}),
+		["<C-e>"] = cmp.mapping.abort(),
 		["<CR>"] = cmp.mapping.confirm({ select = false }), -- explictly select options
 	},
 
@@ -68,7 +64,6 @@ cmp.setup({
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			vim_item.menu = ({
 				nvim_lsp = "[lsp]",
-				nvim_lua = "[nvim_lua]",
 				luasnip = "[snippet]",
 				buffer = "[buffer]",
 				path = "[path]",
@@ -83,6 +78,5 @@ cmp.setup({
 		{ name = "buffer" },
 		{ name = "path" },
 		{ name = "luasnip" },
-		{ name = "nvim_lua" },
 	},
 })

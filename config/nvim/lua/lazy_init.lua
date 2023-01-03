@@ -19,16 +19,13 @@ if not status_ok then
 end
 
 lazy.setup({
-	{ -- aesthetics
-		{ -- theme
-			"catppuccin/nvim",
-			as = "catppuccin",
-			lazy = false,
-			config = function()
-				require("plugins.theme")
-			end,
-		},
-		"kyazdani42/nvim-web-devicons", -- icons
+	{ -- theme
+		"catppuccin/nvim",
+		as = "catppuccin",
+		lazy = false,
+		config = function()
+			require("plugins.theme")
+		end,
 	},
 	{ -- code highlight
 		"nvim-treesitter/nvim-treesitter",
@@ -60,19 +57,19 @@ lazy.setup({
 	{ -- code completion
 		"hrsh7th/nvim-cmp", -- cmp plugin
 		dependencies = {
-			"hrsh7th/cmp-nvim-lsp", -- lsp cmp
-			"hrsh7th/cmp-path", -- path cmp
-			"hrsh7th/cmp-buffer", -- buffer cmp
-			"saadparwaiz1/cmp_luasnip", -- snippets cmp
-			{
-				"L3MON4D3/LuaSnip", -- snippets engine
-				config = function()
-					require("plugins.luasnip")
-				end,
-			},
+			"hrsh7th/cmp-nvim-lsp", -- lsp
+			"hrsh7th/cmp-path", -- path
+			"hrsh7th/cmp-buffer", -- buffer
+			"saadparwaiz1/cmp_luasnip", -- snippets
 		},
 		config = function()
 			require("plugins.nvim-cmp")
+		end,
+	},
+	{
+		"L3MON4D3/LuaSnip", -- snippets engine
+		config = function()
+			require("plugins.luasnip")
 		end,
 	},
 	{ -- file explorer
@@ -81,44 +78,39 @@ lazy.setup({
 			require("plugins.nvim-tree")
 		end,
 	},
-	{
+	{ -- swiss knife
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
 		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
-		dependencies = {
-			{
-				"tiagovla/scope.nvim", -- scope buffers to tabs
-				config = true,
-			},
-		},
 		config = function()
 			require("plugins.telescope")
 		end,
 	},
-	{
-		"tpope/vim-fugitive", -- git client
-		{ -- git signs
-			"lewis6991/gitsigns.nvim",
-			requires = "nvim-lua/plenary.nvim",
-			config = function()
-				require("plugins.gitsigns")
-			end,
-		},
+	{ -- scope buffers to tab page
+		"tiagovla/scope.nvim",
+		config = true,
 	},
-	{
+	{ -- git signs
+		"lewis6991/gitsigns.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("plugins.gitsigns")
+		end,
+	},
+	{ -- swiss knife
 		"echasnovski/mini.nvim",
 		lazy = false,
 		config = function()
 			require("plugins.mini")
 		end,
 	},
-	{
+	{ -- toggle term
 		"akinsho/toggleterm.nvim",
 		config = function()
 			require("plugins.toggleterm")
 		end,
-	}, -- toggle term
-	{
+	},
+	{ -- mind: note-taking
 		"phaazon/mind.nvim",
 		branch = "v2.2",
 		requires = { "nvim-lua/plenary.nvim" },
@@ -126,4 +118,6 @@ lazy.setup({
 	},
 	"nvim-lua/plenary.nvim",
 	"wakatime/vim-wakatime",
+	"tpope/vim-fugitive", -- git client
+	"kyazdani42/nvim-web-devicons", -- icons,
 })

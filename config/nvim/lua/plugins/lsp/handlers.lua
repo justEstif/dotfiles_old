@@ -9,19 +9,11 @@ M.setup = function()
 		float = {
 			focusable = true,
 			style = "minimal",
-			border = "rounded",
-			source = "always",
 			header = "",
 			prefix = "",
 		},
 	}
-
 	vim.diagnostic.config(config)
-
-	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-
-	vim.lsp.handlers["textDocument/signatureHelp"] =
-		vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
 end
 
 local function lsp_keymaps(bufnr)
@@ -32,7 +24,7 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "=", ":lua vim.lsp.buf.format{async=true}<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F2>", ":lua require('plugins.lsp.rename').rename()<cr>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F3>", ":lua vim.lsp.buf.code_action()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F8>", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F8>", ":lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F11>", ":Telescope lsp_type_definitions<cr>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F12>", ":Telescope lsp_references<cr>", opts)
 end

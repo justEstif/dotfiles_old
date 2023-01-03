@@ -16,8 +16,6 @@ telescope.setup({
 			i = {
 				["<leader><leader>"] = actions.close, -- exit
 				["<C-u>"] = false, -- clear input with C-u
-				["<C-j>"] = actions.move_selection_next, -- next item
-				["<C-k>"] = actions.move_selection_previous, -- previous item
 				["<C-w>"] = actions_layout.toggle_preview, -- toggle preview
 				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- add selected (using tab key)
 				["<C-q>"] = actions.smart_add_to_qflist + actions.open_qflist, -- add all to qflist
@@ -25,8 +23,6 @@ telescope.setup({
 			},
 			n = {
 				["<leader><leader>"] = actions.close, -- exit
-				["<C-j>"] = actions.move_selection_next, -- next item
-				["<C-k>"] = actions.move_selection_previous, -- previous item
 				["<C-w>"] = actions_layout.toggle_preview, -- toggle preview
 				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- add selected (using tab key)
 				["<C-q>"] = actions.smart_add_to_qflist + actions.open_qflist, -- add all to qflist
