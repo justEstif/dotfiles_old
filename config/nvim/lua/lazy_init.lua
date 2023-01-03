@@ -61,6 +61,7 @@ lazy.setup({
 			"hrsh7th/cmp-path", -- path
 			"hrsh7th/cmp-buffer", -- buffer
 			"saadparwaiz1/cmp_luasnip", -- snippets
+			"hrsh7th/cmp-emoji", -- emoji
 		},
 		config = function()
 			require("plugins.nvim-cmp")

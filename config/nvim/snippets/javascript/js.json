@@ -1,4 +1,21 @@
 {
+  "JSDoc Comment": {
+    "prefix": "/*",
+    "body": [
+      "/**",
+      " * ${1:Comment}$0",
+      "*/"
+    ],
+    "description": "A JSDoc comment"
+  },
+  "console.log": {
+    "prefix": "clg",
+    "body": "console.log(${0})"
+  },
+  "return": {
+    "prefix": "ret",
+    "body": "return ${0}"
+  },
   "if-else statement": {
     "prefix": "if",
     "body": [
@@ -48,26 +65,21 @@
     "prefix": ".some",
     "body": ".some((${2:item}) => {\n\t${0}\n})"
   },
-  "JSDoc Comment": {
-    "prefix": "/*",
-    "body": [
-      "/**",
-      " * ${1:Comment}$0",
-      "*/"
-    ],
-    "description": "A JSDoc comment"
-  },
-  "const object": {
-    "prefix": "c{}",
-    "body": "const ${1:name} = {\n\t${0}\n}"
-  },
-  "const array": {
-    "prefix": "c[]",
-    "body": "const ${1:name} = [\n\t${0}\n]"
+  "import module": {
+    "prefix": "imp",
+    "body": "import ${2:*} from '${1:module}'"
   },
   "module default export": {
     "prefix": "ed",
     "body": "export default ${1:member}"
+  },
+  "function": {
+    "prefix": "f",
+    "body": "const ${1:first} = (${2:second}) => { ${3:third} }"
+  },
+  "export function": {
+    "prefix": "ef",
+    "body": "export const ${1:first} = (${2:second}) => { ${3:third} }"
   },
   "module default export function": {
     "prefix": "edf",
@@ -76,29 +88,5 @@
       "",
       "export default ${1:first}"
     ]
-  },
-  "import module": {
-    "prefix": "i",
-    "body": "import ${2:*} from '${1:module}'"
-  },
-  "import module destructured": {
-    "prefix": "i{}",
-    "body": "import {$2} from '${1:module}'"
-  },
-  "console.log": {
-    "prefix": "clg",
-    "body": "console.log(${0})"
-  },
-  "return": {
-    "prefix": "r",
-    "body": "return ${0}"
-  },
-  "return new object": {
-    "prefix": "r{}",
-    "body": "return {\n\t${0}\n}"
-  },
-  "return new array": {
-    "prefix": "r[]",
-    "body": "return [\n\t${0}\n]"
   }
 }
