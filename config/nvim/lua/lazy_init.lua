@@ -56,12 +56,24 @@ lazy.setup({
 		config = function()
 			require("plugins.null-ls")
 		end,
-		{
-			"L3MON4D3/LuaSnip", -- snippets engine
-			config = function()
-				require("plugins.luasnip")
-			end,
+	},
+	{ -- code completion
+		"hrsh7th/nvim-cmp", -- cmp plugin
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp", -- lsp cmp
+			"hrsh7th/cmp-path", -- path cmp
+			"hrsh7th/cmp-buffer", -- buffer cmp
+			"saadparwaiz1/cmp_luasnip", -- snippets cmp
+			{
+				"L3MON4D3/LuaSnip", -- snippets engine
+				config = function()
+					require("plugins.luasnip")
+				end,
+			},
 		},
+		config = function()
+			require("plugins.nvim-cmp")
+		end,
 	},
 	{ -- file explorer
 		"kyazdani42/nvim-tree.lua",
