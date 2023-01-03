@@ -1,13 +1,7 @@
 {
   "if-else statement": {
-    "prefix": "ifelse",
-    "body": [
-      "if (${1:condition}) {",
-      "\t$0",
-      "} else {",
-      "\t",
-      "}"
-    ],
+    "prefix": "if",
+    "body": ["if (${1:condition}) {", "\t$0", "} else {", "\t", "}"],
     "description": "If-Else Statement"
   },
   "switch statement": {
@@ -25,67 +19,41 @@
     "description": "Switch Statement"
   },
   "map": {
-    "prefix": "map",
-    "body": "${1:iterable}.map((${2:item}) => {\n\t${0}\n})"
+    "prefix": ".map",
+    "body": ".map((${2:item}) => {\n\t${0}\n})"
   },
   "reduce": {
-    "prefix": "reduce",
-    "body": "${1:iterable}.reduce((${2:previous}, ${3:current}) => {\n\t${0}\n}${4:, initial})"
+    "prefix": ".reduce",
+    "body": ".reduce((${2:previous}, ${3:current}) => {\n\t${0}\n}${4:, initial})"
   },
   "filter": {
-    "prefix": "filter",
-    "body": "${1:iterable}.filter((${2:item}) => {\n\t${0}\n})"
+    "prefix": ".filter",
+    "body": ".filter((${2:item}) => {\n\t${0}\n})"
   },
   "find": {
-    "prefix": "find",
-    "body": "${1:iterable}.find((${2:item}) => {\n\t${0}\n})"
+    "prefix": ".find",
+    "body": ".find((${2:item}) => {\n\t${0}\n})"
   },
   "every": {
-    "prefix": "every",
-    "body": "${1:iterable}.every((${2:item}) => {\n\t${0}\n})"
+    "prefix": ".every",
+    "body": ".every((${2:item}) => {\n\t${0}\n})"
   },
   "some": {
-    "prefix": "some",
-    "body": "${1:iterable}.some((${2:item}) => {\n\t${0}\n})"
+    "prefix": ".some",
+    "body": ".some((${2:item}) => {\n\t${0}\n})"
   },
   "JSDoc Comment": {
     "prefix": "/*",
-    "body": [
-      "/**",
-      " * ${1:Comment}$0",
-      "*/"
-    ],
+    "body": ["/**", " * ${1:Comment}$0", "*/"],
     "description": "A JSDoc comment"
   },
-  "const statement": {
-    "prefix": "c",
-    "body": "const ${1:name}"
-  },
-  "const statement from destructuring": {
-    "prefix": "cd",
-    "body": "const { ${2:prop} } = ${1:value}"
-  },
   "const object": {
-    "prefix": "co",
+    "prefix": "c{}",
     "body": "const ${1:name} = {\n\t${0}\n}"
   },
   "const array": {
-    "prefix": "ca",
+    "prefix": "c[]",
     "body": "const ${1:name} = [\n\t${0}\n]"
-  },
-  "function": {
-    "prefix": "f",
-    "body": "const ${1:first} = (${2:second}) => { ${3:third} }"
-  },
-  "const async function": {
-    "prefix": "af",
-    "body": "const ${1:first} = async (${2:second}) => { ${3:third} }"
-  },
-  "export named function": {
-    "prefix": "ef",
-    "body": [
-      "export const ${1:first} = (${2:second}) => { ${3:third} }"
-    ]
   },
   "module default export": {
     "prefix": "ed",
@@ -100,15 +68,11 @@
     ]
   },
   "import module": {
-    "prefix": "im",
+    "prefix": "i",
     "body": "import ${2:*} from '${1:module}'"
   },
-  "import module as": {
-    "prefix": "ia",
-    "body": "import ${2:*} as ${3:name} from '${1:module}'"
-  },
   "import module destructured": {
-    "prefix": "id",
+    "prefix": "i{}",
     "body": "import {$2} from '${1:module}'"
   },
   "console.log": {
@@ -120,11 +84,11 @@
     "body": "return ${0}"
   },
   "return new object": {
-    "prefix": "ro",
+    "prefix": "r{}",
     "body": "return {\n\t${0}\n}"
   },
   "return new array": {
-    "prefix": "ra",
+    "prefix": "r[]",
     "body": "return [\n\t${0}\n]"
   }
 }

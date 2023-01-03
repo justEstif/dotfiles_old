@@ -1,50 +1,7 @@
 {
-  "header 1": {
-    "prefix": "h1",
-    "body": [
-      "# ${0}"
-    ],
-    "description": "Add header level 1"
-  },
-  "header 2": {
-    "prefix": "h2",
-    "body": [
-      "## ${0}"
-    ],
-    "description": "Add header level 2"
-  },
-  "header 3": {
-    "prefix": "h3",
-    "body": [
-      "### ${0}"
-    ],
-    "description": "Add header level 3"
-  },
-  "header 4": {
-    "prefix": "h4",
-    "body": [
-      "#### ${0}"
-    ],
-    "description": "Add header level 4"
-  },
-  "header 5": {
-    "prefix": "h5",
-    "body": [
-      "##### ${0}"
-    ],
-    "description": "Add header level 5"
-  },
-  "header 6": {
-    "prefix": "h6",
-    "body": [
-      "###### ${0}"
-    ],
-    "description": "Add header level 6"
-  },
   "Links": {
     "prefix": [
-      "l",
-      "link"
+      "l"
     ],
     "body": [
       "[${1}](${2}) ${0}"
@@ -53,21 +10,12 @@
   },
   "URLS": {
     "prefix": [
-      "u",
-      "url"
+      "u"
     ],
     "body": [
       "<${1}> ${0}"
     ],
     "description": "Add urls"
-  },
-  "Insert code": {
-    "prefix": [
-      "code",
-      "c"
-    ],
-    "body": "`${1}` $0",
-    "description": "Insert code"
   },
   "Insert code block": {
     "prefix": [
@@ -83,16 +31,14 @@
   },
   "Insert horizontal rule": {
     "prefix": [
-      "--",
-      "horizontal rule"
+      "--"
     ],
     "body": "----------\n",
     "description": "Insert horizontal rule"
   },
   "Insert task list": {
     "prefix": [
-      "t",
-      "task"
+      "[]"
     ],
     "body": [
       "- [${1| ,x|}] ${2:text}",
