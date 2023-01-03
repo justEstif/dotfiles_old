@@ -24,6 +24,9 @@ map("n", "<leader>cv", ":qall<cr>", { desc = "close vim" })
 map("n", "<leader>om", ":tabnew<bar>:MindOpenProject<cr>", { desc = "open mind project" })
 map("n", "<leader>cm", ":tabclose<bar>:MindClose<cr>", { desc = "close mind project" })
 
+-- Lazy
+map("n", "<leader>l", ":Lazy<cr>", { desc = "open lazy plugin manager" })
+
 -- Telescope
 map("n", "<leader>b", ":Telescope buffers<cr>", { desc = "List open buffers" })
 map("n", "<leader>h", ":Telescope help_tags<cr>", { desc = "help tags" })

@@ -1,5 +1,4 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim" if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
 		"clone",
@@ -19,6 +18,41 @@ if not status_ok then
 end
 
 lazy.setup({
+	-- spec = "plugins",
+	install = {
+		colorschema = { "catppuccin-macchiato" },
+		checker = { enabled = true },
+	},
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"2html_plugin",
+				"getscript",
+				"getscriptPlugin",
+				"gzip",
+				"logipat",
+				"netrw",
+				"netrwPlugin",
+				"netrwSettings",
+				"netrwFileHandlers",
+				"tar",
+				"tarPlugin",
+				"rrhelper",
+				"spellfile_plugin",
+				"vimball",
+				"vimballPlugin",
+				"zip",
+				"zipPlugin",
+				"tutor",
+				"rplugin",
+				"synmenu",
+				"optwin",
+				"compiler",
+				"bugreport",
+				"tohtml",
+			},
+		},
+	},
 	{ -- theme
 		"catppuccin/nvim",
 		as = "catppuccin",
@@ -61,7 +95,6 @@ lazy.setup({
 			"hrsh7th/cmp-path", -- path
 			"hrsh7th/cmp-buffer", -- buffer
 			"saadparwaiz1/cmp_luasnip", -- snippets
-			"hrsh7th/cmp-emoji", -- emoji
 		},
 		config = function()
 			require("plugins.nvim-cmp")

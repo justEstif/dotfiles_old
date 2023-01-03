@@ -47,6 +47,9 @@ opt.updatetime = 300 -- ms to wait for trigger an event
 opt.undofile = true -- enable persistent undo
 opt.autoread = true -- auto read files changes
 
+-- fix markdown indentation settings
+g.markdown_recommended_style = 0
+
 opt.shortmess:append("I") -- disable welcome
 -- ignore these files in search
 opt.wildignore:append({
@@ -61,34 +64,3 @@ opt.wildignore:append({
 	"*/build/*",
 	"package-lock.json",
 })
-
--- Disable builtins plugins
-local disabled_built_ins = {
-	"2html_plugin",
-	"getscript",
-	"getscriptPlugin",
-	"gzip",
-	"logipat",
-	"netrw",
-	"netrwPlugin",
-	"netrwSettings",
-	"netrwFileHandlers",
-	"tar",
-	"tarPlugin",
-	"rrhelper",
-	"spellfile_plugin",
-	"vimball",
-	"vimballPlugin",
-	"zip",
-	"zipPlugin",
-	"tutor",
-	"rplugin",
-	"synmenu",
-	"optwin",
-	"compiler",
-	"bugreport",
-}
-
-for _, plugin in pairs(disabled_built_ins) do
-	g["loaded_" .. plugin] = 1
-end
