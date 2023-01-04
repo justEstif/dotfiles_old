@@ -50,7 +50,7 @@ bindsym $mod+c kill
 bindsym Print exec flameshot gui
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun -run-shell-command '{terminal} -e zsh -ic "{cmd} && read"'
+bindsym $mod+d exec --no-startup-id rofi -show drun
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
