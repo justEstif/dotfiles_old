@@ -49,8 +49,9 @@ opt.autoread = true -- auto read files changes
 
 -- fix markdown indentation settings
 g.markdown_recommended_style = 0
-
+opt.iskeyword:append("-") -- treat dash separated words as a word text object
 opt.shortmess:append("I") -- disable welcome
+
 -- ignore these files in search
 opt.wildignore:append({
 	"*.zip",

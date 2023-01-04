@@ -18,5 +18,5 @@ jump2d.setup({
 local map = require("core.utils").map
 
 map("n", ";", function()
-	jump2d.start(jump2d.builtin_opts.single_character)
+	jump2d.start(jump2d.builtin_opts.query)
 end, { desc = "Jump to single_character" })
