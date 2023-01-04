@@ -4,10 +4,13 @@
 - yay
 - git
 - nvim
-- insomnia: http client
 - ranger
 - i3lockmore
 - flameshot
 - master pdf editor version 4
 - iwgtk
 - arandr
+- xarchiver
+- thunar
+- postgres, pgcli
+- rofi
