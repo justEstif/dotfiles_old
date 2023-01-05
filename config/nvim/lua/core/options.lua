@@ -20,6 +20,7 @@ opt.showmatch = true -- Highlight matching parenthesis
 opt.wrap = false -- wrap lines
 opt.pumheight = 10 -- pop up menu height
 opt.cursorline = true -- show cursorline
+opt.relativenumber = true -- show relativenumber
 opt.signcolumn = "yes:1" -- sign column default size
 
 -- new window direction
@@ -49,8 +50,10 @@ opt.autoread = true -- auto read files changes
 
 -- fix markdown indentation settings
 g.markdown_recommended_style = 0
+
 opt.iskeyword:append("-") -- treat dash separated words as a word text object
 opt.shortmess:append("I") -- disable welcome
+opt.nrformats:append("unsigned") -- inc/dec the last digit of dashed
 
 -- ignore these files in search
 opt.wildignore:append({

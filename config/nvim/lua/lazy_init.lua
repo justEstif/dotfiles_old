@@ -18,9 +18,7 @@ if not status_ok then
 end
 
 lazy.setup({
-	-- spec = "_plugins",
 	install = {
-		colorschema = { "catppuccin-macchiato" },
 		checker = { enabled = true },
 	},
 	performance = {
