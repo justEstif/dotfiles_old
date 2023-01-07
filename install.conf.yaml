@@ -13,6 +13,7 @@
     ~/.config/ranger: config/ranger
     ~/.config/rofi: config/rofi
     ~/.config/kitty: config/kitty
+    /etc/keyd: etc/keyd
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
