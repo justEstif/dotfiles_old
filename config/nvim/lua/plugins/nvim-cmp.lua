@@ -44,7 +44,10 @@ cmp.setup({
 		end,
 	},
 
-	completion = { keyword_length = 1 },
+	completion = {
+		completeopt = "menu,menuone,noinsert",
+		keyword_length = 1,
+	},
 
 	-- Key mapping
 	mapping = {

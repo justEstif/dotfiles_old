@@ -33,12 +33,4 @@ M.run_file = function()
 	vim.cmd(cmd)
 end
 
--- @desc create autocmd
-M.aucmd = vim.api.nvim_create_autocmd
-
--- @desc create autocmd group
-M.augroup = function(name, fnc)
-	fnc(vim.api.nvim_create_augroup(name, { clear = true }))
-end
-
 return M

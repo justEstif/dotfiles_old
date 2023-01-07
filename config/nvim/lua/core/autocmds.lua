@@ -1,41 +1,33 @@
-local augroup = require("core.utils").augroup
-local aucmd = require("core.utils").aucmd
+local autogroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
 
-augroup("SmartTextYankPost", function(g)
-	aucmd("TextYankPost", {
-		group = g,
-		pattern = "*",
-		desc = "Highlight yanked text",
-		callback = function()
-			vim.highlight.on_yank({
-				higroup = "IncSearch",
-				timeout = "200",
-			})
-		end,
-	})
-end)
+-- Highlight on yank
+autocmd("TextYankPost", {
+	desc = "highlight on yank",
+	callback = function()
+		vim.highlight.on_yank({ higroup = "IncSearch", timeout = "200" })
+	end,
+})
 
-augroup("NewlineNoAutoComments", function(g)
-	aucmd("BufEnter", {
-		group = g,
-		pattern = "*",
-		command = "setlocal formatoptions-=o",
-	})
-end)
+autocmd("BufEnter", {
+	desc = "don't auto comment new lines",
+	pattern = "*",
+	command = "set fo-=c fo-=r fo-=o",
+})
 
-augroup("DisableCmpInCmdLine", function(g)
-	aucmd("CmdWinEnter", {
-		group = g,
-		pattern = "*",
-		callback = function()
-			require("cmp").setup({ enabled = false })
-		end,
-	})
-	aucmd("CmdWinLeave", {
-		group = g,
-		pattern = "*",
-		callback = function()
-			require("cmp").setup({ enabled = true })
-		end,
-	})
-end)
+autogroup("DisableCmp", { clear = true })
+autocmd("CmdWinEnter", {
+	pattern = "*",
+  group = "DisableCmp",
+	callback = function()
+		require("cmp").setup({ enabled = false })
+	end,
+})
+
+autocmd("CmdWinLeave", {
+	pattern = "*",
+  group = "DisableCmp",
+	callback = function()
+		require("cmp").setup({ enabled = true })
+	end,
+})

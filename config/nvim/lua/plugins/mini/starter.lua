@@ -7,7 +7,6 @@ end
 starter.setup({
 	content_hooks = {
 		starter.gen_hook.aligning("center", "center"),
-		starter.gen_hook.adding_bullet(),
 	},
 	evaluate_single = true,
 	footer = os.date(),
