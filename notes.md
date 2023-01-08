@@ -14,3 +14,6 @@
 - thunar
 - postgres, pgcli
 - rofi
+- displaylink (follow aur instructions)
+- bluetooth manager
+- transmission
