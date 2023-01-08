@@ -52,8 +52,6 @@ lazy.setup({
 			},
 		},
 	},
-
-	-- coding
 	{ -- code highlight
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
@@ -66,13 +64,13 @@ lazy.setup({
 			require("plugins.nvim-treesitter")
 		end,
 	},
-
 	{ -- lsp
 		"neovim/nvim-lspconfig", -- nvim native lsp
 		dependencies = {
 			{
 				"williamboman/mason.nvim", -- Installer for external tools
 				cmd = "Mason",
+				config = true,
 			},
 			"williamboman/mason-lspconfig.nvim", -- mason extension for lspconfig
 			"jose-elias-alvarez/typescript.nvim", -- add features to tsserver config
@@ -125,7 +123,6 @@ lazy.setup({
 			require("plugins.luasnip")
 		end,
 	},
-	-- tools
 	{
 		"kyazdani42/nvim-tree.lua",
 		config = function()
@@ -152,11 +149,11 @@ lazy.setup({
 	},
 	{ -- toggle term
 		"akinsho/toggleterm.nvim",
+		keys = { "<leader>t" },
 		config = function()
 			require("plugins.toggleterm")
 		end,
 	},
-	-- utils
 	{ -- scope buffers to tab page
 		"tiagovla/scope.nvim",
 		config = true,
@@ -182,11 +179,10 @@ lazy.setup({
 	{
 		"folke/lazy.nvim",
 		keys = {
-			{ "n", "<leader>l", ":Lazy<cr>", desc = "open lazy plugin manager" },
+			{ "<leader>l", ":Lazy<cr>", desc = "open lazy plugin manager" },
 		},
 	},
-	-- git
-	{ -- git signs
+	{
 		"lewis6991/gitsigns.nvim",
 		requires = "nvim-lua/plenary.nvim",
 		config = function()
@@ -194,7 +190,6 @@ lazy.setup({
 		end,
 	},
 	{
-		-- theme
 		"catppuccin/nvim",
 		as = "catppuccin",
 		lazy = false,
