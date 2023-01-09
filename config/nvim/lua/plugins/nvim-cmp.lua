@@ -57,7 +57,7 @@ cmp.setup({
 		["<C-d>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		["<C-e>"] = cmp.mapping.abort(),
-		["<CR>"] = cmp.mapping.confirm({ select = false }), -- explictly select options
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	},
 
 	formatting = {

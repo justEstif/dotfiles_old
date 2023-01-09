@@ -165,17 +165,6 @@ lazy.setup({
 			require("plugins.mini")
 		end,
 	},
-	{ -- mind: note-taking
-		"phaazon/mind.nvim",
-		branch = "v2.2",
-		requires = { "nvim-lua/plenary.nvim" },
-		config = true,
-		cmd = "MindOpenProject",
-		keys = {
-			{ "<leader>om", ":tabnew<bar>:MindOpenProject<cr>", desc = "open mind project" },
-			{ "<leader>cm", ":tabclose<bar>:MindClose<cr>", desc = "close mind project" },
-		},
-	},
 	{
 		"folke/lazy.nvim",
 		keys = {
@@ -184,6 +173,7 @@ lazy.setup({
 	},
 	{
 		"lewis6991/gitsigns.nvim",
+		event = "BufReadPre",
 		requires = "nvim-lua/plenary.nvim",
 		config = function()
 			require("plugins.gitsigns")

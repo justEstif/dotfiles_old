@@ -21,3 +21,8 @@ map("n", "<leader>cb", ":bd<cr>", { desc = "close buffer" })
 map("n", "<leader>cv", ":qall<cr>", { desc = "close vim" })
 
 map("n", "<leader>g", ":G<cr>", { desc = "Open fugitive" })
+
+map("n", "<leader>ss", function()
+	local scribe = require("plugins.scribe")
+	scribe.open()
+end)
