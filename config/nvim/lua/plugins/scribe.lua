@@ -1,23 +1,29 @@
--- https://github.com/Ostralyan/scribe.nvim
 local M = {}
 
 local config = {
-	directory = vim.fn.getcwd() .. "/notes/",
+	directory = "/notes/",
 	file_ext = ".md",
 	default_file_name = "index",
 }
 
 local create_folder = function()
-	local dir_exists = vim.fn.isdirectory(config.directory) ~= 0
-
-	if dir_exists == false then
-		os.execute("mkdir -p " .. config.directory)
-	end
+	vim.api.nvim_create_autocmd("BufWritePre", {
+		pattern = "*" .. config.directory .. "**/*" .. config.file_ext,
+		callback = function()
+			local dir = vim.fn.expand("<afile>:p:h")
+			if dir:find("%l+://") == 1 then
+				return
+			end
+			if vim.fn.isdirectory(dir) == 0 then
+				vim.fn.mkdir(dir, "p")
+			end
+		end,
+	})
 end
 
 local create_file = function(file_name)
+	vim.cmd("e " .. vim.fn.getcwd() .. config.directory .. file_name .. config.file_ext)
 	create_folder()
-	vim.cmd("e " .. config.directory .. file_name .. config.file_ext)
 end
 
 M.open = function()
@@ -25,7 +31,7 @@ M.open = function()
 		if file_name == "" then
 			create_file(config.default_file_name)
 		elseif file_name == nil then
-			print("nil value provided; no file created")
+			print("No file created: provided valid value")
 			return
 		else
 			create_file(file_name)

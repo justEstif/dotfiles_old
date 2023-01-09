@@ -20,9 +20,10 @@ map("n", "<leader>ct", ":tabclose<cr>", { desc = "close tab" })
 map("n", "<leader>cb", ":bd<cr>", { desc = "close buffer" })
 map("n", "<leader>cv", ":qall<cr>", { desc = "close vim" })
 
-map("n", "<leader>g", ":G<cr>", { desc = "Open fugitive" })
-
-map("n", "<leader>ss", function()
+map("n", "<leader>m", function()
 	local scribe = require("plugins.scribe")
 	scribe.open()
 end)
+
+map("n", "<leader>g", ":G<cr>", { desc = "Open fugitive" })
+map("n", "<leader>l", ":Lazy<cr>", { desc = "open lazy plugin manager" })

@@ -166,12 +166,6 @@ lazy.setup({
 		end,
 	},
 	{
-		"folke/lazy.nvim",
-		keys = {
-			{ "<leader>l", ":Lazy<cr>", desc = "open lazy plugin manager" },
-		},
-	},
-	{
 		"lewis6991/gitsigns.nvim",
 		event = "BufReadPre",
 		requires = "nvim-lua/plenary.nvim",
@@ -189,5 +183,6 @@ lazy.setup({
 	},
 	"kyazdani42/nvim-web-devicons", -- icons,
 	"tpope/vim-fugitive", -- git client,,
+	"folke/lazy.nvim",
 	"nvim-lua/plenary.nvim",
 })
