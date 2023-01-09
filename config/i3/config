@@ -105,6 +105,3 @@ bar {
   modifier $mod+$alt
   font pango:UbuntuMono Nerd Font Mono 10
 }
-
-# displaylink setup
-exec_always --no-startup-id ~/.config/i3/scripts/monitor_setup.sh
