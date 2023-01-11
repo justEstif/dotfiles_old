@@ -20,6 +20,7 @@ opt.showmatch = true -- Highlight matching parenthesis
 opt.pumheight = 10 -- pop up menu height
 opt.cursorline = true -- show cursorline
 opt.relativenumber = true -- show relativenumber
+opt.number = true
 opt.signcolumn = "yes:1" -- sign column default size
 
 -- new window direction
@@ -49,6 +50,12 @@ opt.autoread = true -- auto read files changes
 
 -- fix markdown indentation settings
 g.markdown_recommended_style = 0
+g.markdown_folding = 1
+
+g.loaded_ruby_provider = 0
+g.loaded_perl_provider = 0
+g.loaded_node_provider = 0
+g.loaded_python3_provider = 0
 
 opt.iskeyword:append("-") -- treat dash separated words as a word text object
 opt.nrformats:append("unsigned") -- inc/dec the last digit of dashed
@@ -66,3 +73,35 @@ opt.wildignore:append({
 	"*/build/*",
 	"package-lock.json",
 })
+
+-- Disable builtins plugins
+local disabled_built_ins = {
+	"2html_plugin",
+	"getscript",
+	"getscriptPlugin",
+	"gzip",
+	"logipat",
+	"netrw",
+	"netrwPlugin",
+	"netrwSettings",
+	"netrwFileHandlers",
+	"tar",
+	"tarPlugin",
+	"rrhelper",
+	"spellfile_plugin",
+	"vimball",
+	"vimballPlugin",
+	"zip",
+	"zipPlugin",
+	"tutor",
+	"rplugin",
+	"synmenu",
+	"optwin",
+	"compiler",
+	"bugreport",
+	"tohtml",
+}
+
+for _, plugin in pairs(disabled_built_ins) do
+	g["loaded_" .. plugin] = 1
+end

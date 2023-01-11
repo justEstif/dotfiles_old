@@ -6,4 +6,5 @@ c: ConfigContainer = c  # noqa: F821 pylint: disable=E0602,C0103# User agent to 
 
 config.bind('<alt+Left>', 'tab-prev')
 config.bind('<alt+Right>', 'tab-next')
-config.bind("td", 'config-cycle content.user_stylesheets ./dark-mode.css ""')
+config.bind(
+    "td", 'config-cycle content.user_stylesheets ./dark-mode.css "" ;; restart')

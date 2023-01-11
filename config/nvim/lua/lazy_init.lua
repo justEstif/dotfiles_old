@@ -19,39 +19,6 @@ if not status_ok then
 end
 
 lazy.setup({
-	install = {
-		checker = { enabled = true },
-	},
-	performance = {
-		rtp = {
-			disabled_plugins = {
-				"2html_plugin",
-				"getscript",
-				"getscriptPlugin",
-				"gzip",
-				"logipat",
-				"netrw",
-				"netrwPlugin",
-				"netrwSettings",
-				"netrwFileHandlers",
-				"tar",
-				"tarPlugin",
-				"rrhelper",
-				"spellfile_plugin",
-				"vimball",
-				"vimballPlugin",
-				"zip",
-				"zipPlugin",
-				"tutor",
-				"rplugin",
-				"synmenu",
-				"optwin",
-				"compiler",
-				"bugreport",
-				"tohtml",
-			},
-		},
-	},
 	{ -- code highlight
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
@@ -145,13 +112,6 @@ lazy.setup({
 			{ "<leader>s", ":Telescope live_grep<CR>", desc = "Search in cwd" },
 			{ "<leader><leader>", ":Telescope find_files<CR>", desc = "Find files in cwd" },
 			{ "z=", ":Telescope spell_suggest<CR>", desc = "Spell suggest keybind" },
-		},
-	},
-	{
-		"justEstif/scribe.nvim",
-		config = true,
-		keys = {
-			{ "<leader>os", ":ScribeOpen<cr>" },
 		},
 	},
 	{ -- toggle term

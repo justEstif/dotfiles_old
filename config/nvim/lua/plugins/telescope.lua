@@ -70,5 +70,4 @@ telescope.setup({
 			initial_mode = "normal",
 		},
 	},
-	extensions = {},
 })

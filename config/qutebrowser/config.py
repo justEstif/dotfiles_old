@@ -8,5 +8,9 @@ config.load_autoconfig()
 
 c.downloads.location.directory = '~/Downloads'
 
+# show the tab bar
+c.tabs.show = 'switching'
+c.statusbar.show = 'in-mode'
+
 config.source("./theme.py")
 config.source("./keybinds.py")
