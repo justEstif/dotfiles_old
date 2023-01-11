@@ -13,6 +13,7 @@ return {
 			},
 			experimental = {
 				classRegex = {
+					'class="([^"]*)',
 					"cva\\(([^)]*)\\)",
 					"[\"'`]([^\"'`]*).*?[\"'`]",
 				},

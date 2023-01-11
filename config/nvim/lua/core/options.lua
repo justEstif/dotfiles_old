@@ -8,6 +8,7 @@ opt.swapfile = false -- Don't modify file open in another nvim processs
 opt.joinspaces = false -- Don't autoinsert two spaces after '.', '?', '!' for join command.
 opt.encoding = "utf-8" -- Display this encoding.
 opt.fileencoding = "utf-8" -- Use this encoding when writing to file.
+opt.wrap = true  -- wrap long lines
 
 -- Search
 opt.ignorecase = true -- Ignore case letters when search
@@ -16,7 +17,6 @@ opt.gdefault = true -- default g flag to search
 opt.showmatch = true -- Highlight matching parenthesis
 
 -- UI
-opt.wrap = false -- wrap lines
 opt.pumheight = 10 -- pop up menu height
 opt.cursorline = true -- show cursorline
 opt.relativenumber = true -- show relativenumber
@@ -51,7 +51,6 @@ opt.autoread = true -- auto read files changes
 g.markdown_recommended_style = 0
 
 opt.iskeyword:append("-") -- treat dash separated words as a word text object
-opt.shortmess:append("I") -- disable welcome
 opt.nrformats:append("unsigned") -- inc/dec the last digit of dashed
 
 -- ignore these files in search

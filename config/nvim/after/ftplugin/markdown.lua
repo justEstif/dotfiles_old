@@ -1,1 +1,1 @@
-vim.opt_local.spell = true -- enable spell
+vim.opt_local.spell = true -- enable spell check

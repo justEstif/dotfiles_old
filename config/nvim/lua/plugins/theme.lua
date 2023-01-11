@@ -11,6 +11,7 @@ theme.setup({
 	},
 	custom_highlights = function(colors)
 		return {
+			EndOfBuffer = { fg = "#ffffff" },
 			["@text.todo"] = { fg = colors.base, bg = colors.yellow, style = { "bold" } },
 		}
 	end,
