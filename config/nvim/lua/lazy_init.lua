@@ -147,6 +147,13 @@ lazy.setup({
 			{ "z=", ":Telescope spell_suggest<CR>", desc = "Spell suggest keybind" },
 		},
 	},
+	{
+		"justEstif/scribe.nvim",
+		config = true,
+		keys = {
+			{ "<leader>os", ":ScribeOpen<cr>" },
+		},
+	},
 	{ -- toggle term
 		"akinsho/toggleterm.nvim",
 		keys = { "<leader>t" },
@@ -181,12 +188,8 @@ lazy.setup({
 			require("plugins.theme")
 		end,
 	},
-	{
-		"justEstif/scribe.nvim",
-		config = true,
-	},
+	"folke/lazy.nvim",
 	"kyazdani42/nvim-web-devicons", -- icons,
 	"tpope/vim-fugitive", -- git client,,
-	"folke/lazy.nvim",
 	"nvim-lua/plenary.nvim",
 })

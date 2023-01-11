@@ -17,3 +17,4 @@
 - displaylink (follow aur instructions)
 - bluetooth manager
 - transmission
+- qutebrowser

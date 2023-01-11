@@ -13,6 +13,7 @@
     ~/.config/ranger: config/ranger
     ~/.config/rofi: config/rofi
     ~/.config/kitty: config/kitty
+    ~/.config/qutebrowser: config/qutebrowser
     # /etc/keyd: etc/keyd
 
 - shell:

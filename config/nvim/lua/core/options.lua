@@ -8,7 +8,7 @@ opt.swapfile = false -- Don't modify file open in another nvim processs
 opt.joinspaces = false -- Don't autoinsert two spaces after '.', '?', '!' for join command.
 opt.encoding = "utf-8" -- Display this encoding.
 opt.fileencoding = "utf-8" -- Use this encoding when writing to file.
-opt.wrap = true  -- wrap long lines
+opt.wrap = true -- wrap long lines
 
 -- Search
 opt.ignorecase = true -- Ignore case letters when search

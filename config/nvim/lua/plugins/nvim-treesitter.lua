@@ -15,7 +15,7 @@ nvim_treesitter.setup({
 		"markdown",
 		"markdown_inline",
 		"python",
-		"comment",
+		-- "comment", -- slows down ts
 		"fish",
 		"diff",
 		"gitcommit",
