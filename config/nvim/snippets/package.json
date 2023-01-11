@@ -35,6 +35,10 @@
         "path": "./prisma.json"
       },
       {
+        "language": "html",
+        "path": "./html.json"
+      },
+      {
         "language": [
           "plaintext",
           "markdown",
