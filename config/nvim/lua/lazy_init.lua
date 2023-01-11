@@ -181,6 +181,10 @@ lazy.setup({
 			require("plugins.theme")
 		end,
 	},
+	{
+		"justEstif/scribe.nvim",
+		config = true,
+	},
 	"kyazdani42/nvim-web-devicons", -- icons,
 	"tpope/vim-fugitive", -- git client,,
 	"folke/lazy.nvim",
