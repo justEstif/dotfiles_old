@@ -45,12 +45,14 @@ telescope.setup({
 		live_grep = {
 			glob_pattern = {
 				"!package-lock.json",
+				"!yarn.lock",
 			},
 		},
 		buffers = {
 			path_display = { "tail" },
 			initial_mode = "normal",
 			theme = "cursor",
+			ignore_current_buffer = true,
 			layout_config = {
 				preview_width = 0.4,
 			},
