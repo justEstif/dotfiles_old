@@ -22,6 +22,7 @@ opt.cursorline = true -- show cursorline
 opt.relativenumber = true -- show relativenumber
 opt.number = true
 opt.signcolumn = "yes:1" -- sign column default size
+opt.showtabline = 0 -- don't show tabline
 
 -- new window direction
 opt.splitright = true -- Horizontal split to the bottom
