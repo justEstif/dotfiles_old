@@ -11,8 +11,5 @@ map("n", "<C-l>", function()
 	vim.cmd.echo()
 end, { desc = "clear highlights" })
 
--- tabs
-map("n", "<leader>tt", ":tabnew<cr>", { desc = "open new tab" })
-
 map("n", "<leader>g", ":G<cr>", { desc = "open fugitive" })
 map("n", "<leader>l", ":Lazy<cr>", { desc = "open lazy plugin manager" })
