@@ -27,6 +27,7 @@ M.run_file = function()
 		javascript = "node %",
 		typescript = "ts-node %",
 		go = "go run %",
+		markdown = "glow %:p",
 	}
 
 	local cmd = string.format('TermExec cmd="%s"<cr>', fts[vim.bo.ft])

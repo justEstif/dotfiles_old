@@ -117,6 +117,7 @@ lazy.setup({
 	{ -- toggle term
 		"akinsho/toggleterm.nvim",
 		keys = { "<leader>t" },
+		ft = { "markdown" },
 		config = function()
 			require("plugins.toggleterm")
 		end,
