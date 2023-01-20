@@ -4,8 +4,10 @@ if not status then
 	return
 end
 
+local animation = indentscope.gen_animation
 indentscope.setup({
+	symbol = "·",
 	draw = {
-		animation = indentscope.gen_animation.none(),
+		animation = animation.none(),
 	},
 })

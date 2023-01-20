@@ -37,24 +37,14 @@ local config = {
 
 vim.diagnostic.config(config)
 
-local function lsp_keymaps(bufnr)
-	local opts = { noremap = true, silent = true }
-	vim.api.nvim_buf_set_option(bufnr, "tagfunc", "v:lua.vim.lsp.tagfunc") -- use Ctrl-] to go to definition
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gh", ":lua vim.lsp.buf.hover()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", ":lua vim.diagnostic.open_float()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "=", ":lua vim.lsp.buf.format{async=true}<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F2>", ":lua vim.lsp.buf.rename()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F3>", ":lua vim.lsp.buf.code_action()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F8>", ":lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F11>", ":lua vim.lsp.buf.type_definition()<cr>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<F12>", ":lua vim.lsp.buf.references()<cr>", opts)
-end
-
-local on_attach = function(client, bufnr)
-	lsp_keymaps(bufnr)
-
+local on_attach = function(client)
+	require("core.keymaps").lsp_keymaps()
 	-- use null-ls for these languages
-	local ignored_formatters = { "tsserver", "sumneko_lua", "html" }
+	local ignored_formatters = {
+		"tsserver",
+		"sumneko_lua",
+		"html",
+	}
 	for _, value in ipairs(ignored_formatters) do
 		if value == client.name then
 			client.server_capabilities.document_formatting = false
@@ -77,9 +67,7 @@ local servers = {
 	"pylsp",
 }
 
-mason_lspconfig.setup({
-	ensure_installed = servers,
-})
+mason_lspconfig.setup({ ensure_installed = servers })
 
 for _, server in pairs(servers) do
 	local opts = {
