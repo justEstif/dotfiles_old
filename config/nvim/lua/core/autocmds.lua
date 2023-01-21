@@ -18,7 +18,7 @@ autocmd("BufEnter", {
 autogroup("DisableCmp", { clear = true })
 autocmd("CmdWinEnter", {
 	pattern = "*",
-  group = "DisableCmp",
+	group = "DisableCmp",
 	callback = function()
 		require("cmp").setup({ enabled = false })
 	end,
@@ -26,8 +26,16 @@ autocmd("CmdWinEnter", {
 
 autocmd("CmdWinLeave", {
 	pattern = "*",
-  group = "DisableCmp",
+	group = "DisableCmp",
 	callback = function()
 		require("cmp").setup({ enabled = true })
 	end,
+})
+
+autocmd("CmdlineEnter", {
+	command = "command! Term :botright vsplit term://$SHELL",
+})
+
+autocmd("TermOpen", {
+	command = "setlocal listchars= nonumber norelativenumber nocursorline",
 })

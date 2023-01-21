@@ -29,4 +29,33 @@ M.lsp_keymaps = function()
 	buf_map("n", "<F12>", ":lua vim.lsp.buf.references()<cr>")
 end
 
+M.plugin_keymaps = {
+	telescope = {
+		{ "<leader>b", ":Telescope buffers<cr>", desc = "List open buffers" },
+		{ "<leader>h", ":Telescope help_tags<cr>", desc = "help tags" },
+		{ "<leader>s", ":Telescope live_grep<CR>", desc = "Search in cwd" },
+		{ "<leader><leader>", ":Telescope find_files<CR>", desc = "Find files in cwd" },
+		{ "z=", ":Telescope spell_suggest<CR>", desc = "Spell suggest keybind" },
+	},
+	lua_snip = {
+		{
+			"<C-l>",
+			function()
+				require("luasnip").jump(1)
+			end,
+			mode = { "i", "s" },
+		},
+		{
+			"<C-h>",
+			function()
+				require("luasnip").jump(-1)
+			end,
+			mode = { "i", "s" },
+		},
+	},
+
+	toggle_term = { { "<leader>t", desc = "Toggle term" } },
+	nvim_tree = { { "<leader>f", ":NvimTreeToggle<CR>", desc = "Open Nvim tree" } },
+}
+
 return M

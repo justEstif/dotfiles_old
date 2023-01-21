@@ -18,6 +18,7 @@ if not status_ok then
 	return
 end
 
+local plugin_keymaps = require("core.keymaps").plugin_keymaps
 lazy.setup({
 	{ -- code highlight
 		"nvim-treesitter/nvim-treesitter",
@@ -70,22 +71,7 @@ lazy.setup({
 	},
 	{
 		"L3MON4D3/LuaSnip", -- snippets engine
-		keys = {
-			{
-				"<C-l>",
-				function()
-					require("luasnip").jump(1)
-				end,
-				mode = { "i", "s" },
-			},
-			{
-				"<C-h>",
-				function()
-					require("luasnip").jump(-1)
-				end,
-				mode = { "i", "s" },
-			},
-		},
+		keys = plugin_keymaps.lua_snip,
 		config = function()
 			require("plugins.luasnip")
 		end,
@@ -95,9 +81,7 @@ lazy.setup({
 		config = function()
 			require("plugins.nvim-tree")
 		end,
-		keys = {
-			{ "<leader>f", ":NvimTreeToggle<CR>", desc = "Open Nvim tree" },
-		},
+		keys = plugin_keymaps.nvim_tree,
 	},
 	{ -- swiss knife
 		"nvim-telescope/telescope.nvim",
@@ -106,17 +90,11 @@ lazy.setup({
 		config = function()
 			require("plugins.telescope")
 		end,
-		keys = {
-			{ "<leader>b", ":Telescope buffers<cr>", desc = "List open buffers" },
-			{ "<leader>h", ":Telescope help_tags<cr>", desc = "help tags" },
-			{ "<leader>s", ":Telescope live_grep<CR>", desc = "Search in cwd" },
-			{ "<leader><leader>", ":Telescope find_files<CR>", desc = "Find files in cwd" },
-			{ "z=", ":Telescope spell_suggest<CR>", desc = "Spell suggest keybind" },
-		},
+		keys = plugin_keymaps.telescope,
 	},
 	{ -- toggle term
 		"akinsho/toggleterm.nvim",
-		keys = { "<leader>t" },
+		keys = plugin_keymaps.toggle_term,
 		ft = { "markdown" },
 		config = function()
 			require("plugins.toggleterm")

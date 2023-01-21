@@ -18,3 +18,5 @@
 - bluetooth manager
 - transmission
 - qutebrowser
+- glow
+- zk
