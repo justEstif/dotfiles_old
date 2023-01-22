@@ -4,7 +4,6 @@
 - yay
 - git
 - nvim
-- ranger
 - i3lockmore
 - flameshot
 - master pdf editor version 4
@@ -20,3 +19,4 @@
 - qutebrowser
 - glow
 - zk
+- exa

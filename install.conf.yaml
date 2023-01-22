@@ -14,6 +14,7 @@
     ~/.config/rofi: config/rofi
     ~/.config/kitty: config/kitty
     ~/.config/qutebrowser: config/qutebrowser
+    ~/.config/zk: config/zk
     # /etc/keyd: etc/keyd
 
 - shell:
