@@ -65,6 +65,7 @@ local servers = {
 	"marksman",
 	"eslint",
 	"pylsp",
+	"zk",
 }
 
 mason_lspconfig.setup({ ensure_installed = servers })
