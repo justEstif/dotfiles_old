@@ -14,6 +14,7 @@ gaps outer 0
 
 # Show border on focused client
 for_window [class=".*"] border pixel 1
+for_window [class="iwgtk"] floating enable
 
 # class         border  backgr. text    indicator child_border
 client.focused  #81A1C1 #81A1C1 #D8DEE9 #a7c080   #81A1C1

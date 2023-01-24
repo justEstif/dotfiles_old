@@ -2,11 +2,15 @@ function fish_user_key_bindings
   fish_vi_key_bindings
 end
 
+###### variables ######
 set -x EDITOR nvim
 set -x ZK_NOTEBOOK_DIR ~/zk-notes
 set fish_greeting # Turn off the fish welcome message
 set fzf_directory_opts --bind "ctrl-o:execute($EDITOR {} &> /dev/tty)"
+
+###### Alias ######
 alias cdu="cd -" # go to the prev dir
+alias ..='cd ..' # go to the parent dir
 alias lf='ranger_cd' # file manager
 alias lz='nvim +"tab G"'  # git client
 alias v='nvim' # nvim
