@@ -18,6 +18,7 @@ end, { desc = "clear highlights" })
 
 map("n", "<leader>g", ":G<cr>", { desc = "open fugitive" })
 map("n", "<leader>l", ":Lazy<cr>", { desc = "open lazy plugin manager" })
+map("n", "<leader>cd", ":tcd %:p:h<cr>", { desc = "change cwd" })
 
 M.lsp_keymaps = function()
 	vim.bo.tagfunc = "v:lua.vim.lsp.tagfunc" -- use Ctrl-] to go to definition

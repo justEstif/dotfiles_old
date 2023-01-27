@@ -7,7 +7,12 @@ local nvim_tree_config = require("nvim-tree.config")
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
-	update_focused_file = { enable = true },
+	sync_root_with_cwd = true,
+	respect_buf_cwd = true,
+	update_focused_file = {
+		enable = true,
+		update_root = true,
+	},
 	filters = { custom = { "^.git$" } },
 	diagnostics = {
 		enable = true,
