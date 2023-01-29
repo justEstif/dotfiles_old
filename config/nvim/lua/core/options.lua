@@ -31,6 +31,8 @@ opt.splitbelow = true -- Horizontal split to the bottom
 opt.fillchars = { fold = " " }
 opt.foldmethod = "indent"
 opt.foldenable = false
+opt.foldlevel = 99
+g.markdown_folding = 1 -- enable markdown folding
 
 -- Tabs, indent
 opt.expandtab = true -- Convert tabs to spaces
@@ -50,7 +52,6 @@ opt.autoread = true -- auto read files changes
 
 -- fix markdown indentation settings
 g.markdown_recommended_style = 0
-g.markdown_folding = 1
 
 g.loaded_ruby_provider = 0
 g.loaded_perl_provider = 0

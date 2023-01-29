@@ -1,6 +1,9 @@
 [extra]
 author = "Estifanos"
 
+[note]
+filename = "{{id}}-{{slug title}}"
+
 [group.daily]
 paths = ["journal"]
 
@@ -17,5 +20,4 @@ fzf-preview = "bat -p --color always {-1}"
 conf = '$EDITOR ~/dotfiles/config/zk/config.toml'
 edit = "zk edit --interactive $argv"
 daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal"'
-ls = "zk list $argv"
 n = 'zk new --title "$argv"'
