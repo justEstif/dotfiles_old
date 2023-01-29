@@ -104,11 +104,95 @@ lazy.setup({
 		"tiagovla/scope.nvim",
 		config = true,
 	},
-	{ -- swiss knife
-		"echasnovski/mini.nvim",
-		lazy = false,
+	{
+		"echasnovski/mini.ai",
+		version = false,
 		config = function()
-			require("plugins.mini")
+			require("plugins.mini.ai")
+		end,
+	},
+	{
+		"echasnovski/mini.align",
+		version = false,
+		config = function()
+			require("plugins.mini.align")
+		end,
+	},
+	{
+		"echasnovski/mini.comment",
+		version = false,
+		config = function()
+			require("plugins.mini.comment")
+		end,
+	},
+	{
+		"echasnovski/mini.fuzzy",
+		version = false,
+		config = function()
+			require("plugins.mini.fuzzy")
+		end,
+	},
+	{
+		"echasnovski/mini.jump",
+		version = false,
+		config = function()
+			require("plugins.mini.jump")
+		end,
+	},
+	{
+		"echasnovski/mini.jump2d",
+		version = false,
+		config = function()
+			require("plugins.mini.jump2d")
+		end,
+	},
+	{
+		"echasnovski/mini.indentscope",
+		version = false,
+		config = function()
+			require("plugins.mini.indentscope")
+		end,
+	},
+	{
+		"echasnovski/mini.move",
+		version = false,
+		config = function()
+			require("plugins.mini.move")
+		end,
+	},
+	{
+		"echasnovski/mini.pairs",
+		version = false,
+		config = function()
+			require("plugins.mini.pairs")
+		end,
+	},
+	{
+		"echasnovski/mini.surround",
+		version = false,
+		config = function()
+			require("plugins.mini.surround")
+		end,
+	},
+	{
+		"echasnovski/mini.statusline",
+		version = false,
+		config = function()
+			require("plugins.mini.statusline")
+		end,
+	},
+	{
+		"echasnovski/mini.tabline",
+		version = false,
+		config = function()
+			require("plugins.mini.tabline")
+		end,
+	},
+	{
+		"echasnovski/mini.trailspace",
+		version = false,
+		config = function()
+			require("plugins.mini.trailspace")
 		end,
 	},
 	{
