@@ -20,3 +20,5 @@
 - glow
 - zk
 - exa
+- task (taskwarrior)
+- taskwarrior-tui
