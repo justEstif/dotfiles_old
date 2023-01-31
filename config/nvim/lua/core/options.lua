@@ -22,6 +22,7 @@ opt.cursorline = true -- show cursorline
 opt.relativenumber = true -- show relativenumber
 opt.number = true
 opt.signcolumn = "yes:1" -- sign column default size
+opt.conceallevel = 0 -- `` is visible in markdown files
 
 -- new window direction
 opt.splitright = true -- Horizontal split to the bottom

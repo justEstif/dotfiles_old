@@ -95,7 +95,7 @@ lazy.setup({
 	{ -- toggle term
 		"akinsho/toggleterm.nvim",
 		keys = plugin_keymaps.toggle_term,
-		ft = { "markdown" },
+		ft = { "markdown", "javascript" },
 		config = function()
 			require("plugins.toggleterm")
 		end,
@@ -212,6 +212,7 @@ lazy.setup({
 		end,
 	},
 	"folke/lazy.nvim",
+	"dkarter/bullets.vim", -- bullet points
 	"kyazdani42/nvim-web-devicons", -- icons,
 	"tpope/vim-fugitive", -- git client,,
 	"nvim-lua/plenary.nvim",

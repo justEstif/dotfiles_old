@@ -10,9 +10,10 @@ autocmd("TextYankPost", {
 })
 
 autocmd("BufEnter", {
-	desc = "don't auto comment new lines",
-	pattern = "*",
-	command = "set fo-=c fo-=r fo-=o",
+	callback = function()
+		vim.opt.formatoptions:remove({ "c", "r", "o" })
+	end,
+	desc = "Disable New Line Comment",
 })
 
 autogroup("DisableCmp", { clear = true })
@@ -37,5 +38,10 @@ autocmd("CmdlineEnter", {
 })
 
 autocmd("TermOpen", {
-	command = "setlocal listchars= nonumber norelativenumber nocursorline",
+	callback = function()
+		vim.opt_local.relativenumber = false
+		vim.opt_local.number = false
+		vim.opt_local.cursorline = false
+	end,
+	desc = "Terminal Options",
 })

@@ -32,6 +32,7 @@ M.run_file = function()
 
 	local cmd = string.format('TermExec cmd="%s"<cr>', fts[vim.bo.ft])
 	vim.cmd(cmd)
+	M.buf_map({ "n", "t" }, "q", "<cmd>close<cr>")
 end
 
 return M
