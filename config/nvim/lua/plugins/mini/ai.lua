@@ -5,7 +5,8 @@ if not status then
 end
 
 ai.setup({
-	n_lines = 200,
+	n_lines = 500,
+	search_method = "cover_or_nearest",
 	custom_textobjects = {
 		-- Whole buffer
 		g = function()

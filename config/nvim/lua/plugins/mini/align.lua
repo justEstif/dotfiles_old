@@ -4,4 +4,4 @@ if not status then
 	return
 end
 
-align.setup({})
+align.setup()
