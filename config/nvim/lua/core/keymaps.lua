@@ -60,7 +60,6 @@ M.plugin_keymaps = {
 			mode = { "i", "s" },
 		},
 	},
-
 	toggle_term = { { "<leader>t", desc = "Toggle term" } },
 	nvim_tree = { { "<leader>f", ":NvimTreeToggle<CR>", desc = "Open Nvim tree" } },
 }

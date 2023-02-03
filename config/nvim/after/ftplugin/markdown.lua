@@ -10,3 +10,5 @@ buf_map("n", "k", "gk", { desc = "move up wrapped lines" })
 buf_map("n", "<leader>rr", function()
 	run_file()
 end, { desc = "preview file using glow" })
+
+buf_map("n", "-", ":lua require('toggle-checkbox').toggle()<CR>")

@@ -105,94 +105,10 @@ lazy.setup({
 		config = true,
 	},
 	{
-		"echasnovski/mini.ai",
+		"echasnovski/mini.nvim",
 		version = false,
 		config = function()
-			require("plugins.mini.ai")
-		end,
-	},
-	{
-		"echasnovski/mini.align",
-		version = false,
-		config = function()
-			require("plugins.mini.align")
-		end,
-	},
-	{
-		"echasnovski/mini.comment",
-		version = false,
-		config = function()
-			require("plugins.mini.comment")
-		end,
-	},
-	{
-		"echasnovski/mini.fuzzy",
-		version = false,
-		config = function()
-			require("plugins.mini.fuzzy")
-		end,
-	},
-	{
-		"echasnovski/mini.jump",
-		version = false,
-		config = function()
-			require("plugins.mini.jump")
-		end,
-	},
-	{
-		"echasnovski/mini.jump2d",
-		version = false,
-		config = function()
-			require("plugins.mini.jump2d")
-		end,
-	},
-	{
-		"echasnovski/mini.indentscope",
-		version = false,
-		config = function()
-			require("plugins.mini.indentscope")
-		end,
-	},
-	{
-		"echasnovski/mini.move",
-		version = false,
-		config = function()
-			require("plugins.mini.move")
-		end,
-	},
-	{
-		"echasnovski/mini.pairs",
-		version = false,
-		config = function()
-			require("plugins.mini.pairs")
-		end,
-	},
-	{
-		"echasnovski/mini.surround",
-		version = false,
-		config = function()
-			require("plugins.mini.surround")
-		end,
-	},
-	{
-		"echasnovski/mini.statusline",
-		version = false,
-		config = function()
-			require("plugins.mini.statusline")
-		end,
-	},
-	{
-		"echasnovski/mini.tabline",
-		version = false,
-		config = function()
-			require("plugins.mini.tabline")
-		end,
-	},
-	{
-		"echasnovski/mini.trailspace",
-		version = false,
-		config = function()
-			require("plugins.mini.trailspace")
+			require("plugins.mini")
 		end,
 	},
 	{
@@ -211,8 +127,12 @@ lazy.setup({
 			require("plugins.theme")
 		end,
 	},
+	{ -- markdown
+		"jghauser/follow-md-links.nvim",
+		"dkarter/bullets.vim", -- bullet points
+		"opdavies/toggle-checkbox.nvim",
+	},
 	"folke/lazy.nvim",
-	"dkarter/bullets.vim", -- bullet points
 	"kyazdani42/nvim-web-devicons", -- icons,
 	"tpope/vim-fugitive", -- git client,,
 	"nvim-lua/plenary.nvim",

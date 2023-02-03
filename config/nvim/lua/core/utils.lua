@@ -3,7 +3,6 @@ local M = {}
 -- @desc function for global keymapping
 M.map = function(mode, lhs, rhs, opts)
 	local options = { silent = true }
-
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
 	end
@@ -13,7 +12,6 @@ end
 -- @desc function for buffer keymapping
 M.buf_map = function(mode, lhs, rhs, opts)
 	local options = { silent = true, buffer = true }
-
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
 	end
@@ -29,7 +27,6 @@ M.run_file = function()
 		go = "go run %",
 		markdown = "glow %:p",
 	}
-
 	local cmd = string.format('TermExec cmd="%s"<cr>', fts[vim.bo.ft])
 	vim.cmd(cmd)
 	M.buf_map({ "n", "t" }, "q", "<cmd>close<cr>")
