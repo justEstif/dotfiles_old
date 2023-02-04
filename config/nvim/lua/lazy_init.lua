@@ -134,6 +134,5 @@ lazy.setup({
 	},
 	"folke/lazy.nvim",
 	"kyazdani42/nvim-web-devicons", -- icons,
-	"tpope/vim-fugitive", -- git client,,
 	"nvim-lua/plenary.nvim",
 })

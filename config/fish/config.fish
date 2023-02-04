@@ -12,7 +12,7 @@ set fzf_directory_opts --bind "ctrl-o:execute($EDITOR {} &> /dev/tty)"
 alias cdu="cd -" # go to the prev dir
 alias ..='cd ..' # go to the parent dir
 alias lf='ranger_cd' # file manager
-alias lz='nvim +"tab G"'  # git client
+alias lz='lazygit'  # git client
 alias v='nvim' # nvim
 alias killnode="killall -9 node" # kill all node apps
 alias l="exa -lba" # ls
