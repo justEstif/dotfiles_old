@@ -59,7 +59,7 @@ M.plugin_keymaps = {
 			mode = { "i", "s" },
 		},
 	},
-	toggle_term = { { "<leader>t", desc = "Toggle term" } },
+	toggle_term = { { "<leader>t", desc = "Toggle term" }, { "<leader>g", desc = "toggle lazygit" } },
 	nvim_tree = { { "<leader>f", ":NvimTreeToggle<CR>", desc = "Open Nvim tree" } },
 }
 
