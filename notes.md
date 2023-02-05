@@ -7,6 +7,7 @@
 - i3lockmore
 - flameshot
 - master pdf editor version 4
+- zahtura
 - iwgtk
 - arandr
 - xarchiver
@@ -21,4 +22,4 @@
 - zk
 - exa
 - task (taskwarrior)
-- taskwarrior-tui
+- foliate
