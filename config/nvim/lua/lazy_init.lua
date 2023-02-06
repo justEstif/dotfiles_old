@@ -96,6 +96,15 @@ lazy.setup({
 		"akinsho/toggleterm.nvim",
 		keys = plugin_keymaps.toggle_term,
 		ft = { "markdown", "javascript" },
+		dependencies = {
+			{
+				"chomosuke/term-edit.nvim",
+				version = "1.*",
+				config = function()
+					require("plugins.term-edit")
+				end,
+			},
+		},
 		config = function()
 			require("plugins.toggleterm")
 		end,

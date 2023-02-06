@@ -23,3 +23,4 @@
 - exa
 - task (taskwarrior)
 - foliate
+- lazygit
