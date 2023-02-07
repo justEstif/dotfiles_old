@@ -21,6 +21,6 @@
 - glow
 - zk
 - exa
-- task (taskwarrior)
+- todotxt
 - foliate
 - lazygit
