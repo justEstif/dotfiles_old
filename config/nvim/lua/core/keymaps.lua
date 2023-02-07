@@ -18,9 +18,22 @@ end, { desc = "clear highlights" })
 
 map("n", "]b", ":bnext<CR>", { desc = "navigate buffers" })
 map("n", "[b", ":bprevious<CR>", { desc = "navigate buffers" })
-
-map("n", "<leader>l", ":Lazy<cr>", { desc = "open lazy plugin manager" })
 map("n", "<leader>cd", ":tcd %:p:h<cr>", { desc = "change cwd" })
+
+map("n", "<leader>f", ":NvimTreeToggle<CR>")
+
+map("n", "<F1>", ":Telescope help_tags<cr>", { desc = "help tags" })
+map("n", "<leader>b", ":Telescope buffers<cr>", { desc = "List open buffers" })
+map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Search in cwd" })
+map("n", "<leader><leader>", ":Telescope find_files<CR>", { desc = "Find files in cwd" })
+map("n", "z=", ":Telescope spell_suggest<CR>", { desc = "Spell suggest keybind" })
+
+map({ "i", "s" }, "<C-l>", function()
+	require("luasnip").jump(1)
+end, { desc = "jump in snippet" })
+map({ "i", "s" }, "<C-h>", function()
+	require("luasnip").jump(-1)
+end, { desc = "jump in snippet" })
 
 M.lsp_keymaps = function()
 	vim.bo.tagfunc = "v:lua.vim.lsp.tagfunc" -- use Ctrl-] to go to definition
@@ -34,38 +47,5 @@ M.lsp_keymaps = function()
 	buf_map("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>")
 	buf_map("n", "<F14>", ":lua vim.lsp.buf.code_action()<CR>")
 end
-
-M.plugin_keymaps = {
-	telescope = {
-		{ "<F1>", ":Telescope help_tags<cr>", desc = "help tags" },
-		{ "<leader>b", ":Telescope buffers<cr>", desc = "List open buffers" },
-		{ "<leader>s", ":Telescope live_grep<CR>", desc = "Search in cwd" },
-		{ "<leader><leader>", ":Telescope find_files<CR>", desc = "Find files in cwd" },
-		{ "z=", ":Telescope spell_suggest<CR>", desc = "Spell suggest keybind" },
-	},
-	toggle_term = {
-		{ "<leader>t", desc = "toggle term" },
-		{ "<leader>g", desc = "toggle lazygit" },
-	},
-	nvim_tree = {
-		{ "<leader>f", ":NvimTreeToggle<CR>", desc = "Open Nvim tree" },
-	},
-	lua_snip = {
-		{
-			"<C-l>",
-			function()
-				require("luasnip").jump(1)
-			end,
-			mode = { "i", "s" },
-		},
-		{
-			"<C-h>",
-			function()
-				require("luasnip").jump(-1)
-			end,
-			mode = { "i", "s" },
-		},
-	},
-}
 
 return M

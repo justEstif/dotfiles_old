@@ -16,26 +16,23 @@ autocmd("BufEnter", {
 	desc = "Disable New Line Comment",
 })
 
-autogroup("DisableCmp", { clear = true })
-autocmd("CmdWinEnter", {
-	pattern = "*",
-	group = "DisableCmp",
-	callback = function()
-		require("cmp").setup({ enabled = false })
-	end,
-})
+-- autocmd("CmdWinEnter", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		require("cmp").setup({ enabled = false })
+-- 	end,
+-- })
 
-autocmd("CmdWinLeave", {
-	pattern = "*",
-	group = "DisableCmp",
-	callback = function()
-		require("cmp").setup({ enabled = true })
-	end,
-})
+-- autocmd("CmdWinLeave", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		require("cmp").setup({ enabled = true })
+-- 	end,
+-- })
 
-autocmd("CmdlineEnter", {
-	command = "command! Term :botright vsplit term://$SHELL",
-})
+-- autocmd("CmdlineEnter", {
+-- 	command = "command! Term :botright vsplit term://$SHELL",
+-- })
 
 autocmd("TermOpen", {
 	callback = function()
