@@ -36,11 +36,11 @@ return packer.startup(function(use)
 		"windwp/nvim-ts-autotag", --autoclose and autorename html tag
 	})
 
-	use({
-		"neovim/nvim-lspconfig", -- nvim native lsp
-		"williamboman/mason.nvim", -- Installer for external tools
-		"williamboman/mason-lspconfig.nvim", -- mason extension for lspconfig
-		"jose-elias-alvarez/typescript.nvim", -- add features to tsserver config
+	use({ -- lsp
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+		"jose-elias-alvarez/typescript.nvim",
 	})
 
 	use({

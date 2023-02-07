@@ -1,3 +1,9 @@
+local status_mason, mason = pcall(require, "mason")
+if not status_mason then
+	print("mason-lspconfig error")
+	return
+end
+
 local status_lsp_installer, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not status_lsp_installer then
 	print("mason-lspconfig error")
@@ -68,6 +74,7 @@ local servers = {
 	"zk",
 }
 
+mason.setup()
 mason_lspconfig.setup({ ensure_installed = servers })
 
 for _, server in pairs(servers) do
