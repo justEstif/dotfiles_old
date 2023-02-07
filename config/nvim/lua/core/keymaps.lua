@@ -43,6 +43,13 @@ M.plugin_keymaps = {
 		{ "<leader><leader>", ":Telescope find_files<CR>", desc = "Find files in cwd" },
 		{ "z=", ":Telescope spell_suggest<CR>", desc = "Spell suggest keybind" },
 	},
+	toggle_term = {
+		{ "<leader>t", desc = "toggle term" },
+		{ "<leader>g", desc = "toggle lazygit" },
+	},
+	nvim_tree = {
+		{ "<leader>f", ":NvimTreeToggle<CR>", desc = "Open Nvim tree" },
+	},
 	lua_snip = {
 		{
 			"<C-l>",
@@ -59,8 +66,6 @@ M.plugin_keymaps = {
 			mode = { "i", "s" },
 		},
 	},
-	toggle_term = { { "<leader>t", desc = "Toggle term" }, { "<leader>g", desc = "toggle lazygit" } },
-	nvim_tree = { { "<leader>f", ":NvimTreeToggle<CR>", desc = "Open Nvim tree" } },
 }
 
 return M
