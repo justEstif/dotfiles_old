@@ -81,6 +81,12 @@ return packer.startup(function(use)
 
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
+	use({ -- markdown
+		"jghauser/follow-md-links.nvim",
+		"dkarter/bullets.vim", -- bullet points
+		"opdavies/toggle-checkbox.nvim",
+	})
+
 	use({
 		"kyazdani42/nvim-web-devicons", -- icons,
 		"nvim-lua/plenary.nvim",

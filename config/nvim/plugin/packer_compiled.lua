@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/estif/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bullets.vim"] = {
+    loaded = true,
+    path = "/home/estif/.local/share/nvim/site/pack/packer/start/bullets.vim",
+    url = "https://github.com/dkarter/bullets.vim"
+  },
   catppuccin = {
     loaded = true,
     path = "/home/estif/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -103,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/estif/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["follow-md-links.nvim"] = {
+    loaded = true,
+    path = "/home/estif/.local/share/nvim/site/pack/packer/start/follow-md-links.nvim",
+    url = "https://github.com/jghauser/follow-md-links.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -188,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/estif/.local/share/nvim/site/pack/packer/start/term-edit.nvim",
     url = "https://github.com/chomosuke/term-edit.nvim"
+  },
+  ["toggle-checkbox.nvim"] = {
+    loaded = true,
+    path = "/home/estif/.local/share/nvim/site/pack/packer/start/toggle-checkbox.nvim",
+    url = "https://github.com/opdavies/toggle-checkbox.nvim"
   },
   ["toggleterm.nvim"] = {
     loaded = true,
