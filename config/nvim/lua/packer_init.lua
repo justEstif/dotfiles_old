@@ -27,69 +27,130 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use({
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
-	})
-
-	use({
 		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments support
 		"windwp/nvim-ts-autotag", --autoclose and autorename html tag
+		{
+
+			"nvim-treesitter/nvim-treesitter",
+			run = ":TSUpdate",
+			config = function()
+				require("plugins.nvim-treesitter")
+			end,
+		},
 	})
 
 	use({ -- lsp
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
 		"jose-elias-alvarez/typescript.nvim",
+		{
+			"neovim/nvim-lspconfig",
+			config = function()
+				require("plugins.lsp")
+			end,
+		},
 	})
 
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("plugins.null-ls")
+		end,
 	})
 
 	use({ -- completion/cmp
-		"hrsh7th/nvim-cmp", -- cmp plugin
 		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
 		"hrsh7th/cmp-path", -- path cmp
 		"hrsh7th/cmp-buffer", -- buffer cmp
 		"saadparwaiz1/cmp_luasnip", -- snippets cmp
-		"L3MON4D3/LuaSnip", -- snippets engine
+		{
+			"hrsh7th/nvim-cmp", -- cmp plugin
+			config = function()
+				require("plugins.nvim-cmp")
+			end,
+		},
+		{
+			"L3MON4D3/LuaSnip", -- snippets engine
+			config = function()
+				require("plugins.luasnip")
+			end,
+		},
 	})
 
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = { "nvim-tree/nvim-web-devicons" }, -- optional, for file icons },
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
+		config = function()
+			require("plugins.nvim-tree")
+		end,
 	})
 
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.x",
 		requires = { "nvim-lua/plenary.nvim", "kyazdani42/nvim-web-devicons" },
+		config = function()
+			require("plugins.telescope")
+		end,
 	})
 
-	use({ "akinsho/toggleterm.nvim" })
-	use({ "chomosuke/term-edit.nvim" })
-	use({ "tiagovla/scope.nvim" })
-	use({ "echasnovski/mini.nvim" })
+	use({
+		"akinsho/toggleterm.nvim",
+		config = function()
+			require("plugins.toggleterm")
+		end,
+	})
+
+	use({
+		"chomosuke/term-edit.nvim",
+		config = function()
+			require("plugins.term-edit")
+		end,
+	})
+
+	use({
+		"tiagovla/scope.nvim",
+		config = function()
+			require("plugins.mini")
+		end,
+	})
+
+	use({
+		"echasnovski/mini.nvim",
+		config = function()
+			require("plugins.mini")
+		end,
+	})
 
 	use({
 		"lewis6991/gitsigns.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("plugins.gitsigns")
+		end,
 	})
 
-	use({ "catppuccin/nvim", as = "catppuccin" })
-
-	use({ -- markdown
-		"jghauser/follow-md-links.nvim",
-		"dkarter/bullets.vim", -- bullet points
-		"opdavies/toggle-checkbox.nvim",
+	use({
+		"catppuccin/nvim",
+		as = "catppuccin",
+		config = function()
+			require("plugins.theme")
+		end,
 	})
 
 	use({
 		"kyazdani42/nvim-web-devicons", -- icons,
 		"nvim-lua/plenary.nvim",
+	})
+
+	use({
+		"jakewvincent/mkdnflow.nvim",
+		rocks = "luautf8", -- Ensures optional luautf8 dependency is installed
+		config = function()
+			require("plugins.mkdnflow")
+		end,
 	})
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
