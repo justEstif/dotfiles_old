@@ -19,8 +19,8 @@ opt.showmatch = true -- Highlight matching parenthesis
 -- UI
 opt.pumheight = 10 -- pop up menu height
 opt.cursorline = true -- show cursorline
-opt.relativenumber = true -- show relativenumber
-opt.number = true
+opt.relativenumber = false -- show relativenumber
+opt.number = false
 opt.signcolumn = "yes:1" -- sign column default size
 opt.conceallevel = 0 -- `` is visible in markdown files
 

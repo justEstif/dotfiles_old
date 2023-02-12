@@ -59,7 +59,7 @@ local on_attach = function(client)
 	-- use null-ls for these languages
 	local ignored_formatters = {
 		"tsserver",
-		"sumneko_lua",
+		"lua_ls",
 		"html",
 	}
 	for _, value in ipairs(ignored_formatters) do
@@ -75,7 +75,7 @@ local servers = {
 	"html",
 	"cssls",
 	"tsserver",
-	"sumneko_lua",
+	"lua_ls",
 	"jsonls",
 	"tailwindcss",
 	"prismals",
@@ -105,6 +105,7 @@ for _, server in pairs(servers) do
 			debug = false, -- enable debug logging for commands
 			server = opts,
 		})
+	-- TODO fix this later, temporary fix
 	else
 		lspconfig[server].setup(opts)
 	end
