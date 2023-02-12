@@ -4,6 +4,4 @@ if not status then
 	return
 end
 
-pairs.setup({
-	modes = { insert = true, command = true, terminal = true },
-})
+pairs.setup()

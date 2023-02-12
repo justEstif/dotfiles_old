@@ -30,7 +30,6 @@ return packer.startup(function(use)
 		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments support
 		"windwp/nvim-ts-autotag", --autoclose and autorename html tag
 		{
-
 			"nvim-treesitter/nvim-treesitter",
 			run = ":TSUpdate",
 			config = function()
