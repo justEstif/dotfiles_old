@@ -71,6 +71,7 @@ cmp.setup({
 				buffer = "[buffer]",
 				path = "[path]",
 			})[entry.source.name]
+			vim_item.abbr = string.sub(vim_item.abbr, 1, 25)
 			return vim_item
 		end,
 	},
@@ -78,8 +79,8 @@ cmp.setup({
 	-- add sources here; move priorities higher
 	sources = {
 		{ name = "nvim_lsp" },
+		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
-		{ name = "luasnip" },
 	},
 })
