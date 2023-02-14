@@ -24,7 +24,11 @@ end
 
 -- Install plugins
 return packer.startup(function(use)
-	use("wbthomason/packer.nvim")
+	use({
+		"wbthomason/packer.nvim",
+		"kyazdani42/nvim-web-devicons", -- icons,
+		"nvim-lua/plenary.nvim",
+	})
 
 	use({
 		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments support
@@ -103,13 +107,6 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"chomosuke/term-edit.nvim",
-		config = function()
-			require("plugins.term-edit")
-		end,
-	})
-
-	use({
 		"tiagovla/scope.nvim",
 		config = function()
 			require("plugins.mini")
@@ -137,11 +134,6 @@ return packer.startup(function(use)
 		config = function()
 			require("plugins.theme")
 		end,
-	})
-
-	use({
-		"kyazdani42/nvim-web-devicons", -- icons,
-		"nvim-lua/plenary.nvim",
 	})
 
 	use({
