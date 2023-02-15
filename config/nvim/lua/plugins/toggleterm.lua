@@ -13,6 +13,7 @@ toggleterm.setup({
 	insert_mappings = false, -- open_mapping off in insert mode
 	on_open = function()
 		buf_map("t", "<esc>", [[<C-\><C-n>]])
+		vim.b.miniindentscope_disable = true
 	end,
 })
 
@@ -23,6 +24,7 @@ local lazygit = Terminal:new({
 	dir = "git_dir",
 	on_open = function()
 		vim.cmd("startinsert!")
+		vim.b.miniindentscope_disable = true
 		buf_map("n", "q", "<cmd>close<CR>")
 	end,
 })
