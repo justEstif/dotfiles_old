@@ -129,8 +129,7 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"catppuccin/nvim",
-		as = "catppuccin",
+		"folke/tokyonight.nvim",
 		config = function()
 			require("plugins.theme")
 		end,
