@@ -142,6 +142,13 @@ return packer.startup(function(use)
 			require("plugins.mkdnflow")
 		end,
 	})
+
+	use({
+		"nvim-orgmode/orgmode", -- agenda/task management
+		config = function()
+			require("plugins.org")
+		end,
+	})
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

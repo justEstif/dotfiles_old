@@ -22,12 +22,13 @@ nvim_treesitter.setup({
 		"gitignore",
 		"sql",
 		"prisma",
+    "org"
 	},
 	sync_install = false,
 	auto_install = true,
 	highlight = {
 		enable = true, -- enable extension
-		additional_vim_regex_highlighting = false,
+		additional_vim_regex_highlighting = { "org" },
 	},
 	indent = { enable = true }, -- indent
 	context_commentstring = { enable = true, enable_autocmd = false }, -- comments(plugin)
