@@ -26,8 +26,14 @@ end
 return packer.startup(function(use)
 	use({
 		"wbthomason/packer.nvim",
-		"kyazdani42/nvim-web-devicons", -- icons,
 		"nvim-lua/plenary.nvim",
+	})
+
+	use({
+		"kyazdani42/nvim-web-devicons", -- icons,
+		config = function()
+			require("plugins.devicons")
+		end,
 	})
 
 	use({
@@ -149,6 +155,7 @@ return packer.startup(function(use)
 			require("plugins.org")
 		end,
 	})
+
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
