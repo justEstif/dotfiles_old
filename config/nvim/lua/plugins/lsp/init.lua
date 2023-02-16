@@ -48,7 +48,7 @@ local on_attach = function(client)
 	vim.bo.tagfunc = "v:lua.vim.lsp.tagfunc" -- use Ctrl-] to go to definition
 	buf_map("n", "gh", ":lua vim.lsp.buf.hover()<CR>")
 	buf_map("n", "gl", ":lua vim.diagnostic.open_float()<CR>")
-	buf_map("n", "gr", ":Telescope lsp_references<cr>")
+	buf_map("n", "gr", ":FzfLua lsp_references<cr>")
 	buf_map("n", "gT", ":lua vim.lsp.buf.type_definition()<cr>")
 	buf_map("n", "=", ":lua vim.lsp.buf.format{async=true}<CR>")
 	buf_map("n", "]d", ":lua vim.diagnostic.goto_next({buffer=0})<cr>")

@@ -97,11 +97,10 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.x",
-		requires = { "nvim-lua/plenary.nvim", "kyazdani42/nvim-web-devicons" },
+		"ibhagwan/fzf-lua",
+		requires = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			require("plugins.telescope")
+			require("fzf-lua").setup()
 		end,
 	})
 
@@ -151,6 +150,9 @@ return packer.startup(function(use)
 
 	use({
 		"nvim-orgmode/orgmode", -- agenda/task management
+		require = {
+			"kyazdani42/nvim-web-devicons",
+		},
 		config = function()
 			require("plugins.org")
 		end,

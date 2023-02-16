@@ -32,8 +32,9 @@ vim.cmd([[
 -- NvimTree
 map("n", "<leader>f", ":NvimTreeToggle<CR>")
 
--- Telescope
-map("n", "<F1>", ":Telescope help_tags<cr>", { desc = "help tags" })
-map("n", "<leader>s", ":Telescope live_grep<CR>", { desc = "Search in cwd" })
-map("n", "<leader><leader>", ":Telescope find_files<CR>", { desc = "Find files in cwd" })
-map("n", "z=", ":Telescope spell_suggest<CR>", { desc = "Spell suggest keybind" })
+-- Fzf
+map("n", "<C-k>", ":FzfLua builtin<cr>", { desc = "fzflua buffers" })
+map("n", "<C-p>", ":FzfLua files<cr>", { desc = "fzflua buffers" })
+map("n", "<C-\\>", ":FzfLua live_grep<cr>", { desc = "fzflua buffers" })
+map("n", "<F1>", ":FzfLua help_tags<cr>", { desc = "fzflua buffers" })
+map("n", "z=", ":FzfLua spell_suggest<CR>", { desc = "Spell suggest keybind" })
