@@ -24,3 +24,4 @@
 - todotxt
 - foliate
 - lazygit
+- blugon

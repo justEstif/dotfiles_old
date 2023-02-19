@@ -100,7 +100,7 @@ return packer.startup(function(use)
 		"ibhagwan/fzf-lua",
 		requires = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			require("fzf-lua").setup()
+			require("plugins.fzf-lua")
 		end,
 	})
 
@@ -114,7 +114,7 @@ return packer.startup(function(use)
 	use({
 		"tiagovla/scope.nvim",
 		config = function()
-			require("plugins.mini")
+			require("plugins.scope")
 		end,
 	})
 

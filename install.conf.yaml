@@ -15,6 +15,7 @@
     ~/.config/kitty: config/kitty
     ~/.config/qutebrowser: config/qutebrowser
     ~/.config/zk: config/zk
+    ~/.config/blugon: config/blugon
     ~/.taskrc: .taskrc
     # /etc/keyd: etc/keyd
 
