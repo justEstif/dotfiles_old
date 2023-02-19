@@ -13,3 +13,15 @@ autocmd("BufEnter", {
 		vim.opt.formatoptions:remove({ "c", "r", "o" })
 	end,
 })
+
+autocmd("BufWinLeave", {
+	desc = "remember folds",
+	pattern = "*",
+	command = "mkview",
+})
+
+autocmd("BufWinEnter", {
+	desc = "remember folds",
+	pattern = "*",
+	command = "silent! loadview",
+})
