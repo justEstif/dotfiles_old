@@ -147,7 +147,17 @@ return packer.startup(function(use)
 			require("plugins.mkdnflow")
 		end,
 	})
-
+	use({
+		"epwalsh/obsidian.nvim",
+		config = function()
+			require("obsidian").setup({
+				dir = "~/notes",
+				completion = {
+					nvim_cmp = true, -- if using nvim-cmp, otherwise set to false
+				},
+			})
+		end,
+	})
 	use({
 		"nvim-orgmode/orgmode", -- agenda/task management
 		require = {
