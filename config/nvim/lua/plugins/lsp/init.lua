@@ -82,7 +82,6 @@ local servers = {
 	"marksman",
 	"eslint",
 	"pylsp",
-	"zk",
 	"bashls",
 }
 

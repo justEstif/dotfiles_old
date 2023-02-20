@@ -98,7 +98,6 @@ return packer.startup(function(use)
 
 	use({
 		"ibhagwan/fzf-lua",
-		requires = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("plugins.fzf-lua")
 		end,
@@ -150,21 +149,7 @@ return packer.startup(function(use)
 	use({
 		"epwalsh/obsidian.nvim",
 		config = function()
-			require("obsidian").setup({
-				dir = "~/notes",
-				completion = {
-					nvim_cmp = true, -- if using nvim-cmp, otherwise set to false
-				},
-			})
-		end,
-	})
-	use({
-		"nvim-orgmode/orgmode", -- agenda/task management
-		require = {
-			"kyazdani42/nvim-web-devicons",
-		},
-		config = function()
-			require("plugins.org")
+			require("plugins.obsidian")
 		end,
 	})
 
