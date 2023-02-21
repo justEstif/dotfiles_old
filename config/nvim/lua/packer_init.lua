@@ -146,6 +146,7 @@ return packer.startup(function(use)
 			require("plugins.mkdnflow")
 		end,
 	})
+
 	use({
 		"epwalsh/obsidian.nvim",
 		config = function()
