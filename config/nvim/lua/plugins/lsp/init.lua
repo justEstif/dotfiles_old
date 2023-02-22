@@ -51,8 +51,6 @@ local on_attach = function(client)
 	buf_map("n", "gr", ":FzfLua lsp_references<cr>")
 	buf_map("n", "gT", ":lua vim.lsp.buf.type_definition()<cr>")
 	buf_map("n", "=", ":lua vim.lsp.buf.format{async=true}<CR>")
-	buf_map("n", "]d", ":lua vim.diagnostic.goto_next({buffer=0})<cr>")
-	buf_map("n", "[d", ":lua vim.diagnostic.goto_next({buffer=0})<cr>")
 	buf_map("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>")
 	buf_map("n", "<F14>", ":lua vim.lsp.buf.code_action()<CR>")
 
