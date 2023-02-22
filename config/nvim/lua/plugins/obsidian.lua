@@ -22,19 +22,3 @@ obsidian.setup({
 		return tostring(os.time()) .. "-" .. suffix
 	end,
 })
-
-local map = require("core.utils").map
-
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-	pattern = tostring("~/Sync/notes/**.md"),
-	callback = function()
-		map("n", "gf", function()
-			if require("obsidian").util.cursor_on_markdown_link() then
-				return "<cmd>ObsidianFollowLink<CR>"
-			else
-				return "gf"
-			end
-		end, { noremap = false, expr = true })
-		map("n", "<C-p>", ":ObsidianSearch<cr>", { desc = "fzflua buffers" })
-	end,
-})
