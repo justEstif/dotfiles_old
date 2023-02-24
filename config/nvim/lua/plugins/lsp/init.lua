@@ -81,6 +81,7 @@ local servers = {
 	"eslint",
 	"pylsp",
 	"bashls",
+	"svelte",
 }
 
 mason.setup()

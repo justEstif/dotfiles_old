@@ -18,6 +18,7 @@ map("n", "'", "`", { desc = "jump to mark" })
 -- if one buffer quit, else close buffer
 vim.cmd([[
   func  Smart_qq()
+    exe 'NvimTreeClose'
     if expand('%') == '' && ( len( filter( range(1, bufnr('$')),  'buflisted(v:val)' ) )  == 1 )
       exe 'q'
     else

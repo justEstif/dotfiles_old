@@ -9,4 +9,4 @@ settings:
   colors.webpage.darkmode.enabled:
     global: false
   content.user_stylesheets:
-    global: null
+    global: ./dark-mode.css

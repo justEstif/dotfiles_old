@@ -12,7 +12,9 @@ local code_actions = null_ls.builtins.code_actions
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier, -- prettier
+		formatting.prettier.with({
+			extra_filetypes = { "svelte" },
+		}), -- prettier
 		diagnostics.jsonlint, -- json
 		formatting.rustywind, -- tailwind
 		formatting.stylua, -- lua
