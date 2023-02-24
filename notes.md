@@ -19,9 +19,7 @@
 - transmission
 - qutebrowser
 - glow
-- zk
 - exa
-- todotxt
 - foliate
 - lazygit
 - blugon
