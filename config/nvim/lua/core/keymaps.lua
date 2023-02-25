@@ -13,8 +13,6 @@ map("n", "<C-l>", function()
 	vim.cmd.echo()
 end, { desc = "clear highlights" })
 
-map("n", "<leader>cd", ":tcd %:p:h<cr>", { desc = "change cwd" })
-map("n", "'", "`", { desc = "jump to mark" })
 -- if one buffer quit, else close buffer
 vim.cmd([[
   func  Smart_qq()
