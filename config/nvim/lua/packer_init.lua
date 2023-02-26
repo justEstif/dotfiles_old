@@ -30,13 +30,6 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"kyazdani42/nvim-web-devicons", -- icons,
-		config = function()
-			require("plugins.devicons")
-		end,
-	})
-
-	use({
 		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments support
 		"windwp/nvim-ts-autotag", --autoclose and autorename html tag
 		{

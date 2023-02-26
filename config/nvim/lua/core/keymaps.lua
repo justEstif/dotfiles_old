@@ -1,5 +1,3 @@
-require("core.fixfnkeys")
-
 local map = require("core.utils").map
 
 vim.g.mapleader = ","
@@ -24,6 +22,7 @@ vim.cmd([[
     endif
   endfunc
   nn  <leader>q :call Smart_qq()<cr>
+  nn  <leader>Q :bufdo call Smart_qq()<cr>
 ]])
 
 -- NvimTree
