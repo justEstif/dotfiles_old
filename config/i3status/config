@@ -22,14 +22,15 @@ wireless _first_ {
 }
 
 battery all {
-        format = "%status %percentage %remaining %emptytime"
+        format = "%status %percentage"
         format_down = ""
-        status_chr = "chr"
-        status_bat = "bat"
-        status_unk = "unk"
-        status_full = "full"
+        status_chr = " "
+        status_bat = "󰂁"
+        status_unk = "󰂑"
+        status_full = "󰂄"
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
+        integer_battery_capacity = true
 }
 
 tztime local {
