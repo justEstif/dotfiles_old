@@ -31,7 +31,7 @@ alias l="exa -lba" # ls
 alias ls="exa" # ls
 alias la='exa -albF --git' # list, size, type, git
 
-alias ni="npm i"
-alias nid="npm i --save-dev"
-alias nr="npm run"
-alias nig="npm i -g"
+alias ni="pnpm i"
+alias nid="pnpm i --save-dev"
+alias nr="pnpm run"
+alias nig="pnpm i -g"
