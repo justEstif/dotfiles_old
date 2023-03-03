@@ -16,6 +16,9 @@ gaps outer 0
 for_window [class=".*"] border pixel 1
 for_window [class="iwgtk"] floating enable
 
+floating_minimum_size 200 x 200
+floating_maximum_size 700 x 700
+
 # class         border  backgr. text    indicator child_border
 client.focused  #81A1C1 #81A1C1 #D8DEE9 #a7c080   #81A1C1
 
