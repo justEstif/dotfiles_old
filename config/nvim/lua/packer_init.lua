@@ -133,14 +133,6 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"jakewvincent/mkdnflow.nvim",
-		rocks = "luautf8", -- Ensures optional luautf8 dependency is installed
-		config = function()
-			require("plugins.mkdnflow")
-		end,
-	})
-
-	use({
 		"epwalsh/obsidian.nvim",
 		config = function()
 			require("plugins.obsidian")
