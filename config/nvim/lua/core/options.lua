@@ -59,7 +59,6 @@ g.loaded_perl_provider = 0
 g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
 
-opt.iskeyword:append("-") -- treat dash separated words as a word text object
 opt.nrformats:append("unsigned") -- inc/dec the last digit of dashed
 
 -- ignore these files in search

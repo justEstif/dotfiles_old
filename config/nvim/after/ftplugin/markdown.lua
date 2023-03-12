@@ -1,7 +1,6 @@
 vim.opt_local.spell = true -- enable spell check
 vim.opt_local.wrap = true
 vim.opt_local.linebreak = true -- break at words
-vim.opt_local.iskeyword:remove("-") -- don't treat dash separated words as 1 word
 
 local buf_map = require("core.utils").buf_map
 
