@@ -29,7 +29,7 @@ vim.cmd([[
 map("n", "<leader>f", ":NvimTreeToggle<CR>")
 
 -- Fzf
-map("n", "<C-k>", ":FzfLua builtin<cr>", { desc = "fzflua buffers" })
+map("n", "<C-k>", ":FzfLua commands<cr>", { desc = "fzflua buffers" })
 map("n", "<C-p>", ":FzfLua files<cr>", { desc = "fzflua buffers" })
 map("n", "<C-\\>", ":FzfLua live_grep<cr>", { desc = "fzflua buffers" })
 map("n", "<F1>", ":FzfLua help_tags<cr>", { desc = "fzflua buffers" })
