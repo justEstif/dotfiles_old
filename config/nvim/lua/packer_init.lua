@@ -22,125 +22,140 @@ if not status_ok then
 	return
 end
 
--- Install plugins
-return packer.startup(function(use)
-	use({
-		"wbthomason/packer.nvim",
-		"nvim-lua/plenary.nvim",
-	})
-
-	use({
-		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments support
-		"windwp/nvim-ts-autotag", --autoclose and autorename html tag
-		{
-			"nvim-treesitter/nvim-treesitter",
-			run = ":TSUpdate",
+if vim.g.vscode then
+	return packer.startup(function(use)
+		use({
+			"echasnovski/mini.nvim",
 			config = function()
-				require("plugins.nvim-treesitter")
+				require("plugins.mini")
 			end,
-		},
-	})
+		})
 
-	use({ -- lsp
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"jose-elias-alvarez/typescript.nvim",
-		{
-			"neovim/nvim-lspconfig",
+		if PACKER_BOOTSTRAP then
+			require("packer").sync()
+		end
+	end)
+else
+	-- Install plugins
+	return packer.startup(function(use)
+		use({
+			"wbthomason/packer.nvim",
+			"nvim-lua/plenary.nvim",
+		})
+
+		use({
+			"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments support
+			"windwp/nvim-ts-autotag", --autoclose and autorename html tag
+			{
+				"nvim-treesitter/nvim-treesitter",
+				run = ":TSUpdate",
+				config = function()
+					require("plugins.nvim-treesitter")
+				end,
+			},
+		})
+
+		use({ -- lsp
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"jose-elias-alvarez/typescript.nvim",
+			{
+				"neovim/nvim-lspconfig",
+				config = function()
+					require("plugins.lsp")
+				end,
+			},
+		})
+
+		use({
+			"jose-elias-alvarez/null-ls.nvim",
+			requires = { "nvim-lua/plenary.nvim" },
 			config = function()
-				require("plugins.lsp")
+				require("plugins.null-ls")
 			end,
-		},
-	})
+		})
 
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-		requires = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("plugins.null-ls")
-		end,
-	})
+		use({ -- completion/cmp
+			"hrsh7th/cmp-nvim-lsp", -- lsp cmp
+			"hrsh7th/cmp-path", -- path cmp
+			"hrsh7th/cmp-buffer", -- buffer cmp
+			"saadparwaiz1/cmp_luasnip", -- snippets cmp
+			{
+				"hrsh7th/nvim-cmp", -- cmp plugin
+				config = function()
+					require("plugins.nvim-cmp")
+				end,
+			},
+			{
+				"L3MON4D3/LuaSnip", -- snippets engine
+				config = function()
+					require("plugins.luasnip")
+				end,
+			},
+		})
 
-	use({ -- completion/cmp
-		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
-		"hrsh7th/cmp-path", -- path cmp
-		"hrsh7th/cmp-buffer", -- buffer cmp
-		"saadparwaiz1/cmp_luasnip", -- snippets cmp
-		{
-			"hrsh7th/nvim-cmp", -- cmp plugin
+		use({
+			"nvim-tree/nvim-tree.lua",
+			requires = { "nvim-tree/nvim-web-devicons" }, -- optional, for file icons },
+			tag = "nightly", -- optional, updated every week. (see issue #1193)
 			config = function()
-				require("plugins.nvim-cmp")
+				require("plugins.nvim-tree")
 			end,
-		},
-		{
-			"L3MON4D3/LuaSnip", -- snippets engine
+		})
+
+		use({
+			"ibhagwan/fzf-lua",
 			config = function()
-				require("plugins.luasnip")
+				require("plugins.fzf-lua")
 			end,
-		},
-	})
+		})
 
-	use({
-		"nvim-tree/nvim-tree.lua",
-		requires = { "nvim-tree/nvim-web-devicons" }, -- optional, for file icons },
-		tag = "nightly", -- optional, updated every week. (see issue #1193)
-		config = function()
-			require("plugins.nvim-tree")
-		end,
-	})
+		use({
+			"akinsho/toggleterm.nvim",
+			config = function()
+				require("plugins.toggleterm")
+			end,
+		})
 
-	use({
-		"ibhagwan/fzf-lua",
-		config = function()
-			require("plugins.fzf-lua")
-		end,
-	})
+		use({
+			"tiagovla/scope.nvim",
+			config = function()
+				require("plugins.scope")
+			end,
+		})
 
-	use({
-		"akinsho/toggleterm.nvim",
-		config = function()
-			require("plugins.toggleterm")
-		end,
-	})
+		use({
+			"lewis6991/gitsigns.nvim",
+			requires = { "nvim-lua/plenary.nvim" },
+			config = function()
+				require("plugins.gitsigns")
+			end,
+		})
 
-	use({
-		"tiagovla/scope.nvim",
-		config = function()
-			require("plugins.scope")
-		end,
-	})
+		use({
+			"folke/tokyonight.nvim",
+			config = function()
+				require("plugins.theme")
+			end,
+		})
 
-	use({
-		"echasnovski/mini.nvim",
-		config = function()
-			require("plugins.mini")
-		end,
-	})
+		use({
+			"echasnovski/mini.nvim",
+			config = function()
+				require("plugins.mini")
+			end,
+		})
 
-	use({
-		"lewis6991/gitsigns.nvim",
-		requires = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("plugins.gitsigns")
-		end,
-	})
+		use({
+			"epwalsh/obsidian.nvim",
+			config = function()
+				require("plugins.obsidian")
+			end,
+		})
 
-	use({
-		"folke/tokyonight.nvim",
-		config = function()
-			require("plugins.theme")
-		end,
-	})
-
-	use({
-		"epwalsh/obsidian.nvim",
-		config = function()
-			require("plugins.obsidian")
-		end,
-	})
-
-	-- Put this at the end after all plugins
-	if PACKER_BOOTSTRAP then
-		require("packer").sync()
-	end
-end)
+		-- Put this at the end after all plugins
+		if PACKER_BOOTSTRAP then
+			require("packer").sync()
+		end
+	end)
+end
