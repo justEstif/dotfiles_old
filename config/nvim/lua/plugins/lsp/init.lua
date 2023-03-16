@@ -79,7 +79,7 @@ local servers = {
 	"prismals",
 	"marksman",
 	"eslint",
-	"pylsp",
+	"pyright",
 	"bashls",
 	"svelte",
 }
