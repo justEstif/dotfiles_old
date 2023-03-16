@@ -27,7 +27,11 @@ if vim.g.vscode then
 		use({
 			"echasnovski/mini.nvim",
 			config = function()
-				require("plugins.mini")
+				require("plugins.mini.ai")
+				require("plugins.mini.align")
+				require("plugins.mini.jump")
+				require("plugins.mini.jump2d")
+				require("plugins.mini.surround")
 			end,
 		})
 
