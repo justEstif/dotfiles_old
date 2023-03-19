@@ -1,6 +1,7 @@
 vim.opt_local.spell = true -- enable spell check
 vim.opt_local.wrap = true
 vim.opt_local.linebreak = true -- break at words
+vim.b.miniindentscope_disable = true
 
 local buf_map = require("core.utils").buf_map
 
