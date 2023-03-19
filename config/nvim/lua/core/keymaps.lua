@@ -1,6 +1,6 @@
 local map = require("core.utils").map
 
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 
 map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
 map("x", "@", [[":norm @" . getcharstr() . "<cr>"]], { expr = true, desc = "Apply macro on visual range" })
@@ -20,8 +20,7 @@ vim.cmd([[
         exe 'bd'
       endif
     endfunc
-    nn  <leader>q :call Smart_qq()<cr>
-    nn  <leader>Q :bufdo call Smart_qq()<cr>
+    nn  <C-q> :call Smart_qq()<cr>
   ]])
 
 -- NvimTree
