@@ -9,15 +9,10 @@ obsidian.setup({
 	completion = { nvim_cmp = true },
 	daily_notes = { folder = "daily" },
 	note_id_func = function(title)
-		-- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
-		local suffix = ""
-		if title ~= nil then
-			suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+		if title then
+			return tostring(os.date("%Y%m%d%H%M%S")) .. "-" .. title
 		else
-			for _ = 1, 4 do
-				suffix = suffix .. string.char(math.random(65, 90))
-			end
+			return tostring(os.date("%Y%m%d%H%M%S"))
 		end
-		return tostring(os.time()) .. "-" .. suffix
 	end,
 })
