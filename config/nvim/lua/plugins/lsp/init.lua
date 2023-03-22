@@ -79,9 +79,9 @@ local servers = {
 	"prismals",
 	"marksman",
 	"eslint",
-	"pyright",
 	"bashls",
 	"svelte",
+	"pyright",
 }
 
 mason.setup()
@@ -104,7 +104,6 @@ for _, server in pairs(servers) do
 			debug = false, -- enable debug logging for commands
 			server = opts,
 		})
-	-- TODO fix this later, temporary fix
 	else
 		lspconfig[server].setup(opts)
 	end

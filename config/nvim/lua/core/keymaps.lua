@@ -1,14 +1,9 @@
 local map = require("core.utils").map
 
-vim.g.mapleader = " "
+vim.g.mapleader = ","
 
 map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
 map("x", "@", [[":norm @" . getcharstr() . "<cr>"]], { expr = true, desc = "Apply macro on visual range" })
-map("n", "<C-l>", function()
-	require("mini.jump").stop_jumping()
-	vim.cmd.nohlsearch()
-	vim.cmd.echo()
-end, { desc = "clear highlights" })
 
 -- if one buffer quit, else close buffer
 vim.cmd([[
