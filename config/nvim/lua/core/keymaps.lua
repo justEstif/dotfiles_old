@@ -1,9 +1,13 @@
 local map = require("core.utils").map
+local run_file = require("core.utils").run_file
 
 vim.g.mapleader = ","
 
 map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
 map("x", "@", [[":norm @" . getcharstr() . "<cr>"]], { expr = true, desc = "Apply macro on visual range" })
+map("n", "<leader>rr", function ()
+  run_file()
+end)
 
 -- if one buffer quit, else close buffer
 vim.cmd([[
