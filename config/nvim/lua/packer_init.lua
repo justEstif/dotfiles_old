@@ -139,6 +139,8 @@ return packer.startup(function(use)
 		end,
 	})
 
+	use("glench/vim-jinja2-syntax")
+
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
