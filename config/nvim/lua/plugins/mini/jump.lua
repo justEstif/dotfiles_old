@@ -6,7 +6,7 @@ end
 
 jump.setup({
 	mappings = {
-		repeat_jump = "",
+		repeat_jump = ";",
 	},
 })
 
