@@ -1,28 +1,19 @@
 local map = require("core.utils").map
 local run_file = require("core.utils").run_file
+local smart_qq = require("core.utils").smart_qq
 
 vim.g.mapleader = ","
 
 map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
 map("x", "@", [[":norm @" . getcharstr() . "<cr>"]], { expr = true, desc = "Apply macro on visual range" })
-map("n", "<leader>rr", function ()
-  run_file()
+map("n", "<leader>rr", function()
+	run_file()
 end)
 
--- if one buffer quit, else close buffer
-vim.cmd([[
-    func  Smart_qq()
-      exe 'NvimTreeClose'
-      if expand('%') == '' && ( len( filter( range(1, bufnr('$')),  'buflisted(v:val)' ) )  == 1 )
-        exe 'q'
-      else
-        exe 'bd'
-      endif
-    endfunc
-    nn  <C-q> :call Smart_qq()<cr>
-  ]])
+map("n", "<C-q>", function()
+	smart_qq()
+end, { desc = "close buffer or quit neovim" })
 
--- NvimTree
 map("n", "<leader>f", ":NvimTreeToggle<CR>")
 
 -- Fzf

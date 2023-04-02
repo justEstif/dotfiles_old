@@ -32,4 +32,14 @@ M.run_file = function()
 	M.buf_map({ "n", "t" }, "q", "<cmd>close<cr>")
 end
 
+-- @desc if one buffer quit, else close buffer
+M.smart_qq = function()
+	vim.api.nvim_command("NvimTreeClose")
+	if vim.fn.expand("%") == "" and #vim.fn.filter(vim.fn.range(1, vim.fn.bufnr("$")), "buflisted(v:val)") == 1 then
+		vim.api.nvim_command("quit")
+	else
+		vim.api.nvim_command("bdelete")
+	end
+end
+
 return M
