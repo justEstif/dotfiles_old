@@ -8,11 +8,18 @@ local buf_map = require("core.utils").buf_map
 buf_map("n", "j", "gj", { desc = "move down wrapped lines" })
 buf_map("n", "k", "gk", { desc = "move up wrapped lines" })
 
-vim.cmd([[
-function s:toggle(pattern, dict, ...)
-  let view = winsaveview()
-  execute 'keeppatterns s/' . a:pattern . '/\=get(a:dict, submatch(0), a:0 ? a:1 : " ")/e'
-  return view
-endfunction
-nnoremap <buffer> <silent> - :call winrestview(<SID>toggle('^\s*-\s*\[\zs.\ze\]', {' ': '-', '-': 'x', 'x': ' '}))<cr>
-]])
+local function toggle_checkbox()
+	local line = vim.api.nvim_get_current_line()
+	local pattern = "%[([ xX])%]"
+	local checkbox = line:match(pattern)
+	if checkbox == " " or not checkbox then
+		line = line:gsub(pattern, "[x]")
+	else
+		line = line:gsub(pattern, "[ ]")
+	end
+	vim.api.nvim_set_current_line(line)
+end
+
+buf_map("n", "-", function()
+	toggle_checkbox()
+end)
