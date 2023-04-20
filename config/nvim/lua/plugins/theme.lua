@@ -1,17 +1,11 @@
-local status, theme = pcall(require, "tokyonight")
+local status, theme = pcall(require, "catppuccin")
 if not status then
-	print("tokyonight error")
+	print("theme error")
 	return
 end
 
 theme.setup({
-	style = "storm", -- strong, moon, night
-	light_style = "day", -- day(light)
-	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-	styles = {
-		comments = { italic = false },
-		keywords = { italic = false },
-	},
+	flavour = "macchiato", -- latte, frappe, macchiato, mocha
 })
 
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd.colorscheme("catppuccin")
