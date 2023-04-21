@@ -70,7 +70,6 @@ cmp.setup({
 				luasnip = "[snippet]",
 				buffer = "[buffer]",
 				path = "[path]",
-				orgmode = "[org]",
 			})[entry.source.name]
 			vim_item.abbr = string.sub(vim_item.abbr, 1, 25)
 			return vim_item
@@ -80,7 +79,6 @@ cmp.setup({
 	-- add sources here; move priorities higher
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "orgmode" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
