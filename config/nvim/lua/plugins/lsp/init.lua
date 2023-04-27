@@ -82,6 +82,7 @@ local servers = {
 	"bashls",
 	"svelte",
 	"pyright",
+	"solargraph",
 }
 
 mason.setup()
