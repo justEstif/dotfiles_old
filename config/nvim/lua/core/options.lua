@@ -5,24 +5,26 @@ local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 opt.mouse = "a" -- enable mouse support
 opt.clipboard = "unnamedplus" -- Copy/paste to system clipboard
 opt.swapfile = false -- Don't modify file open in another nvim processs
-opt.joinspaces = false -- Don't autoinsert two spaces after '.', '?', '!' for join command.
+-- opt.joinspaces = false -- Don't autoinsert two spaces after '.', '?', '!' for join command.
 opt.encoding = "utf-8" -- Display this encoding.
 opt.fileencoding = "utf-8" -- Use this encoding when writing to file.
 opt.wrap = true -- wrap long lines
 
--- Search
-opt.ignorecase = true -- Ignore case letters when search
-opt.smartcase = true -- Ignore lowercase for the whole pattern
-opt.gdefault = true -- default g flag to search
+-- case-insenstive, unless it has uppercase
+opt.ignorecase = true
+opt.smartcase = true
 opt.showmatch = true -- Highlight matching parenthesis
+-- opt.gdefault = true -- default g flag to search
 
 -- UI
 opt.pumheight = 10 -- pop up menu height
 opt.cursorline = true -- show cursorline
-opt.relativenumber = false -- show relativenumber
-opt.number = false
+opt.relativenumber = true -- show relativenumber
+opt.number = true
 opt.signcolumn = "yes:1" -- sign column default size
 opt.conceallevel = 0 -- `` is visible in markdown files
+opt.scrolloff = 5
+opt.termguicolors = true
 
 -- new window direction
 opt.splitright = true -- Horizontal split to the bottom
@@ -41,7 +43,7 @@ opt.tabstop = 2 -- Insert 2 spaces for a tab
 opt.smarttab = true -- Make tabbing smarter (will realize you have 2 vs 4)
 opt.shiftwidth = 2 -- Use this number of spaces for indentation
 opt.smartindent = true -- Make indenting smart
-opt.autoindent = true -- Use auto indent
+-- opt.autoindent = true -- Use auto indent
 
 -- Memory, CPU
 opt.hidden = true -- Enable background buffers
@@ -60,6 +62,9 @@ g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
 
 opt.nrformats:append("unsigned") -- inc/dec the last digit of dashed
+
+opt.path:remove "/usr/include" -- Better search
+opt.path:append "**" -- Better search
 
 -- ignore these files in search
 opt.wildignore:append({
