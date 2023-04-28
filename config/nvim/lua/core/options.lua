@@ -63,8 +63,8 @@ g.loaded_python3_provider = 0
 
 opt.nrformats:append("unsigned") -- inc/dec the last digit of dashed
 
-opt.path:remove "/usr/include" -- Better search
-opt.path:append "**" -- Better search
+opt.path:remove("/usr/include") -- Better search
+opt.path:append("**") -- Better search
 
 -- ignore these files in search
 opt.wildignore:append({
