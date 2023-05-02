@@ -22,12 +22,6 @@ if not status then
 	return
 end
 
-local status_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not status_cmp then
-	print("cmp_nvim_lsp error")
-	return
-end
-
 local config = {
 	virtual_text = false,
 	update_in_insert = true,
@@ -67,14 +61,12 @@ local on_attach = function(client)
 	end
 end
 
-local capabilities = cmp_nvim_lsp.default_capabilities()
-
 local servers = {
 	"html",
 	"cssls",
 	"tsserver",
 	"lua_ls",
-	"jsonls",
+	-- "jsonls",
 	"tailwindcss",
 	"prismals",
 	"marksman",
@@ -91,7 +83,6 @@ mason_lspconfig.setup({ ensure_installed = servers })
 for _, server in pairs(servers) do
 	local opts = {
 		on_attach = on_attach,
-		capabilities = capabilities,
 	}
 
 	server = vim.split(server, "@")[1]

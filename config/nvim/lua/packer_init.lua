@@ -61,25 +61,6 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use({ -- completion/cmp
-		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
-		"hrsh7th/cmp-path", -- path cmp
-		"hrsh7th/cmp-buffer", -- buffer cmp
-		"saadparwaiz1/cmp_luasnip", -- snippets cmp
-		{
-			"hrsh7th/nvim-cmp", -- cmp plugin
-			config = function()
-				require("plugins.nvim-cmp")
-			end,
-		},
-		{
-			"L3MON4D3/LuaSnip", -- snippets engine
-			config = function()
-				require("plugins.luasnip")
-			end,
-		},
-	})
-
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = { "nvim-tree/nvim-web-devicons" }, -- optional, for file icons,
@@ -119,14 +100,6 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"catppuccin/nvim",
-		as = "catppuccin",
-		config = function()
-			require("plugins.theme")
-		end,
-	})
-
-	use({
 		"echasnovski/mini.nvim",
 		config = function()
 			require("plugins.mini")
@@ -137,13 +110,6 @@ return packer.startup(function(use)
 		"epwalsh/obsidian.nvim",
 		config = function()
 			require("plugins.obsidian")
-		end,
-	})
-
-	use({
-		"nvim-orgmode/orgmode",
-		config = function()
-      require("plugins.org-mode")
 		end,
 	})
 
