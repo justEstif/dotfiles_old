@@ -15,7 +15,7 @@ local cyan_grey = {
 }
 
 base16.setup({
-	palette = blue_yellow.light,
+	palette = cyan_grey.light,
 	use_cterm = true,
 	plugins = {
 		default = true,

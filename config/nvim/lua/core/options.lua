@@ -5,7 +5,6 @@ local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 opt.mouse = "a" -- enable mouse support
 opt.clipboard = "unnamedplus" -- Copy/paste to system clipboard
 opt.swapfile = false -- Don't modify file open in another nvim processs
--- opt.joinspaces = false -- Don't autoinsert two spaces after '.', '?', '!' for join command.
 opt.encoding = "utf-8" -- Display this encoding.
 opt.fileencoding = "utf-8" -- Use this encoding when writing to file.
 opt.wrap = true -- wrap long lines
@@ -14,7 +13,6 @@ opt.wrap = true -- wrap long lines
 opt.ignorecase = true
 opt.smartcase = true
 opt.showmatch = true -- Highlight matching parenthesis
--- opt.gdefault = true -- default g flag to search
 
 -- UI
 opt.pumheight = 10 -- pop up menu height
@@ -43,7 +41,6 @@ opt.tabstop = 2 -- Insert 2 spaces for a tab
 opt.smarttab = true -- Make tabbing smarter (will realize you have 2 vs 4)
 opt.shiftwidth = 2 -- Use this number of spaces for indentation
 opt.smartindent = true -- Make indenting smart
--- opt.autoindent = true -- Use auto indent
 
 -- Memory, CPU
 opt.hidden = true -- Enable background buffers
@@ -60,8 +57,6 @@ g.loaded_ruby_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
-
-opt.nrformats:append("unsigned") -- inc/dec the last digit of dashed
 
 opt.path:remove("/usr/include") -- Better search
 opt.path:append("**") -- Better search
