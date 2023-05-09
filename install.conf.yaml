@@ -6,17 +6,14 @@
 
 - link:
     ~/.gitconfig: gitconfig
+    ~/.zshrc: .zshrc
     ~/.config/nvim: config/nvim
-    ~/.config/fish: config/fish
     ~/.config/i3: config/i3
     ~/.config/i3status: config/i3status
     ~/.config/ranger: config/ranger
     ~/.config/rofi: config/rofi
     ~/.config/kitty: config/kitty
     ~/.config/qutebrowser: config/qutebrowser
-    ~/.config/zk: config/zk
-    ~/.config/blugon: config/blugon
-    ~/.taskrc: .taskrc
     # /etc/keyd: etc/keyd
 
 - shell:
