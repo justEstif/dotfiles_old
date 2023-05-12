@@ -4,15 +4,10 @@ local _, lspconfig = pcall(require, "lspconfig")
 local _, typescript = pcall(require, "typescript")
 
 local on_attach_custom = function(client, bufnr)
-	local function buf_set_option(name, value)
-		vim.api.nvim_buf_set_option(bufnr, name, value)
-	end
-
-	buf_set_option("omnifunc", "v:lua.MiniCompletion.completefunc_lsp")
+	vim.bo.tagfunc = "v:lua.vim.lsp.tagfunc" -- use Ctrl-] to go to definition
+	vim.bo.omnifunc = "v:lua.MiniCompletion.completefunc_lsp"
 
 	local buf_map = require("core.utils").buf_map
-	vim.bo.tagfunc = "v:lua.vim.lsp.tagfunc" -- use Ctrl-] to go to definition
-
 	buf_map("n", "gh", ":lua vim.lsp.buf.hover()<CR>")
 	buf_map("n", "gl", ":lua vim.diagnostic.open_float()<CR>")
 	buf_map("n", "gr", ":FzfLua lsp_references<cr>")
