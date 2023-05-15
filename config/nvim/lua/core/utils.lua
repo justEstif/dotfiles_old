@@ -1,6 +1,6 @@
 local M = {}
 
--- @desc function for global keymapping
+-- Function for creating global keymaps
 M.map = function(mode, lhs, rhs, opts)
 	local options = { silent = true }
 	if opts then
@@ -9,7 +9,7 @@ M.map = function(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
--- @desc function for buffer keymapping
+-- Function for creating buffer keymaps
 M.buf_map = function(mode, lhs, rhs, opts)
 	local options = { silent = true, buffer = true }
 	if opts then
@@ -18,7 +18,9 @@ M.buf_map = function(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
--- @desc Run the current file according to filetype
+-- Function to run the current file based on file extension
+-- - It uses ToggleTerm
+-- - It adds keymap q to close extension
 M.run_file = function()
 	local fts = {
 		python = "python %",
@@ -32,7 +34,9 @@ M.run_file = function()
 	M.buf_map({ "n", "t" }, "q", "<cmd>close<cr>")
 end
 
--- @desc if one buffer quit, else close buffer
+-- Function to close buffer
+-- - If no buffer open, close neovim
+-- - Else close buffer
 M.smart_qq = function()
 	vim.api.nvim_command("NvimTreeClose")
 	local no_open_buffer = #vim.fn.filter(vim.fn.range(1, vim.fn.bufnr("$")), "buflisted(v:val)") == 1

@@ -7,10 +7,6 @@ vim.g.mapleader = ","
 map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
 map("x", "@", [[":norm @" . getcharstr() . "<cr>"]], { expr = true, desc = "Apply macro on visual range" })
 
-map("n", "<F5>", ":buffers<CR>:buffer<Space>", {
-	desc = "switch buffers",
-})
-
 map("n", "<leader>rr", function()
 	run_file()
 end)

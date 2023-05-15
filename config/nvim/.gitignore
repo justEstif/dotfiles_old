@@ -11,3 +11,4 @@ paths.vim
 wiki/
 lua-language-server
 deps/
+plugin/

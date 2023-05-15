@@ -3,7 +3,7 @@ local _, mason_lspconfig = pcall(require, "mason-lspconfig")
 local _, lspconfig = pcall(require, "lspconfig")
 local _, typescript = pcall(require, "typescript")
 
-local on_attach_custom = function(client, bufnr)
+local on_attach_custom = function(client)
 	vim.bo.tagfunc = "v:lua.vim.lsp.tagfunc" -- use Ctrl-] to go to definition
 	vim.bo.omnifunc = "v:lua.MiniCompletion.completefunc_lsp"
 
@@ -67,10 +67,11 @@ lspconfig["prismals"].setup({ on_attach = on_attach_custom })
 lspconfig["jsonls"].setup({ on_attach = on_attach_custom })
 lspconfig["cssls"].setup({ on_attach = on_attach_custom })
 lspconfig["html"].setup({ on_attach = on_attach_custom })
+lspconfig["tailwindcss"].setup({ on_attach = on_attach_custom })
 
 lspconfig["lua_ls"].setup(vim.tbl_deep_extend("force", {
-	on_attach = function(client, bufnr)
-		on_attach_custom(client, bufnr)
+	on_attach = function(client)
+		on_attach_custom(client)
 		client.server_capabilities.completionProvider.triggerCharacters = { ".", ":" }
 	end,
 }, require("plugins.lsp.settings.lua_ls")))
@@ -79,9 +80,9 @@ lspconfig["pyright"].setup(vim.tbl_deep_extend("force", {
 	on_attach = on_attach_custom,
 }, require("plugins.lsp.settings.pyright")))
 
-lspconfig["tailwindcss"].setup(vim.tbl_deep_extend("force", {
-	on_attach = on_attach_custom,
-}, require("plugins.lsp.settings.tailwindcss")))
+-- lspconfig["tailwindcss"].setup(vim.tbl_deep_extend("force", {
+-- 	on_attach = on_attach_custom,
+-- }, require("plugins.lsp.settings.tailwindcss")))
 
 typescript.setup({
 	disable_commands = false, -- prevent the plugin from creating Vim commands
