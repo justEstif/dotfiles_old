@@ -80,10 +80,6 @@ lspconfig["pyright"].setup(vim.tbl_deep_extend("force", {
 	on_attach = on_attach_custom,
 }, require("plugins.lsp.settings.pyright")))
 
--- lspconfig["tailwindcss"].setup(vim.tbl_deep_extend("force", {
--- 	on_attach = on_attach_custom,
--- }, require("plugins.lsp.settings.tailwindcss")))
-
 typescript.setup({
 	disable_commands = false, -- prevent the plugin from creating Vim commands
 	debug = false, -- enable debug logging for commands

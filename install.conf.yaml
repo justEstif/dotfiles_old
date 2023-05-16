@@ -8,6 +8,7 @@
     ~/.gitconfig: gitconfig
     ~/.zshrc: .zshrc
     ~/.config/nvim: config/nvim
+    ~/.config/fish: config/fish
     ~/.config/i3: config/i3
     ~/.config/i3status: config/i3status
     ~/.config/ranger: config/ranger

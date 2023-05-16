@@ -1,3 +1,9 @@
+local status, cmp = pcall(require, "mini.completion")
+if not status then
+	print("mini.completion error")
+	return
+end
+
 vim.b.minicompletion_config = {
 	lsp_completion = {
 		process_items = function(items, base)
@@ -9,7 +15,7 @@ vim.b.minicompletion_config = {
 				end
 			end
 
-			return MiniCompletion.default_process_items(items, base)
+			return cmp.default_process_items(items, base)
 		end,
 	},
 }

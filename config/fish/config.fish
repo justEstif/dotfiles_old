@@ -7,8 +7,6 @@ set -x EDITOR nvim
 set fish_greeting # Turn off the fish welcome message
 set fzf_directory_opts --bind "ctrl-o:execute($EDITOR {} &> /dev/tty)"
 
-###### Themes ######
-
 ###### Alias ######
 alias cdu="cd -" # go to the prev dir
 alias ..='cd ..' # go to the parent dir

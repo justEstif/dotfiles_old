@@ -7,19 +7,13 @@ vim.g.mapleader = ","
 map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
 map("x", "@", [[":norm @" . getcharstr() . "<cr>"]], { expr = true, desc = "Apply macro on visual range" })
 
-map("n", "<leader>rr", function()
-	run_file()
-end)
-
-map("n", "<C-q>", function()
-	smart_qq()
-end, { desc = "close buffer or quit neovim" })
+map("n", "<leader>rr", run_file)
+map("n", "<C-q>", smart_qq)
 
 map("n", "<leader>f", ":NvimTreeToggle<CR>")
 
 -- Fzf
-map("n", "<C-k>", ":FzfLua commands<cr>", { desc = "fzflua buffers" })
-map("n", "<C-p>", ":FzfLua files<cr>", { desc = "fzflua buffers" })
-map("n", "<C-\\>", ":FzfLua live_grep<cr>", { desc = "fzflua buffers" })
-map("n", "<F1>", ":FzfLua help_tags<cr>", { desc = "fzflua buffers" })
-map("n", "z=", ":FzfLua spell_suggest<CR>", { desc = "Spell suggest keybind" })
+map("n", "<C-k>", ":FzfLua commands<cr>", { desc = "fzflua commands" })
+map("n", "<C-p>", ":FzfLua files<cr>", { desc = "fzflua files" })
+map("n", "<C-\\>", ":FzfLua live_grep<cr>", { desc = "fzflua grep" })
+map("n", "z=", ":FzfLua spell_suggest<CR>", { desc = "fzflua spell suggest" })

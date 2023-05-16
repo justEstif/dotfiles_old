@@ -3,4 +3,8 @@ if not status_ok then
 	return
 end
 
-fzf.setup()
+fzf.setup({
+	commands = {
+		winopts = { preview = { hidden = "hidden" } },
+	},
+})

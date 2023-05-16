@@ -42,13 +42,22 @@ return packer.startup(function(use)
 	})
 
 	use({ -- lsp
-		"williamboman/mason.nvim",
+		{
+			"williamboman/mason.nvim",
+			run = ":MasonUpdate",
+		},
 		"williamboman/mason-lspconfig.nvim",
 		"jose-elias-alvarez/typescript.nvim",
 		{
 			"neovim/nvim-lspconfig",
 			config = function()
 				require("plugins.lsp")
+			end,
+		},
+		{
+			"j-hui/fidget.nvim",
+			config = function()
+				require("fidget")
 			end,
 		},
 	})

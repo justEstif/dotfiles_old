@@ -13,12 +13,11 @@ SETUVAR _fish_abbr_tkss:tmux\x20kill\x2dsession\x20\x2dt
 SETUVAR _fish_abbr_tksv:tmux\x20kill\x2dserver
 SETUVAR _fish_abbr_tl:tmux\x20list\x2dsessions
 SETUVAR _fish_abbr_ts:tmux\x20new\x2dsession\x20\x2ds
-SETUVAR _fisher_catppuccin_2F_fish_files:\x7e/\x2econfig/fish/themes/Catppuccin\x20Frappe\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Latte\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Macchiato\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Mocha\x2etheme
 SETUVAR _fisher_jethrokuan_2F_z_files:\x7e/\x2econfig/fish/functions/__z\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_add\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_complete\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
-SETUVAR _fisher_oh_2D_my_2D_fish_2F_plugin_2D_rvm_files:\x7e/\x2econfig/fish/functions/rvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/rvm\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/z\x1ejorgebucaran/nvm\x2efish\x1ecatppuccin/fish\x1eoh\x2dmy\x2dfish/plugin\x2drvm
+SETUVAR _fisher_nakulj_2F_auto_2D_venv_files:\x7e/\x2econfig/fish/conf\x2ed/venv\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/z\x1erstacruz/fish\x2dasdf\x1enakulj/auto\x2dvenv
+SETUVAR _fisher_rstacruz_2F_fish_2D_asdf_files:\x7e/\x2econfig/fish/conf\x2ed/asdf\x2efish\x1e\x7e/\x2econfig/fish/completions/asdf\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:737994
 SETUVAR fish_color_cancel:e78284
@@ -62,6 +61,3 @@ SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR --export fish_tmux_config:/home/estif/\x2econfig/tmux/tmux\x2econf
 SETUVAR fish_user_paths:/home/estif/\x2efly/bin\x1e/home/estif/\x2efly
-SETUVAR nvm_data:/home/estif/\x2elocal/share/nvm
-SETUVAR nvm_default_version:v16\x2e17\x2e0
-SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist

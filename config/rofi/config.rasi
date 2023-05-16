@@ -1,6 +1,8 @@
 configuration {
- modi: "window,drun,ssh,filebrowser";
- font: "hack 10";
- combi-modi: "window,drun,ssh";
- }
+  modi: "drun";
+  show-icons: true;
+  font: "hack 10";
+  combi-modi: "window,drun,ssh";
+  terminal: "Kitty";
+}
 @theme "solarized"
