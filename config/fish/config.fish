@@ -16,7 +16,6 @@ alias lz='lazygit'  # git client
 
 alias v='nvim' # nvim
 alias vd='cd ~/dotfiles/config/nvim/; nvim'
-alias vo='cd ~/Sync/notes/; nvim'
 
 alias killnode="killall -9 node" # kill all node apps
 
