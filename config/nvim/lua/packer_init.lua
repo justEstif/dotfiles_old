@@ -115,13 +115,6 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use({
-		"epwalsh/obsidian.nvim",
-		config = function()
-			require("plugins.obsidian")
-		end,
-	})
-
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
