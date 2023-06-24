@@ -54,12 +54,6 @@ return packer.startup(function(use)
 				require("plugins.lsp")
 			end,
 		},
-		{
-			"j-hui/fidget.nvim",
-			config = function()
-				require("fidget")
-			end,
-		},
 	})
 
 	use({
@@ -71,18 +65,11 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"nvim-tree/nvim-tree.lua",
-		requires = { "nvim-tree/nvim-web-devicons" }, -- optional, for file icons,
-		tag = "nightly", -- optional, updated every week.
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.1",
+		requires = { "nvim-lua/plenary.nvim" },
 		config = function()
-			require("plugins.nvim-tree")
-		end,
-	})
-
-	use({
-		"ibhagwan/fzf-lua",
-		config = function()
-			require("plugins.fzf-lua")
+			require("plugins.telescope")
 		end,
 	})
 
@@ -110,6 +97,7 @@ return packer.startup(function(use)
 
 	use({
 		"echasnovski/mini.nvim",
+		requires = { "nvim-tree/nvim-web-devicons" }, -- optional, for file icons,
 		config = function()
 			require("plugins.mini")
 		end,

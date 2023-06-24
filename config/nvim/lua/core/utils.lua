@@ -38,7 +38,6 @@ end
 -- - If no buffer open, close neovim
 -- - Else close buffer
 M.smart_qq = function()
-	vim.api.nvim_command("NvimTreeClose")
 	local no_open_buffer = #vim.fn.filter(vim.fn.range(1, vim.fn.bufnr("$")), "buflisted(v:val)") == 1
 	local empty_buffer = vim.fn.expand("%") == ""
 	if empty_buffer and no_open_buffer then

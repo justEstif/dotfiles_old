@@ -10,10 +10,8 @@ map("x", "@", [[":norm @" . getcharstr() . "<cr>"]], { expr = true, desc = "Appl
 map("n", "<leader>rr", run_file)
 map("n", "<C-q>", smart_qq)
 
-map("n", "<leader>f", ":NvimTreeToggle<CR>")
+map("n", "<leader>f", ":lua MiniFiles.open()<CR>")
 
--- Fzf
-map("n", "<C-k>", ":FzfLua commands<cr>", { desc = "fzflua commands" })
-map("n", "<C-p>", ":FzfLua files<cr>", { desc = "fzflua files" })
-map("n", "<C-\\>", ":FzfLua live_grep<cr>", { desc = "fzflua grep" })
-map("n", "z=", ":FzfLua spell_suggest<CR>", { desc = "fzflua spell suggest" })
+map("n", "<C-p>",  ":Telescope find_files<cr>")
+map("n", "<C-\\>", ":Telescope live_grep<cr>")
+map("n", "z=",     ":Telescope spell_suggest<cr>")

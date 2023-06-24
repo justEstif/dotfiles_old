@@ -10,7 +10,7 @@ local on_attach_custom = function(client)
 	local buf_map = require("core.utils").buf_map
 	buf_map("n", "gh", ":lua vim.lsp.buf.hover()<CR>")
 	buf_map("n", "gl", ":lua vim.diagnostic.open_float()<CR>")
-	buf_map("n", "gr", ":FzfLua lsp_references<cr>")
+	buf_map("n", "gr", ":Telescope lsp_references<cr>")
 	buf_map("n", "gT", ":lua vim.lsp.buf.type_definition()<cr>")
 	buf_map("n", "=", ":lua vim.lsp.buf.format{async=true}<CR>")
 	buf_map("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>")
