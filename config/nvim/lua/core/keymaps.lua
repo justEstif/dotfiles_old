@@ -12,6 +12,7 @@ map("n", "<C-q>", smart_qq)
 
 map("n", "<leader>f", ":lua MiniFiles.open()<CR>")
 
-map("n", "<C-p>",  ":Telescope find_files<cr>")
+map("n", "<C-p>", ":Telescope find_files<cr>")
 map("n", "<C-\\>", ":Telescope live_grep<cr>")
-map("n", "z=",     ":Telescope spell_suggest<cr>")
+map("n", "<F1>", ":Telescope help_tags<cr>")
+map("n", "z=", ":Telescope spell_suggest<cr>")
