@@ -4,4 +4,4 @@ if not status_ok then
 end
 
 colorscheme.setup()
-vim.cmd("colorscheme github_dark")
+vim.cmd("colorscheme github_dark_dimmed")
