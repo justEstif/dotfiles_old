@@ -4,4 +4,9 @@ if not status_ok then
 end
 
 colorscheme.setup()
-vim.cmd("colorscheme github_dark_dimmed")
+
+if os.getenv("theme") == "light" then
+	vim.cmd("colorscheme github_light")
+else
+	vim.cmd("colorscheme github_dark_dimmed")
+end
