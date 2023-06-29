@@ -1,5 +1,4 @@
-function change_theme
-  set theme $argv[1]
+function change_theme --argument theme
   if test "$theme" = "light"
     set -gx theme "light"
     kitty +kitten themes GitHub

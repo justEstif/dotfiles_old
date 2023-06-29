@@ -4,8 +4,9 @@ if not status then
 	return
 end
 
-local toggle_dotfiles = require("plugins.mini.files.toggle_dotfiles")
-toggle_dotfiles(files)
+local toggle_hidden = require("plugins.mini.files.toggle_hidden")
+local set_cwd = require("plugins.mini.files.set_cwd")
+local open_in_split = require("plugins.mini.files.open_in_split")
 
 files.setup({
 	mappings = {
@@ -15,3 +16,7 @@ files.setup({
 		go_out_plus = "h",
 	},
 })
+
+toggle_hidden(files)
+set_cwd(files)
+open_in_split(files)
