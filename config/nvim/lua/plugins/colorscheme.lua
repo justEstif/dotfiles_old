@@ -21,7 +21,7 @@ vim.api.nvim_create_user_command("Theme", function(opts)
 	change_theme(opts.fargs[1])
 end, {
 	nargs = 1,
-	complete = function(ArgLead, CmdLine, CursorPos)
+	complete = function()
 		return { "light", "dark" }
 	end,
 })

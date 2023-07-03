@@ -2,10 +2,12 @@ function change_theme --description "Change theme to light or dark" --argument t
     switch $theme
         case light
             set -gx theme light
+            fish_config theme choose Tomorrow
             kitty +kitten themes --reload-in=all GitHub
             nvim --server ~/.cache/nvim/server.pipe --remote-send ':Theme light<cr>'
         case dark
             set -gx theme dark
+            fish_config theme choose Tomorrow\ Night
             kitty +kitten themes --reload-in=all "GitHub Dark Dimmed"
             nvim --server ~/.cache/nvim/server.pipe --remote-send ':Theme dark<cr>'
         case '*'

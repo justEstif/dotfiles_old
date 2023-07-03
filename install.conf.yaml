@@ -15,6 +15,7 @@
     ~/.config/rofi: config/rofi
     ~/.config/kitty: config/kitty
     ~/.config/qutebrowser: config/qutebrowser
+    ~/.config/lazygit: config/lazygit
     # /etc/keyd: etc/keyd
 
 - shell:
