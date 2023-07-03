@@ -1,5 +1,5 @@
 function fish_user_key_bindings
-  fish_vi_key_bindings
+    fish_vi_key_bindings
 end
 
 ###### variables ######
@@ -12,10 +12,11 @@ alias cdu="cd -" # go to the prev dir
 alias ..='cd ..' # go to the parent dir
 
 alias lf='ranger_cd' # file manager
-alias lz='lazygit'  # git client
+alias lz='lazygit' # git client
 
-alias v='nvim' # nvim
-alias vd='cd ~/dotfiles/config/nvim/; nvim'
+# alias v='nvim' # nvim
+alias v='nvim --listen ~/.cache/nvim/server.pipe'
+alias vd='cd ~/dotfiles/config/nvim/; v'
 
 alias killnode="killall -9 node" # kill all node apps
 
