@@ -103,13 +103,6 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use({
-		"projekt0n/github-nvim-theme",
-		config = function()
-			require("plugins.colorscheme")
-		end,
-	})
-
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

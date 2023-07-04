@@ -14,9 +14,8 @@ alias ..='cd ..' # go to the parent dir
 alias lf='ranger_cd' # file manager
 alias lz='lazygit' # git client
 
-# alias v='nvim' # nvim
-alias v='nvim --listen ~/.cache/nvim/server.pipe'
-alias vd='cd ~/dotfiles/config/nvim/; v'
+alias v='nvim'
+alias vd='cd ~/dotfiles/config/nvim/; nvim'
 
 alias killnode="killall -9 node" # kill all node apps
 
