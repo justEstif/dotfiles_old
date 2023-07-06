@@ -23,3 +23,4 @@
 - foliate
 - lazygit
 - blugon
+- brightnessctl

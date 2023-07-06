@@ -1,11 +1,13 @@
 function change_theme --description "Change theme to light or dark" --argument theme
     switch $theme
         case light
-            fish_config theme choose Tomorrow
-            kitty +kitten themes --reload-in=all "Gruvbox Light"
+            set -Ux theme light
+            fish_config theme choose "Catppuccin Latte"
+            kitty +kitten themes --reload-in=all "Catppuccin-Latte"
         case dark
-            fish_config theme choose Gruvbox\ Dark
-            kitty +kitten themes --reload-in=all "Gruvbox Dark"
+            set -Ux theme dark
+            fish_config theme choose "Catppuccin Mocha"
+            kitty +kitten themes --reload-in=all "Catppuccin-Mocha"
         case '*'
             echo "Invalid theme. Please provide 'light' or 'dark'."
     end
