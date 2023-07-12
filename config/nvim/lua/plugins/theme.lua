@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 theme.setup({
+	no_italic = true, -- Force no italic
 	background = {
 		light = "latte",
 		dark = "mocha",

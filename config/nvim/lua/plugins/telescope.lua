@@ -24,7 +24,7 @@ telescope.setup({
 			},
 		},
 
-		file_ignore_patterns = { "node_modules/.*", ".git/.*", ".next/.*", "dist/.*" },
+		file_ignore_patterns = { "node_modules/.*", ".git/.*", ".next/.*", "dist/.*", ".obsidian/.*" },
 		layout_strategy = "flex",
 
 		-- Use custom sorter based on more intuitive (at least for me) fuzzy logic
