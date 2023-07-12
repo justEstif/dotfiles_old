@@ -16,6 +16,7 @@
     ~/.config/kitty: config/kitty
     ~/.config/qutebrowser: config/qutebrowser
     ~/.config/lazygit: config/lazygit
+    ~/.config/sioyek: config/sioyek
     # /etc/keyd: etc/keyd
 
 - shell:
