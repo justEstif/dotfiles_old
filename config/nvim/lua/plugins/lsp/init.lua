@@ -54,6 +54,7 @@ local servers = {
 	"svelte",
 	"pyright",
 	"solargraph",
+	"gopls",
 }
 
 mason.setup()
@@ -68,6 +69,7 @@ lspconfig["jsonls"].setup({ on_attach = on_attach_custom })
 lspconfig["cssls"].setup({ on_attach = on_attach_custom })
 lspconfig["html"].setup({ on_attach = on_attach_custom })
 lspconfig["tailwindcss"].setup({ on_attach = on_attach_custom })
+lspconfig["gopls"].setup({ on_attach = on_attach_custom })
 
 lspconfig["lua_ls"].setup(vim.tbl_deep_extend("force", {
 	on_attach = function(client)
@@ -85,3 +87,5 @@ typescript.setup({
 	debug = false, -- enable debug logging for commands
 	server = { on_attach = on_attach_custom },
 })
+
+-- go.setup({})

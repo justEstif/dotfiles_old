@@ -15,6 +15,8 @@ null_ls.setup({
 		diagnostics.jsonlint, -- json
 		formatting.rustywind, -- tailwind
 		formatting.stylua, -- lua
+		formatting.gofumpt, -- go
+		formatting.goimports, -- go
 		formatting.autopep8,
 		completion.spell.with({ filetypes = { "markdown", "gitcommit" } }),
 	},
