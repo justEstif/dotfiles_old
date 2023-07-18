@@ -111,6 +111,8 @@ return packer.startup(function(use)
 		end,
 	})
 
+	use("junegunn/goyo.vim")
+
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

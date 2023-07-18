@@ -22,3 +22,10 @@ alias killnode="killall -9 node" # kill all node apps
 alias l="exa -lba" # ls
 alias ls="exa" # ls
 alias la='exa -albF --git' # list, size, type, git
+
+# pnpm
+set -gx PNPM_HOME "/home/estif/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
