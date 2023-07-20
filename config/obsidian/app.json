@@ -1,0 +1,27 @@
+{
+  "vimMode": true,
+  "promptDelete": false,
+  "attachmentFolderPath": "assets",
+  "livePreview": true,
+  "spellcheck": true,
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "useMarkdownLinks": true,
+  "alwaysUpdateLinks": false,
+  "showFrontmatter": false,
+  "showInlineTitle": false,
+  "showLineNumber": false,
+  "userIgnoreFilters": [
+    "projects/"
+  ],
+  "tabSize": 4,
+  "newLinkFormat": "absolute",
+  "smartIndentList": true,
+  "defaultViewMode": "source",
+  "trashOption": "local"
+}

@@ -41,6 +41,9 @@ telescope.setup({
 			glob_pattern = {
 				"!package-lock.json",
 				"!yarn.lock",
+				"!yarn.lock",
+				"!pnpm-lock.yaml",
+				"!CONTRIBUTING.md",
 			},
 		},
 		spell_suggest = {

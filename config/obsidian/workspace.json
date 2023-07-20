@@ -1,0 +1,195 @@
+{
+  "main": {
+    "id": "8ff251a86e0927fb",
+    "type": "split",
+    "children": [
+      {
+        "id": "c018cb0228b602fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d99430a335da3155",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0cba8adb4501c8a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "8f9be6250ef972d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "25e21bf86308ed48",
+            "type": "leaf",
+            "state": {
+              "type": "file-tree-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "704468d324033935",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 247.5110321044922,
+    "collapsed": true
+  },
+  "right": {
+    "id": "61a4b377247d9efd",
+    "type": "split",
+    "children": [
+      {
+        "id": "80bff00e814764ff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "969db3f9befb434d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "26af41bbe8f2f0d1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "299f13529bd6c62e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "533ab3dd99c5b9d0",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "41d43d862cde3d37",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "command-palette:Open command palette": false,
+      "zk-prefixer:Create new unique note": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "templates:Insert template": true,
+      "obsidian-excalidraw-plugin:Create new drawing": true,
+      "daily-notes:Open today's daily note": true
+    }
+  },
+  "active": "d99430a335da3155",
+  "lastOpenFiles": [
+    "journal/2023-07-21.md",
+    "journal/2023-07-20.md",
+    "journal/2023-W31.md",
+    "20230720143418.md",
+    "journal/2023-W29.md",
+    "20230708125034.md",
+    "projects/rainbowdevs/docs/20230720074257.md",
+    "projects/rainbowdevs/docs/20230720121205.md",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/atoms/FormInputWithLabel/FormInputWithLabel.stories.tsx",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/atoms/FormInputWithLabel/index.tsx",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/atoms/FormInputWithLabel/Input.stories.tsx",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/atoms/FormInputWithLabel",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/atoms/Input/index.tsx",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/atoms/Input/Input.stories.tsx",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/atoms/Input",
+    "journal/2023-W30.md",
+    "20230720120501.md",
+    "20230720111249.md",
+    "projects/rainbowdevs/docs/20230719122558.excalidraw.md",
+    "journal/2023-07-19.md",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/molecules/PersonalInformationCard/PersonalInformationCard.stories.tsx",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/molecules/PersonalInformationCard/index.tsx",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/molecules/PersonalInformationCard",
+    "projects/rainbowdevs/health-tracker-frontend/stories/components/images/HeroImage/HeroImage.jpg",
+    "projects/rainbowdevs/health-tracker-frontend/stories/assets/stackalt.svg",
+    "projects/rainbowdevs/health-tracker-frontend/stories/assets/repo.svg",
+    "projects/rainbowdevs/health-tracker-frontend/stories/assets/plugin.svg",
+    "projects/rainbowdevs/health-tracker-frontend/stories/assets/flow.svg",
+    "projects/rainbowdevs/health-tracker-frontend/stories/assets/direction.svg",
+    "projects/rainbowdevs/health-tracker-frontend/stories/assets/comments.svg",
+    "projects/rainbowdevs/health-tracker-frontend/stories/assets/colors.svg",
+    "projects/rainbowdevs/health-tracker-frontend/stories/assets/code-brackets.svg",
+    "projects/rainbowdevs/health-tracker-frontend/public/images/wellpath-logo-mono.svg",
+    "projects/rainbowdevs/health-tracker-frontend/SECURITY.md",
+    "projects/rainbowdevs/health-tracker-frontend/README.md",
+    "projects/rainbowdevs/health-tracker-frontend/LICENSE.md",
+    "projects/rainbowdevs/health-tracker-frontend/CONTRIBUTING.md",
+    "projects/rainbowdevs/health-tracker-frontend/CODE_OF_CONDUCT.md",
+    "projects/rainbowdevs/health-tracker-backend/README.md",
+    "projects/rainbowdevs/health-tracker-backend/CONTRIBUTING.md",
+    "projects/rainbowdevs/health-tracker-backend/SECURITY.md",
+    "projects/rainbowdevs/health-tracker-backend/CODE_OF_CONDUCT.md",
+    "projects/rainbowdevs/health-tracker-backend/LICENSE.md",
+    "20230715090505.md",
+    "20230717123410.md",
+    "projects/love_of_go/docs/20230717072152.md",
+    "assets/canvas/Untitled 1.canvas",
+    "assets/canvas/Untitled.canvas",
+    "Untitled.canvas",
+    "archives/odinbuk_design.canvas",
+    "assets/canvas/svelte-fire.canvas",
+    "canvas/svelte-tree.canvas",
+    "canvas/something-jv-27.canvas",
+    "canvas/sprint-3.canvas",
+    "canvas/20230623-tasks.canvas"
+  ]
+}
