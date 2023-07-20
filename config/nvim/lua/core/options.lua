@@ -30,10 +30,7 @@ opt.splitbelow = true -- Horizontal split to the bottom
 
 -- fold
 opt.fillchars = { fold = " " }
-opt.foldmethod = "indent"
-opt.foldenable = false
-opt.foldlevel = 99
-g.markdown_folding = 1 -- enable markdown folding
+opt.foldmethod = "manual"
 
 -- Tabs, indent
 opt.expandtab = true -- Convert tabs to spaces

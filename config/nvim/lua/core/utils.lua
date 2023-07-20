@@ -18,22 +18,6 @@ M.buf_map = function(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
--- Function to run the current file based on file extension
--- - It uses ToggleTerm
--- - It adds keymap q to close extension
-M.run_file = function()
-	local fts = {
-		python = "python %",
-		javascript = "node %",
-		typescript = "ts-node %",
-		go = "go run %",
-		markdown = "glow %:p",
-	}
-	local cmd = string.format('TermExec cmd="%s"<cr>', fts[vim.bo.ft])
-	vim.cmd(cmd)
-	M.buf_map({ "n", "t" }, "q", "<cmd>close<cr>")
-end
-
 -- Function to close buffer
 -- - If no buffer open, close neovim
 -- - Else close buffer

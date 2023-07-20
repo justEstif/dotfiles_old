@@ -11,6 +11,7 @@ jump.setup({
 })
 
 local map = require("core.utils").map
+
 map("n", "<C-l>", function()
 	jump.stop_jumping()
 	vim.cmd.nohlsearch()

@@ -9,7 +9,7 @@ local map = require("core.utils").map
 
 toggleterm.setup({
 	direction = "float",
-	open_mapping = "<leader>t",
+	open_mapping = "<leader>tt",
 	insert_mappings = false, -- open_mapping off in insert mode
 	on_open = function()
 		buf_map("t", "<esc>", [[<C-\><C-n>]])
@@ -29,6 +29,6 @@ local lazygit = Terminal:new({
 	end,
 })
 
-map("n", "<leader>g", function()
+map("n", "<leader>tg", function()
 	lazygit:toggle()
-end)
+end, { desc = "Lazygit" })

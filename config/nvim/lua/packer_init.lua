@@ -31,7 +31,6 @@ return packer.startup(function(use)
 
 	use({
 		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments support
-		"windwp/nvim-ts-autotag", --autoclose and autorename html tag
 		{
 			"nvim-treesitter/nvim-treesitter",
 			run = ":TSUpdate",
@@ -54,6 +53,13 @@ return packer.startup(function(use)
 				require("plugins.lsp")
 			end,
 		},
+	})
+
+	use({
+		"windwp/nvim-ts-autotag", --autoclose and autorename html tag
+		config = function()
+			require("plugins.autotag")
+		end,
 	})
 
 	use({
@@ -111,7 +117,14 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use("junegunn/goyo.vim")
+	use({
+		"Pocco81/true-zen.nvim",
+		config = function()
+			require("true-zen").setup()
+		end,
+	})
+
+	use("MaximilianLloyd/tw-values.nvim") -- TWValues
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

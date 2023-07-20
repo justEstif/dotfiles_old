@@ -61,5 +61,5 @@ SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR --export fish_tmux_config:/home/estif/\x2econfig/tmux/tmux\x2econf
-SETUVAR fish_user_paths:/home/estif/\x2efly/bin\x1e/home/estif/\x2efly
-SETUVAR --export theme:dark
+SETUVAR fish_user_paths:/home/estif/\x2econfig/emacs/bin\x1e/home/estif/\x2easdf/shims\x1e/home/estif/\x2easdf/bin\x1e/home/estif/\x2efly/bin\x1e/home/estif/\x2efly
+SETUVAR --export theme:light

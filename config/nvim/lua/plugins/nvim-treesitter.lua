@@ -5,23 +5,24 @@ end
 
 nvim_treesitter.setup({
 	ensure_installed = {
+		"comment", -- slows down ts
 		"css",
+		"diff",
+		"fish",
+		"gitcommit",
+		"gitignore",
+		"fish",
 		"html",
 		"javascript",
-		"typescript",
-		"tsx",
 		"json",
 		"lua",
 		"markdown",
 		"markdown_inline",
-		"python",
-		"comment", -- slows down ts
-		"fish",
-		"diff",
-		"gitcommit",
-		"gitignore",
-		"sql",
 		"prisma",
+		"python",
+		"sql",
+		"tsx",
+		"typescript",
 	},
 	sync_install = false,
 	auto_install = true,
@@ -31,5 +32,4 @@ nvim_treesitter.setup({
 	},
 	indent = { enable = true }, -- indent
 	context_commentstring = { enable = true, enable_autocmd = false }, -- comments(plugin)
-	autotag = { enable = true },
 })
