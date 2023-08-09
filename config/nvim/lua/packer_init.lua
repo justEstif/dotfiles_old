@@ -72,7 +72,7 @@ return packer.startup(function(use)
 
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
+		branch = "0.1.x",
 		requires = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("plugins.telescope")
@@ -108,23 +108,6 @@ return packer.startup(function(use)
 			require("plugins.mini")
 		end,
 	})
-
-	use({
-		"catppuccin/nvim",
-		as = "catppuccin",
-		config = function()
-			require("plugins.theme")
-		end,
-	})
-
-	use({
-		"Pocco81/true-zen.nvim",
-		config = function()
-			require("true-zen").setup()
-		end,
-	})
-
-	use("MaximilianLloyd/tw-values.nvim") -- TWValues
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

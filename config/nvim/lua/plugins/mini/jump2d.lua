@@ -60,6 +60,6 @@ jump2d.setup({
 			jump2d.config.spotter = jump2d.gen_pattern_spotter(pattern)
 		end,
 	},
-	mappings = { start_jumping = "s" },
+	mappings = { start_jumping = " " },
 	labels = "etovxqpdygfblzhckisuran",
 })

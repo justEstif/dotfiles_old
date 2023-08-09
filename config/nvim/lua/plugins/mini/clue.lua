@@ -11,8 +11,7 @@ clue.setup({
 		{ mode = "x", keys = "<Leader>" },
 
 		-- Built-in completion
-		-- BUG <C-x> insert mode
-		-- { mode = "i", keys = "<C-x>" },
+		-- { mode = "i", keys = "<C-x>" }, -- BUG
 
 		-- `g` key
 		{ mode = "n", keys = "g" },
@@ -27,7 +26,7 @@ clue.setup({
 		-- Registers
 		{ mode = "n", keys = '"' },
 		{ mode = "x", keys = '"' },
-		{ mode = "i", keys = "<C-r>" },
+		-- { mode = "i", keys = "<C-r>" }, -- BUG
 		{ mode = "c", keys = "<C-r>" },
 
 		-- Window commands

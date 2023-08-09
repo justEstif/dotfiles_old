@@ -6,9 +6,7 @@ vim.g.mapleader = ","
 _G.ES.leader_group_clues = {
 	{ mode = "n", keys = "<Leader>b", desc = "+Buffers" },
 	{ mode = "n", keys = "<Leader>f", desc = "+Files" },
-	{ mode = "n", keys = "<Leader>o", desc = "+Other" },
 	{ mode = "n", keys = "<Leader>t", desc = "+Toggle" },
-	{ mode = "n", keys = "<Leader>z", desc = "+Zen" },
 }
 
 map("v", "p", [["_dP]], { desc = "Keep the yanked text when pasting in visual  mode" })
@@ -27,16 +25,6 @@ map("n", "<C-k>", ":Telescope commands<cr>", { desc = "Telescope: commands" })
 map("n", "<C-\\>", ":Telescope live_grep<cr>", { desc = "Telescope: live grep" })
 map("n", "<F1>", ":Telescope help_tags<cr>", { desc = "help" })
 map("n", "z=", ":Telescope spell_suggest<cr>", { desc = "spell suggest" })
-
--- zen
-map("n", "<leader>zn", ":TZNarrow<CR>", { desc = "narrow" })
-map("v", "<leader>zn", ":'<,'>TZNarrow<CR>", { desc = "narrow" })
-map("n", "<leader>zf", ":TZFocus<CR>", { desc = "focus" })
-map("n", "<leader>zm", ":TZMinimalist<CR>", { desc = "minimalist" })
-map("n", "<leader>za", ":TZAtaraxis<CR>", { desc = "zen" })
-
--- other
-map("n", "<leader>ot", "<cmd>TWValues<cr>", { desc = "TW CSS values" })
 
 -- custom commands
 vim.api.nvim_create_user_command(
