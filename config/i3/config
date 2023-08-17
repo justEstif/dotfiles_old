@@ -54,6 +54,7 @@ bindsym $mod+c kill
 
 # Screenshot
 bindsym Print exec flameshot gui
+bindsym Shift+Print exec flameshot full
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun

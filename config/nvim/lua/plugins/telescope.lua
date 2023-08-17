@@ -10,7 +10,6 @@ local fuzzy = require("mini.fuzzy")
 
 telescope.setup({
 	defaults = {
-		path_display = { "smart" },
 		mappings = {
 			i = {
 				["<leader><leader>"] = actions.close, -- exit
@@ -35,7 +34,6 @@ telescope.setup({
 		find_files = {
 			initial_mode = "insert",
 			theme = "dropdown",
-			find_command = { "fd", "--hidden", "--no-ignore-vcs" },
 		},
 		live_grep = {
 			glob_pattern = {

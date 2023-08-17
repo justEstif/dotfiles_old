@@ -1,4 +1,5 @@
 # font (override)
+# font_family       UbuntuMono Nerd Font
 font_family       UbuntuMono Nerd Font
 font_size         12.0
 disable_ligatures always
@@ -66,6 +67,6 @@ include current-theme.conf
 
 
 # BEGIN_KITTY_THEME
-# Mini-Scheme-Light
+# Catppuccin-Latte
 include current-theme.conf
 # END_KITTY_THEME

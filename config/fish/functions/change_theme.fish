@@ -3,11 +3,11 @@ function change_theme --description "Change theme to light or dark" --argument t
         case light
             set -Ux theme light
             fish_config theme choose "Catppuccin Latte"
-            kitty +kitten themes --reload-in=all "Mini-Scheme-Light"
+            kitty +kitten themes --reload-in=all "Catppuccin-Latte"
         case dark
             set -Ux theme dark
             fish_config theme choose "Catppuccin Mocha"
-            kitty +kitten themes --reload-in=all "Mini-Cyan-Dark"
+            kitty +kitten themes --reload-in=all "Catppuccin-Mocha"
         case '*'
             echo "Invalid theme. Please provide 'light' or 'dark'."
     end

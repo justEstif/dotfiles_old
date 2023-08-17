@@ -1,6 +1,7 @@
-_G.ES = {} -- global object
+_G.ES = {}
 
 require("core.autocmds")
 require("core.keymaps")
+require("core.commands")
 require("core.options")
-require("packer_init")
+require("lazy_init")
