@@ -19,84 +19,66 @@ if not status_ok then
 end
 
 lazy.setup({
-	{ -- code highlight
-		"nvim-treesitter/nvim-treesitter",
-		dependencies = {
-			"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments support
-			"windwp/nvim-ts-autotag",                   --autoclose and autorename html tag
-		},
-		build = ":TSUpdate",
-		event = "BufReadPost",
-		config = function()
-			require("plugins.nvim-treesitter")
-		end,
-	},
-	{                        -- lsp
-		"neovim/nvim-lspconfig", -- nvim native lsp
-		dependencies = {
-			{
-				"williamboman/mason.nvim", -- Installer for external tools
-				cmd = "Mason",
-				config = true,
-			},
-			"williamboman/mason-lspconfig.nvim", -- mason extension for lspconfig
-			"jose-elias-alvarez/typescript.nvim", -- add features to tsserver config
-		},
-		event = "BufReadPre",
-		config = function()
-			require("plugins.lsp")
-		end,
-	},
-	{ -- formatting
-		"jose-elias-alvarez/null-ls.nvim",
-		event = "BufReadPre",
-		dependencies = { "mason.nvim" },
-		config = function()
-			require("plugins.null-ls")
-		end,
-	},
-	{ -- swiss knife
-		"nvim-telescope/telescope.nvim",
-		branch = "0.1.x",
-		requires = { "kyazdani42/nvim-web-devicons", "nvim-lua/plenary.nvim" },
-		config = function()
-			require("plugins.telescope")
-		end,
-	},
-	{ -- toggle term
-		"akinsho/toggleterm.nvim",
-		config = function()
-			require("plugins.toggleterm")
-		end,
-	},
-	{ -- scope buffers to tab page
-		"tiagovla/scope.nvim",
-		config = true,
-	},
-	{
-		"echasnovski/mini.nvim",
-		version = false,
-		config = function()
-			require("plugins.mini")
-		end,
-	},
-	{
-		"lewis6991/gitsigns.nvim",
-		event = "BufReadPre",
-		requires = "nvim-lua/plenary.nvim",
-		config = function()
-			require("plugins.gitsigns")
-		end,
-	},
-	{
-		"catppuccin/nvim",
-		as = "catppuccin",
-		lazy = false,
-		config = function()
-			require("plugins.theme")
-		end,
-	},
 	"folke/lazy.nvim",
-	"kyazdani42/nvim-web-devicons", -- icons,
 	"nvim-lua/plenary.nvim",
+	require("plugins.autotag"),
+	require("plugins.conform"),
+	require("plugins.fzf"),
+	require("plugins.gitsigns"),
+	require("plugins.lsp"),
+	require("plugins.mini.ai"),
+	require("plugins.mini.align"),
+	require("plugins.mini.bracketed"),
+	require("plugins.mini.clue"),
+	require("plugins.mini.comment"),
+	require("plugins.mini.completion"),
+	require("plugins.mini.files"),
+	require("plugins.mini.jump"),
+	require("plugins.mini.jump2d"),
+	require("plugins.mini.move"),
+	require("plugins.mini.operators"),
+	require("plugins.mini.pairs"),
+	require("plugins.mini.split-join"),
+	require("plugins.mini.statusline"),
+	require("plugins.mini.surround"),
+	require("plugins.mini.tabline"),
+	require("plugins.mini.trailspace"),
+	require("plugins.scope"),
+	require("plugins.theme"),
+	require("plugins.treesitter"),
+}, {
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"2html_plugin",
+				"bugreport",
+				"compiler",
+				"getscript",
+				"getscriptPlugin",
+				"gzip",
+				"logipat",
+				"netrw",
+				"netrwFileHandlers",
+				"netrwPlugin",
+				"netrwSettings",
+				"optwin",
+				"rplugin",
+				"rrhelper",
+				"spellfile_plugin",
+				"synmenu",
+				"tar",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"vimball",
+				"vimballPlugin",
+				"zip",
+				"zipPlugin",
+				"loaded_ruby_provider",
+				"loaded_perl_provider",
+				"loaded_node_provider",
+				"loaded_python3_provider",
+			},
+		},
+	},
 })

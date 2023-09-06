@@ -1,8 +1,3 @@
-local _, mason = pcall(require, "mason")
-local _, mason_lspconfig = pcall(require, "mason-lspconfig")
-local _, lspconfig = pcall(require, "lspconfig")
-local _, typescript = pcall(require, "typescript")
-
 local on_attach_custom = function(client)
 	vim.bo.tagfunc = "v:lua.vim.lsp.tagfunc" -- use Ctrl-] to go to definition
 	vim.bo.omnifunc = "v:lua.MiniCompletion.completefunc_lsp"
@@ -35,7 +30,7 @@ vim.diagnostic.config(diagnostic_opts)
 local servers = {
 	"html",
 	"cssls",
-	"tsserver", -- use typescript plugin
+	"tsserver",
 	"lua_ls",
 	"jsonls",
 	"tailwindcss",
@@ -48,36 +43,58 @@ local servers = {
 	"gopls",
 }
 
-mason.setup()
-mason_lspconfig.setup({ ensure_installed = servers })
+return { -- lsp
+	"neovim/nvim-lspconfig", -- nvim native lsp
+	event = { "BufReadPost", "BufNewFile" },
+	cmd = { "LspInfo", "LspInstall", "LspUninstall" },
+	dependencies = {
+		{
+			"williamboman/mason.nvim", -- Installer for external tools
+			cmd = {
+				"Mason",
+				"MasonInstall",
+				"MasonUninstall",
+				"MasonUninstallAll",
+				"MasonLog",
+			},
+			config = true,
+			dependencies = "williamboman/mason-lspconfig.nvim",
+		},
+		"williamboman/mason-lspconfig.nvim", -- mason extension for lspconfig
+		opts = { ensure_installed = servers },
+	},
+	opts = { on_attach = on_attach_custom },
+	config = function(_, opts)
+		local lspconfig = require("lspconfig")
 
-lspconfig["solargraph"].setup({ on_attach = on_attach_custom })
-lspconfig["svelte"].setup({ on_attach = on_attach_custom })
-lspconfig["eslint"].setup({ on_attach = on_attach_custom })
-lspconfig["marksman"].setup({ on_attach = on_attach_custom })
-lspconfig["prismals"].setup({ on_attach = on_attach_custom })
-lspconfig["jsonls"].setup({ on_attach = on_attach_custom })
-lspconfig["html"].setup({ on_attach = on_attach_custom })
-lspconfig["tailwindcss"].setup({ on_attach = on_attach_custom })
-lspconfig["gopls"].setup({ on_attach = on_attach_custom })
+		lspconfig["svelte"].setup(opts)
+		lspconfig["eslint"].setup(opts)
+		lspconfig["marksman"].setup(opts)
+		lspconfig["prismals"].setup(opts)
+		lspconfig["jsonls"].setup(opts)
+		lspconfig["html"].setup(opts)
+		lspconfig["tailwindcss"].setup(opts)
+		lspconfig["gopls"].setup(opts)
+		lspconfig["tsserver"].setup(opts)
 
-lspconfig["cssls"].setup(vim.tbl_deep_extend("force", {
-	on_attach = on_attach_custom,
-}, require("plugins.lsp.settings.cssls")))
+		lspconfig["cssls"].setup(vim.tbl_deep_extend("force", opts, require("plugins.lsp.settings.cssls")))
 
-lspconfig["lua_ls"].setup(vim.tbl_deep_extend("force", {
-	on_attach = function(client)
-		on_attach_custom(client)
-		client.server_capabilities.completionProvider.triggerCharacters = { ".", ":" }
+		lspconfig["solargraph"].setup(vim.tbl_deep_extend("force", {
+			on_attach = function(client)
+				on_attach_custom(client)
+				client.server_capabilities.completionProvider.triggerCharacters = { ".", ":" }
+			end,
+		}, require("plugins.lsp.settings.solargraph")))
+
+		lspconfig["lua_ls"].setup(vim.tbl_deep_extend("force", {
+			on_attach = function(client)
+				on_attach_custom(client)
+				client.server_capabilities.completionProvider.triggerCharacters = { ".", ":" }
+			end,
+		}, require("plugins.lsp.settings.lua_ls")))
+
+		lspconfig["pyright"].setup(vim.tbl_deep_extend("force", opts, require("plugins.lsp.settings.pyright")))
+		lspconfig["denols"].setup(vim.tbl_deep_extend("force", opts, require("plugins.lsp.settings.denols")))
+		lspconfig["tsserver"].setup(vim.tbl_deep_extend("force", opts, require("plugins.lsp.settings.tsserver")))
 	end,
-}, require("plugins.lsp.settings.lua_ls")))
-
-lspconfig["pyright"].setup(vim.tbl_deep_extend("force", {
-	on_attach = on_attach_custom,
-}, require("plugins.lsp.settings.pyright")))
-
-typescript.setup({
-	disable_commands = false, -- prevent the plugin from creating Vim commands
-	debug = false, -- enable debug logging for commands
-	server = { on_attach = on_attach_custom },
-})
+}

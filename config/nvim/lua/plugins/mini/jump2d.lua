@@ -1,9 +1,3 @@
-local status, jump2d = pcall(require, "mini.jump2d")
-if not status then
-	print("mini.jump2d error")
-	return
-end
-
 local safe_getcharstr = function(msg)
 	vim.cmd("echon " .. vim.inspect(msg))
 	local ok, res = pcall(vim.fn.getcharstr) -- Allow `<C-c>` to end input
@@ -39,27 +33,31 @@ local dummy_spotter = function()
 	return {}
 end
 
-jump2d.setup({
-	spotter = dummy_spotter,
-	allowed_lines = { blank = false, fold = false },
-	hooks = {
-		before_start = function()
-			local first = safe_getcharstr("(mini.jump2d) Enter first character: ")
-			if first == nil then
-				jump2d.config.spotter = dummy_spotter
-				return
-			end
+return {
+	"echasnovski/mini.jump2d",
+	opts = {
+		spotter = dummy_spotter,
+		allowed_lines = { blank = false, fold = false },
+		hooks = {
+			before_start = function()
+				local jump2d = require("mini.jump2d")
+				local first = safe_getcharstr("(mini.jump2d) Enter first character: ")
+				if first == nil then
+					jump2d.config.spotter = dummy_spotter
+					return
+				end
 
-			local second = safe_getcharstr("(mini.jump2d) Enter second character: ")
-			if second == nil then
-				jump2d.config.spotter = dummy_spotter
-				return
-			end
+				local second = safe_getcharstr("(mini.jump2d) Enter second character: ")
+				if second == nil then
+					jump2d.config.spotter = dummy_spotter
+					return
+				end
 
-			local pattern = make_ignorecase_pattern(first .. second)
-			jump2d.config.spotter = jump2d.gen_pattern_spotter(pattern)
-		end,
+				local pattern = make_ignorecase_pattern(first .. second)
+				jump2d.config.spotter = jump2d.gen_pattern_spotter(pattern)
+			end,
+		},
+		mappings = { start_jumping = " " },
+		labels = "etovxqpdygfblzhckisuran",
 	},
-	mappings = { start_jumping = " " },
-	labels = "etovxqpdygfblzhckisuran",
-})
+}

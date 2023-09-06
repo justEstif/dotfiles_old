@@ -1,10 +1,7 @@
-local status, operators = pcall(require, "mini.operators")
-if not status then
-	print("mini.operators error")
-	return
-end
-
-operators.setup()
+return {
+	"echasnovski/mini.operators",
+	config = true,
+}
 
 -- evaluate g=
 -- exchange gx

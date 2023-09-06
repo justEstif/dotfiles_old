@@ -24,6 +24,7 @@ end
 M.smart_qq = function()
 	local no_open_buffer = #vim.fn.filter(vim.fn.range(1, vim.fn.bufnr("$")), "buflisted(v:val)") == 1
 	local empty_buffer = vim.fn.expand("%") == ""
+
 	if empty_buffer and no_open_buffer then
 		if not pcall(vim.api.nvim_command, "quit") then
 			print("Unsaved changes")
